@@ -1,0 +1,31 @@
+---
+interface Props {
+    link: string;
+    title: string;
+    description: string;
+}
+
+const { link, title, description } = Astro.props;
+---
+
+<a
+    href={link}
+    class="flex justify-between border-2 border-[#D6D6D6] text-white rounded-[16.75px] p-6 shadow-lg hover:shadow-xl
+  transition duration-300 w-full max-w-full overflow-hidden"
+>
+    <div class="flex-1">
+        <span class="text-[12px] lg:text-[28px] font-semibold">{title}</span>
+        <p
+            class="text-[#B0B0B0] text-[8px] lg:text-[18px] mt-5 leading-[23.44px]"
+        >
+            {description}
+        </p>
+    </div>
+    <div class="flex justify-end">
+        <img
+            src="/assets/arrowright.png"
+            alt="Arrow Icon"
+            class="w-8 h-8 fluid p-1 hover:bg-[#15AED5] rounded-[100px] transition duration-300 border-[#D6D6D6] border-solid border-2"
+        />
+    </div>
+</a>

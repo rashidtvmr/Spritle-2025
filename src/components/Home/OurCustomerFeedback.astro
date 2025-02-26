@@ -1,0 +1,175 @@
+<!-- import React, { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+const testimonials = [
+  {
+    name: 'Floyd Miles',
+    rating: 4,
+    description:
+      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+    image: '/assets/star1pic.png',
+  },
+  {
+    name: 'Ronald Richards',
+    rating: 5,
+    description:
+      'ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+    image: '/assets/star2pic.png',
+  },
+  {
+    name: 'Savannah Nguyen',
+    rating: 4,
+    description:
+      'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+    image: '/assets/starpic3.png',
+  },
+  {
+    name: 'Jane Cooper',
+    rating: 5,
+    description: 'Exceptional service! The team went above and beyond my expectations.',
+    image: '/assets/star2pic.png',
+  },
+  {
+    name: 'Robert Fox',
+    rating: 4,
+    description: 'Very professional and efficient. The results were exactly what I was looking for.',
+    image: '/assets/starpic3.png',
+  },
+  {
+    name: 'Leslie Alexander',
+    rating: 5,
+    description: 'Outstanding experience from start to finish. The attention to detail was impeccable.',
+    image: '/assets/star1pic.png',
+  },
+  {
+    name: 'Jenny Wilson',
+    rating: 4,
+    description: 'Incredible results! The team was responsive and delivered exactly what we needed.',
+    image: '/assets/starpic3.png',
+  },
+  {
+    name: 'Wade Warren',
+    rating: 5,
+    description: 'Top-notch service and expertise. They made the process smooth and stress-free.',
+    image: '/assets/star1pic.png',
+  },
+  {
+    name: 'Cameron Wright',
+    rating: 4,
+    description: 'Fantastic work! They understood our requirements perfectly and delivered beyond expectations.',
+    image: '/assets/star2pic.png',
+  },
+];
+
+const CustomerFeedback = () => {
+  const [itemsPerPage, setItemsPerPage] = useState(getItemsPerPage());
+
+  useEffect(() => {
+    function handleResize() {
+      setItemsPerPage(getItemsPerPage());
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  function getItemsPerPage() {
+    if (window.innerWidth < 768) return 1; // 1 card on small screens
+    if (window.innerWidth < 1280) return 2; // 2 cards on medium screens
+    return 3; // 3 cards on large screens
+  }
+
+  return (
+    <div className="text-white font-dm-sans px-4 md:px-8 lg:px-16"> {/* Adjust padding for mobile and larger screens */}
+      <div className="py-8 md:py-12 lg:py-16"> {/* Adjust padding for mobile and larger screens */}
+        <div className="flex flex-col md:flex-row justify-between items-center mb-4 md:mb-8 lg:mb-12"> {/* Adjust margin for mobile and larger screens */}
+          <div className="text-center md:text-left">
+            <div className="text-[#E2E2E2] font-dm-sans font-medium text-[20px] md:text-[24px] lg:text-[32px] xl:text-[48px] leading-[28px] md:leading-[36px] lg:leading-[48px]"> {/* Adjust text and leading for mobile and larger screens */}
+              Our Customer Feedback
+            </div>
+            <p className="text-[#B0B0B0] font-dm-sans text-[12px] md:text-[14px] lg:text-[18px] xl:text-[24px] leading-[18px] md:leading-[24px] lg:leading-[32px] w-full mb-4 md:mb-8 lg:mb-12 font-normal max-w-[968px]"> {/* Adjust text, leading, and margin for mobile and larger screens */}
+              Don't take our word for it. Trust our customers
+            </p>
+          </div>
+        </div>
+
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={16}
+          slidesPerView={itemsPerPage}
+          navigation={{
+            prevEl: '.prev-btn',
+            nextEl: '.next-btn',
+          }}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+            1280: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {testimonials.map((t, index) => (
+            <SwiperSlide key={index}>
+              <div className="w-full p-2 md:p-4 lg:p-6 flex-shrink-0 h-full"> {/* Adjust padding for mobile and larger screens */}
+                <div className="rounded-lg p-4 md:p-6 lg:p-8 border flex flex-col justify-start h-full "> {/* Adjust padding for mobile and larger screens */}
+                  <div className="flex flex-col items-center space-y-2 md:space-y-4 "> {/* Adjust spacing for mobile and larger screens */}
+                    <img
+                      src={t.image}
+                      alt={t.name}
+                      className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full "
+                    />
+                    <h3 className="text-[16px] md:text-[20px] lg:text-[24px] font-semibold">{t.name}</h3>
+                    <div className="flex space-x-1">
+  {'★'
+    .repeat(t.rating)
+    .padEnd(5, '☆')
+    .split('')
+    .map((s, i) => (
+      <span
+        key={i}
+        className={`${
+          s === '★' ? 'text-yellow-500' : 'text-gray-500'
+        } text-[10px] md:text-[16px] lg:text-[20px] `} // Adjusted text size for mobile
+      >
+        {s}
+      </span>
+    ))}
+</div>
+                  </div>
+                  <p className="text-[#E2E2E2] text-[12px] md:text-[14px] lg:text-[16px] leading-[1.4] md:leading-[1.6] mt-4 md:mt-6"> {/* Adjust text, leading, and margin for mobile and larger screens */}
+                    {t.description}
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <div className="flex gap-2 md:gap-4 lg:gap-6 mt-4 md:mt-8 lg:mt-12 justify-end"> {/* Adjust spacing and margin for mobile and larger screens */}
+          <button
+            className="prev-btn border hover:bg-gray-600 text-white font-bold rounded-lg focus:outline-none py-1 px-2 text-xs md:py-2 md:px-4 md:text-sm lg:py-3 lg:px-6 lg:text-lg"
+          >
+            <span className="text-[#9BD609]">&lt;</span> Previous
+          </button>
+          <button
+            className="next-btn border hover:bg-gray-600 text-white font-bold rounded-lg focus:outline-none py-1 px-2 text-xs md:py-2 md:px-4 md:text-sm lg:py-3 lg:px-6 lg:text-lg"
+          >
+            Next <span className="text-[#9BD609]">&gt;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CustomerFeedback; -->

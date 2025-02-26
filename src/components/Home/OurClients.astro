@@ -1,0 +1,62 @@
+<div class="" >
+    <div
+        class="py-5"
+       
+    >
+        <div class="space-y-5 h-[85vh] w-[100%] pl-6">
+            <div
+                class="text-[#E2E2E2] font-dm-sans font-medium text-[24px] xl:text-[48px] font-medium"
+            >
+                Our Clients
+            </div>
+            <p
+                class="text-[#B0B0B0] font-dm-sans text-[24px] xl:text-[34px] tracking-small xl:tracking-[widest] w-100% mb-10 font-normal"
+            >
+                Transform your business with generative AI
+            </p>
+
+            <div
+                class="flex flex-col items-center justify-center h-auto w-auto p-20"
+            >
+                <div
+                    id="logo-container"
+                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-10 gap-y-20"
+                >
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const logos = [
+                "nestle.png",
+                "stanford.png",
+                "hyundai.png",
+                "panasonic.png",
+                "larsen.png",
+                "stengg.png",
+                "motorola.png",
+                "un.png",
+                "re.png",
+                "changi.png",
+                "livingmatrix.png",
+                "reach.png",
+                "innerkraft.png",
+                "moddo.png",
+                "share.png",
+                "nanny.png",
+            ];
+
+            const container = document.getElementById("logo-container");
+
+            container.innerHTML = logos
+                .map(
+                    (logo) =>
+                        `<img src="/public/assets/${logo}" alt="${logo.split(".")[0]}" class="mx-auto w-auto h-auto ${
+                            logo === "nanny.png" ? "max-h-16" : "max-h-24"
+                        } object-contain">`,
+                )
+                .join("");
+        });
+    </script>
+</div>

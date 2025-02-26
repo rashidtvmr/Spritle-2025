@@ -1,0 +1,75 @@
+---
+import Hero from "@/components/Home/Hero.astro";
+import TextAnimation from "@/components/Home/TextAnimation.astro";
+import Carousel from "@/components/Home/Carousel.astro";
+import OurClients from "@/components/Home/OurClients.astro";
+import UpSlider from "@/components/Home/UpSlider.astro";
+import OurServices from "@/components/Home/OurServices.astro";
+import IndustriesWeServe from "@/components/Home/IndustriesWeServe.astro";
+import OurPartners from "@/components/Home/OurPartners.astro";
+import Blogs from "@/components/Home/Blogs.astro";
+import CustomerSlider from "@/components/Home/CustomerSlider.jsx";
+import SwiperJsx from "@/components/Home/SwiperJsx";
+import CarouselSwiper from "@/components/Home/CarouselSwiper.jsx";
+---
+
+<div class="">
+    <div>
+        <!-- <Swiper client:load /> //test -->
+        <SwiperJsx client:load />
+        <!-- <Hero client:load /> // old  -->
+    </div><div class="">
+        <div
+            class=""
+        >
+            <TextAnimation />
+        </div>
+    </div>
+
+    <div
+        class="pb-10 sm:pl-6 sm:pb-12 md:pl-8 md:pb-12 lg:pl-16 lg:pb-16 xl:pl-20 xl:pb-20 ml-5"
+    >
+        <CarouselSwiper client:load />
+        <!-- <Carousel /> -->
+    </div>
+
+    <div class="space-y-10">
+        <OurClients />
+    </div>
+
+    <div
+        class="p-4 pb-10 sm:p-6 sm:pb-12 md:p-8 md:pb-12 lg:p-16 lg:pb-16 xl:pb-20 space-y-5"
+    >
+        <UpSlider />
+    </div>
+
+    <div
+        class="p-4 pb-10 sm:p-6 sm:pb-12 md:p-8 md:pb-12 lg:p-16 lg:pb-13 xl:pl-20 xl:pb-15"
+    >
+        <OurServices />
+    </div>
+
+    <div
+        class="p-4 pb-10 sm:p-6 sm:pb-12 md:p-8 md:pb-12 lg:p-16 lg:pb-16 xl:pb-20"
+    >
+        <IndustriesWeServe />
+    </div>
+
+    <div
+        class="p-4 pb-10 sm:p-6 sm:pb-12 md:p-8 md:pb-12 lg:p-16 lg:pb-16 xl:p-14 xl:pb-20"
+    >
+        <OurPartners />
+    </div>
+
+    <div
+        class="p-4 pb-10 sm:p-6 sm:pb-12 md:p-8 md:pb-12 lg:p-16 lg:pb-16 xl:p-12 xl:pb-0"
+    >
+        <CustomerSlider client:load />
+    </div>
+
+    <div
+        class="p-4 pb-10 sm:p-6 sm:pb-12 md:p-8 md:pb-12 lg:p-16 lg:pb-16 xl:p-12 xl:pb-0"
+    >
+        <Blogs />
+    </div>
+</div>

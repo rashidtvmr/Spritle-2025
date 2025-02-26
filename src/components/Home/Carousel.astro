@@ -1,0 +1,199 @@
+<!-- ---
+const sliderItems = [
+    {
+        img: "assets/Rectangle 93092.png",
+        text: "How we helped Nestle create personalized nutrition through genetic insights",
+    },
+    {
+        img: "assets/flight.png",
+        text: "Smart Airport Management: Track, Maintain, and Optimize with Precision",
+    },
+    {
+        img: "assets/run.png",
+        text: "A platform for managing and coordinating every sports meet across USA",
+    },
+    {
+        img: "assets/van.png",
+        text: "A major logistics company in the US achieved a 40% reduction in response time.",
+    },
+    {
+        img: "assets/doctor.png",
+        text: "Instant Access to Top Cancer Specialists Across the World – Safe & Effortless",
+    },
+    {
+        img: "assets/computer.png",
+        text: "Unlocking Education with Smooth, Engaging Digital Learning",
+    },
+];
+---
+
+<div class="space-y-5">
+    <div
+        class="text-[#E2E2E2] font-dm-sans font-medium text-[24px] xl:text-[48px]"
+    >
+        Transforming Business
+    </div>
+    <p
+        class="text-[#B0B0B0] font-dm-sans text-[24px] xl:text-[34px]
+    tracking-small xl:tracking-[widest] w-60% mb-10"
+    >
+        Transform your business with generative AI =>We help businesses start
+        their digital journey
+    </p>
+</div>
+<div class="overflow-hidden w-full flex flex-col items-start">
+    <div class="relative w-full mx-auto">
+        <div
+            class="flex gap-[80px] transition-transform duration-500 ease-in-out max-w-fit w-[100%] h-[100%]"
+            id="sliderContainer"
+        >
+            {
+                sliderItems.map((item, index) => (
+                    <div
+                        key={index}
+                        class="flex-none w-[90vw] sm:w-[45vw] md:w-[40vw] lg:w-[43%] h-[60%] slider-item relative overflow-hidden group"
+                    >
+                        <div class="relative overflow-hidden transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:shadow-xl group w-[100%] h-[100%]">
+                            <img
+                                src={item.img}
+                                alt="Slide Image"
+                                class="w-[797px] h-[797px]  object-cover rounded-lg shadow-lg "
+                            />
+                            <div
+                                class="absolute bottom-7 left-1/2 xl:left-1/2 xl:-translate-x-[60%] transform -translate-x-1/2 transition duration-300 
+  py-2 text-white text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-[48px] 
+  leading-6 sm:leading-8 md:leading-5 lg:leading-[60px] xl:leading-[72px] 
+  tracking-tight w-[90%] sm:w-[80%] md:w-[300px] lg:w-[391px] xl:w-[591px] 
+  hover:shadow-xl slider-text "
+                            >
+                                {item.text}
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+
+    <div class="flex gap-3 flex-row justify-end items-center w-[1670px] mt-6">
+        <button
+            id="prevBtn"
+            class="p-2 -full hover:bg-[#15AED5] rounded-[100px] w-[50px] h-[50px] justify-center items-center flex bg-black"
+        >
+            <img src="/assets/arrowcarousel.png" alt="" />
+        </button>
+        <button
+            id="nextBtn"
+            class="p-2 hover:bg-[#15afd5] text-white rounded-[100px] w-[50px] h-[50px] justify-center items-center flex bg-black"
+        >
+            <img src="/assets/arrowcar2.png" />
+        </button>
+    </div>
+    <style>
+        .slider-text {
+            position: absolute;
+            text-align: left;
+            padding-right: 30px;
+        }
+
+        .slider-item:hover .slider-text {
+            text-shadow: 4px 14px 18px rgba(0, 0, 0, 0.9); /* More intense text shadow */
+            filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.8))
+                drop-shadow(0 0 30px rgba(0, 0, 0, 0.8)); /* Stronger shadow effect */
+            transform: translateX(30px);
+        }
+
+        .slider-text::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: transparent;
+            white-space: normal;
+            text-shadow:
+                6px 6px 15px rgba(0, 0, 0, 1),
+                -6px -6px 10px rgba(0, 0, 0, 1);
+            /* z-index: -1; */
+        }
+    </style>
+    <script>
+        let currentIndex = 0;
+        let slideWidth = 0;
+        let gapSize = 0;
+        let slideCount;
+
+        function calculateDimensions() {
+            const firstSlide = document.querySelector(".slider-item");
+            if (!firstSlide) return;
+
+            slideWidth = firstSlide.getBoundingClientRect().width;
+            gapSize =
+                parseInt(
+                    window.getComputedStyle(firstSlide.parentElement).gap,
+                ) || 0;
+            slideCount = document.querySelectorAll(".slider-item").length;
+        }
+
+        function getMaxIndex() {
+            const containerWidth =
+                document.querySelector("#sliderContainer").parentElement
+                    .clientWidth;
+            const visibleSlides =
+                window.innerWidth < 640
+                    ? 1
+                    : window.innerWidth < 1024
+                      ? 2
+                      : Math.floor(containerWidth / (slideWidth + gapSize));
+            return Math.max(0, slideCount - visibleSlides);
+        }
+
+        function updateSlider() {
+            const sliderContainer = document.getElementById("sliderContainer");
+            if (!sliderContainer) return;
+
+            const maxIndex = getMaxIndex();
+            const translateX = currentIndex * (slideWidth + gapSize);
+            sliderContainer.style.transform = `translateX(-${translateX}px)`;
+
+            document.getElementById("prevBtn").disabled = currentIndex === 0;
+            document.getElementById("nextBtn").disabled =
+                currentIndex >= maxIndex;
+        }
+
+        function moveSliderToPreviousItem() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlider();
+            }
+        }
+
+        function moveSliderToNextItem() {
+            calculateDimensions();
+            const maxIndex = getMaxIndex();
+            if (currentIndex < maxIndex) {
+                currentIndex++;
+                updateSlider();
+            }
+        }
+
+        window.addEventListener("resize", () => {
+            calculateDimensions();
+            updateSlider();
+        });
+
+        window.addEventListener("load", () => {
+            calculateDimensions();
+            updateSlider();
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document
+                .getElementById("prevBtn")
+                .addEventListener("click", moveSliderToPreviousItem);
+            document
+                .getElementById("nextBtn")
+                .addEventListener("click", moveSliderToNextItem);
+        });
+    </script>
+</div> -->

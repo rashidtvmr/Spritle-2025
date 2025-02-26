@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@100..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --font-manrope: "Manrope", sans-serif;
+    --font-dm-sans: "DM Sans", sans-serif;
+    --font-sora: "Sora", sans-serif;
+}
+
+body {
+    @apply bg-[#252525] text-[#f5f5f5] font-dm-sans;
+}
+body {
+  /* scrollbar-width: none; For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer/Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
