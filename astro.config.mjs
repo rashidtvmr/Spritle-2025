@@ -4,8 +4,11 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
-// https://astro.build/config
 export default defineConfig({
+  base: '/Spritle-2025/', // Add your repo name here
+  site: 'https://Suryasu5678.github.io/Spritle-2025/', // Your GitHub Pages URL
+  output: 'static', // GitHub Pages needs static output
+
   integrations: [react()],
 
   vite: {
