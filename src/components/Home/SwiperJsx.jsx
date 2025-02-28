@@ -89,8 +89,8 @@ const ImageSlider = () => {
                 <img
                   src={slide.img}
                   alt={slide.text}
-                  className="object-cover rounded-xl shadow-xl mx-auto md:h-auto w-full h-[30vh]"
-                  style={{  maxWidth: '100%', maxHeight: '657px' }}
+                  className="object-contain rounded-xl shadow-xl mx-auto md:h-auto w-full h-[20vh]"
+                  style={{  maxWidth: '100%', maxHeight: '657px', }}
                 />
               </div>
             </div>
@@ -99,13 +99,7 @@ const ImageSlider = () => {
       </swiper-container>
 
       <style jsx global>{`
-        swiper-container {
-          display: flex !important;
-          justify-content: center !important;
-          align-items: center !important;
-          overflow: visible !important;
-        }
-
+      
         swiper-slide {
           width: 80% !important;
           height: auto !important;

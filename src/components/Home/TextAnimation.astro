@@ -1,9 +1,5 @@
----
-
----
-
 <section
-  class="scroll-reveal h-[20vh] md:h-[30vh] lg:h-[50vh] xl:h-[70vh] flex justify-center items-center "
+  class="scroll-reveal h-[20vh] md:h-[30vh] lg:h-[50vh] xl:h-[70vh] flex justify-center items-center"
 >
   <p
     class="font-dm-sans font-normal text-l md:text-3xl lg:text-3xl xl:text-[60px] leading-[1.5] md:leading-[68.12px] lg:leading-[68px] xl:leading-[78.12px] text-justify max-h-[332px] max-w-[1485px]"
@@ -24,7 +20,7 @@
     background-repeat: no-repeat;
     background-size: 0% 100%;
     background-image: linear-gradient(90deg, white, white);
-    animation: scroll-reveal linear forwards;
+    animation: scroll-reveal linear forwards; 
     animation-timeline: view(y);
   }
 
@@ -33,7 +29,7 @@
   }
 
   .first-text {
-    transition: all 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
     opacity: 0;
   }
 
@@ -43,7 +39,7 @@
 
   .fade-text.fade-in {
     opacity: 1;
-    animation: fadeIn 2s forwards 1s;
+    animation: fadeIn 0.8s forwards 0.3s;
   }
 
   @keyframes fadeIn {
@@ -75,14 +71,16 @@
     function handleIntersection(entries, observer) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          firstTextSpan.style.animationDuration = `${entry.intersectionRatio * 0.5}s`;
           firstTextSpan.classList.add("fade-in");
-          observer.unobserve(entry.target);
+        } else {
+          firstTextSpan.classList.remove("fade-in");
         }
       });
     }
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.9,
+      threshold: Array.from({ length: 50 }, (_, i) => i * 0.01),
     });
 
     observer.observe(firstTextSpan);

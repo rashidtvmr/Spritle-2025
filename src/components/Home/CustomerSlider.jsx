@@ -82,13 +82,12 @@ const CustomerFeedback = () => {
   }, []);
 
   return (
-    <div className="text-white font-dm-sans px-4 md:px-8 py-12">
-      <div className="text-center md:text-left mb-8 flex flex-col md:flex-row justify-between">
-        <div className="mb-4 md:mb-0">
-          <h2 className="text-[#E2E2E2] text-[24px] md:text-[32px] xl:text-[48px] leading-[28px] md:leading-[36px] xl:leading-[58px]">
+<div className="space-y-1 lg:space-y-6 md:space-y-3 lg:mt-40 md:mt:20 mt-20">      <div className="text-center md:text-left mb-8 flex flex-col md:flex-row justify-between">
+        <div className="">
+          <h2 className="text-heading mb-0 md:mb-4">
             Our Customer Feedback
           </h2>
-          <p className="text-[#B0B0B0] text-[14px] md:text-[16px] xl:text-[24px] leading-[18px] md:leading-[24px] xl:leading-[31.25px] max-w-[968px] mb-4 md:mb-10">
+          <p className="text-subheading max-w-[968px] mb-4 md:mb-1">
             Don't take our word for it. Trust our customers
           </p>
         </div>

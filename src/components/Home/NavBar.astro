@@ -1,19 +1,134 @@
 <style>
+    /* Custom styles for mobile navigation */
     #mobile-nav {
-        transform: translateX(-100%); 
-          transition: transform 0.3s ease-in-out; 
-               z-index: 50;   }
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        z-index: 50;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+    }
 
+    /* Glass effect for mobile menu */
+    .mobile-menu-glass {
+        background-color: #303235;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* Initial clip-path - starts as a small rectangle where the hamburger is */
+        clip-path: polygon(81.05% 9.1%, 92% 9.1%, 92% 10.1%, 81.05% 10.1%);
+        transition:
+            clip-path 400ms cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
+        position: absolute;
+        top: 0;
+    }
+
+    /* Active clip-path state - expands to cover the whole screen */
     #mobile-nav.active {
-        transform: translateX(0); /* Slide in */
+        pointer-events: auto;
+    }
+
+    #mobile-nav.active .mobile-menu-glass {
+        clip-path: polygon(101% -1%, 101% 101%, -1% 101%, -1% -1%);
+    }
+
+    /* Menu options animation */
+    .menu-options {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+        transform: scale(0.8);
+        transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #mobile-nav.active .menu-options {
+        transform: scale(1);
+    }
+
+    /* Menu link styling */
+    .menu-link {
+        cursor: pointer;
+        margin: 8px 0;
+        color: #f2f2f2;
+    }
+
+    .menu-link.selected {
+        color: #a02f56;
+    }
+
+    /* Hamburger icon animation */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        cursor: pointer;
+        z-index: 100;
+        position: relative;
+    }
+
+    .hamburger .bar {
+        width: 24px;
+        height: 2px;
+        background-color: white;
+        transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .hamburger .bar1 {
+        transform-origin: 12px 1px;
+    }
+
+    .hamburger .bar2 {
+        transform-origin: 12px 1px;
+    }
+
+    .hamburger.active .bar1 {
+        transform: translateY(7.2px) rotate(45deg);
+    }
+
+    .hamburger.active .bar2 {
+        transform: rotate(-45deg);
+    }
+
+    .hamburger .bar3 {
+        opacity: 1;
+        transition: opacity 300ms ease-in-out;
+    }
+
+    .hamburger.active .bar3 {
+        opacity: 0;
+    }
+
+    /* Sticky navbar */
+    .sticky-nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(37, 37, 37, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgb(237, 237, 237);
     }
 </style>
 
-<div class="flex items-center justify-between px-6 py-2 h-[100px]">
+<!-- Sticky Navbar -->
+<div class="sticky-nav flex items-center justify-between px-6 py-2 h-[100px]">
+    <!-- Logo -->
     <div>
-        <img src="/public/assets/logo.png" alt="Logo" class="h-11" />
+        <img src="/public/assets/logo.png" alt="Logo" class="lg:h-11 h-8" />
     </div>
-    <div class="hidden md:flex items-center gap-8">
+
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex items-center md:gap-4 lg:gap-8 gap:5">
         <a href="/" class="hover:text-blue-500 transition duration-300"
             >AI Solutions</a
         >
@@ -38,46 +153,49 @@
             >Contact Us</a
         >
     </div>
-    <!-- Make the hamburger button visible for both mobile and tablet views -->
+
+    <!-- Hamburger Button for Mobile -->
     <div class="md:hidden">
-        <button id="nav-toggle" class="focus:outline-none">
-            <!-- Icon for hamburger menu -->
-            &#9776;
+        <button id="nav-toggle" class="hamburger focus:outline-none">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
         </button>
     </div>
 </div>
 
 <!-- Mobile Navigation -->
-<div id="mobile-nav" class="">
-    <div
-        class="absolute top-0 left-0 w-full bg-black text-blue shadow-lg flex flex-col items-center justify-center gap-4 lg:hidden"
-    >
-        <a href="/" class="py-2 hover:text-blue-500 transition duration-300"
-            >AI Solutions</a
-        >
-        <a href="/" class="py-2 hover:text-blue-500 transition duration-300"
-            >Services</a
-        >
-        <a href="/" class="py-2 hover:text-blue-500 transition duration-300"
-            >Industries</a
-        >
-        <a href="/" class="py-2 hover:text-blue-500 transition duration-300"
-            >Works</a
-        >
-        <a href="/" class="py-2 hover:text-blue-500 transition duration-300"
-            >About</a
-        >
-        <a href="/" class="py-2 hover:text-blue-500 transition duration-300"
-            >Blogs</a
-        >
-        <a href="/" class="py-2 hover:text-blue-500 transition duration-300"
-            >Career</a
-        >
-        <a
-            href="/"
-            class="rounded-full bg-[#14AED5] px-4 py-1 text-white hover:bg-[#108EB0] transition duration-300"
-            >Contact Us</a
-        >
+<div id="mobile-nav">
+    <div class="mobile-menu-glass">
+        <div class="menu-options">
+            <!-- Mobile Menu Links -->
+            <a href="/" class="menu-link text-2xl py-2 transition duration-300"
+                >AI Solutions</a
+            >
+            <a href="/" class="menu-link text-2xl py-2 transition duration-300"
+                >Services</a
+            >
+            <a href="/" class="menu-link text-2xl py-2 transition duration-300"
+                >Industries</a
+            >
+            <a href="/" class="menu-link text-2xl py-2 transition duration-300"
+                >Works</a
+            >
+            <a href="/" class="menu-link text-2xl py-2 transition duration-300"
+                >About</a
+            >
+            <a href="/" class="menu-link text-2xl py-2 transition duration-300"
+                >Blogs</a
+            >
+            <a href="/" class="menu-link text-2xl py-2 transition duration-300"
+                >Career</a
+            >
+            <a
+                href="/"
+                class="menu-link text-2xl mt-4 rounded-full bg-[#14AED5] px-6 py-2 text-white  transition duration-300"
+                >Contact Us</a
+            >
+        </div>
     </div>
 </div>
 
@@ -85,14 +203,12 @@
     document.addEventListener("DOMContentLoaded", () => {
         const navToggle = document.getElementById("nav-toggle");
         const mobileNav = document.getElementById("mobile-nav");
+        const hamburger = document.querySelector(".hamburger");
 
+        // Toggle mobile menu
         navToggle.addEventListener("click", () => {
-            mobileNav.classList.toggle("active"); // Toggle active class
-            if (mobileNav.classList.contains("active")) {
-                mobileNav.style.transform = "translateX(0)"; // Slide in
-            } else {
-                mobileNav.style.transform = "translateX(-100%)"; // Slide out
-            }
+            mobileNav.classList.toggle("active");
+            hamburger.classList.toggle("active");
         });
     });
 </script>

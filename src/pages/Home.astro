@@ -1,0 +1,61 @@
+---
+import Hero from "@/components/Home/Hero.astro";
+import SwiperJsx from "@/components/Home/SwiperJsx";
+
+import TextAnimation from "@/components/Home/TextAnimation.astro";
+import Carousel from "@/components/Home/Carousel.astro";
+import OurClients from "@/components/Home/OurClients.astro";
+import UpSlider from "@/components/Home/UpSlider.astro";
+import OurServices from "@/components/Home/OurServices.astro";
+import IndustriesWeServe from "@/components/Home/IndustriesWeServe.astro";
+import OurPartners from "@/components/Home/OurPartners.astro";
+import Blogs from "@/components/Home/Blogs.astro";
+import CustomerSlider from "@/components/Home/CustomerSlider.jsx";
+import CarouselSwiper from "@/components/Home/CarouselSwiper.jsx";
+import Ourclient from "@/components/Home/Ourclient.astro";
+---
+
+<div>
+    <!-- <Swiper client:load /> //test -->
+    <SwiperJsx client:load />
+    <!-- <Hero client:load /> // old  -->
+</div><div class="">
+    <div class="">
+        <TextAnimation />
+    </div>
+</div>
+
+<div class="">
+    <CarouselSwiper client:load />
+    <!-- <Carousel /> -->
+</div>
+
+<div>
+    <OurClients client:load />
+    <!-- <Ourclient client:load /> -->
+</div>
+
+<div>
+    <UpSlider />
+</div>
+<div class="container mx-auto">
+    <div class="">
+        <OurServices />
+    </div>
+
+    <div class="">
+        <IndustriesWeServe />
+    </div>
+
+    <div class="">
+        <OurPartners />
+    </div>
+
+    <div class="">
+        <CustomerSlider client:load />
+    </div>
+
+    <div class="">
+        <Blogs />
+    </div>
+</div>

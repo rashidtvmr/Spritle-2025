@@ -128,7 +128,7 @@ const UpSliderData = [
 <style>
   .upSliderSlide {
     opacity: 0;
-    transform: scale(0.9);
+    transform: translateY(50px) scale(1); /* Start lower and scaled down */
     transition:
       opacity 0.7s ease-out,
       transform 0.7s ease-in-out;
@@ -141,6 +141,6 @@ const UpSliderData = [
   /* Ensure first slide is visible initially */
   .upSliderSlide:first-child {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0) scale(1); /* Slide up and scale to normal */
   }
 </style>

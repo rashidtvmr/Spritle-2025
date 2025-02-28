@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@100..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
+
+
+
+
 
 @import "tailwindcss";
 
@@ -18,4 +23,12 @@ body {
 
 body::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Opera */
+}
+
+.text-heading{
+  @apply text-2xl lg:text-5xl text-[#E2E2E2] font-dm-sans
+}
+
+.text-subheading {
+  @apply text-[#B0B0B0] text-sm font-extralight font-dm-sans  md:text-2xl  lg:text-4xl lg:leading-[41.25px] md:leading-[34.27px] sm:leading-9.5;
 }
