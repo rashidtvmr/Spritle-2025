@@ -1,4 +1,5 @@
 ---
+// Data for the slider
 const UpSliderData = [
   {
     id: "slide1",
@@ -6,14 +7,14 @@ const UpSliderData = [
     description:
       "Efficiently managing a large team demands a solid technological foundation. Our services offer robust, secure, and user-friendly solutions tailored to your needs. Picture a team of over 150 members, seamlessly collaborating with the aid of precisely crafted tools. This is the vision of future work that we're adept at bringing to fruition for enterprises.",
     p: "Large enterprise businesses that became our clients : ",
-    image: "/assets/enterprise1.png",
+    image: "../assets/enterprise1.png",
     logos: [
-      "/assets/nestlelogo.png",
-      "/assets/hyundailogo.png",
-      "/assets/stengglogo.png",
-      "/assets/panasoniclogo.png",
-      "/assets/c2.png",
-      "/assets/standfordlogo.png",
+      "../assets/nestlelogo.png",
+      "../assets/hyundailogo.png",
+      "../assets/stengglogo.png",
+      "../assets/panasoniclogo.png",
+      "../assets/c2.png",
+      "../assets/standfordlogo.png",
     ],
   },
   {
@@ -22,8 +23,8 @@ const UpSliderData = [
     description:
       "Embrace growth with our flexible tech solutions tailored for mid-level companies. Stay agile as your business evolves, empowered by our support every step of the way, so you can focus on what truly matters—achieving your goals",
     p: "Up-and-coming companies we partnered with early on  ",
-    image: "/assets/enterprise2.png",
-    logos: ["/assets/trianglelogo.png", "/assets/pinnaclelogo.png"],
+    image: "../assets/enterprise2.png",
+    logos: ["../assets/trianglelogo.png", "../assets/pinnaclelogo.png"],
   },
   {
     id: "slide3",
@@ -31,12 +32,12 @@ const UpSliderData = [
     description:
       "Are you a startup grappling with managing both your creative concepts and technical infrastructure? We understand the struggle. Our user-friendly solutions are designed to adapt as your startup expands. Focus on your passion while we handle the tech, accelerating your journey to realizing your dreams.",
     p: "Young companies we partnered with",
-    image: "/assets/enterprise3.png",
+    image: "../assets/enterprise3.png",
     logos: [
-      "/assets/treelogo.png",
-      "/assets/timesportslogo.png",
-      "/assets/innerkraftlogo.png",
-      "/assets/haleonlogo.png",
+      "../assets/treelogo.png",
+      "../assets/timesportslogo.png",
+      "../assets/innerkraftlogo.png",
+      "../assets/haleonlogo.png",
     ],
   },
 ];
@@ -47,23 +48,23 @@ const UpSliderData = [
 >
   <div
     id="upSliderWrapper"
-    class="md:w-[90%] h-[80vh] lg:w-full flex flex-col snap-y snap-mandatory overflow-y-scroll xl:h-[80vh] scroll-smooth relative"
+    class="md:w-[90%] h-[80vh] lg:w-full flex flex-col snap-y snap-mandatory overflow-y-scroll xl:h-[80vh] scroll-smooth relative mt-40"
     style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
   >
     {
       UpSliderData.map((slide, index) => (
         <div
           id={`slide-${index}`}
-          class="upSliderSlide flex max-lg:flex-col lg:flex-row-reverse w-full h-[80vh] flex-shrink-0 items-center justify-between px-6 lg:px-10 bg-black rounded-lg overflow-hidden gap-[52px] opacity-0 scale-90 transition-transform duration-700 ease-in-out "
+          class={`upSliderSlide slide-${index} flex max-lg:flex-col lg:flex-row-reverse w-full h-[80vh] flex-shrink-0 items-center justify-between px-6 lg:px-10 bg-black rounded-lg overflow-hidden md:gap-[52px] gap-[0px]`}
         >
-          <div class="max-lg:w-full max-lg:order-1 w-1/2 flex justify-center relative">
+          <div class="max-lg:w-full max-lg:order-1 w-1/2 flex justify-center relative ">
             <img
               src={slide.image}
               alt="Map"
-              class="max-lg:p-3 md:p-5 lg:p-0 max-lg:h-[40vh] h-[20vh] md:h-[35vh] lg:h-[469px] lg:w-[750px] w-full rounded-lg shadow-lg object-contain object-center"
+              class="max-lg:p-3 md:p-5 lg:p-0 max-lg:h-[30vh] h-[20vh] md:h-[35vh] lg:h-[469px] lg:w-[750px] w-full rounded-lg shadow-lg object-contain object-center "
             />
           </div>
-          <div class="max-lg:w-full max-lg:order-2 max-lg:pt-8 w-1/2 space-y-10 ml-10">
+          <div class="max-lg:w-full max-lg:order-2 max-lg:pt-8  w-1/2 md:space-y-10 space-y-7  md:ml-10 ml-0 relative bottom-[80px] md:bottom-[0px]">
             <h2 class="text-l lg:text-[36px] font-stretch-30% text-white">
               {slide.title}
             </h2>
@@ -87,34 +88,42 @@ const UpSliderData = [
   </div>
 </div>
 
+<style>
+  /* Base style for all slides */
+  .upSliderSlide {
+    position: sticky;
+    top: 0;
+    will-change: transform, filter;
+    transition:
+      transform 0.5s ease-out,
+      filter 0.5s ease-out;
+  }
+
+  /* Custom scrollbar hiding */
+  #upSliderWrapper::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll(".upSliderSlide");
 
-    // Set initial z-index for proper stacking
-    slides.forEach((slide, index) => {
-      slide.style.position = "sticky";
-      slide.style.top = "0";
-      slide.style.zIndex = "1"; // Default behind others
-    });
-
     const observerOptions = {
-      root: null,
+      root: document.querySelector("#upSliderWrapper"),
       rootMargin: "0px",
-      threshold: 0.8,
+      threshold: 0.7, // Trigger when 50% of the slide is visible
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        const slide = entry.target;
+        const slide = entry.target as HTMLElement; // Type assertion here
         if (entry.isIntersecting) {
-          slide.style.opacity = "1";
           slide.style.transform = "scale(1)";
-          slide.style.zIndex = "10"; // Bring the current slide on top
+          slide.style.filter = "grayscale(0%)";
         } else {
-          slide.style.opacity = "0";
-          slide.style.transform = "scale(0.9)";
-          slide.style.zIndex = "1"; // Push other slides behind
+          slide.style.transform = "scale(0.8)";
+          slide.style.filter = "grayscale(80%)";
         }
       });
     }, observerOptions);
@@ -124,23 +133,3 @@ const UpSliderData = [
     });
   });
 </script>
-
-<style>
-  .upSliderSlide {
-    opacity: 0;
-    transform: translateY(50px) scale(1); /* Start lower and scaled down */
-    transition:
-      opacity 0.7s ease-out,
-      transform 0.7s ease-in-out;
-    position: sticky;
-    top: 0;
-    will-change: transform, opacity;
-    z-index: 1;
-  }
-
-  /* Ensure first slide is visible initially */
-  .upSliderSlide:first-child {
-    opacity: 1;
-    transform: translateY(0) scale(1); /* Slide up and scale to normal */
-  }
-</style>

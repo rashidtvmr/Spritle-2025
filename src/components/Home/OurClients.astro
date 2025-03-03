@@ -4,9 +4,13 @@
             "linear-gradient(to bottom, #20202066, #00000047, #17171766)",
     }}
 >
-    <div class="clients-container py-5 mx-auto my-auto container">
+    <div
+        class="clients-container mx-auto container md:py-15 py-5 mt-10 md:mt-0"
+    >
         <!-- Adjust height for tablet screens (md) -->
-        <div class="clients-content space-y-5 h-[30vh] md:h-[80vh] lg:h-[80vh]  w-[100%] pl-6 ">
+        <div
+            class="clients-content space-y-5 h-[30vh] md:h-[80vh] lg:h-[80vh] w-[100%] pl-6"
+        >
             <div class="clients-heading text-heading">Our Clients</div>
             <p
                 class="clients-subheading max-w-100% mb-0 md:mb-10 text-subheading"
@@ -16,7 +20,7 @@
 
             <!-- Desktop/Tablet Grid Layout -->
             <div
-                class="clients-logo-grid hidden md:flex flex-col items-center justify-center h-auto w-auto p-5 md:p-5  "
+                class="clients-logo-grid hidden md:flex flex-col items-center justify-center h-auto w-auto p-5 md:p-5"
             >
                 <div
                     id="clients-logo-container"
@@ -26,7 +30,9 @@
             </div>
 
             <!-- Mobile Slider -->
-            <div class="clients-logo-slider md:hidden swiper h-auto w-full mt-10">
+            <div
+                class="clients-logo-slider md:hidden swiper h-auto w-full mt-10"
+            >
                 <div
                     class="clients-swiper-wrapper swiper-wrapper"
                     id="clients-logo-container-mobile"
@@ -59,30 +65,34 @@
             ];
 
             const container = document.getElementById("clients-logo-container");
-            container.innerHTML = logos
-                .map(
-                    (logo) =>
-                        `<img src="/public/assets/${logo}" alt="${logo.split(".")[0]}" class="clients-logo mx-auto size-30 lg:size-40 ${
-                            logo === "nanny.png" ? "max-h-30 pb-10" : "max-h-24"
-                        } object-contain">`,
-                )
-                .join("");
+            if (container) {
+                container.innerHTML = logos
+                    .map(
+                        (logo) =>
+                            `<img src="/public/assets/${logo}" alt="${logo.split(".")[0]}" class="clients-logo mx-auto size-30 lg:size-40 ${
+                                logo === "nanny.png"
+                                    ? "max-h-30 pb-10"
+                                    : "max-h-24"
+                            } object-contain">`,
+                    )
+                    .join("");
+            }
 
             const mobileContainer = document.getElementById(
                 "clients-logo-container-mobile",
             );
-            mobileContainer.innerHTML = logos
-                .map(
-                    (logo) =>
-                        `<div class="clients-swiper-slide swiper-slide flex items-center justify-center ">
-                            <img src="/public/assets/${logo}" alt="${logo.split(".")[0]}" class="clients-logo mx-auto w-auto h-auto md:hidden ${
-                                logo === "nanny.png"
-                                    ? "max-h-35 pb-5"
-                                    : "max-h-24"
-                            } object-contain">
-                        </div>`,
-                )
-                .join("");
+            if (mobileContainer) {
+                mobileContainer.innerHTML = logos
+                    .map(
+                        (logo) =>
+                            `<div class="clients-swiper-slide swiper-slide flex items-center justify-center ">
+                        <img src="/public/assets/${logo}" alt="${logo.split(".")[0]}" class="clients-logo mx-auto w-auto h-auto md:hidden ${
+                            logo === "nanny.png" ? "max-h-35 pb-5" : "max-h-24"
+                        } object-contain">
+                    </div>`,
+                    )
+                    .join("");
+            }
 
             if (window.innerWidth < 768) {
                 const swiper = new Swiper(".clients-logo-slider", {
@@ -97,6 +107,7 @@
                 });
             }
         });
+
         import Swiper from "swiper";
         import "swiper/css";
         import "swiper/css/navigation";

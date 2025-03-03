@@ -11,27 +11,27 @@ const CarouselSwiper = () => {
 
   const sliderItems = [
     {
-      img: "/assets/Rectangle 93092.png",
+      img: "../assets/Rectangle 93092.png",
       text: "How we helped Nestle create personalized nutrition through genetic insights",
     },
     {
-      img: "/assets/flight.png",
+      img: "../assets/flight.png",
       text: "Smart Airport Management: Track, Maintain, and Optimize with Precision",
     },
     {
-      img: "/assets/run.png",
+      img: "../assets/run.png",
       text: "A platform for managing and coordinating every sports meet across USA",
     },
     {
-      img: "/assets/van.png",
+      img: "../assets/van.png",
       text: "A major logistics company in the US achieved a 40% reduction in response time.",
     },
     {
-      img: "/assets/Rectangle 93092.png",
+      img: "../assets/Rectangle 93092.png",
       text: "Instant Access to Top Cancer Specialists Across the World – Safe & Effortless",
     },
     {
-      img: "/assets/computer.png",
+      img: "../assets/computer.png",
       text: "Unlocking Education with Smooth, Engaging Digital Learning",
     },
   ];
@@ -109,7 +109,7 @@ const CarouselSwiper = () => {
             } w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] p-0 sm:p-2`}
             disabled={isBeginning}
           >
-            <img src="/assets/arrowcarousel.png" alt="Previous" className="w-4 p-1 sm:w-5 md:w-6" />
+            <img src="../assets/arrowcarousel.png" alt="Previous" className="w-4 p-1 sm:w-5 md:w-6" />
           </button>
           <button
             id="nextBtn"
@@ -118,7 +118,7 @@ const CarouselSwiper = () => {
             } w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] p-2 sm:p-2`}
             disabled={isEnd}
           >
-            <img src="/assets/arrowcar2.png" alt="Next" className="w-4 p-1 sm:w-5 md:w-6" />
+            <img src="../assets/arrowcar2.png" alt="Next" className="w-4 p-1 sm:w-5 md:w-6" />
           </button>
         </div>
       </div>
