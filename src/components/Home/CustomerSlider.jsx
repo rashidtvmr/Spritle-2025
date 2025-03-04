@@ -82,12 +82,12 @@ const CustomerFeedback = () => {
   }, []);
 
   return (
-<div className="space-y-1 lg:space-y-6 md:space-y-3 lg:mt-40 md:mt:20 mt-20">      <div className="text-center md:text-left mb-8 flex flex-col md:flex-row justify-between">
+<div className="space-y-1 lg:space-y-6 md:space-y-3 lg:mt-40 md:mt:20 mt-20 container mx-auto px-5">      <div className="text-center md:text-left mb-8 flex flex-col md:flex-row justify-between">
         <div className="">
-          <h2 className="text-heading mb-0 md:mb-4">
+          <h2 className="text-heading text-primary font-medium mb-0 md:mb-4">
             Our Customer Feedback
           </h2>
-          <p className="text-subheading max-w-[968px] mb-4 md:mb-1">
+          <p className="text-subheading max-w-[968px] mb-4 md:mb-1 font-light text-secondary">
             Don't take our word for it. Trust our customers
           </p>
         </div>
@@ -113,7 +113,7 @@ const CustomerFeedback = () => {
         </div>
       </div>
 
-      <Swiper
+    <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         modules={[Pagination]}
         spaceBetween={16}
@@ -136,18 +136,18 @@ const CustomerFeedback = () => {
                 <img src={t.image} alt={t.name} className="w-16 h-16 lg:w-[80px] lg:h-[80px] mb-4 md:mb-0" />
                 <div className="flex space-x-1">
                   {'★'.repeat(t.rating).padEnd(5, '☆').split('').map((s, i) => (
-                    <span key={i} className={`${s === '★' ? 'text-yellow-500' : 'text-gray-500'} text-[24px] md:text-[32px]`}>
+                    <span key={i} className={`${s === '★' ? 'text-yellow-500' : 'text-gray-500'} text-3xl md:text-3xl`}>
                       {s}
                     </span>
                   ))}
                 </div>
               </div>
               <div className="flex flex-col items-center text-center md:items-start md:text-left">
-                <h3 className="font-[Manrope] font-semibold text-[24px] md:text-[26px] lg:text-[29.33px] leading-[32px] md:leading-[36px] lg:leading-[40.07px] tracking-[2%] text-center">
+                <h3 className="font-[Manrope] font-semibold text-subtitle leading-[32px] md:leading-[36px] lg:leading-[40.07px] tracking-[2%] text-center">
                   {t.name}
                 </h3>
                 <p
-                  className="font-[DM_Sans] font-medium text-[14px] leading-[20px] tracking-[2%] sm:text-[16px] sm:leading-[22px] md:text-[18px] md:leading-[24px] lg:text-[21.33px] lg:leading-[27.78px] lg:max-w-[483.56px] lg:max-h-[173.33px] md:max-h-[113.33px] overflow-hidden text-ellipsis m-1 md:m-6"
+                  className="font-[DM_Sans] font-medium  leading-[20px] tracking-[2%]  sm:leading-[22px]  md:leading-[24px]  lg:leading-[27.78px] lg:max-w-[483.56px] lg:max-h-[173.33px] md:max-h-[113.33px] overflow-hidden text-ellipsis m-1 md:m-6 card-inside"
                   style={{
                     display: '-webkit-box',
                     WebkitLineClamp: 6,
@@ -161,6 +161,7 @@ const CustomerFeedback = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
 
       <div className="flex justify-center gap-2 mt-10">
         {[...Array(Math.ceil(testimonials.length / 3)).keys()].map((btnIndex) => (

@@ -44,8 +44,8 @@ const CarouselSwiper = () => {
   return (
     <div className="md:space-y-5 space-y-0 lg:pl-20 md:pl-10 pl-5">
       {/* Heading Section */}
-      <div className="font-dm-sans text-heading">Transforming Business</div>
-      <p className="text-subheading w-full md:mb-10 mb-1">
+      <div className="font-dm-sans text-heading text-primary">Transforming Business</div>
+      <p className="text-subheading text-secondary w-full md:mb-10 mb-1">
         Transform your business with generative AI → We help businesses start their digital journey
       </p>
 
@@ -90,7 +90,7 @@ const CarouselSwiper = () => {
                       alt="Slide Image"
                       className="w-full h-full object-cover rounded-lg shadow-lg"
                     />
-                    <div className="absolute bottom-7 left-1/2 xl:left-3/5 xl:-translate-x-[60%] transform -translate-x-1/2 transition  py-2 text-white text-lg sm:text-l md:text-xl lg:text-2xl xl:text-[48px] leading-6 sm:leading-8 md:leading-5 lg:leading-[40px] xl:leading-[72px] tracking-tight w-[90%] sm:w-[80%] md:w-[300px] lg:w-[391px] xl:w-[691px] hover:shadow-2xl hover:transition duration-700  slider-text font-[poppins]">
+                    <div className="absolute bottom-7 left-1/2 xl:left-3/5 xl:-translate-x-[60%] transform -translate-x-1/2 transition  py-2 text-white text-lg text-heading leading-6 sm:leading-8 md:leading-5 lg:leading-[40px] xl:leading-[72px] tracking-tight w-[90%] sm:w-[80%] md:w-[300px] lg:w-[391px] xl:w-[691px] hover:shadow-2xl hover:transition duration-700  slider-text font-[poppins]">
                       {item.text}
                     </div>
                   </div>

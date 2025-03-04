@@ -79,7 +79,7 @@ const ImageSlider = () => {
                 className="flex justify-center items-center mb-[10px] transition-opacity duration-500"
                 style={{ opacity: activeIndex === index ? 1 : 0, width: '100%', maxWidth: '900px', maxHeight: '180px', margin: '0 auto' }}
               >
-                <p className="text-[#F5F5F5] text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-[12px] sm:text-lg md:text-xl lg:text-[48px] leading-[1.1] xl:leading-[62.5px] lg:pt-10 pt-0">
+                <p className="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-heading leading-[1.1] xl:leading-[62.5px] lg:pt-10 pt-0">
                   {slide.text}
                 </p>
               </div>

@@ -6,6 +6,19 @@
 
 
 @import "tailwindcss";
+@tailwind utilities; 
+
+
+@layer utilities {
+  .text-primary {
+    @apply text-[#E2E2E2];
+  }
+
+  .text-secondary {
+    @apply text-[#B0B0B0];
+  }
+}
+
 
 @theme {
     --font-manrope: "Manrope", sans-serif;
@@ -25,10 +38,21 @@ body::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Opera */
 }
 
-.text-heading{
-  @apply text-2xl lg:text-5xl text-[#E2E2E2] font-dm-sans
+.text-heading {
+  @apply text-2xl lg:text-5xl font-dm-sans;
 }
 
 .text-subheading {
-  @apply text-[#B0B0B0] text-sm font-extralight font-dm-sans  md:text-2xl  lg:text-4xl lg:leading-[41.25px] md:leading-[34.27px] sm:leading-9.5;
+  @apply text-base md:text-2xl lg:text-4xl ;
+}
+.card-inside{
+@apply text-base  lg:text-2xl
+}
+.text-title{
+    @apply text-4xl lg:text-8xl ;
+
+}
+.text-subtitle{
+    @apply text-xl lg:text-3xl ;
+
 }

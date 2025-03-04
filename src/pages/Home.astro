@@ -1,6 +1,5 @@
 ---
 
-import SwiperJsx from "../components/Home/SwiperJsx";
 
 import TextAnimation from "../components/Home/TextAnimation.astro";
 import OurClients from "../components/Home/OurClients.astro";
@@ -10,12 +9,15 @@ import IndustriesWeServe from "../components/Home/IndustriesWeServe.astro";
 import OurPartners from "../components/Home/OurPartners.astro";
 import Blogs from "../components/Home/Blogs.astro";
 import CustomerSlider from "../components/Home/CustomerSlider.jsx";
-import CarouselSwiper from "../components/Home/CarouselSwiper.jsx";
+// import CarouselSwiper from "../components/Home/CarouselSwiper.jsx";
+import Swiper from "../components/Home/Swiper.astro";
+import Carousel from "../components/Home/Carousel.astro";
+import Customer from "../components/Home/Customer.astro"
 ---
 
 <div>
-    <!-- <Swiper client:load /> //test -->
-    <SwiperJsx client:load />
+    <Swiper client:load /> 
+    <!-- <SwiperJsx client:load /> -->
     <!-- <Hero client:load /> // old  -->
 </div><div class="">
     <div class="">
@@ -24,18 +26,18 @@ import CarouselSwiper from "../components/Home/CarouselSwiper.jsx";
 </div>
 
 <div class="">
-    <CarouselSwiper client:load />
-    <!-- <Carousel /> -->
+    <!-- <CarouselSwiper client:load /> -->
+    <Carousel />
 </div>
 
 <div>
-    <OurClients client:load />
+    <OurClients  />
 </div>
 
 <div>
     <UpSlider />
 </div>
-<div class="container mx-auto">
+<div class="">
     <div class="">
         <OurServices />
     </div>
@@ -49,7 +51,8 @@ import CarouselSwiper from "../components/Home/CarouselSwiper.jsx";
     </div>
 
     <div class="">
-        <CustomerSlider client:load />
+        <!-- <CustomerSlider client:load /> -->
+         <Customer/>
     </div>
 
     <div class="">

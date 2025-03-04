@@ -2,19 +2,23 @@
 import ServiceLink from "./ServiceLink.astro";
 ---
 
-<div class="space-y-1 lg:space-y-6 md:space-y-3  md:mt:20 mt-15">
-  <div class="max-w-[968px] md:pb-5 pb-1">
-    <div class="text-heading mb-0 md:mb-4">Our Services</div>
-    <p class="text-subheading">
+<div
+  class="space-y-1 lg:space-y-6 md:space-y-3 md:mt:20 mt-15 container mx-auto"
+>
+  <div class="max-w-[968px] md:pb-5 pb-1 px-5">
+    <div class="text-heading mb-0 md:mb-4 text-primary font-medium">
+      Our Services
+    </div>
+    <p class="text-subheading text-secondary font-light">
       Spritle Software transforms businesses by delivering cutting-edge
       AIsolutions,seamless digital experiences,and data-driven insights that
       fuel growth and operational excellence.
     </p>
   </div>
 
-  <div class="m-5">
+  <div class="md:m-15 m-5">
     <div
-      class="grid md:grid-cols-2 grid-cols-1 gap-y-6  md:gap-x-12 md:gap-y-20 text-[20px] lg:text-[34px]"
+      class="grid md:grid-cols-2 grid-cols-1 gap-y-6 md:gap-x-12 md:gap-y-20 text-subheading font-medium"
     >
       <ServiceLink text="Gen AI Solution" link="/" />
       <ServiceLink text="Vision AI Solution" link="/" />

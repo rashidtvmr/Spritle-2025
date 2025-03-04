@@ -7,110 +7,177 @@
     <div
         class="clients-container mx-auto container md:py-15 py-5 mt-10 md:mt-0"
     >
-        <!-- Adjust height for tablet screens (md) -->
         <div
-            class="clients-content space-y-5 h-[30vh] md:h-[80vh] lg:h-[80vh] w-[100%] pl-6"
+            class="clients-content space-y-5 h-[30vh] md:h-[80vh] lg:h-[80vh] w-[100%] pl-0 md:pl-6"
         >
-            <div class="clients-heading text-heading">Our Clients</div>
+            <div class="clients-heading text-heading text-primary px-5">
+                Our Clients
+            </div>
             <p
-                class="clients-subheading max-w-100% mb-0 md:mb-10 text-subheading"
+                class="clients-subheading max-w-100% mb-0 md:mb-10 text-secondary text-subheading px-5"
             >
                 Transform your business with generative AI
             </p>
 
-            <!-- Desktop/Tablet Grid Layout -->
+            <div class="marquee md:hidden">
+                <ul class="marquee-content">
+                    <li>
+                        <img src="/public/assets/nestle.png" alt="Nestle" />
+                    </li>
+                    <li>
+                        <img src="/public/assets/stanford.png" alt="Stanford" />
+                    </li>
+                    <li>
+                        <img src="/public/assets/hyundai.png" alt="Hyundai" />
+                    </li>
+                    <li>
+                        <img
+                            src="/public/assets/panasonic.png"
+                            alt="Panasonic"
+                        />
+                    </li>
+                    <li>
+                        <img src="/public/assets/larsen.png" alt="Larsen" />
+                    </li>
+                    <li>
+                        <img src="/public/assets/stengg.png" alt="STEngg" />
+                    </li>
+                    <li>
+                        <img src="/public/assets/motorola.png" alt="Motorola" />
+                    </li>
+                    <li><img src="/public/assets/un.png" alt="UN" /></li>
+                    <li><img src="/public/assets/re.png" alt="RE" /></li>
+                    <li>
+                        <img src="/public/assets/changi.png" alt="Changi" />
+                    </li>
+                    <li>
+                        <img
+                            src="/public/assets/livingmatrix.png"
+                            alt="Living Matrix"
+                        />
+                    </li>
+                    <li><img src="/public/assets/reach.png" alt="Reach" /></li>
+                    <li>
+                        <img
+                            src="/public/assets/innerkraft.png"
+                            alt="Innerkraft"
+                        />
+                    </li>
+                    <li><img src="/public/assets/moddo.png" alt="Moddo" /></li>
+                    <li><img src="/public/assets/share.png" alt="Share" /></li>
+                    <li><img src="/public/assets/nanny.png" alt="Nanny" /></li>
+                </ul>
+            </div>
+
             <div
                 class="clients-logo-grid hidden md:flex flex-col items-center justify-center h-auto w-auto p-5 md:p-5"
             >
                 <div
                     id="clients-logo-container"
-                    class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 md:gap-x-15 md:gap-y-15 lg:gap-x-15 xl:gap-x-65 ;g:gap-y-15 gap-x-0 gap-y-0 object-cover"
+                    class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 md:gap-x-15 md:gap-y-15 lg:gap-x-15 xl:gap-x-65 lg:gap-y-15 gap-x-0 gap-y-0 object-cover"
                 >
                 </div>
-            </div>
-
-            <!-- Mobile Slider -->
-            <div
-                class="clients-logo-slider md:hidden swiper h-auto w-full mt-10"
-            >
-                <div
-                    class="clients-swiper-wrapper swiper-wrapper"
-                    id="clients-logo-container-mobile"
-                >
-                </div>
-                <div class="clients-swiper-pagination swiper-pagination"></div>
             </div>
         </div>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const logos = [
-                "nestle.png",
-                "stanford.png",
-                "hyundai.png",
-                "panasonic.png",
-                "larsen.png",
-                "stengg.png",
-                "motorola.png",
-                "un.png",
-                "re.png",
-                "changi.png",
-                "livingmatrix.png",
-                "reach.png",
-                "innerkraft.png",
-                "moddo.png",
-                "share.png",
-                "nanny.png",
-            ];
-
-            const container = document.getElementById("clients-logo-container");
-            if (container) {
-                container.innerHTML = logos
-                    .map(
-                        (logo) =>
-                            `<img src="/public/assets/${logo}" alt="${logo.split(".")[0]}" class="clients-logo mx-auto size-30 lg:size-40 ${
-                                logo === "nanny.png"
-                                    ? "max-h-30 pb-10"
-                                    : "max-h-24"
-                            } object-contain">`,
-                    )
-                    .join("");
-            }
-
-            const mobileContainer = document.getElementById(
-                "clients-logo-container-mobile",
-            );
-            if (mobileContainer) {
-                mobileContainer.innerHTML = logos
-                    .map(
-                        (logo) =>
-                            `<div class="clients-swiper-slide swiper-slide flex items-center justify-center ">
-                        <img src="/public/assets/${logo}" alt="${logo.split(".")[0]}" class="clients-logo mx-auto w-auto h-auto md:hidden ${
-                            logo === "nanny.png" ? "max-h-35 pb-5" : "max-h-24"
-                        } object-contain">
-                    </div>`,
-                    )
-                    .join("");
-            }
-
-            if (window.innerWidth < 768) {
-                const swiper = new Swiper(".clients-logo-slider", {
-                    modules: [Autoplay],
-                    loop: true,
-                    autoplay: {
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    },
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                });
-            }
-        });
-
-        import Swiper from "swiper";
-        import "swiper/css";
-        import "swiper/css/navigation";
-        import { Autoplay } from "swiper/modules";
-    </script>
 </div>
+
+<style>
+    :root {
+        --marquee-width: 100vw;
+        --marquee-height: 26vh;
+        --marquee-elements-displayed: 1;
+        --marquee-element-width: calc(
+            var(--marquee-width) / var(--marquee-elements-displayed)
+        );
+        --marquee-animation-duration: calc(var(--marquee-elements) * 2s);
+    }
+
+    .marquee {
+        width: var(--marquee-width);
+        height: var(--marquee-height);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .marquee-content {
+        list-style: none;
+        height: 100%;
+        display: flex;
+        animation: scrolling var(--marquee-animation-duration) linear infinite;
+    }
+
+    @keyframes scrolling {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(
+                calc(
+                    -1 * var(--marquee-element-width) * var(--marquee-elements)
+                )
+            );
+        }
+    }
+
+    .marquee-content li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: var(--marquee-element-width);
+        max-height: 100%;
+    }
+
+    .marquee-content li img {
+        object-fit: contain;
+    }
+</style>
+
+<script>
+    const root = document.documentElement;
+    const marqueeContent = document.querySelector(".marquee-content");
+
+    root.style.setProperty(
+        "--marquee-elements",
+        marqueeContent.children.length,
+    );
+
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue(
+        "--marquee-elements-displayed",
+    );
+    for (let i = 0; i < marqueeElementsDisplayed; i++) {
+        marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const logos = [
+            "nestle.png",
+            "stanford.png",
+            "hyundai.png",
+            "panasonic.png",
+            "larsen.png",
+            "stengg.png",
+            "motorola.png",
+            "un.png",
+            "re.png",
+            "changi.png",
+            "livingmatrix.png",
+            "reach.png",
+            "innerkraft.png",
+            "moddo.png",
+            "share.png",
+            "nanny.png",
+        ];
+
+        const container = document.getElementById("clients-logo-container");
+        if (container) {
+            container.innerHTML = logos
+                .map(
+                    (logo) =>
+                        `<img src="/public/assets/${logo}" alt="${logo.split(".")[0]}" class="clients-logo mx-auto size-30 lg:size-40 ${logo === "nanny.png" ? "max-h-30 pb-10" : "max-h-24"} object-contain">`,
+                )
+                .join("");
+        }
+    });
+</script>
