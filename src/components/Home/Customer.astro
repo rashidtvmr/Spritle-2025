@@ -1,221 +1,229 @@
 ---
 const testimonials = [
-    {
-        name: "Floyd Miles",
-        rating: 4,
-        description:
-            "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-        image: "/public/assets/star1pic.png",
-    },
-    {
-        name: "Ronald Richards",
-        rating: 5,
-        description:
-            "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-        image: "/public/assets/star2pic.png",
-    },
-    {
-        name: "Savannah Nguyen",
-        rating: 4,
-        description:
-            "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-        image: "/public/assets/starpic3.png",
-    },
-    {
-        name: "Jane Cooper",
-        rating: 5,
-        description:
-            "Exceptional service! The team went above and beyond my expectations.",
-        image: "/public/assets/star2pic.png",
-    },
-    {
-        name: "Robert Fox",
-        rating: 4,
-        description:
-            "Very professional and efficient. The results were exactly what I was looking for.",
-        image: "/public/assets/starpic3.png",
-    },
-    {
-        name: "Leslie Alexander",
-        rating: 5,
-        description:
-            "Outstanding experience from start to finish. The attention to detail was impeccable.",
-        image: "/public/assets/star1pic.png",
-    },
-    {
-        name: "Jenny Wilson",
-        rating: 4,
-        description:
-            "Incredible results! The team was responsive and delivered exactly what we needed.",
-        image: "/public/assets/starpic3.png",
-    },
-    {
-        name: "Wade Warren",
-        rating: 5,
-        description:
-            "Top-notch service and expertise. They made the process smooth and stress-free.",
-        image: "/public/assets/star1pic.png",
-    },
-    {
-        name: "Cameron Wright",
-        rating: 4,
-        description:
-            "Fantastic work! They understood our requirements perfectly and delivered beyond expectations.",
-        image: "/public/assets/star2pic.png",
-    },
+  {
+    name: "Floyd Miles",
+    rating: 4,
+    description:
+      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+    image: "/public/assets/star1pic.png",
+  },
+  {
+    name: "Ronald Richards",
+    rating: 5,
+    description:
+      "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+    image: "/public/assets/star2pic.png",
+  },
+  {
+    name: "Savannah Nguyen",
+    rating: 4,
+    description:
+      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+    image: "/public/assets/starpic3.png",
+  },
+  {
+    name: "Jane Cooper",
+    rating: 5,
+    description:
+      "Exceptional service! The team went above and beyond my expectations.",
+    image: "/public/assets/star2pic.png",
+  },
+  {
+    name: "Robert Fox",
+    rating: 4,
+    description:
+      "Very professional and efficient. The results were exactly what I was looking for.",
+    image: "/public/assets/starpic3.png",
+  },
+  {
+    name: "Leslie Alexander",
+    rating: 5,
+    description:
+      "Outstanding experience from start to finish. The attention to detail was impeccable.",
+    image: "/public/assets/star1pic.png",
+  },
+  {
+    name: "Jenny Wilson",
+    rating: 4,
+    description:
+      "Incredible results! The team was responsive and delivered exactly what we needed.",
+    image: "/public/assets/starpic3.png",
+  },
+  {
+    name: "Wade Warren",
+    rating: 5,
+    description:
+      "Top-notch service and expertise. They made the process smooth and stress-free.",
+    image: "/public/assets/star1pic.png",
+  },
+  {
+    name: "Cameron Wright",
+    rating: 4,
+    description:
+      "Fantastic work! They understood our requirements perfectly and delivered beyond expectations.",
+    image: "/public/assets/star2pic.png",
+  },
 ];
 ---
 
 <div
-    class="space-y-1 lg:space-y-6 md:space-y-3 lg:mt-40 md:mt:20 mt-20 container mx-auto  overflow-hidden"
+  class="space-y-1 lg:space-y-6 md:space-y-3 lg:mt-40 md:mt:20 mt-20 px-5 container md:px-0 overflow-hidden"
 >
-    <div
-        class="text-center md:text-left mb-8 flex flex-col md:flex-row justify-between"
-    >
-        <div>
-            <h2 class="text-heading text-primary font-medium mb-0 md:mb-4">
-                Our Customer Feedback
-            </h2>
-            <p
-                class="text-subheading max-w-[968px] mb-4 md:mb-1 font-light text-secondary"
-            >
-                Don't take our word for it. Trust our customers
-            </p>
-        </div>
-        <div class="flex gap-4 justify-center md:justify-start">
-            <button
-                id="prevButton"
-                class="border hover:bg-gray-600 text-white font-bold rounded-md focus:outline-none border-[1.33px] w-[123px] h-[48px] p-2 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-                <span class="text-[#9BD609]">&lt;</span> Previous
-            </button>
-            <button
-                id="nextButton"
-                class="border hover:bg-gray-600 text-white font-bold rounded-md focus:outline-none border-[1.33px] w-[113px] h-[48px] p-2 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-                Next <span class="text-[#9BD609]">&gt;</span>
-            </button>
-        </div>
+  <div
+    class="text-center md:text-left mb-8 flex flex-col md:flex-row justify-between"
+  >
+    <div>
+      <h2 class="text-heading text-primary font-medium mb-0 md:mb-4">
+        Our Customer Feedback
+      </h2>
+      <p
+        class="text-subheading max-w-[968px] mb-4 md:mb-1 font-light text-secondary"
+      >
+        Don't take our word for it. Trust our customers
+      </p>
     </div>
-    <div class="swiper-container relative overflow-hidden ">
-        <div class="swiper-wrapper">
-            {
-                testimonials.map((t, index) => (
-                    <div class="swiper-slide" key={index}>
-                        <div class=" rounded-lg p-6 border flex flex-col md:h-[300px] lg:h-[389px] pb-3 ">
-                            <div class="flex flex-col items-center justify-center space-y-2 md:flex-row md:justify-between md:items-center pb-4">
-                                <img
-                                    src={t.image}
-                                    alt={t.name}
-                                    class="w-16 h-16 lg:w-[80px] lg:h-[80px] mb-4 md:mb-0"
-                                />
-                                <div class="flex space-x-1">
-                                    {"★"
-                                        .repeat(t.rating)
-                                        .padEnd(5, "☆")
-                                        .split("")
-                                        .map((s, i) => (
-                                            <span
-                                                key={i}
-                                                class={`${s === "★" ? "text-yellow-500" : "text-gray-500"} text-3xl md:text-3xl`}
-                                            >
-                                                {s}
-                                            </span>
-                                        ))}
-                                </div>
-                            </div>
-                            <div class="flex flex-col items-center text-center md:items-start md:text-left">
-                                <h3 class="font-[Manrope] font-semibold text-subtitle leading-[32px] md:leading-[36px] lg:leading-[40.07px] tracking-[2%] text-center">
-                                    {t.name}
-                                </h3>
-                                <p
-                                    class="font-[DM_Sans] font-light  leading-[20px] tracking-[2%]  sm:leading-[22px]  md:leading-[24px]  lg:leading-[27.78px] lg:max-w-[483.56px] lg:max-h-[173.33px] md:max-h-[113.33px] overflow-hidden text-ellipsis m-1 md:m-6 card-inside"
-                                    style={{
-                                        display: "-webkit-box",
-                                        WebkitLineClamp: 6,
-                                        WebkitBoxOrient: "vertical",
-                                    }}
-                                >
-                                    {t.description}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                ))
-            }
-        </div>
-        <!-- Swiper Pagination -->
-        <div class="swiper-pagination"></div>
+    <div class="flex gap-4 justify-center md:justify-start">
+      <button
+        id="prevButton"
+        class="hover:bg-gray-600 text-white font-bold rounded-md focus:outline-none border-2 w-[123px] h-[48px] p-2 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        <span class="text-[#9BD609]">&lt;</span> Previous
+      </button>
+      <button
+        id="nextButton"
+        class="hover:bg-gray-600 text-white font-bold rounded-md focus:outline-none border-2 w-[113px] h-[48px] p-2 disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        Next <span class="text-[#9BD609]">&gt;</span>
+      </button>
     </div>
+  </div>
+  <div
+    id="testimonials-unique"
+    class="swiper-container relative overflow-hidden"
+  >
+    <div class="swiper-wrapper">
+      {
+        testimonials.map((t, index) => (
+          <div class="swiper-slide" key={index}>
+            <div class="rounded-lg p-6 border flex flex-col md:h-[300px] lg:h-[389px] pb-3">
+              <div class="flex flex-col items-center justify-center space-y-2 md:flex-row md:justify-between md:items-center pb-4">
+                <img
+                  src={t.image}
+                  alt={t.name}
+                  class="w-16 h-16 lg:w-[80px] lg:h-[80px] mb-4 md:mb-0"
+                />
+                <div class="flex space-x-1">
+                  {"★"
+                    .repeat(t.rating)
+                    .padEnd(5, "☆")
+                    .split("")
+                    .map((s, i) => (
+                      <span
+                        key={i}
+                        class={`${s === "★" ? "text-yellow-500" : "text-gray-500"} text-3xl md:text-3xl`}
+                      >
+                        {s}
+                      </span>
+                    ))}
+                </div>
+              </div>
+              <div class="flex flex-col items-center text-center md:items-start md:text-left">
+                <h3 class="font-[Manrope] font-semibold text-subtitle leading-[32px] md:leading-[36px] lg:leading-[40.07px] tracking-[2%] text-center">
+                  {t.name}
+                </h3>
+                <p
+                  class="font-[DM_Sans] font-light leading-[20px] tracking-[2%] sm:leading-[22px] md:leading-[24px] lg:leading-[27.78px] lg:max-w-[483.56px] lg:max-h-[173.33px] md:max-h-[113.33px] overflow-hidden text-ellipsis m-1 md:m-6 card-inside"
+                  style={{
+                    display: "-webkit-box",
+                    WebkitLineClamp: 6,
+                    WebkitBoxOrient: "vertical",
+                  }}
+                >
+                  {t.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <!-- Swiper Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
 
-    <!-- Pagination Buttons Container -->
-    <div id="paginationButtons" class="flex justify-center gap-2 mt-10"></div>
+  <!-- Pagination Buttons Container -->
+  <div id="paginationButtons" class="flex justify-center gap-2 mt-10"></div>
 </div>
 
 <script>
-    import Swiper from "swiper";
-    import { Navigation } from "swiper/modules";
-    import "swiper/css";
-    import "swiper/css/navigation";
-    import { Pagination } from "swiper/modules";
-    import "swiper/css";
-    import "swiper/css/pagination";
-    document.addEventListener("DOMContentLoaded", () => {
-        const swiper = new Swiper(".swiper-container", {
-            modules: [Pagination, Navigation],
-            slidesPerView: 1,
-            slidesPerGroup: 1, // Ensure pagination moves one slide at a time
-            spaceBetween: 16,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: "#nextButton",
-                prevEl: "#prevButton",
-            },
-            breakpoints: {
-                768: { slidesPerView: 2, slidesPerGroup: 3}, // Update here too
-                1024: { slidesPerView: 3, slidesPerGroup: 3 }, // And here
-            },
-        });
-        
-
-        const prevButton = document.getElementById("prevButton");
-        const nextButton = document.getElementById("nextButton");
-
-        // Update button states on slide change
-        swiper.on("slideChange", () => {
-            prevButton.disabled = swiper.isBeginning;
-            nextButton.disabled = swiper.isEnd;
-        });
-
-        // Initialize button states
-        prevButton.disabled = swiper.isBeginning;
-        nextButton.disabled = swiper.isEnd;
+  import Swiper from "swiper";
+  import { Navigation } from "swiper/modules";
+  import "swiper/css";
+  import "swiper/css/navigation";
+  import { Pagination } from "swiper/modules";
+  import "swiper/css";
+  import "swiper/css/pagination";
+  document.addEventListener("DOMContentLoaded", () => {
+    const swiper = new Swiper("#testimonials-unique", {
+      modules: [Pagination, Navigation],
+      slidesPerView: 1,
+      slidesPerGroup: 1, // Ensure pagination moves one slide at a time
+      spaceBetween: 16,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: "#nextButton",
+        prevEl: "#prevButton",
+      },
+      breakpoints: {
+        768: { slidesPerView: 2, slidesPerGroup: 2 }, // Update here too
+        1024: { slidesPerView: 3, slidesPerGroup: 3 }, // And here
+      },
     });
+
+    const prevButton = document.getElementById("prevButton");
+    const nextButton = document.getElementById("nextButton");
+
+    // Update button states on slide change
+    swiper.on("slideChange", () => {
+      prevButton.disabled = swiper.isBeginning;
+      nextButton.disabled = swiper.isEnd;
+    });
+
+    // Initialize button states
+    prevButton.disabled = swiper.isBeginning;
+    nextButton.disabled = swiper.isEnd;
+  });
 </script>
 
 <style>
-    /* Custom styles for pagination bullets */
-    .swiper-pagination-bullet {
-        background-color: #9bd6094d; /* Inactive bullet color */
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        display: inline-block;
-        margin: 0 4px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
+  /* Custom styles for pagination bullets */
+  #testimonials-unique .swiper-pagination .swiper-pagination-bullet {
+    background-color: !important;
+    --swiper-theme-color: #9bd6094d !important;
 
-    .swiper-pagination-active {
-        background-color: #9bd609; /* Active bullet color */
-    }
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    display: inline-block !important;
+    margin: 0 4px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+  }
 
-    /* Ensure Swiper pagination container is visible */
-    .swiper-pagination {
-        text-align: center;
-        
-    }
+  #testimonials-unique .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #9bd609 !important;
+  }
+
+  /* Ensure Swiper pagination container is visible */
+  #testimonials-unique .swiper-pagination {
+    position: relative !important;
+    text-align: center !important;
+    margin-top: 20px !important; /* Add margin to position pagination below the card */
+  }
+  #testimonials-unique {
+    --swiper-theme-color: #9bd609;
+  }
 </style>

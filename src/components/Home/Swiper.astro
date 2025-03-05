@@ -1,252 +1,294 @@
 <style>
-    .container-sw {
-        position: relative;
-        height: 100%;
-    }
+  #herobanner {
+    position: relative;
+    height: 100%;
+  }
 
-    .swiper {
-        width: 100%;
-        height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
 
+  .swiper-slide {
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 1457px;
+    opacity: 0.5;
+    transform: scale(0.85);
+    transition: all 1000ms ease;
+    margin: 0 75px;
+  }
+
+  .swiper-slide-active {
+    opacity: 1 !important;
+    transform: scale(1.1) !important;
+    transition: 0.8s ease-in-out;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .swiper-slide .text-container {
+    opacity: 0;
+    transition: opacity 500ms ease;
+  }
+
+  .swiper-slide-active .text-container {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
     .swiper-slide {
-        text-align: center;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        opacity: 0.5; /* Inactive slides are semi-transparent */
-        transform: scale(0.85); /* Inactive slides are scaled down */
-        transition: all 1000ms ease; /* Smooth transition */
+      width: 70%;
+      opacity: 0.5;
+      transform: scale(0.85);
+      transition: all 1000ms ease;
+      margin: 0 1%;
+      padding-top: 10px;
     }
 
     .swiper-slide-active {
-        opacity: 1 !important; /* Active slide is fully visible */
-        transform: scale(
-            1
-        ) !important; /* Active slide is scaled to full size */
+      opacity: 1 !important;
+      transform: scale(1) !important;
+      margin: 0 5%;
     }
 
     .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      height: 30vh;
+      object-fit: contain;
+      padding-top: 10px;
     }
+  }
 
-    .mySwiper {
-        width: 0;
-        height: 1px;
-        visibility: hidden;
-    }
-
+  @media (max-width: 480px) {
     
-
-   
-    .mySwiper .swiper-wrapper {
-        justify-content: center;
+    .swiper-slide img {
+      height: 23vh;
+      object-fit: cover;
+      margin: 0px;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1500px) {
+    .swiper-slide {
+      width: 60%;
+      margin: 0 5%;
+      transform: scale(0.9);
+      padding-top: 30px;
     }
 
-    
-
-    .mySwiper .swiper-slide-active {
-        opacity: 1;
-        transform: scale(1);
-        transition: transform 0.5s linear;
+    .swiper-slide-active {
+      transform: scale(1);
     }
-   
+
+    .swiper-slide img {
+      height: 45vh;
+      object-fit: cover;
+    }
+  }
+
+  .mySwiper {
+    width: 0;
+    height: 1px;
+    visibility: hidden;
+  }
+
+  .mySwiper .swiper-wrapper {
+    justify-content: center;
+  }
+
+  .mySwiper .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.5s linear;
+  }
 </style>
 
-<div class="container-sw">
-    <!-- Swiper -->
-    <div
-        style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;"
-        class="swiper mySwiper2"
-    >
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide ">
-                <div class="relative">
-                    <div
-                        class="flex justify-center items-center mb-[10px] transition-opacity duration-500"
-                        style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
-                    >
-                        <p
-                            class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-heading leading-[1.1] xl:leading-[62.5px] lg:pt-10 pt-0"
-                        >
-                            Spritle's Gen AI solutions drive operational cost
-                            savings for our clients
-                        </p>
-                    </div>
-                    <div class="relative h-full">
-                        <img
-                            src="../assets/20995.png"
-                            alt="Slide image"
-                            class="rounded-xl object-cover shadow-xl mx-auto md:h-auto w-full h-[20vh]"
-                            style="width: 100%; height: 657px"
-                        />
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="relative">
-                    <div
-                        class="flex justify-center items-center mb-[10px] transition-opacity duration-500"
-                        style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
-                    >
-                        <p
-                            class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-heading leading-[1.1] xl:leading-[62.5px] lg:pt-10 pt-0"
-                        >
-                            We help businesses improve efficiency using Vision
-                            AI
-                        </p>
-                    </div>
-                    <div class="relative h-full">
-                        <img
-                            src="../assets/30713.png"
-                            alt="Slide image"
-                            class="rounded-xl object-cover shadow-xl mx-auto md:h-auto w-full h-[20vh]"
-                            style="width: 100%; height: 657px"
-                        />
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="relative">
-                    <div
-                        class="flex justify-center items-center mb-[10px] transition-opacity duration-500"
-                        style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
-                    >
-                        <p
-                            class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-heading leading-[1.1] xl:leading-[62.5px] lg:pt-10 pt-0"
-                        >
-                            Spritle simplifies & accelerates digital
-                            transformation for your business
-                        </p>
-                    </div>
-                    <div class="relative h-full">
-                        <img
-                            src="../assets/30714.png"
-                            alt="Slide image"
-                            class="rounded-xl object-cover shadow-xl mx-auto md:h-auto w-full h-[20vh]"
-                            style="width: 100%; height: 657px"
-                        />
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="relative">
-                    <div
-                        class="flex justify-center items-center mb-[10px] transition-opacity duration-500"
-                        style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
-                    >
-                        <p
-                            class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-heading leading-[1.1] xl:leading-[62.5px] lg:pt-10 pt-0"
-                        >
-                            Spritle simplifies & accelerates digital
-                            transformation for your business
-                        </p>
-                    </div>
-                    <div class="relative h-full">
-                        <img
-                            src="../assets/2151790123.png"
-                            alt="Slide image"
-                            class="rounded-xl object-cover shadow-xl mx-auto md:h-auto w-full h-[20vh]"
-                            style="width: 100%; height: 657px"
-                        />
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="relative">
-                    <div
-                        class="flex justify-center items-center mb-[10px] transition-opacity duration-500"
-                        style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
-                    >
-                        <p
-                            class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-heading leading-[1.1] xl:leading-[62.5px] lg:pt-10 pt-0"
-                        >
-                            We are the official partners of Nvidia & Google
-                        </p>
-                    </div>
-                    <div class="relative h-full">
-                        <img
-                            src="../assets/20995 (1).png"
-                            alt="Slide image"
-                            class="rounded-xl object-cover shadow-xl mx-auto md:h-auto w-full h-[20vh]"
-                            style="width: 100%; height: 657px"
-                        />
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="relative">
-                    <div
-                        class="flex justify-center items-center mb-[10px] transition-opacity duration-500"
-                        style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
-                    >
-                        <p
-                            class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-heading leading-[1.1] xl:leading-[62.5px] lg:pt-10 pt-0"
-                        >
-                            With 15+ years of experience, we create custom apps
-                            that transform your business
-                        </p>
-                    </div>
-                    <div class="relative h-full">
-                        <img
-                            src="../assets/30713 (1).png"
-                            alt="Slide image"
-                            class="rounded-xl object-cover shadow-xl mx-auto md:h-auto w-full h-[20vh]"
-                            style="width: 100%; height: 657px"
-                        />
-                    </div>
-                </div>
-            </div>
+<div id="herobanner">
+  <!-- Swiper -->
+  <div
+    style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff;"
+    class="swiper"
+    id="herobannerSwiper"
+  >
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <div class="relative">
+          <div
+            class="flex justify-center items-center mb-[10px] transition-opacity duration-500"
+            style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
+          >
+            <p
+              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-sm md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
+            >
+              Spritle's Gen AI solutions drive operational cost savings for our
+              clients
+            </p>
+          </div>
+          <div class="relative h-full">
+            <img
+              src="../assets/20995.png"
+              alt="Slide image"
+              class="rounded-xl object-center object-cover shadow-xl mx-auto md:h-auto w-full h-[30vh]"
+            />
+          </div>
         </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="relative">
+          <div
+            class="flex justify-center items-center mb-[10px] transition-opacity duration-500"
+            style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
+          >
+            <p
+              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-sm md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
+            >
+              We help businesses improve efficiency using Vision AI
+            </p>
+          </div>
+          <div class="relative h-full">
+            <img
+              src="../assets/30713.png"
+              alt="Slide image"
+              class="rounded-xl object-center object-contain shadow-xl mx-auto md:h-auto w-full h-[30vh]"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="relative">
+          <div
+            class="flex justify-center items-center mb-[10px] transition-opacity duration-500"
+            style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
+          >
+            <p
+              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-sm md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
+            >
+              Spritle simplifies & accelerates digital transformation for your
+              business
+            </p>
+          </div>
+          <div class="relative h-full">
+            <img
+              src="../assets/30714.png"
+              alt="Slide image"
+              class="rounded-xl object-center object-contain shadow-xl mx-auto md:h-auto w-full h-[30vh]"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="relative">
+          <div
+            class="flex justify-center items-center mb-[10px] transition-opacity duration-500"
+            style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
+          >
+            <p
+              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-sm md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
+            >
+              Spritle simplifies & accelerates digital transformation for your
+              business
+            </p>
+          </div>
+          <div class="relative h-full">
+            <img
+              src="../assets/2151790123.png"
+              alt="Slide image"
+              class="rounded-xl object-center object-contain shadow-xl mx-auto md:h-auto w-full h-[30vh]"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="relative">
+          <div
+            class="flex justify-center items-center mb-[10px] transition-opacity duration-500"
+            style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
+          >
+            <p
+              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-sm md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
+            >
+              We are the official partners of Nvidia & Google
+            </p>
+          </div>
+          <div class="relative h-full">
+            <img
+              src="../assets/20995 (1).png"
+              alt="Slide image"
+              class="rounded-xl object-center object-contain shadow-xl mx-auto md:h-auto w-full h-[30vh]"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="relative">
+          <div
+            class="flex justify-center items-center mb-[10px] transition-opacity duration-500"
+            style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
+          >
+            <p
+              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-sm md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
+            >
+              With 15+ years of experience, we create custom apps that transform
+              your business
+            </p>
+          </div>
+          <div class="relative h-full">
+            <img
+              src="../assets/30713 (1).png"
+              alt="Slide image"
+              class="rounded-xl object-center object-contain shadow-xl mx-auto md:h-auto w-full h-[30vh]"
+            />
+          </div>
+        </div>
+      </div>
     </div>
-    <div thumbsSlider="" class="swiper mySwiper"></div>
+  </div>
+  <div thumbsSlider="" class="swiper mySwiper"></div>
 </div>
 
 <!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const mySwiper2_wrapper = document.querySelector(
-                ".mySwiper2 .swiper-wrapper",
-            ),
-            mySwiper_container = document.querySelector(".mySwiper"),
-            clone = mySwiper2_wrapper.cloneNode(true);
-        mySwiper_container.appendChild(clone);
+  document.addEventListener("DOMContentLoaded", function () {
+    const herobannerSwiper_wrapper = document.querySelector(
+        "#herobannerSwiper .swiper-wrapper"
+      ),
+      mySwiper_container = document.querySelector(".mySwiper"),
+      clone = herobannerSwiper_wrapper.cloneNode(true);
+    mySwiper_container.appendChild(clone);
 
-        const swiper = new Swiper(".mySwiper", {});
-
-        const swiper2 = new Swiper(".mySwiper2", {
-            modules: [Autoplay],
-            autoplay: {
-                delay: 1000,
-                disableOnInteraction: false,
-            },
-            slidesPerView: "auto",
-            autoplay: true,
-            centeredSlides: true,
-            loop: true,
-            loopedSlides: mySwiper2_wrapper.childNodes.length,
-            spaceBetween: 0,
-            speed: 800,
-            thumbs: {
-                swiper: swiper,
-            },
-        });
+    const swiper = new Swiper(".mySwiper", {});
+    const swiper2 = new Swiper("#herobannerSwiper", {
+      modules: [Autoplay],
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: "auto",
+      autoplay: true,
+      centeredSlides: true,
+      loop: true,
+      loopedSlides: herobannerSwiper_wrapper.childNodes.length,
+      spaceBetween: 0,
+      speed: 800,
+      thumbs: {
+        swiper: swiper,
+      },
     });
-    import Swiper from "swiper";
-    import "swiper/css";
-    import "swiper/css";
-    import "swiper/css/effect-coverflow";
-    import "swiper/css/navigation";
-    import { Autoplay } from "swiper/modules";
+  });
+  import Swiper from "swiper";
+  import "swiper/css";
+  import "swiper/css";
+  import "swiper/css/effect-coverflow";
+  import "swiper/css/navigation";
+  import { Autoplay } from "swiper/modules";
 </script>

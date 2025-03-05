@@ -6,28 +6,20 @@
 
 
 @import "tailwindcss";
-@tailwind utilities; 
-
-
-@layer utilities {
-  .text-primary {
-    @apply text-[#E2E2E2];
-  }
-
-  .text-secondary {
-    @apply text-[#B0B0B0];
-  }
-}
+@config "../../tailwind.cofig.mjs";
 
 
 @theme {
     --font-manrope: "Manrope", sans-serif;
     --font-dm-sans: "DM Sans", sans-serif;
     --font-sora: "Sora", sans-serif;
+    --color-primary: #E2E2E2;
+    --color-secondary: #B0B0B0;
+    --color-background: #252525;
 }
 
 body {
-    @apply bg-[#252525] text-[#f5f5f5] font-dm-sans;
+    @apply bg-background text-primary font-dm-sans;
 }
 body {
   /* scrollbar-width: none; For Firefox */
@@ -43,7 +35,7 @@ body::-webkit-scrollbar {
 }
 
 .text-subheading {
-  @apply text-base md:text-2xl lg:text-4xl ;
+  @apply text-xl md:text-2xl lg:text-4xl ;
 }
 .card-inside{
 @apply text-base  lg:text-2xl
@@ -53,6 +45,6 @@ body::-webkit-scrollbar {
 
 }
 .text-subtitle{
-    @apply text-xl lg:text-3xl ;
+    @apply text-lg lg:text-3xl ;
 
 }
