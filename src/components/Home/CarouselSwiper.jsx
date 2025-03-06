@@ -1,8 +1,8 @@
-import { useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
+import { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const CarouselSwiper = () => {
   const swiperRef = useRef(null);
@@ -44,9 +44,12 @@ const CarouselSwiper = () => {
   return (
     <div className="md:space-y-5 space-y-0 lg:pl-20 md:pl-10 pl-5">
       {/* Heading Section */}
-      <div className="font-dm-sans text-heading text-primary">Transforming Business</div>
+      <div className="font-dm-sans text-heading text-primary">
+        Transforming Business
+      </div>
       <p className="text-subheading text-secondary w-full md:mb-10 mb-1">
-        Transform your business with generative AI → We help businesses start their digital journey
+        Transform your business with generative AI → We help businesses start
+        their digital journey
       </p>
 
       {/* Swiper Slider */}
@@ -59,10 +62,10 @@ const CarouselSwiper = () => {
             slidesPerView={1.2}
             centeredSlides={false}
             loop={false}
-              autoplay={false} 
+            autoplay={false}
             navigation={{
-              prevEl: '#prevBtn',
-              nextEl: '#nextBtn',
+              prevEl: "#prevBtn",
+              nextEl: "#nextBtn",
             }}
             onSlideChange={handleSlideChange}
             className="w-full h-full"
@@ -82,7 +85,7 @@ const CarouselSwiper = () => {
             }}
           >
             {sliderItems.map((item, index) => (
-              <SwiperSlide key={index} >
+              <SwiperSlide key={index}>
                 <div className="flex w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[797px] slider-item relative overflow-hidden group ">
                   <div className="relative overflow-hidden transition-transform duration-800 ease-in-out group-hover:scale-110 group-hover:shadow-xl w-full h-full ">
                     <img
@@ -105,26 +108,34 @@ const CarouselSwiper = () => {
           <button
             id="prevBtn"
             className={`rounded-full flex justify-center items-center bg-[#15AED5] hover:bg-[#15AED5] ${
-              isBeginning ? 'opacity-50 cursor-not-allowed' : ''
+              isBeginning ? "opacity-50 cursor-not-allowed" : ""
             } w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] p-0 sm:p-2`}
             disabled={isBeginning}
           >
-            <img src="../assets/arrowcarousel.png" alt="Previous" className="w-4 p-1 sm:w-5 md:w-6" />
+            <img
+              src="../assets/arrowcarousel.png"
+              alt="Previous"
+              className="w-4 p-1 sm:w-5 md:w-6"
+            />
           </button>
           <button
             id="nextBtn"
             className={`rounded-full flex justify-center items-center bg-[#15AED5] hover:bg-[#15AED5] text-white ${
-              isEnd ? 'opacity-50 cursor-not-allowed' : ''
+              isEnd ? "opacity-50 cursor-not-allowed" : ""
             } w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] p-2 sm:p-2`}
             disabled={isEnd}
           >
-            <img src="../assets/arrowcar2.png" alt="Next" className="w-4 p-1 sm:w-5 md:w-6" />
+            <img
+              src="../assets/arrowcar2.png"
+              alt="Next"
+              className="w-4 p-1 sm:w-5 md:w-6"
+            />
           </button>
         </div>
       </div>
 
       {/* Custom Styles */}
-      <style >
+      <style>
         {`
         .slider-text {
           position: absolute;
@@ -184,7 +195,8 @@ const CarouselSwiper = () => {
             padding-left: 80px;
           }
         }
-      `}</style>
+      `}
+      </style>
     </div>
   );
 };

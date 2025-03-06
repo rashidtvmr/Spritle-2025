@@ -1,8 +1,8 @@
 <section
-  class="scroll-reveal h-[30vh] md:h-[40vh] lg:h-[50vh] xl:h-[100vh] flex justify-center items-center container mx-auto px-5"
+  class="scroll-reveal h-[30vh] md:h-[40vh] lg:h-[50vh] xl:h-[100vh] flex justify-center items-center container mx-auto px-5 pl-11 md:pl-0"
 >
   <p
-    class="font-dm-sans font-normal text-xl md:text-3xl lg:text-4xl xl:text-6xl leading-none xl:leading-normal text-justify max-h-[332px] max-w-[1485px]"
+    class="font-dm-sans font-normal text-2xl md:text-3xl lg:text-4xl xl:text-6xl leading-none xl:leading-normal text-start md:text-justify max-h-[332px] max-w-[1485px]"
   >
     <span class="static-text">At Spritle, </span>
     <span class="first-text fade-text">
@@ -14,6 +14,12 @@
 </section>
 
 <style>
+  @media (max-width: 468px) {
+    p{
+      font-size: 1.2rem;
+      line-height: 25px;
+    }
+  }
   .scroll-reveal span:not(.static-text) {
     color: hsl(0 0% 100% / 0.2);
     background-clip: text;

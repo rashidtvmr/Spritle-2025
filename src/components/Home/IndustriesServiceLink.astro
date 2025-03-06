@@ -1,33 +1,31 @@
 ---
 interface Props {
-    link: string;
-    title: string;
-    description: string;
+  link: string;
+  title: string;
+  description: string;
 }
 
 const { link, title, description } = Astro.props;
 ---
 
 <a
-    href={link}
-    class="flex justify-between border-2 border-[#D6D6D6]  rounded-[16.75px] p-5 md:p-6 shadow-lg hover:shadow-xl
+  href={link}
+  class="flex justify-between border-2 border-[#D6D6D6] rounded-[16.75px] p-5 md:p-6 shadow-lg hover:shadow-xl
   transition duration-300 w-full max-w-full overflow-hidden"
 >
-    <div class="flex-1 ">
-                    <span class="text-subtitle  font-medium text-primary break-words "
-            >{title}</span
-        >
-        <p
-            class="text-secondary text-lg font-medium mt-5 "
-        >
-            {description}
-        </p>
-    </div>
-    <div class="flex justify-end">
-        <img
-            src="../assets/arrowright.png"
-            alt="Arrow Icon"
-            class="w-8 h-8 fluid p-1 hover:bg-[#15AED5] rounded-[100px] transition duration-300 border-[#D6D6D6] border-solid border-2"
-        />
-    </div>
+  <div class="flex-1">
+    <span class="text-subtitle font-medium text-primary break-words"
+      >{title}</span
+    >
+    <p class="text-secondary text-lg font-medium lg:mt-5">
+      {description}
+    </p>
+  </div>
+  <div class="flex justify-end">
+    <img
+      src="../assets/industrybutton.svg"
+      alt="Industry Button"
+      class=" p-1 hover:bg-[#15AED5]  transition duration-300 size-12"
+    />
+  </div>
 </a>

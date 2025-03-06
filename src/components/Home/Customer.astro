@@ -69,9 +69,7 @@ const testimonials = [
 <div
   class="space-y-1 lg:space-y-6 md:space-y-3 lg:mt-30 md:mt:20 mt-5 px-5 container md:px-0 overflow-hidden"
 >
-  <div
-    class="text-center md:text-left mb-8 flex flex-col md:flex-row justify-between"
-  >
+  <div class="text-left md:mb-8 flex flex-col md:flex-row justify-between">
     <div>
       <h2 class="text-heading text-primary font-bold mb-0 md:mb-4">
         Our Customer Feedback
@@ -82,10 +80,10 @@ const testimonials = [
         Don't take our word for it. Trust our customers
       </p>
     </div>
-    <div class="flex gap-4 justify-center md:justify-start">
+    <div class="hidden md:flex gap-4 justify-center md:justify-start  ">
       <button
         id="prevButton"
-        class="hover:bg-gray-600 text-white font-bold rounded-md focus:outline-none border-2 w-[123px] h-[48px] p-2 disabled:opacity-50 disabled:cursor-not-allowed"
+        class="hover:bg-gray-600 text-white font-bold rounded-md focus:outline-none border-2 w-[123px] h-[48px] p-2 disabled:opacity-50 disabled:cursor-not-allowed "
       >
         <span class="text-[#9BD609]">&lt;</span> Previous
       </button>
@@ -152,7 +150,21 @@ const testimonials = [
   </div>
 
   <!-- Pagination Buttons Container -->
-  <div id="paginationButtons" class="flex justify-center gap-2 mt-10"></div>
+  <div id="paginationButtons" class="flex justify-center gap-2 md:mt-10"></div>
+  <div class="flex justify-between   md:hidden">
+    <button
+      id="prevButton"
+      class="hover:bg-gray-600 text-white font-bold rounded-md focus:outline-none border-2 w-[123px] h-[48px] p-2 disabled:opacity-50 disabled:cursor-not-allowed"
+    >
+      <span class="text-[#9BD609]">&lt;</span> Previous
+    </button>
+    <button
+      id="nextButton"
+      class="hover:bg-gray-600 text-white font-bold rounded-md focus:outline-none border-2 w-[113px] h-[48px] p-2 disabled:opacity-50 disabled:cursor-not-allowed"
+    >
+      Next <span class="text-[#9BD609]">&gt;</span>
+    </button>
+  </div>
 </div>
 
 <script>
@@ -226,4 +238,21 @@ const testimonials = [
   #testimonials-unique {
     --swiper-theme-color: #9bd609;
   }
+  @media (max-width: 767px) {
+    /* Button Container */
+    .flex.justify-center.gap-4 {
+      margin-top: 16px; /* Add space between pagination and buttons */
+    }
+
+    /* Buttons */
+    #prevButtonMobile,
+    #nextButtonMobile {
+      width: 120px; /* Adjust button width for mobile */
+      height: 40px; /* Adjust button height for mobile */
+      font-size: 14px; /* Adjust font size for mobile */
+    }
+  }
+
+  /* Hide mobile buttons on desktop */
+ 
 </style>
