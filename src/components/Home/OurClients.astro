@@ -1,21 +1,18 @@
 <div
   class="md:mt-10 sm:mt-4"
   style={{
-    // background: "linear-gradient(to bottom, #20202066, #00000047, #17171766)",
-    background: "black",
+    background: "linear-gradient(to bottom, #20202066, #00000047, #17171766)",
   }}
 >
-  <div
-    class="clients-container xl:py-15 py-6 mt-10 md:mt-0 lg:pl-20 md:pl-10 pl-5"
-  >
+  <div class="clients-container xl:py-5 py-6 mt-10 md:mt-15">
     <div
-      class="clients-content space-y-5 h-[45vh] md:h-[53vh] lg:h-[89vh] w-[100%]"
+      class="clients-content space-y-5 h-[45vh] md:h-[53vh] lg:h-[903px] w-[100%] mt-6"
     >
-      <div class="clients-heading text-heading text-primary px-5 pl-3 md:pl-6">
+      <div class="clients-heading text-heading text-primary px-5 pl-3 xl:pl-26">
         Our Clients
       </div>
       <p
-        class="clients-subheading max-w-100% mb-0 md:mb-10 text-secondary text-subheading px-5 pl-3 md:pl-6"
+        class="clients-subheading max-w-100% mb-5 md:mb-10 text-secondary text-subheading px-5 pl-3 xl:pl-26"
       >
         Transform your business with generative AI
       </p>
@@ -158,11 +155,12 @@
 
       <!-- Existing Desktop Logo Grid -->
       <div
-        class="clients-logo-grid hidden lg:flex flex-col items-center justify-center h-auto w-auto p-5 md:p-5"
+        class="clients-logo-grid hidden lg:flex flex-col items-center h-auto w-auto p-5 md:p-0 mt-20"
       >
         <div
           id="clients-logo-container"
-          class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 md:gap-x-15 md:gap-y-15 lg:gap-x-15 xl:gap-x-65 lg:gap-y-25 gap-x-0 gap-y-0 object-cover"
+          class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 md:gap-x-15 md:gap-y-15 lg:gap-x-15 xl:gap-x-55 lg:gap-y-23 gap-x-0 gap-y-0 object-contain px-10"
+          style="max-width: 1621px; height: 629px;"
         >
         </div>
       </div>
@@ -184,7 +182,9 @@
     float: left;
     width: 50%;
   }
+  /* Base styles (shared across devices) */
 
+  /* Laptop-specific styles */
   .clients-marquee-block {
     --total-marquee-items: 8;
     height: 150px;
@@ -249,7 +249,6 @@
     }
   }
 </style>
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const logos = [
@@ -276,7 +275,7 @@
       container.innerHTML = logos
         .map(
           (logo) =>
-            `<img src="/public/assets/${logo}" alt="${logo.split(".")[0]}" class="clients-logo mx-auto size-30 lg:size-40 ${logo === "nanny.png" ? "max-h-30 pb-10" : "max-h-24"} object-contain">`
+            `<img src="/public/assets/${logo}" alt="${logo.split(".")[0]}" class="clients-logo mx-auto size-30 lg:size-60 ${logo === "nanny.png" ? "max-h-30 pb-10" : "max-h-24"} object-contain">`
         )
         .join("");
     }

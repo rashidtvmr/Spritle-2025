@@ -29,22 +29,22 @@ body {
 body::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Opera */
 }
-
-.text-heading {
-  @apply text-2xl lg:text-5xl font-dm-sans;
-}
-
-.text-subheading {
-  @apply text-xl md:text-2xl lg:text-4xl ;
-}
-.card-inside{
-@apply text-base  lg:text-2xl
-}
 .text-title{
     @apply text-4xl lg:text-8xl ;
 
 }
 .text-subtitle{
-    @apply text-lg lg:text-3xl ;
+    @apply text-xl lg:text-3xl ;
 
+}
+
+.text-heading {
+  @apply text-2xl  lg:text-4xl xl:text-[48px] font-dm-sans;
+}
+
+.text-subheading {
+  @apply text-lg  lg:text-2xl xl:text-[24px];
+}
+.text-body{
+@apply text-lg  lg:text-2xl
 }

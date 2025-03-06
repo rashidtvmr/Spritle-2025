@@ -11,8 +11,6 @@
 
   .swiper-slide {
     text-align: center;
-    background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,26 +18,42 @@
     max-width: 1457px;
     opacity: 0.5;
     transform: scale(0.85);
-    transition: all 1000ms ease;
+    transition: all 1s ease;
     margin: 0 75px;
+    position: relative;
   }
 
   .swiper-slide-active {
-    opacity: 1 !important;
-    transform: scale(1.1) !important;
+    opacity: 1;
+    transform: scale(1.1);
     transition: 0.8s ease-in-out;
+  }
+
+  .image-container {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    position: relative;
   }
 
   .swiper-slide img {
     display: block;
     width: 100%;
-    height: auto;
+    height: auto; /* Allow height to adjust dynamically */
     object-fit: cover;
+    border-radius: 10px;
   }
 
-  .swiper-slide .text-container {
+  .text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
     opacity: 0;
-    transition: opacity 500ms ease;
+    transition: opacity 0.5s ease;
   }
 
   .swiper-slide-active .text-container {
@@ -49,34 +63,42 @@
   @media (max-width: 768px) {
     .swiper-slide {
       width: 70%;
-      opacity: 0.5;
-      transform: scale(0.85);
-      transition: all 1000ms ease;
       margin: 0 1%;
       padding-top: 10px;
     }
 
     .swiper-slide-active {
-      opacity: 1 !important;
-      transform: scale(1) !important;
+      transform: scale(1);
       margin: 0 5%;
     }
 
+    .image-container {
+      height: auto; /* Allow height to adjust dynamically on mobile */
+    }
+
     .swiper-slide img {
-      height: 30vh;
-      object-fit: contain;
-      padding-top: 10px;
+      height: 30vh; /* Allow height to adjust dynamically on mobile */
     }
   }
 
   @media (max-width: 480px) {
     
-    .swiper-slide img {
-      height: 23vh;
-      object-fit: cover;
-      margin: 0px;
-    }
+ .image-container {
+  width: 100%;
+  height: auto; /* Let the container grow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 30vh; /* Let the image fill the container */
+  object-fit: cover; /* Show the full image */
+}
+
   }
+
   @media (min-width: 769px) and (max-width: 1500px) {
     .swiper-slide {
       width: 60%;
@@ -89,26 +111,16 @@
       transform: scale(1);
     }
 
-    .swiper-slide img {
-      height: 45vh;
-      object-fit: cover;
+    .image-container {
+      height: 45vh; /* Fixed height for larger screens */
+      width: 100%;
     }
-  }
 
-  .mySwiper {
-    width: 0;
-    height: 1px;
-    visibility: hidden;
-  }
-
-  .mySwiper .swiper-wrapper {
-    justify-content: center;
-  }
-
-  .mySwiper .swiper-slide-active {
-    opacity: 1;
-    transform: scale(1);
-    transition: transform 0.5s linear;
+    .swiper-slide img {
+      width: 100%;
+      object-fit: contain;
+      height: 100%; /* Ensure images fill the container on larger screens */
+    }
   }
 </style>
 
@@ -128,17 +140,17 @@
             style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
           >
             <p
-              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-sm md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
+              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-lg md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
             >
               Spritle's Gen AI solutions drive operational cost savings for our
               clients
             </p>
           </div>
-          <div class="relative h-full">
+          <div class="image-container">
             <img
               src="../assets/20995.png"
               alt="Slide image"
-              class="rounded-xl object-center object-cover shadow-xl mx-auto md:h-auto w-full h-[30vh]"
+              class="rounded-xl object-center object-cover shadow-xl mx-auto md:h-auto w-full"
             />
           </div>
         </div>
@@ -150,16 +162,16 @@
             style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
           >
             <p
-              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-sm md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
+              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-lg md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
             >
               We help businesses improve efficiency using Vision AI
             </p>
           </div>
-          <div class="relative h-full">
+          <div class="image-container">
             <img
               src="../assets/30713.png"
               alt="Slide image"
-              class="rounded-xl object-center object-contain shadow-xl mx-auto md:h-auto w-full h-[30vh]"
+              class="rounded-xl object-center object-contain shadow-xl mx-auto md:h-auto w-full"
             />
           </div>
         </div>
@@ -171,17 +183,17 @@
             style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
           >
             <p
-              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-sm md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
+              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-lg md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
             >
               Spritle simplifies & accelerates digital transformation for your
               business
             </p>
           </div>
-          <div class="relative h-full">
+          <div class="image-container">
             <img
               src="../assets/30714.png"
               alt="Slide image"
-              class="rounded-xl object-center object-contain shadow-xl mx-auto md:h-auto w-full h-[30vh]"
+              class="rounded-xl object-center object-contain shadow-xl mx-auto md:h-auto w-full"
             />
           </div>
         </div>
@@ -193,17 +205,17 @@
             style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
           >
             <p
-              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-sm md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
+              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-lg md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
             >
               Spritle simplifies & accelerates digital transformation for your
               business
             </p>
           </div>
-          <div class="relative h-full">
+          <div class="image-container">
             <img
               src="../assets/2151790123.png"
               alt="Slide image"
-              class="rounded-xl object-center object-contain shadow-xl mx-auto md:h-auto w-full h-[30vh]"
+              class="rounded-xl object-center object-contain shadow-xl mx-auto md:h-auto w-full"
             />
           </div>
         </div>
@@ -215,16 +227,16 @@
             style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
           >
             <p
-              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-sm md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
+              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-lg md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
             >
               We are the official partners of Nvidia & Google
             </p>
           </div>
-          <div class="relative h-full">
+          <div class="image-container">
             <img
               src="../assets/20995 (1).png"
               alt="Slide image"
-              class="rounded-xl object-center object-contain shadow-xl mx-auto md:h-auto w-full h-[30vh]"
+              class="rounded-xl object-center object-contain shadow-xl mx-auto md:h-auto w-full"
             />
           </div>
         </div>
@@ -236,17 +248,17 @@
             style="opacity: 1; width: 100%; max-width: 900px; max-height: 180px; margin: 0 auto"
           >
             <p
-              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-sm md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
+              class="text-white text-center lg:pb-5 pb-2 font-dm-sans lg:font-medium font-light text-lg md:text-3xl xl:text-5xl leading-[1.1] lg:leading-[40px] xl:leading-[62.5px] lg:pt-10 pt-0"
             >
               With 15+ years of experience, we create custom apps that transform
               your business
             </p>
           </div>
-          <div class="relative h-full">
+          <div class="image-container">
             <img
               src="../assets/30713 (1).png"
               alt="Slide image"
-              class="rounded-xl object-center object-contain shadow-xl mx-auto md:h-auto w-full h-[30vh]"
+              class="rounded-xl object-center object-contain shadow-xl mx-auto md:h-auto w-full"
             />
           </div>
         </div>
@@ -263,7 +275,7 @@
         "#herobannerSwiper .swiper-wrapper"
       ),
       mySwiper_container = document.querySelector(".mySwiper"),
-      clone = herobannerSwiper_wrapper.cloneNode(true);
+      clone = herobannerSwiper_wrapper.cloneNode(false);
     mySwiper_container.appendChild(clone);
 
     const swiper = new Swiper(".mySwiper", {});
@@ -285,8 +297,8 @@
       },
     });
   });
+
   import Swiper from "swiper";
-  import "swiper/css";
   import "swiper/css";
   import "swiper/css/effect-coverflow";
   import "swiper/css/navigation";
