@@ -6,28 +6,21 @@
 >
   <div class="clients-container xl:py-5 py-6 mt-10 md:mt-15">
     <div
-      class="clients-content space-y-1 md:space-y-1 h-[45vh] md:h-[53vh] lg:h-[903px] w-[100%] mt-6"
+      class="clients-content space-y-1 md:space-y-1 h-[auto] md:h-[53vh] lg:h-[903px] w-[100%] mt-6 mb-1"
     >
-      <div class="clients-heading text-heading text-primary  pl-3 xl:pl-26 ">
+      <div
+        class="clients-heading text-heading text-primary font-bold pl-3 xl:pl-26"
+      >
         Our Clients
       </div>
       <p
-        class="clients-subheading max-w-100% mb-5 md:mb-10 text-secondary text-subheading px-5 pl-3 xl:pl-26"
+        class="clients-subheading max-w-100% mb-5 md:mb-10 text-secondary text-subheading px-5 pl-3 xl:pl-26 font-medium"
       >
         Transform your business with generative AI
       </p>
 
       <!-- Marquee for Mobile and Tablet -->
       <div class="clients-marquee-wrapper md:block lg:hidden">
-        <div
-          class="pointer-events-none absolute inset-y-0 left-0 w-1/6 bg-gradient-to-r from-black/80 to-transparent z-10"
-        >
-        </div>
-        <div
-          class="pointer-events-none absolute inset-y-0 right-0 w-1/6 bg-gradient-to-l from-black/80 to-transparent z-10"
-        >
-        </div>
-
         <div class="clients-marquee-container">
           <!-- Left to Right Marquee -->
           <div class="clients-marquee-block">
@@ -227,25 +220,29 @@
     background-color: #3f3f46;
   }
   .clients-marquee-left {
-    animation: marqueeLeft 20s linear infinite;
+    animation: marqueeLeft 40s linear infinite;
   }
   .clients-marquee-right {
-    animation: marqueeRight 20s linear infinite;
+    animation: marqueeRight 40s linear infinite;
   }
   @keyframes marqueeLeft {
     0% {
       left: 0;
+      transform: translateX(0);
     }
     100% {
       left: -100%;
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
   @keyframes marqueeRight {
     0% {
       left: -100%;
+      transform: translateX(0);
     }
     100% {
       left: 0;
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
 </style>
@@ -280,4 +277,25 @@
         .join("");
     }
   });
+  const vertical = false;
+  const pauseOnHover = true;
+  const reverse = true;
+
+  const element = document.createElement("div");
+  element.style.display = vertical ? "flex" : "block";
+  element.style.flexDirection = vertical ? "column" : "row";
+  element.style.animation = "marquee 10s linear infinite";
+  element.style.animationDirection = reverse ? "reverse" : "normal";
+
+  if (pauseOnHover) {
+    element.addEventListener("mouseenter", () => {
+      element.style.animationPlayState = "paused";
+    });
+    element.addEventListener("mouseleave", () => {
+      element.style.animationPlayState = "running";
+    });
+  }
+
+  element.innerText = "Marquee Content";
+  document.body.appendChild(element);
 </script>

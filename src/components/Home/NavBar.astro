@@ -1,6 +1,78 @@
-<style>
-    /* Custom styles for mobile navigation */
-    #mobile-nav {
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Bar with Mobile Dropdowns</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #1a1a1a;
+        color: #f2f2f2;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Flex utilities */
+      .flex {
+        display: flex;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .justify-between {
+        justify-content: space-between;
+      }
+      .hidden {
+        display: none;
+      }
+      .md\:flex {
+        display: none;
+      }
+      .md\:gap-4 {
+        gap: 1rem;
+      }
+      .lg\:gap-8 {
+        gap: 2rem;
+      }
+      .lg\:h-11 {
+        height: 2.75rem;
+      }
+      .h-8 {
+        height: 2rem;
+      }
+      .px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      .py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      .h-\[100px\] {
+        height: 100px;
+      }
+
+      @media (min-width: 768px) {
+        .md\:flex {
+          display: flex;
+        }
+        .md\:hidden {
+          display: none;
+        }
+      }
+
+      /* Custom styles for mobile navigation */
+      #mobile-nav {
         transform: translateX(0);
         opacity: 1;
         visibility: visible;
@@ -11,62 +83,171 @@
         width: 100vw;
         height: 100vh;
         pointer-events: none;
-    }
+      }
 
-    /* Glass effect for mobile menu */
-    .mobile-menu-glass {
+      /* Glass effect for mobile menu */
+      .mobile-menu-glass {
         background-color: #303235;
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         /* Initial clip-path - starts as a small rectangle where the hamburger is */
         clip-path: polygon(81.05% 9.1%, 92% 9.1%, 92% 10.1%, 81.05% 10.1%);
         transition:
-            clip-path 400ms cubic-bezier(0.4, 0, 0.2, 1),
-            background-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
+          clip-path 400ms cubic-bezier(0.4, 0, 0.2, 1),
+          background-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
         position: absolute;
         top: 0;
-    }
+        overflow-y: auto;
+      }
 
-    /* Active clip-path state - expands to cover the whole screen */
-    #mobile-nav.active {
+      /* Active clip-path state - expands to cover the whole screen */
+      #mobile-nav.active {
         pointer-events: auto;
-    }
+      }
 
-    #mobile-nav.active .mobile-menu-glass {
+      #mobile-nav.active .mobile-menu-glass {
         clip-path: polygon(101% -1%, 101% 101%, -1% 101%, -1% -1%);
-    }
+      }
 
-    /* Menu options animation */
-    .menu-options {
+      /* Menu options animation */
+      .menu-options {
         align-items: center;
         display: flex;
         flex-direction: column;
-        margin-top: 60px;
+        width: 100%;
+        margin-top: 90px;
         transform: scale(0.8);
         transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
+      }
 
-    #mobile-nav.active .menu-options {
+      #mobile-nav.active .menu-options {
         transform: scale(1);
-    }
+      }
 
-    /* Menu link styling */
-    .menu-link {
+      /* Menu link styling */
+      .menu-link {
         cursor: pointer;
         margin: 8px 0;
         color: #f2f2f2;
-    }
+        text-decoration: none;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        padding: 10px 15px;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+      }
 
-    .menu-link.selected {
+      .menu-link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .menu-link.selected {
         color: #a02f56;
-    }
+      }
 
-    /* Hamburger icon animation */
-    .hamburger {
+      /* Mobile dropdown menu styling */
+      .mobile-dropdown {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #303235;
+        z-index: 60;
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+        overflow-y: auto;
+        margin-top: 90px;
+      }
+
+      .mobile-dropdown.active {
+        display: flex;
+      }
+
+      .mobile-dropdown-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .back-button {
+        display: flex;
+        align-items: center;
+        color: #f2f2f2;
+        font-size: 1.2rem;
+        margin-right: 15px;
+        cursor: pointer;
+      }
+
+      .mobile-dropdown-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #f2f2f2;
+      }
+
+      .mobile-dropdown-section {
+        margin-bottom: 25px;
+      }
+
+      .mobile-dropdown-section-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #eeeeee;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .mobile-dropdown-link {
+        display: block;
+        font-size: 1.2rem;
+        color: rgba(242, 242, 242, 0.8);
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .mobile-dropdown-link:last-child {
+        border-bottom: none;
+      }
+
+      .mobile-link-description {
+        display: block;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 4px;
+      }
+
+      /* Chevron for dropdown indicators */
+      .chevron-right {
+        width: 12px;
+        height: 12px;
+        border-right: 2px solid #f2f2f2;
+        border-bottom: 2px solid #f2f2f2;
+        transform: rotate(-45deg);
+        margin-left: 10px;
+      }
+
+      .chevron-left {
+        width: 12px;
+        height: 12px;
+        border-left: 2px solid #f2f2f2;
+        border-bottom: 2px solid #f2f2f2;
+        transform: rotate(45deg);
+        margin-right: 10px;
+      }
+
+      /* Hamburger icon animation */
+      .hamburger {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -74,42 +255,42 @@
         cursor: pointer;
         z-index: 100;
         position: relative;
-    }
+      }
 
-    .hamburger .bar {
+      .hamburger .bar {
         width: 24px;
         height: 2px;
         background-color: white;
         transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
+      }
 
-    .hamburger .bar1 {
+      .hamburger .bar1 {
         transform-origin: 12px 1px;
-    }
+      }
 
-    .hamburger .bar2 {
+      .hamburger .bar2 {
         transform-origin: 12px 1px;
-    }
+      }
 
-    .hamburger.active .bar1 {
+      .hamburger.active .bar1 {
         transform: translateY(7.2px) rotate(45deg);
-    }
+      }
 
-    .hamburger.active .bar2 {
+      .hamburger.active .bar2 {
         transform: rotate(-45deg);
-    }
+      }
 
-    .hamburger .bar3 {
+      .hamburger .bar3 {
         opacity: 1;
         transition: opacity 300ms ease-in-out;
-    }
+      }
 
-    .hamburger.active .bar3 {
+      .hamburger.active .bar3 {
         opacity: 0;
-    }
+      }
 
-    /* Sticky navbar */
-    .sticky-nav {
+      /* Sticky navbar */
+      .sticky-nav {
         position: sticky;
         top: 0;
         z-index: 100;
@@ -117,98 +298,575 @@
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1);
         color: rgb(237, 237, 237);
-    }
-</style>
+      }
 
-<!-- Sticky Navbar -->
-<div class="sticky-nav flex items-center justify-between px-6 py-2 h-[100px]">
-    <!-- Logo -->
-    <div>
+      /* Desktop Navigation Dropdown - Updated to match Liveblocks style */
+      .nav-item {
+        position: relative;
+        z-index: 1;
+      }
+      .nav-item:not(:hover) .dropdown {
+        display: none;
+        opacity: 0;
+      }
+      /* Dropdown container */
+      .dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #111111;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 20px;
+        z-index: 100;
+        min-width: 280px;
+        opacity: 0;
+        transition:
+          opacity 300ms ease-in-out,
+          transform 300ms ease-in-out;
+        transform-origin: top center;
+        transform: translateX(-50%) translateY(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        min-width: 400px;
+      }
+
+      /* Two-column dropdown layout */
+      .dropdown-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        min-width: 500px;
+      }
+
+      .nav-item:hover .dropdown {
+        display: block;
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      /* Dropdown section styling */
+      .dropdown-section {
+        margin-bottom: 20px;
+      }
+
+      .dropdown-section-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #eeeeee;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* Dropdown link styling */
+      .dropdown a {
+        font-size: 15px;
+        padding: 6px 0;
+        transition: color 0.3s;
+        opacity: 0.7;
+      }
+      .nav-item {
+        position: relative;
+        padding: 8px 12px; /* Add padding to the nav-item */
+      }
+
+      .dropdown a:hover {
+        color: #14aed5;
+        text-decoration: none; /* Ensure no underline on hover */
+      }
+
+      /* Link description */
+      .link-description {
+        display: block;
+        font-size: 12px;
+        color: #777777;
+        margin-top: 2px;
+      }
+
+      /* Hover Effect for Nav Links */
+      .nav-item a {
+        display: block; /* Make the link a block element */
+        width: 100%; /* Take full width of the parent */
+        padding: 8px 0; /* Add padding to the link */
+        color: rgba(242, 242, 242, 0.7); /* Slightly dimmed by default */
+        text-decoration: none;
+        transition: color 0.8s ease;
+      }
+
+      .nav-item a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+        text-decoration: none;
+      }
+
+      .nav-item a:hover {
+        color: rgba(242, 242, 242, 1); /* Full opacity on hover */
+      }
+      .nav-item:hover a,
+      .nav-item:hover + .nav-item a,
+      .nav-item:has(+ .nav-item:hover) a {
+        color: white;
+      }
+
+      /* Contact Us button styling */
+      .contact-button {
+        text-align: center;
+        background-color: #14aed5;
+        border-radius: 9999px;
+        padding: 0.5rem 1.5rem;
+        color: white;
+        transition: background-color 0.3s;
+      }
+
+      .contact-button:hover {
+        background-color: #0e8cad;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sticky Navbar -->
+    <div
+      class="sticky-nav flex items-center justify-between px-6 py-2 h-[100px]"
+    >
+      <!-- Logo -->
+      <div>
         <img src="/public/assets/logo.png" alt="Logo" class="lg:h-11 h-8" />
-    </div>
+      </div>
 
-    <!-- Desktop Navigation -->
-    <div class="hidden md:flex items-center md:gap-4 lg:gap-8 gap:5">
-        <a href="/" class="hover:text-blue-500 transition duration-300"
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center md:gap-4 lg:gap-8 gap:5">
+        <div class="nav-item">
+          <a href="/" class="hover:text-blue-500 transition duration-300"
             >AI Solutions</a
-        >
-        <a href="/" class="hover:text-blue-500 transition duration-300"
-            >Services</a
-        >
-        <a href="/" class="hover:text-blue-500 transition duration-300"
-            >Industries</a
-        >
-        <a href="/" class="hover:text-blue-500 transition duration-300">Works</a
-        >
-        <a href="/" class="hover:text-blue-500 transition duration-300">About</a
-        >
-        <a href="/" class="hover:text-blue-500 transition duration-300">Blogs</a
-        >
-        <a href="/" class="hover:text-blue-500 transition duration-300"
-            >Career</a
-        >
-        <a
-            href="/"
-            class="rounded-full bg-[#14AED5] px-4 py-1 text-white hover:bg-[#108EB0] transition duration-300"
-            >Contact Us</a
-        >
-    </div>
-
-    <!-- Hamburger Button for Mobile -->
-    <div class="md:hidden">
-        <button id="nav-toggle" class="hamburger focus:outline-none">
-            <div class="bar bar1"></div>
-            <div class="bar bar2"></div>
-            <div class="bar bar3"></div>
-        </button>
-    </div>
-</div>
-
-<!-- Mobile Navigation -->
-<div id="mobile-nav">
-    <div class="mobile-menu-glass">
-        <div class="menu-options">
-            <!-- Mobile Menu Links -->
-            <a href="/" class="menu-link text-2xl py-2 transition duration-300"
-                >AI Solutions</a
-            >
-            <a href="/" class="menu-link text-2xl py-2 transition duration-300"
-                >Services</a
-            >
-            <a href="/" class="menu-link text-2xl py-2 transition duration-300"
-                >Industries</a
-            >
-            <a href="/" class="menu-link text-2xl py-2 transition duration-300"
-                >Works</a
-            >
-            <a href="/" class="menu-link text-2xl py-2 transition duration-300"
-                >About</a
-            >
-            <a href="/" class="menu-link text-2xl py-2 transition duration-300"
-                >Blogs</a
-            >
-            <a href="/" class="menu-link text-2xl py-2 transition duration-300"
-                >Career</a
-            >
-            <a
-                href="/"
-                class="menu-link text-2xl mt-4 rounded-full bg-[#14AED5] px-6 py-2 text-white  transition duration-300"
-                >Contact Us</a
-            >
+          >
         </div>
-    </div>
-</div>
+        <div class="nav-item">
+          <a href="/" class="hover:text-blue-500 transition duration-300"
+            >Services</a
+          >
+          <div class="dropdown dropdown-grid">
+            <!-- First Column -->
+            <div>
+              <div class="dropdown-section">
+                <div class="dropdown-section-title">Development</div>
+                <a href="/">
+                  Custom Software Development
+                  <span class="link-description"
+                    >Tailored solutions for your business</span
+                  >
+                </a>
+                <a href="/">
+                  Web Application Development
+                  <span class="link-description"
+                    >Scalable and responsive web apps</span
+                  >
+                </a>
+                <a href="/">
+                  Mobile Application Development
+                  <span class="link-description"
+                    >iOS and Android development</span
+                  >
+                </a>
+                <a href="/">
+                  Ruby on Rails Development
+                  <span class="link-description"
+                    >Fast and efficient web frameworks</span
+                  >
+                </a>
+                <a href="/">
+                  React Native App Development
+                  <span class="link-description"
+                    >Cross-platform mobile solutions</span
+                  >
+                </a>
+              </div>
+            </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
+            <!-- Second Column -->
+            <div>
+              <div class="dropdown-section">
+                <div class="dropdown-section-title">Specializations</div>
+                <a href="/">
+                  Software Testing Services
+                  <span class="link-description"
+                    >Ensure quality and reliability</span
+                  >
+                </a>
+                <a href="/">
+                  IT Consulting Services
+                  <span class="link-description">Expert technical guidance</span
+                  >
+                </a>
+                <a href="/">
+                  UI/UX Design Services
+                  <span class="link-description"
+                    >User-centered design solutions</span
+                  >
+                </a>
+                <a href="/">
+                  AI Development Services
+                  <span class="link-description">Intelligent automation</span>
+                </a>
+                <a href="/">
+                  Gen AI Development Services
+                  <span class="link-description">Next-gen AI solutions</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/" class="hover:text-blue-500 transition duration-300"
+            >Industries</a
+          >
+          <div class="dropdown">
+            <div class="dropdown-section">
+              <div class="dropdown-section-title">Key Industries</div>
+              <a href="/">
+                Health Care
+                <span class="link-description"
+                  >Healthcare technology solutions</span
+                >
+              </a>
+              <a href="/">
+                Aviation
+                <span class="link-description">Aviation software systems</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/" class="hover:text-blue-500 transition duration-300"
+            >Works</a
+          >
+        </div>
+        <div class="nav-item">
+          <a href="/" class="hover:text-blue-500 transition duration-300"
+            >About</a
+          >
+          <div class="dropdown">
+            <div class="dropdown-section">
+              <div class="dropdown-section-title">Company</div>
+              <a href="/">
+                Who We Are
+                <span class="link-description">Our mission and values</span>
+              </a>
+              <a href="/">
+                Our Process
+                <span class="link-description">How we work with clients</span>
+              </a>
+              <a href="/">
+                Our Works
+                <span class="link-description">Portfolio of projects</span>
+              </a>
+              <a href="/">
+                Events
+                <span class="link-description"
+                  >Industry events and conferences</span
+                >
+              </a>
+              <a href="/">
+                Careers
+                <span class="link-description">Join our growing team</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/" class="hover:text-blue-500 transition duration-300"
+            >Blogs</a
+          >
+          <div class="dropdown">
+            <div class="dropdown-section">
+              <div class="dropdown-section-title">Resources</div>
+              <a href="/">
+                Knowledge Blogs
+                <span class="link-description">Insights and expertise</span>
+              </a>
+              <a href="/">
+                Tip of the Week
+                <span class="link-description">Helpful weekly tips</span>
+              </a>
+              <a href="/">
+                Q&A of the Week
+                <span class="link-description">Common questions answered</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item">
+          <a href="/" class="hover:text-blue-500 transition duration-300"
+            >Career</a
+          >
+        </div>
+        <a href="/" class="contact-button">Contact Us</a>
+      </div>
+
+      <!-- Hamburger Button for Mobile -->
+      <div class="md:hidden">
+        <button id="nav-toggle" class="hamburger focus:outline-none">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav">
+      <div class="mobile-menu-glass">
+        <div class="menu-options">
+          <!-- Mobile Menu Links -->
+          <a href="/" class="menu-link"> AI Solutions </a>
+          <div class="menu-link" data-dropdown="services">
+            Services
+            <span class="chevron-right"></span>
+          </div>
+          <div class="menu-link" data-dropdown="industries">
+            Industries
+            <span class="chevron-right"></span>
+          </div>
+          <a href="/" class="menu-link"> Works </a>
+          <div class="menu-link" data-dropdown="about">
+            About
+            <span class="chevron-right"></span>
+          </div>
+          <div class="menu-link" data-dropdown="blogs">
+            Blogs
+            <span class="chevron-right"></span>
+          </div>
+          <a href="/" class="menu-link"> Career </a>
+          <a
+            href="/"
+            class="menu-link contact-button"
+            style="width: auto; margin-top: 20px;"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menus -->
+    <!-- Services Dropdown -->
+    <div id="services-dropdown" class="mobile-dropdown">
+      <div class="mobile-dropdown-header">
+        <div class="back-button">
+          <span class="chevron-left"></span>
+          Back
+        </div>
+        <div
+          class="mobile-dropdown-title flex justify-center items-center w-60"
+        >
+          Services
+        </div>
+      </div>
+      <div class="mobile-dropdown-section">
+        <div class="mobile-dropdown-section-title">Development</div>
+        <a href="/" class="mobile-dropdown-link">
+          Custom Software Development
+          <span class="mobile-link-description"
+            >Tailored solutions for your business</span
+          >
+        </a>
+        <a href="/" class="mobile-dropdown-link">
+          Web Application Development
+          <span class="mobile-link-description"
+            >Scalable and responsive web apps</span
+          >
+        </a>
+        <a href="/" class="mobile-dropdown-link">
+          Mobile Application Development
+          <span class="mobile-link-description"
+            >iOS and Android development</span
+          >
+        </a>
+        <a href="/" class="mobile-dropdown-link">
+          Ruby on Rails Development
+          <span class="mobile-link-description"
+            >Fast and efficient web frameworks</span
+          >
+        </a>
+        <a href="/" class="mobile-dropdown-link">
+          React Native App Development
+          <span class="mobile-link-description"
+            >Cross-platform mobile solutions</span
+          >
+        </a>
+      </div>
+      <div class="mobile-dropdown-section">
+        <div class="mobile-dropdown-section-title">Specializations</div>
+        <a href="/" class="mobile-dropdown-link">
+          Software Testing Services
+          <span class="mobile-link-description"
+            >Ensure quality and reliability</span
+          >
+        </a>
+        <a href="/" class="mobile-dropdown-link">
+          IT Consulting Services
+          <span class="mobile-link-description">Expert technical guidance</span>
+        </a>
+        <a href="/" class="mobile-dropdown-link">
+          UI/UX Design Services
+          <span class="mobile-link-description"
+            >User-centered design solutions</span
+          >
+        </a>
+        <a href="/" class="mobile-dropdown-link">
+          AI Development Services
+          <span class="mobile-link-description">Intelligent automation</span>
+        </a>
+        <a href="/" class="mobile-dropdown-link">
+          Gen AI Development Services
+          <span class="mobile-link-description">Next-gen AI solutions</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Industries Dropdown -->
+    <div id="industries-dropdown" class="mobile-dropdown">
+      <div class="mobile-dropdown-header">
+        <div class="back-button">
+          <span class="chevron-left"></span>
+          Back
+        </div>
+        <div
+          class="mobile-dropdown-title flex justify-center items-center w-60"
+        >
+          Industries
+        </div>
+      </div>
+      <div class="mobile-dropdown-section">
+        <div class="mobile-dropdown-section-title">Key Industries</div>
+        <a href="/" class="mobile-dropdown-link">
+          Health Care
+          <span class="mobile-link-description"
+            >Healthcare technology solutions</span
+          >
+        </a>
+        <a href="/" class="mobile-dropdown-link">
+          Aviation
+          <span class="mobile-link-description">Aviation software systems</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- About Dropdown -->
+    <div id="about-dropdown" class="mobile-dropdown">
+      <div class="mobile-dropdown-header">
+        <div class="back-button">
+          <span class="chevron-left"></span>
+          Back
+        </div>
+        <div
+          class="mobile-dropdown-title flex justify-center items-center w-60"
+        >
+          About
+        </div>
+      </div>
+      <div class="mobile-dropdown-section">
+        <div class="mobile-dropdown-section-title">Company</div>
+        <a href="/" class="mobile-dropdown-link">
+          Who We Are
+          <span class="mobile-link-description">Our mission and values</span>
+        </a>
+        <a href="/" class="mobile-dropdown-link">
+          Our Process
+          <span class="mobile-link-description">How we work with clients</span>
+        </a>
+        <a href="/" class="mobile-dropdown-link">
+          Our Works
+          <span class="mobile-link-description">Portfolio of projects</span>
+        </a>
+        <a href="/" class="mobile-dropdown-link">
+          Events
+          <span class="mobile-link-description"
+            >Industry events and conferences</span
+          >
+        </a>
+        <a href="/" class="mobile-dropdown-link">
+          Careers
+          <span class="mobile-link-description">Join our growing team</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Blogs Dropdown -->
+    <div id="blogs-dropdown" class="mobile-dropdown">
+      <div class="mobile-dropdown-header">
+        <div class="back-button">
+          <span class="chevron-left"></span>
+          Back
+        </div>
+        <div
+          class="mobile-dropdown-title flex justify-center items-center w-60"
+        >
+          Blogs
+        </div>
+      </div>
+      <div class="mobile-dropdown-section">
+        <div class="mobile-dropdown-section-title">Resources</div>
+        <a href="/" class="mobile-dropdown-link">
+          Knowledge Blogs
+          <span class="mobile-link-description">Insights and expertise</span>
+        </a>
+        <a href="/" class="mobile-dropdown-link">
+          Tip of the Week
+          <span class="mobile-link-description">Helpful weekly tips</span>
+        </a>
+        <a href="/" class="mobile-dropdown-link">
+          Q&A of the Week
+          <span class="mobile-link-description">Common questions answered</span>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
         const navToggle = document.getElementById("nav-toggle");
         const mobileNav = document.getElementById("mobile-nav");
         const hamburger = document.querySelector(".hamburger");
+        const dropdownTriggers = document.querySelectorAll("[data-dropdown]");
+        const backButtons = document.querySelectorAll(".back-button");
 
         // Toggle mobile menu
         navToggle.addEventListener("click", () => {
-            mobileNav.classList.toggle("active");
-            hamburger.classList.toggle("active");
+          mobileNav.classList.toggle("active");
+          hamburger.classList.toggle("active");
+
+          // Close any open dropdowns when toggling the main menu
+          document.querySelectorAll(".mobile-dropdown").forEach((dropdown) => {
+            dropdown.classList.remove("active");
+          });
         });
-    });
-</script>
+
+        // Handle dropdown menu clicks
+        dropdownTriggers.forEach((trigger) => {
+          trigger.addEventListener("click", () => {
+            const dropdownName = trigger.getAttribute("data-dropdown");
+            const dropdown = document.getElementById(
+              `${dropdownName}-dropdown`
+            );
+
+            if (dropdown) {
+              dropdown.classList.add("active");
+            }
+          });
+        });
+
+        // Handle back button clicks
+        backButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const dropdown = button.closest(".mobile-dropdown");
+            dropdown.classList.remove("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
