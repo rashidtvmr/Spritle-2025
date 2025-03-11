@@ -1,0 +1,69 @@
+---
+const AiSectionThreeMap = [
+  {
+    image: "/assets/secthree1.png",
+    title: "Healthcare",
+    description:
+      "Revolutionizing patient care with AI-driven diagnostics, personalized treatments, and operational automation",
+  },
+  {
+    image: "/assets/secthree2.png",
+    title: "Retail",
+    description:
+      "Enhancing inventory management, customer personalization, and supply chain optimization using AI technologies",
+  },
+  {
+    image: "/assets/secthree3.png",
+    title: "Manufacturing",
+    description:
+      "Improving predictive maintenance, production optimization, and quality control with AI-driven analytics",
+  },
+  {
+    image: "/assets/secthree4.png",
+    title: "Aviation/Airports",
+    description:
+      "Streamlining airport operations, enhancing safety, and optimizing passenger experiences through predictive analytics, computer vision, and AI-driven automation",
+  },
+];
+---
+
+<div
+  class="text-primary font-bold text-heading container px-5 md:px-0 mt-20 md:mt-28 lg:mt-46 xl:mt-45"
+>
+  AI Solutions Across Industries
+  <p class="text-secondary mt-4 text-subheading max-w-[1205px] font-medium">
+    Innovate faster with new capabilities, a choice of industry-leading FMs, and
+    infrastructure that delivers high performance while lowering costs.
+  </p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 mt-12 container px-5 md:px-0">
+  {
+    AiSectionThreeMap.map((card, index) => (
+      <div
+        key={index}
+        class="relative border-2 border-[#D6D6D6] rounded-[10px] overflow-hidden shadow-lg  p-4 xl:h-[593px] xl:max-w-[832px] w-full "
+      >
+        <div class="absolute inset-0 rounded-lg m-1 " />
+        <img
+          src={card.image}
+          alt={card.title}
+          class="w-full h-[349px]  object-cover rounded-lg"
+        />
+        <div class=" mt-5">
+          <div class="flex items-center justify-between">
+            <h2 class="text-primary text-subtitle font-medium">{card.title}</h2>
+            <img
+              src="../assets/industrybutton.svg"
+              alt="Industry Button"
+              class=" p-1 hover:bg-[#15AED5]  transition duration-300 size-12"
+            />
+          </div>
+          <p class="text-secondary font-medium text-subheading mt-7">
+            {card.description}
+          </p>
+        </div>
+      </div>
+    ))
+  }
+</div>
