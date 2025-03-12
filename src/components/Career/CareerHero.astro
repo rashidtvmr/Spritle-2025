@@ -1,0 +1,62 @@
+---
+const cards = [
+  {
+    title: "Adding Value To Your Career",
+    description:
+      "We at Spritle are always conscious of your development. We provide you with the correct environment to learn and grow towards a better future.",
+  },
+  {
+    title: "Professional, Yet Friendly",
+    description:
+      "We are a group of friendly professionals looking forward to contributing to personal & professional improvement. We believe friendliness makes wonders.",
+  },
+  {
+    title: "A Healthy Competition",
+    description:
+      "Employees of Spritle are very generous and we share even the tiniest bit of new information we learn. Our knowledge well is very deep!",
+  },
+  {
+    title: "Fun Get-Togethers",
+    description:
+      "A stress-free environment for our employees is a must. We have different get-togethers and parties all time round the clock on important occasions & days.",
+  },
+];
+---
+
+<div
+  class="flex flex-col justify-center items-center text-center px-5 md:px-0 container space-y-5 mt-10 md:mt-20"
+>
+  <h1
+    class="font-dmSans font-normal
+            text-title"
+    style="background: linear-gradient(360deg, #ffffff 0%, rgba(255, 255, 255, 0.3) 100%); 
+             -webkit-background-clip: text;
+             -webkit-text-fill-color: transparent;"
+  >
+    High-performing remote teams. <br /> The future of work.
+  </h1>
+  <p class="font-normal md:mt-4 text-title-body text-primary max-w-[1021px]">
+    Powerful, self-serve team engagement tools and analytics. Supercharge your
+    managers & keep employees engaged from anywhere.
+  </p>
+</div>
+
+<div
+  class="grid grid-cols-1 md:grid-cols-2   container px-5 md:px-0 mt-10 md:mt-20 gap-x-1 md:gap-y-10 gap-y-4"
+>
+  {
+    cards.map((card, index) => (
+      <div
+        key={index}
+        class="bg-[#2E2E2E] border border-[#1F1F1F] rounded-[20px]  w-full max-w-[850px] max-h-[264px] h-screen flex flex-col justify-center space-y-3  md:space-y-6 p-3  md:p-10 "
+      >
+        <h3 class="text-primary text-title-body  font-dm-sans font-semibold  ">
+          {card.title}
+        </h3>
+        <p class="text-secondary text-subheading font-dm-sans font-medium max-w-[750px]">
+          {card.description}
+        </p>
+      </div>
+    ))
+  }
+</div>
