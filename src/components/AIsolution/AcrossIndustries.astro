@@ -37,13 +37,14 @@ const AiSectionThreeMap = [
   </p>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 mt-12 container px-5 md:px-0">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-12 container px-5 md:px-0">
   {
     AiSectionThreeMap.map((card, index) => (
       <div
         key={index}
-        class="relative border-2 border-[#D6D6D6] rounded-[10px] overflow-hidden shadow-lg  p-4 xl:h-[593px] xl:max-w-[832px] w-full "
+        class="relative border-2 border-[#D6D6D6] rounded-[10px] overflow-hidden shadow-lg  p-4 xl:h-[593px]  w-full "
       >
+        {/* xl:max-w-[832px] this card is 832px  */}
         <div class="absolute inset-0 rounded-lg m-1 " />
         <img
           src={card.image}

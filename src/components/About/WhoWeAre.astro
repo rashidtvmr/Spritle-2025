@@ -1,0 +1,305 @@
+---
+import GradientHeading from "../DynamicProps/GradientHeading.astro";
+import Ourprocess from "./Ourprocess.astro";
+
+const images = [
+  { src: "/assets/loganathan.png", alt: "Loganathan" },
+  { src: "/assets/manohar.png", alt: "Manohar" },
+  { src: "/assets/balaji.png", alt: "Balaji" },
+  { src: "/assets/suren.png", alt: "Suren" },
+];
+---
+
+<div class="mt-33">
+  <div
+    class="flex flex-col justify-center items-center text-center space-y-5 container"
+  >
+    <div class="flex mb-15">
+      <!-- Who We Are Button -->
+      <button
+        id="whoWeAreBtn"
+        class="w-[158.5px] h-[44.215px] bg-[#EAEAEA] text-[#252525] text-body font-semibold px-[7.11px] py-[7.11px] rounded-tl-[38.38px] rounded-bl-[38.38px] flex items-center justify-center active-tab"
+      >
+        Who We Are
+      </button>
+
+      <!-- Our Process Button -->
+      <button
+        id="ourProcessBtn"
+        class="w-[158.5px] h-[44.215px] bg-transparent border-[0.71px] border-white text-[#EAEAEA] text-body font-semibold px-[7.11px] py-[7.11px] rounded-tr-[38.38px] rounded-br-[38.38px] flex items-center justify-center"
+      >
+        Our Process
+      </button>
+    </div>
+
+    <!-- Tab Content Containers -->
+    <div id="whoWeAreContent" class="tab-content">
+      <!-- Who We Are content is already in the page by default -->
+      <GradientHeading text="Meet Spritle's Talented Clan of Tech Experts" />
+      <div class="w-screen flex justify-center items-center flex-col">
+        <p
+          class="font-normal lg:mt-8 mt-4 text-title-body text-primary max-w-[700px]"
+        >
+          Entranced by the alluring spell of innovative tech trends, we craft
+          futuristic solutions for all!
+        </p>
+        <button
+          class="mt-6 bg-[#15AED5] text-[#1D1D1D] lg:w-screen lg:max-w-[194px] max-h-[46px] text-sm font-normal px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 rounded-full flex items-center justify-center gap-2"
+        >
+          Get Started <img
+            src="/assets/arrowright.png"
+            alt="Right Arrow"
+            class="w-4 h-4 invert"
+          />
+        </button>
+
+        <h1
+          class="text-heading text-primary font-dmSans font-semibold
+            md:py-1.5 lg:py-1.5 xl:pt-18 pt-3 md:pt-3"
+        >
+          Mission and The Journey So Far
+        </h1>
+        <p
+          class="text-secondary mt-4 text-subbody font-normal max-w-[1424px] pt-10"
+        >
+          Software is created for people, and so is our mission-focused towards
+          people-centric solutions! From creating the questful ambiance for
+          working on tech tools to honoring the harbor that goes into making
+          great software, we are a hub of software innovators. We always strive
+          towards making futuristic software cost-effective and user-friendly!
+        </p>
+      </div>
+      <!-- Counter Section -->
+      <div class="py-18 xl:mt-20 mt-5" id="counterSection">
+        <div
+          class="w-screen mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-[73.55px] text-center xl:px-30 px-5"
+        >
+          <!-- Box 1 -->
+          <div
+            class="w-full h-[187px] border-[5.47px] lg:border-[12.47px] border-white rounded-tl-[62.33px] rounded-br-[62.33px] overflow-hidden flex items-center justify-center"
+          >
+            <div class="p-6">
+              <div
+                class="font-poppins font-semibold text-[28px] sm:text-[58.57px] leading-[32px] sm:leading-[82.85px] text-white text-center"
+              >
+                <span data-target="15" id="years">0</span>+
+              </div>
+              <p class="text-white text-l sm:text-xl">Years</p>
+            </div>
+          </div>
+
+          <!-- Box 2 -->
+          <div
+            class="w-full h-[187px] border-[5.47px] lg:border-[12.47px] border-white rounded-tl-[62.33px] rounded-br-[62.33px] overflow-hidden flex items-center justify-center"
+          >
+            <div class="p-6">
+              <div
+                class="font-poppins font-semibold text-[28px] sm:text-[58.57px] leading-[32px] sm:leading-[82.85px] text-white text-center"
+              >
+                <span data-target="150" id="happyClients">0</span>+
+              </div>
+              <p class="text-white text-l sm:text-xl">Happy Clients</p>
+            </div>
+          </div>
+
+          <!-- Box 3 -->
+          <div
+            class="w-full h-[187px] border-[5.47px] lg:border-[12.47px] border-white rounded-tl-[62.33px] rounded-br-[62.33px] overflow-hidden flex items-center justify-center"
+          >
+            <div class="p-6">
+              <div
+                class="font-poppins font-semibold text-[28px] sm:text-[58.57px] leading-[32px] sm:leading-[82.85px] text-white text-center"
+              >
+                <span data-target="200" id="projects">0</span>+
+              </div>
+              <p class="text-gray-300 text-l sm:text-xl">Projects</p>
+            </div>
+          </div>
+
+          <!-- Box 4 -->
+          <div
+            class="w-full h-[187px] border-[5.47px] lg:border-[12.47px] border-white rounded-tl-[62.33px] rounded-br-[62.33px] overflow-hidden flex items-center justify-center"
+          >
+            <div class="p-6">
+              <div
+                class="font-poppins font-semibold text-[28px] sm:text-[58.57px] leading-[32px] sm:leading-[82.85px] text-white text-center"
+              >
+                <span data-target="100" id="integrations">0</span>+
+              </div>
+              <p class="text-gray-300 text-l sm:text-xl">
+                Third Party Integrations
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Child Companies Section -->
+      <h1
+        class="font-semibold lg:text-[54px] text-lg flex justify-center xl:mt-40 lg:mt-20 mt-0"
+      >
+        Our Child Companies
+      </h1>
+
+      <div class="xl:py-28 xl:py-12 py-5 h-[auto] xl:h-[300px]">
+        <div class="xl:px-30 px-5 w-screen justify-center items-center">
+          <div
+            class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-8 text-center"
+          >
+            <div class="flex justify-center">
+              <img
+                src="/assets/seewise.png"
+                alt="Seewise"
+                class="max-w-full h-auto"
+              />
+            </div>
+            <div class="flex justify-center">
+              <img
+                src="/assets/saasly.png"
+                alt="Saasly"
+                class="max-w-full h-auto"
+              />
+            </div>
+            <div class="flex justify-center">
+              <img
+                src="/assets/martleai.png"
+                alt="Marlteai"
+                class="max-w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Megaminds Behind Spritle Section -->
+      <h1
+        class="text-xl font-medium md:text-[60px] flex justify-center lg:pt-30 lg:py-13"
+      >
+        Megaminds Behind Spritle
+      </h1>
+      <div
+        class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 xl:gap-[150px] gap-10 justify-items-center justify-center items-center"
+      >
+        {
+          images.map((image) => (
+            <img
+              key={image.alt}
+              src={image.src}
+              alt={image.alt}
+              class="w-full max-w-xs object-cover"
+            />
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Our Process Content Container -->
+    <div id="ourProcessContent" class="tab-content hidden">
+      <Ourprocess />
+    </div>
+  </div>
+</div>
+
+<script>
+  // Tab switching functionality
+  const whoWeAreBtn = document.getElementById("whoWeAreBtn");
+  const ourProcessBtn = document.getElementById("ourProcessBtn");
+  const whoWeAreContent = document.getElementById("whoWeAreContent");
+  const ourProcessContent = document.getElementById("ourProcessContent");
+
+  whoWeAreBtn.addEventListener("click", () => {
+    // Update button styles
+    whoWeAreBtn.classList.add("bg-[#EAEAEA]", "text-[#252525]");
+    whoWeAreBtn.classList.remove(
+      "bg-transparent",
+      "border-white",
+      "text-[#EAEAEA]"
+    );
+
+    ourProcessBtn.classList.remove("bg-[#EAEAEA]", "text-[#252525]");
+    ourProcessBtn.classList.add(
+      "bg-transparent",
+      "border-[0.71px]",
+      "border-white",
+      "text-[#EAEAEA]"
+    );
+
+    // Show/hide content
+    whoWeAreContent.classList.remove("hidden");
+    ourProcessContent.classList.add("hidden");
+  });
+
+  ourProcessBtn.addEventListener("click", () => {
+    // Update button styles
+    ourProcessBtn.classList.add(
+      "bg-[#EAEAEA]",
+      "text-[#252525]",
+      "border-[2.71px]"
+    );
+    ourProcessBtn.classList.remove(
+      "bg-transparent",
+      "border-white",
+      "text-[#EAEAEA]",
+
+    );
+
+    whoWeAreBtn.classList.remove("bg-[#EAEAEA]", "text-[#252525]");
+    whoWeAreBtn.classList.add(
+      "bg-transparent",
+      "border-[2.71px]",
+      "border-white",
+      "text-[#EAEAEA]"
+    );
+
+    // Show/hide content
+    ourProcessContent.classList.remove("hidden");
+    whoWeAreContent.classList.add("hidden");
+  });
+
+  // Counter animation functionality
+  function animateCounter(id, target, duration) {
+    let start = 0;
+    const element = document.getElementById(id);
+    if (!element) return;
+    const increment = target / duration;
+    let current = start;
+
+    function updateCounter() {
+      current += increment;
+      if (current >= target) {
+        element.textContent = target.toString();
+      } else {
+        element.textContent = Math.floor(current).toString();
+        requestAnimationFrame(updateCounter);
+      }
+    }
+    updateCounter();
+  }
+
+  function handleIntersection(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCounter("years", 15, 20);
+        animateCounter("happyClients", 150, 20);
+        animateCounter("projects", 200, 20);
+        animateCounter("integrations", 100, 20);
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(handleIntersection, {
+    threshold: 0.5,
+  });
+
+  const counterSection = document.getElementById("counterSection");
+  if (counterSection) {
+    observer.observe(counterSection);
+  }
+</script>
+
+<style>
+  .hidden {
+    display: none;
+  }
+</style>

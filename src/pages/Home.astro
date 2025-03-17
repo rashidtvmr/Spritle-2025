@@ -8,26 +8,22 @@ import OurServices from "../components/Home/OurServices.astro";
 import IndustriesWeServe from "../components/Home/IndustriesWeServe.astro";
 import OurPartners from "../components/Home/OurPartners.astro";
 import Blogs from "../components/Home/Blogs.astro";
-import CustomerSlider from "../components/Home/CustomerSlider.jsx";
-// import CarouselSwiper from "../components/Home/CarouselSwiper.jsx";
+
+
 import Swiper from "../components/Home/Swiper.astro";
 import Carousel from "../components/Home/Carousel.astro";
 import Customer from "../components/Home/Customer.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
-  <div>
+  <div class="pt-18" >
     <Swiper />
-    <!-- <SwiperJsx client:load /> -->
-    <!-- <Hero client:load /> // old  -->
-  </div><div class="">
+  </div>
     <div class="">
       <TextAnimation />
     </div>
-  </div>
 
   <div class="">
-    <!-- <CarouselSwiper client:load /> -->
     <Carousel />
   </div>
 
@@ -52,7 +48,6 @@ import Layout from "@/layouts/Layout.astro";
     </div>
 
     <div class="">
-      <!-- <CustomerSlider client:load /> -->
       <Customer />
     </div>
 

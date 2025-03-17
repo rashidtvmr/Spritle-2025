@@ -1,19 +1,30 @@
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			animation: {
+				'moving-line': 'scrolling 2s linear infinite',
+			},
+			keyframes: {
+				scrolling: {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(100%)' },
+				},
+			},
+		},
 		container: {
 			center: true,
 			padding: '2rem',
 			screens: {
-				sm: '640px',  // Custom small container size
-				md: '768px',  // Custom medium container size
-				lg: '1024px',  // Custom large container size
-				xl: '1280px', // Custom extra-large container size
-				'2xl': '1736px' // Custom 2xl container size
-			}
-		}
+				sm: '640px',
+				md: '768px',
+				lg: '1024px',
+				xl: '1280px',
+				'2xl': '1736px',
+			},
+		},
 	},
-	plugins: []
-}
+	plugins: [],
+};
