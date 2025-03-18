@@ -1,0 +1,155 @@
+---
+const cards = [
+  {
+    logo: "/assets/stengg.svg",
+    title: "ST Engineering",
+    partner: "Premium Development Partner",
+    description:
+      "A global technology, defense, and engineering group specializing in aerospace, electronics, marine, etc.",
+  },
+  {
+    logo: "/assets/reach.svg",
+    title: "Reachv",
+    partner: "Southeast Asia’s Largest Airport",
+    description:
+      "A Truck Management App built to simplify the driver request process and create value for Service Providers. h",
+  },
+  {
+    logo: "/assets/changi.svg",
+    title: "Changi Airporth",
+    partner: "Southeast Asia’s Largest Airport",
+    description:
+      "A holistic Airport Management System for maintaining all the terminals and runways in a single integrated platform. ",
+  },
+  {
+    logo: "/assets/livingmatrix.svg",
+    title: "LivingMatrix ",
+    partner: "Comprehensive Analytical Tool",
+    description:
+      "Advanced tool for functional doctors to assess patient health based on symptoms and questions.",
+  },
+  {
+    logo: "/assets/geosnapshot.svg",
+    title: "GEOSNAPSHOT",
+    partner: "Immigration Self-Help Kioskrusted Industry Expert",
+    description:
+      "An interactive platform for ardent photographers who go to events, take photos, and display them on the site which can be purchased by users.",
+  },
+  {
+    logo: "/assets/tree.svg",
+    title: "Share & Remember",
+    partner: "Part of Rugged Device OS",
+    description:
+      "Provides essential communication products & services to support public safety & commercial clients worldwide.",
+  },
+  {
+    logo: "/assets/lt.svg",
+    title: "L&T ",
+    partner: "AI-Powered Monitoring System",
+    description:
+      "An AI-Powered Monitoring system to get real-time retention analytics on the functioning of their galvanizing plants.",
+  },
+  {
+    logo: "/assets/re.svg",
+    title: "Royal Enfield ",
+    partner: "AI-Powered Monitoring System",
+    description:
+      "A Truck Management App built to simplify the driver request process and create value for Service Providers.",
+  },
+  {
+    logo: "/assets/ica.svg",
+    title: "ICA ",
+    partner: "Immigration Self-Help Kiosk",
+    description:
+      "A holistic Airport Management System for maintaining all the terminals and runways in a single integrated platform. ",
+  },
+  {
+    logo: "/assets/nestle.svg",
+    title: "Nestlé Health Science",
+    partner: "Functional Medicine",
+    description:
+      "A cutting-edge Analytical Tool to serve functional doctors to get an accurate depiction of patient health status.",
+  },
+  {
+    logo: "/assets/freshworks.svg",
+    title: "Freshworks ",
+    partner: "Freshworks Integrations",
+    description:
+      "AAs an official solution partner, we helped hundreds of Freshworks customers, each with unique and innovative solutions.",
+  },
+  {
+    logo: "/assets/moddo.svg",
+    title: "MODDO",
+    partner: "Immigration Self-Help Kiosk",
+    description:
+      "A technology service that acts as a strategic partner, enabling brands to have all the necessary tools to sell better.",
+  },
+  {
+    logo: "/assets/showdownlive.svg",
+    title: "ShowDown Time",
+    partner: "Built Live HQ Trivia App",
+    description:
+      "An Adrenaline-Pumping App which gives you the privilege and enjoyment to create and play live-streaming trivia game shows right on your mobile phone.",
+  },
+  {
+    logo: "/assets/tea.svg",
+    title: "BeerBoard",
+    partner: "Built Full-Class Apps",
+    description:
+      "A consolidated & complex app that is built to serve as a Beer Management Solution integrating bars, brewers, and beer lovers seamlessly.",
+  },
+  {
+    logo: "/assets/healthpotter.svg",
+    title: "HealthPlotter ",
+    partner: "Premium Development partner",
+    description:
+      "A Business App that helps the organization track and support employees' health insurance and other related claim details for continual benefits.",
+  },
+  {
+    logo: "/assets/livingmatrix.svg",
+    title: "Sitefly",
+    partner: "Build Apps Like Wix",
+    description:
+      "Sitefly’s mission is to empower artists and small businesses by providing them a platform to create compelling social websites and grow their fan base.",
+  },
+  {
+    logo: "/assets/doctordb.svg",
+    title: " doctorDB",
+    partner: "Premium Development Partner ",
+    description:
+      "A Digital Medical Emergency Lookup Directory that uses the GPS location of the users to list the nearby doctors, clinics, and hospitals.",
+  },
+  {
+    logo: "/assets/united.svg",
+    title: "United Nations",
+    partner: "Complete CMS System",
+    description:
+      "Facilitates greater economic integration & cooperation among its member countries & promotes sustainable development.",
+  },
+];
+---
+
+<section
+  class="grid grid-cols-1 md:grid-cols-3 md:gap-5 xl:gap-y-18 gap-y-5 p-6 container lg:mt-30 md:mt-15 mt-5"
+>
+  {
+    cards.map((card) => (
+      <div class="max-w-[501px] h-screen max-h-[388px] rounded-[10px] border-[0.2px] p-5 xl:p-[15px_30px_40px_40px] bg-[#313131] text-white md:pt-5 md:space-y-3 flex flex-col md:items-start items-center text-center md:text-left">
+        <img
+          src={card.logo}
+          alt="Logo"
+          class="max-w-[76px] max-h-[76px] mb-4"
+        />
+        <h2 class="text-subheading font-medium text-[#EAEAEA] pt-5">
+          {card.title}
+        </h2>
+        <h3 class="text-subheading text-[#EAEAEA] font-normal">
+          {card.partner}
+        </h3>
+        <p class="text-[#B0B0B0] font-normal text-subheading">
+          {card.description}
+        </p>
+      </div>
+    ))
+  }
+</section>
