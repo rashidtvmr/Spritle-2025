@@ -1,0 +1,35 @@
+---
+import Star from "@/components/DynamicProps/Star.astro";
+
+const items = [
+  {
+    title: "Accuracy Beyond Human Capabilities",
+    description:
+      " Vision AI models can process visual data at speeds and scales impossible for humans, delivering faster, more accurate insights in real-time",
+  },
+  {
+    title: "Automation & Efficiency",
+    description:
+      " Automate complex tasks such as defect detection, facial recognition, and visual inspection, reducing manual intervention and costs.",
+  },
+  {
+    title: "Real-Time Decision-Making",
+    description:
+      " With real-time video and image analysis, businesses can respond instantly to critical events, enhancing safety, security, and operational efficiency",
+  },
+];
+---
+
+<div class="py-8 mt-10 md:mt-20 lg:mt-20 xl:mt-30">
+  <div class="container px-5 md:px-0 flex justify-center items-center flex-col">
+    <h2
+      class="text-3xl font-medium mb-6 md:text-4xl lg:text-[54px] text-primary"
+    >
+      Why Vision AI is a Game Changer
+    </h2>
+
+    <div>
+      <Star items={items} />
+    </div>
+  </div>
+</div>

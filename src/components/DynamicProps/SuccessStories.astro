@@ -1,0 +1,23 @@
+---
+// CustomerCard.astro
+const { image, heading, description } = Astro.props;
+---
+
+<div
+  class="max-w-[832px] max-h-[585px] rounded-lg border-2 border-gray-300 p-[26px] gap-5 flex flex-col overflow-hidden overflow-ellipsis"
+  
+>
+  <img
+    src={image}
+    alt="Customer Image"
+    class="w-full max-w-[782px] max-h-[300px] rounded-lg object-cover"
+  />
+  <div class="w-full max-w-[781px] max-h-[211px] gap-4 flex flex-col">
+    <h2 class="font-medium text-subtitle text-primary">
+      {heading}
+    </h2>
+    <p class="text-[#B0B0B0] font-medium text-subheading">
+      {description}
+    </p>
+  </div>
+</div>

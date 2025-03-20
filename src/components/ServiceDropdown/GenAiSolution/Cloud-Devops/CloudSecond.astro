@@ -1,0 +1,47 @@
+---
+import DataPillCard from "@/components/DynamicProps/DataPillCard.astro";
+---
+
+<div
+  class="text-heading text-primary md:mb-12 mb-2 font-bold container mt-8 md:mt-20 lg:mt-40"
+>
+  Core Cloud & DevOps Services
+</div>
+<div class="container gap-5 grid md:grid-cols-2 grid-cols-1 xl:grid-cols-3">
+  <DataPillCard
+    logo="/assets/unique1.svg"
+    heading="Cloud Infrastructure Design & Migration"
+    content={["AWS", "Azure", "Google Cloud"]}
+    description="Seamlessly migrate your legacy systems to the cloud, or design robust cloud architectures from scratch"
+  />
+  <DataPillCard
+    logo="/assets/unique1.svg"
+    heading="CI/CD Pipeline Automation"
+    content={["Jenkins", "GitLab CI", "CircleCI", "cassandra"]}
+    description=" Streamline your development lifecycle with automated Continuous Integration and Continuous Delivery pipelines, ensuring rapid and error-free deployments"
+  />
+  <DataPillCard
+    logo="/assets/unique1.svg"
+    heading="Infrastructure as Code (IaC)"
+    content={["Terraform", "AWS CloudFormation ", "Ansible"]}
+    description="Automate and standardize infrastructure management using IaC tools, improving consistency and reducing deployment time"
+  />
+  <DataPillCard
+    logo="/assets/unique1.svg"
+    heading="Containerization & Orchestration"
+    content={["Docker", "Kubernetes", "OpenShift"]}
+    description="Optimize your microservices with containerized environments and orchestration tools for enhanced scalability and fault tolerance"
+  />
+  <DataPillCard
+    logo="/assets/unique1.svg"
+    heading="Cloud Security & Monitoring"
+    content={["Prometheus ", "Grafana", "AWS CloudWatch"]}
+    description="Implement robust cloud security protocols and real-time monitoring to ensure your systems are protected and performant"
+  />
+  <DataPillCard
+    logo="/assets/unique1.svg"
+    heading="DevOps Consultation & Implementation"
+    content={["DevOps culture", "Process automation", "Toolchain optimization"]}
+    description="Adopt DevOps best practices to foster a culture of collaboration, speed up development cycles, and reduce operational overhead"
+  />
+</div>

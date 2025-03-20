@@ -1,0 +1,28 @@
+---
+// DynamicList.astro
+const { items } = Astro.props;
+---
+
+<ul class="h-full w-full max-w-[1212px] py-3 md:py-8">
+  {
+    items.map((item, index) => (
+      <li key={index} class="flex items-start mb-0 md:mb-12">
+        <div class="mr-4 h-full ">
+          <img
+            src="/assets/star.svg"
+            alt="Logo"
+            class="object-contain mt-3 md:mt-0"
+          />
+        </div>
+        <div class="mt-3">
+          <h4 class="font-medium font-primary text-subbody">
+            {item.title}:{" "}
+            <span class="md:text-[28px] text-base font-medium text-secondary">
+              {item.description}
+            </span>
+          </h4>
+        </div>
+      </li>
+    ))
+  }
+</ul>

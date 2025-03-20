@@ -1,10 +1,20 @@
 <!-- Navbar -->
-<nav class="bg-[#171717] shadow-md fixed top-0 left-0 w-full z-50 ">
-  <div class="px-4 sm:px-6 lg:px-8 ">
+<nav class="bg-[#171717] shadow-md fixed top-0 left-0 w-full z-50">
+  <div class="px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <!-- Home SVG Logo (Left Side) -->
-      <div class="flex items-center hover:h-12 hover:w-12 bg-[#262626] rounded-lg md:hidden p-2">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <div
+        class="flex items-center hover:h-12 hover:w-12 bg-[#262626] rounded-lg md:hidden p-2"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
           <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
           <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
           <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
@@ -13,183 +23,477 @@
 
       <!-- Spritle Logo (Centered) -->
       <div class="flex-1 flex justify-center md:justify-start">
-        <img src="/assets/logo.png" alt="Logo" class="lg:h-8 lg:w-24 h-8 w-30" />
+        <img
+          src="/assets/logo.png"
+          alt="Logo"
+          class="lg:h-8 lg:w-24 h-8 w-30"
+        />
       </div>
 
       <!-- Menu Items for Laptop -->
       <div class="hidden md:flex space-x-6 items-center">
-        <a href="aisolution" class="text-primary text-sm hover:bg-[#262626] px-3 py-2 rounded-lg transition duration-300">AI Solutions</a>
+        <a
+          href="aisolution"
+          class="text-primary text-sm hover:bg-[#262626] px-3 py-2 rounded-lg transition duration-300"
+          >AI Solutions</a
+        >
 
         <!-- Services Dropdown for Laptop -->
-      <div class="relative group">
-  <a href="#" id="servicesDropdownToggleDesktop" class="text-primary text-sm px-3 py-2 rounded-t-xl transition duration-300 flex items-center group-hover:bg-[#262626]">
-    Services
-    <svg id="servicesArrowDesktop" class="w-4 h-4 ml-1 transform transition-transform group-hover:rotate-180 duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-    </svg>
-  </a>
-  <!-- Dropdown Menu Service -->
-  <div id="servicesDropdownDesktop" class="absolute hidden group-hover:block bg-[#262626] mt-1   rounded-lg rounded-tl-none shadow-lg w-64">
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">Custom Software Development</a>
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">AI ML Solution</a>
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">Data Science and Big Data Solution</a>
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">Cloud and Devops Solution</a>
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">UI/UX Design</a>
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">IT Consulting</a>
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">QA & Testing Services</a>
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">Maintenance and Support</a>
-  </div>
-</div>
+        <div class="relative group">
+          <a
+            href="#"
+            id="servicesDropdownToggleDesktop"
+            class="text-primary text-sm px-3 py-2 rounded-t-xl transition duration-300 flex items-center group-hover:bg-[#262626]"
+          >
+            Services
+            <svg
+              id="servicesArrowDesktop"
+              class="w-4 h-4 ml-1 transform transition-transform group-hover:rotate-180 duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <!-- Dropdown Menu Service -->
+          <div
+            id="servicesDropdownDesktop"
+            class="absolute hidden group-hover:block bg-[#262626] mt-1 rounded-lg rounded-tl-none shadow-lg w-64"
+          >
+            <a
+              href="/genaisolution"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+            >
+              Gen AI Solution</a
+            >
+            <a
+              href="/visionai"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >VisionAi</a
+            >
+            <a
+              href="/custom"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >custom-software-development-page</a
+            >
+            <a
+              href="/ai-ml-solutions"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >AI&mL solutions</a
+            >
+            <a
+              href="/datascience-bigdata"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >DataScience&BigData</a
+            >
+            <a
+              href="/cloud-devops"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >Cloud&Devops</a
+            >
+            <a
+              href="/ui-ux"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >Ui/Ux</a
+            >
+            <a
+              href="/it-consulting"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >IT Consulting</a
+            >
+            <a
+              href="/quality-assurance-testing"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >Quality Assurance & Testing</a
+            >
+            <a
+              href="/maintainance-and-support"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >Maintainance and Support</a
+            >
+          </div>
+        </div>
 
         <!-- Services End -->
 
         <!-- Industries Dropdown for Laptop -->
-    <div class="relative group">
-  <a href="#" id="industriesDropdownToggleDesktop" class="text-primary text-sm px-3 py-2 rounded-t-xl transition duration-300 flex items-center group-hover:bg-[#262626]">
-    Industries
-    <svg id="industriesArrowDesktop" class="w-4 h-4 ml-1 transform transition-transform group-hover:rotate-180 duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-    </svg>
-  </a>
-  <!-- Dropdown Menu Industries -->
-  <div id="industriesDropdownDesktop" class="absolute hidden group-hover:block bg-[#262626] mt-1 rounded-lg rounded-tl-none shadow-lg w-64">
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">Healthcare Industry</a>
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">Aviation Industry</a>
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">Education Industry</a>
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">Manufacturing Industry</a>
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">Ecommerce Industry</a>
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">Life Science Industry</a>
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">Transportation & Logistics Industry</a>
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">CPaaS Industry</a>
-    <a href="#" class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg">Energy & Utilities Industry</a>
-  </div>
-</div>
+        <div class="relative group">
+          <a
+            href="#"
+            id="industriesDropdownToggleDesktop"
+            class="text-primary text-sm px-3 py-2 rounded-t-xl transition duration-300 flex items-center group-hover:bg-[#262626]"
+          >
+            Industries
+            <svg
+              id="industriesArrowDesktop"
+              class="w-4 h-4 ml-1 transform transition-transform group-hover:rotate-180 duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <!-- Dropdown Menu Industries -->
+          <div
+            id="industriesDropdownDesktop"
+            class="absolute hidden group-hover:block bg-[#262626] mt-1 rounded-lg rounded-tl-none shadow-lg w-64"
+          >
+            <a
+              href="#"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >Healthcare Industry</a
+            >
+            <a
+              href="#"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >Aviation Industry</a
+            >
+            <a
+              href="#"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >Education Industry</a
+            >
+            <a
+              href="#"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >Manufacturing Industry</a
+            >
+            <a
+              href="#"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >Ecommerce Industry</a
+            >
+            <a
+              href="#"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >Life Science Industry</a
+            >
+            <a
+              href="#"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >Transportation & Logistics Industry</a
+            >
+            <a
+              href="#"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >CPaaS Industry</a
+            >
+            <a
+              href="#"
+              class="block text-primary text-sm px-4 py-2 mx-2 hover:bg-blue-800 hover:rounded-lg"
+              >Energy & Utilities Industry</a
+            >
+          </div>
+        </div>
 
         <!-- Industries End -->
 
-        <a href="/works" class="text-primary text-sm hover:bg-[#262626] px-3 py-2 rounded-lg transition duration-300">Works</a>
-        <a href="/about" class="text-primary text-sm hover:bg-[#262626] px-3 py-2 rounded-lg transition duration-300">About</a>
-        <a href="#" class="text-primary text-sm hover:bg-[#262626] px-3 py-2 rounded-lg transition duration-300">Blogs</a>
-        <a href="/career" class="text-primary text-sm hover:bg-[#262626] px-3 py-2 rounded-lg transition duration-300">Career</a>
-        <a href="/contact" class="bg-[#15AED5] text-primary px-4 py-2 rounded-full hover:bg-[#262626] transition duration-300 text-sm">
+        <a
+          href="/works"
+          class="text-primary text-sm hover:bg-[#262626] px-3 py-2 rounded-lg transition duration-300"
+          >Works</a
+        >
+        <a
+          href="/about"
+          class="text-primary text-sm hover:bg-[#262626] px-3 py-2 rounded-lg transition duration-300"
+          >About</a
+        >
+        <a
+          href="#"
+          class="text-primary text-sm hover:bg-[#262626] px-3 py-2 rounded-lg transition duration-300"
+          >Blogs</a
+        >
+        <a
+          href="/career"
+          class="text-primary text-sm hover:bg-[#262626] px-3 py-2 rounded-lg transition duration-300"
+          >Career</a
+        >
+        <a
+          href="/contact"
+          class="bg-[#15AED5] text-primary px-4 py-2 rounded-full hover:bg-[#262626] transition duration-300 text-sm"
+        >
           Contact us
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
-<button id="mobileMenuButton" class="flex items-center hover:h-12 hover:w-12 bg-[#262626] rounded-lg md:hidden p-2 focus:outline-none relative w-10 h-10 group " aria-label="Toggle menu">
-  <span class="absolute top-2.5 left-2 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out origin-center transform group-[.open]:rotate-45 group-[.open]:translate-y-1.5 group-hover:bg-gray-300 mt-1"></span>
-  <span class="absolute top-5 left-2 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out origin-center transform group-[.open]:-rotate-45 group-[.open]:-translate-y-1 group-hover:bg-gray-300 mt-1"></span>
-</button>
-
-
+      <button
+        id="mobileMenuButton"
+        class="flex items-center hover:h-12 hover:w-12 bg-[#262626] rounded-lg md:hidden p-2 focus:outline-none relative w-10 h-10 group"
+        aria-label="Toggle menu"
+      >
+        <span
+          class="absolute top-2.5 left-2 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out origin-center transform group-[.open]:rotate-45 group-[.open]:translate-y-1.5 group-hover:bg-gray-300 mt-1"
+        ></span>
+        <span
+          class="absolute top-5 left-2 w-6 h-0.5 bg-white transition-all duration-300 ease-in-out origin-center transform group-[.open]:-rotate-45 group-[.open]:-translate-y-1 group-hover:bg-gray-300 mt-1"
+        ></span>
+      </button>
     </div>
   </div>
 </nav>
 
 <!-- Mobile Menu (Hidden by default) -->
-<div id="mobileMenu" class="md:hidden bg-black shadow-md hidden fixed top-0 left-0 mt-15 w-full h-full z-60 overflow-y-auto">
+<div
+  id="mobileMenu"
+  class="md:hidden bg-black shadow-md hidden fixed top-0 left-0 mt-15 w-full h-full z-60 overflow-y-auto"
+>
   <div class="px-4 pt-2 pb-3 space-y-1">
-    <a href="/aisolution" class="block text-lg text-white hover:bg-[#171717] p-[16px]">AI Solutions</a>
+    <a
+      href="/aisolution"
+      class="block text-lg text-white hover:bg-[#171717] p-[16px]"
+      >AI Solutions</a
+    >
 
     <!-- Services Dropdown for Mobile -->
     <div>
-      <a href="#" id="servicesDropdownToggleMobile" class="text-lg text-white  hover:bg-[#262626] flex items-center p-[16px] rounded-t-xl">
+      <a
+        href="#"
+        id="servicesDropdownToggleMobile"
+        class="text-lg text-white hover:bg-[#262626] flex items-center p-[16px] rounded-t-xl"
+      >
         Services
         <div class="flex justify-end w-full">
-          <svg id="servicesArrowMobile" class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          <svg
+            id="servicesArrowMobile"
+            class="w-5 h-5 transform transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
           </svg>
         </div>
       </a>
-      <div id="servicesDropdownMobile" class="hidden rounded-b-xl bg-[#171717]  pl-4 space-y-6">
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">Custom Software Development</a>
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">AI ML Solution</a>
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">Data Science and Big Data Solution</a>
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">Cloud and Devops Solution</a>
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">UI/UX Design</a>
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">IT Consulting</a>
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">QA & Testing Services</a>
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">Maintenance and Support</a>
+      <div
+        id="servicesDropdownMobile"
+        class="hidden rounded-b-xl bg-[#171717] pl-4 space-y-6"
+      >
+        <a
+          href="/genaisolution"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Gen AI Solution</a
+        >
+        <a
+          href="/visionai"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Vision Ai</a
+        >
+        <a
+          href="/custom"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >custom-software-development-page</a
+        >
+        <a
+          href="/ai-ml-solutions"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >AI&mL solutions</a
+        >
+        <a
+          href="/datascience-bigdata"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >DataScience&BigData</a
+        >
+        <a
+          href="/cloud-devops"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Cloud&Devops</a
+        >
+        <a
+          href="/ui-ux"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >ui/ux</a
+        >
+        <a
+          href="/it-consulting"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >IT Consulting</a
+        >
+        <a
+          href="/quality-assurance-testing"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Quality Assurance&Testing</a
+        >
+        <a
+          href="/maintainance-and-support"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Maintainance and Support</a
+        >
       </div>
     </div>
     <!-- Services End -->
 
     <!-- Industries Dropdown for Mobile -->
     <div>
-      <a href="#" id="industriesDropdownToggleMobile" class="flex text-lg text-white rounded-t-xl hover:bg-[#262626] items-center p-[16px]">
+      <a
+        href="#"
+        id="industriesDropdownToggleMobile"
+        class="flex text-lg text-white rounded-t-xl hover:bg-[#262626] items-center p-[16px]"
+      >
         Industries
         <div class="flex justify-end w-full">
-          <svg id="industriesArrowMobile" class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          <svg
+            id="industriesArrowMobile"
+            class="w-5 h-5 transform transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
           </svg>
         </div>
       </a>
-      <div id="industriesDropdownMobile" class="hidden bg-[#171717] rounded-b-xl pl-4 space-y-6">
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">Healthcare Industry</a>
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">Aviation Industry</a>
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">Education Industry</a>
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">Manufacturing Industry</a>
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">Ecommerce Industry</a>
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">Life Science Industry</a>
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">Transportation & Logistics Industry</a>
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">CPaaS Industry</a>
-        <a href="#" class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl">Energy & Utilities Industry</a>
+      <div
+        id="industriesDropdownMobile"
+        class="hidden bg-[#171717] rounded-b-xl pl-4 space-y-6"
+      >
+        <a
+          href="#"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Healthcare Industry</a
+        >
+        <a
+          href="#"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Aviation Industry</a
+        >
+        <a
+          href="#"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Education Industry</a
+        >
+        <a
+          href="#"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Manufacturing Industry</a
+        >
+        <a
+          href="#"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Ecommerce Industry</a
+        >
+        <a
+          href="#"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Life Science Industry</a
+        >
+        <a
+          href="#"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Transportation & Logistics Industry</a
+        >
+        <a
+          href="#"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >CPaaS Industry</a
+        >
+        <a
+          href="#"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Energy & Utilities Industry</a
+        >
       </div>
     </div>
     <!-- Industries End -->
 
-    <a href="/works" class="block text-lg text-white hover:bg-[#171717] p-[16px]">Works</a>
-    <a href="/about" class="block text-lg text-white hover:bg-[#171717] p-[16px]">About</a>
-    <a href="#" class="block text-lg text-white hover:bg-[#171717] p-[16px]">Blogs</a>
-    <a href="/career" class="block text-lg text-white hover:bg-[#171717] p-[16px]">Career</a>
-    <a href="/contact" class="block text-lg text-white hover:bg-[#171717] p-[16px]">Contact us</a>
+    <a
+      href="/works"
+      class="block text-lg text-white hover:bg-[#171717] p-[16px]">Works</a
+    >
+    <a
+      href="/about"
+      class="block text-lg text-white hover:bg-[#171717] p-[16px]">About</a
+    >
+    <a href="#" class="block text-lg text-white hover:bg-[#171717] p-[16px]"
+      >Blogs</a
+    >
+    <a
+      href="/career"
+      class="block text-lg text-white hover:bg-[#171717] p-[16px]">Career</a
+    >
+    <a
+      href="/contact"
+      class="block text-lg text-white hover:bg-[#171717] p-[16px]">Contact us</a
+    >
   </div>
 </div>
 
 <!-- JavaScript for Mobile Menu Toggle and Dropdowns -->
 <script>
   // Toggle Mobile Menu
-  const mobileMenuButton = document.getElementById('mobileMenuButton');
-  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileMenuButton = document.getElementById("mobileMenuButton");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-  mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-        mobileMenuButton.classList.toggle('open');
-
+  mobileMenuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+    mobileMenuButton.classList.toggle("open");
   });
 
   // Toggle Dropdowns for Desktop
-  const servicesDropdownToggleDesktop = document.getElementById('servicesDropdownToggleDesktop');
-  const servicesDropdownDesktop = document.getElementById('servicesDropdownDesktop');
-  const servicesArrowDesktop = document.getElementById('servicesArrowDesktop');
+  const servicesDropdownToggleDesktop = document.getElementById(
+    "servicesDropdownToggleDesktop"
+  );
+  const servicesDropdownDesktop = document.getElementById(
+    "servicesDropdownDesktop"
+  );
+  const servicesArrowDesktop = document.getElementById("servicesArrowDesktop");
 
-  const industriesDropdownToggleDesktop = document.getElementById('industriesDropdownToggleDesktop');
-  const industriesDropdownDesktop = document.getElementById('industriesDropdownDesktop');
-  const industriesArrowDesktop = document.getElementById('industriesArrowDesktop');
-
-
-
- 
+  const industriesDropdownToggleDesktop = document.getElementById(
+    "industriesDropdownToggleDesktop"
+  );
+  const industriesDropdownDesktop = document.getElementById(
+    "industriesDropdownDesktop"
+  );
+  const industriesArrowDesktop = document.getElementById(
+    "industriesArrowDesktop"
+  );
 
   // Toggle Dropdowns for Mobile
-  const servicesDropdownToggleMobile = document.getElementById('servicesDropdownToggleMobile');
-  const servicesDropdownMobile = document.getElementById('servicesDropdownMobile');
-  const servicesArrowMobile = document.getElementById('servicesArrowMobile');
+  const servicesDropdownToggleMobile = document.getElementById(
+    "servicesDropdownToggleMobile"
+  );
+  const servicesDropdownMobile = document.getElementById(
+    "servicesDropdownMobile"
+  );
+  const servicesArrowMobile = document.getElementById("servicesArrowMobile");
 
-  const industriesDropdownToggleMobile = document.getElementById('industriesDropdownToggleMobile');
-  const industriesDropdownMobile = document.getElementById('industriesDropdownMobile');
-  const industriesArrowMobile = document.getElementById('industriesArrowMobile');
+  const industriesDropdownToggleMobile = document.getElementById(
+    "industriesDropdownToggleMobile"
+  );
+  const industriesDropdownMobile = document.getElementById(
+    "industriesDropdownMobile"
+  );
+  const industriesArrowMobile = document.getElementById(
+    "industriesArrowMobile"
+  );
 
-  servicesDropdownToggleMobile.addEventListener('click', () => {
-    servicesDropdownMobile.classList.toggle('hidden');
-    servicesArrowMobile.classList.toggle('rotate-180');
-    servicesDropdownToggleMobile.classList.toggle('bg-[#171717]');
+  servicesDropdownToggleMobile.addEventListener("click", () => {
+    servicesDropdownMobile.classList.toggle("hidden");
+    servicesArrowMobile.classList.toggle("rotate-180");
+    servicesDropdownToggleMobile.classList.toggle("bg-[#171717]");
   });
 
-  industriesDropdownToggleMobile.addEventListener('click', () => {
-    industriesDropdownMobile.classList.toggle('hidden');
-    industriesArrowMobile.classList.toggle('rotate-180');
-    industriesDropdownToggleMobile.classList.toggle('bg-[#171717]');
+  industriesDropdownToggleMobile.addEventListener("click", () => {
+    industriesDropdownMobile.classList.toggle("hidden");
+    industriesArrowMobile.classList.toggle("rotate-180");
+    industriesDropdownToggleMobile.classList.toggle("bg-[#171717]");
   });
 </script>

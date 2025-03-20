@@ -1,0 +1,49 @@
+---
+import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
+---
+
+<div class="mt-40">
+  <div
+    class="flex flex-col justify-center items-center text-center h-auto px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background container"
+  >
+    <GradientHeading text=" Revolutionize Your Business with Generative AI" />
+    <!-- <h1
+    class="font-dmSans font-normal inline-block
+            text-title bg-gradient-to-t from-white to-[rgba(255,255,255,0.3)] bg-clip-text text-transparent"
+  >
+  </h1> -->
+    <p class="font-normal mt-4 text-title-body text-primary max-w-[1000px]">
+      AI-Powered Innovation to Accelerate Your Growth
+    </p>
+    <button
+      class="mt-6 bg-[#15AED5] text-white text-base md:text-lg lg:text-xl font-medium px-4 py-2 md:px-6 md:py-3 lg:px-20 lg:py-2 rounded-full flex items-center gap-2"
+    >
+      Discover Our AI Solutions
+      <img
+        src="/assets/arrowright.png"
+        alt="Right Arrow"
+        class="w-4 h-4 md:w-5 md:h-5 lg:w-4 lg:h-4"
+      />
+    </button>
+    <h1
+      class="text-heading text-primary font-dmSans font-semibold  mt-20"
+    >
+      What is Generative AI?
+    </h1>
+    <p
+      class="text-secondary mt-0 text-subbody font-normal  text-center"
+    >
+      Generative AI is a transformative technology that uses machine learning
+      models to create new content, from text and images to music and code.
+      Whether it’s automating content creation or generating personalized
+      experiences, Generative AI empowers businesses to unlock new
+      possibilities, streamline operations, and improve customer engagement.
+    </p>
+  </div>
+</div>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&display=swap");
+  .font-dmSans {
+    font-family: "DM Sans", sans-serif;
+  }
+</style>

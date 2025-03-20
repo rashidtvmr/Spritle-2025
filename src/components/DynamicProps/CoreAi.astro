@@ -1,0 +1,30 @@
+---
+// Define props for the component
+const { logo, heading, content } = Astro.props;
+---
+
+<div
+  class="bg-[#2E2E2E] min-h-[337px] w-full h-auto  rounded-lg border-white border-2 p-4 flex flex-col items-center gap-7 mb-2"
+>
+  <!-- Logo -->
+  <img src={logo} alt="Logo" class="max-w-[54px] max-h-[48px] mt-6" />
+
+  <!-- Heading -->
+  <h1
+    class="text-center font-medium text-primary xl:text-[32px] text-xl mb-2
+]"
+  >
+    {heading}
+  </h1>
+
+  <!-- Content Box (Pill Layout) -->
+  <div class="flex flex-wrap justify-center gap-[0.6rem] mb-7">
+    {
+      content.map((item) => (
+        <div class="xl:px-[15px] px-6 max-h-[43px] py-[5px] border-white border-2 rounded-full text-white text-lg flex items-center justify-center ">
+          {item}
+        </div>
+      ))
+    }
+  </div>
+</div>

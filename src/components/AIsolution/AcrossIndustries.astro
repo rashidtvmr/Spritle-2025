@@ -1,4 +1,7 @@
 ---
+// index.astro or your desired page
+import AiCard from "../DynamicProps/AiCard.astro";
+
 const AiSectionThreeMap = [
   {
     image: "/assets/secthree1.png",
@@ -37,34 +40,8 @@ const AiSectionThreeMap = [
   </p>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-12 container px-5 md:px-0">
-  {
-    AiSectionThreeMap.map((card, index) => (
-      <div
-        key={index}
-        class="relative border-2 border-[#D6D6D6] rounded-[10px] overflow-hidden shadow-lg  p-4 xl:h-[593px]  w-full "
-      >
-        {/* xl:max-w-[832px] this card is 832px  */}
-        <div class="absolute inset-0 rounded-lg m-1 " />
-        <img
-          src={card.image}
-          alt={card.title}
-          class="w-full h-[349px]  object-cover rounded-lg"
-        />
-        <div class=" mt-5">
-          <div class="flex items-center justify-between">
-            <h2 class="text-primary text-subtitle font-medium">{card.title}</h2>
-            <img
-              src="../assets/industrybutton.svg"
-              alt="Industry Button"
-              class=" p-1 hover:bg-[#15AED5]  transition duration-300 size-12"
-            />
-          </div>
-          <p class="text-secondary font-medium text-subheading mt-7">
-            {card.description}
-          </p>
-        </div>
-      </div>
-    ))
-  }
+<div
+  class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-12 container px-5 md:px-0"
+>
+  {AiSectionThreeMap.map((card, index) => <AiCard key={index} {...card} />)}
 </div>
