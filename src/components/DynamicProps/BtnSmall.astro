@@ -1,0 +1,9 @@
+---
+const { class: customClass = "", text = "Click Me" } = Astro.props;
+const defaultClass =
+  "bg-[#15AED5] hover:bg-[#15AED5] text-white font-bold px-4 py-2 md:py-3 md:px-7  rounded-lg mt-9 md:mt-0";
+---
+
+<button class={`${defaultClass} ${customClass}`}>
+  {text}
+</button>

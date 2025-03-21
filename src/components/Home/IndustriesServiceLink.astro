@@ -10,8 +10,8 @@ const { link, title, description } = Astro.props;
 
 <a
   href={link}
-  class="flex justify-between border-2 border-[#D6D6D6] rounded-[16.75px] p-5 md:p-6 shadow-lg hover:shadow-xl
-  transition duration-300 w-full max-w-full overflow-hidden"
+  class="flex justify-between border-2 border-[#D6D6D6] rounded-xl p-5 md:p-6 shadow-lg
+   w-full max-h-[171px]  overflow-hidden"
 >
   <div class="flex-1">
     <span class="text-subtitle font-medium text-primary break-words"
@@ -23,9 +23,9 @@ const { link, title, description } = Astro.props;
   </div>
   <div class="flex justify-end">
     <img
-      src="../assets/industrybutton.svg"
+      src="../assets/roundarrow.svg"
       alt="Industry Button"
-      class=" p-1 hover:bg-[#15AED5]  transition duration-300 size-12"
+      class=" hover:bg-[#15AED5]  size-12 hover:rounded-full "
     />
   </div>
 </a>

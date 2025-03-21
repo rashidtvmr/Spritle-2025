@@ -1,10 +1,10 @@
 <div class="bg-background px-5 container md:px-0 mt-1">
-  <div class="text-heading text-primary md:mb-6 mb-2 font-bold">
+  <div class="text-heading text-primary md:mb-10 mb-2 font-medium">
     Our Core AI Competencies
   </div>
 
   <div
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-6 xl:gap-y-12 xl-gap-x-0 md:mt-14 "
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-6 xl:gap-y-12 xl-gap-x-0 md:mt-14"
     id="cardContainer"
   >
   </div>
@@ -48,10 +48,16 @@
   cardContainer.innerHTML = cards
     .map(
       (card) => `
-      <div class="flex flex-col items-center justify-around text-center border-2 border-primary p-6 xl:pt-10 rounded-lg shadow-lg bg-[#313131] xl:h-[400px] w-full  xl:max-w-[550px] flex-wrap">
+      <div class="flex flex-col items-center justify-around text-center border-2 border-primary p-6 xl:pt-0 rounded-lg shadow-lg bg-[#313131] xl:h-[400px] w-full  xl:max-w-[550px] flex-wrap">
+
+<div class="flex  flex-col  justify-center items-center gap-4">
+
         <img src="${card.logo}" alt="${card.title}" class="size-16 " />
         <h2 class="text-primary text-subtitle font-medium">${card.title}</h2>
+</div>
+
         <p class="text-secondary text-subheading ">${card.description}</p>
+
       </div>
     `
     )

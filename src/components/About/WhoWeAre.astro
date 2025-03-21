@@ -16,20 +16,13 @@ const images = [
   >
     <div class="flex mb-15">
       <!-- Who We Are Button -->
-      <button
-        id="whoWeAreBtn"
-        class="w-[158.5px] h-[44.215px] bg-[#EAEAEA] text-[#252525] text-body font-semibold px-[7.11px] py-[7.11px] rounded-tl-[38.38px] rounded-bl-[38.38px] flex items-center justify-center active-tab"
-      >
-        Who We Are
-      </button>
+   <a  id="whoWeAreBtn" class="rounded-l-full border-2 border-white px-5 py-2 cursor-pointer bg-white text-background text-body font-semibold">
+  Who We Are
+</a>
+<a   id="ourProcessBtn"  class="rounded-r-full cursor-pointer px-5 py-2 border-2 text-body font-semibold">
+  Our Process
+</a>
 
-      <!-- Our Process Button -->
-      <button
-        id="ourProcessBtn"
-        class="w-[158.5px] h-[44.215px] bg-transparent border-[0.71px] border-white text-[#EAEAEA] text-body font-semibold px-[7.11px] py-[7.11px] rounded-tr-[38.38px] rounded-br-[38.38px] flex items-center justify-center"
-      >
-        Our Process
-      </button>
     </div>
 
     <!-- Tab Content Containers -->
@@ -141,7 +134,7 @@ const images = [
         Our Child Companies
       </h1>
 
-      <div class="xl:py-28 xl:py-12 py-5 h-[auto] xl:h-[300px]">
+      <div class="xl:py-28 xl:py-12 py-5 h-auto xl:h-[300px]">
         <div class="xl:px-30 px-5 w-screen justify-center items-center">
           <div
             class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-8 text-center"
@@ -208,50 +201,12 @@ const images = [
   const ourProcessContent = document.getElementById("ourProcessContent");
 
   whoWeAreBtn.addEventListener("click", () => {
-    // Update button styles
-    whoWeAreBtn.classList.add("bg-[#EAEAEA]", "text-[#252525]");
-    whoWeAreBtn.classList.remove(
-      "bg-transparent",
-      "border-white",
-      "text-[#EAEAEA]"
-    );
-
-    ourProcessBtn.classList.remove("bg-[#EAEAEA]", "text-[#252525]");
-    ourProcessBtn.classList.add(
-      "bg-transparent",
-      "border-[0.71px]",
-      "border-white",
-      "text-[#EAEAEA]"
-    );
-
-    // Show/hide content
-    whoWeAreContent.classList.remove("hidden");
+   whoWeAreContent.classList.remove("hidden");
     ourProcessContent.classList.add("hidden");
   });
 
   ourProcessBtn.addEventListener("click", () => {
-    // Update button styles
-    ourProcessBtn.classList.add(
-      "bg-[#EAEAEA]",
-      "text-[#252525]",
-      "border-[2.71px]"
-    );
-    ourProcessBtn.classList.remove(
-      "bg-transparent",
-      "border-white",
-      "text-[#EAEAEA]",
-
-    );
-
-    whoWeAreBtn.classList.remove("bg-[#EAEAEA]", "text-[#252525]");
-    whoWeAreBtn.classList.add(
-      "bg-transparent",
-      "border-[2.71px]",
-      "border-white",
-      "text-[#EAEAEA]"
-    );
-
-    // Show/hide content
+    
     ourProcessContent.classList.remove("hidden");
     whoWeAreContent.classList.add("hidden");
   });

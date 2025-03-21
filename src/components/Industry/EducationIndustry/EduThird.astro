@@ -1,0 +1,37 @@
+---
+// index.astro or your desired page
+import SuccessStories from "@/components/DynamicProps/SuccessStories.astro";
+
+const cardData = [
+  {
+    image: "/assets/edu1.svg",
+    heading: "AI-Powered LMS for Higher Education",
+    description:
+      "Developed an AI-driven learning platform for a leading university, increasing student engagement by 40% and improving retention rates",
+  },
+  {
+    image: "/assets/edu2.svg",
+    heading: "Virtual Classroom for Global Education Provider",
+    description:
+      "Implemented a virtual classroom solution for a global education provider, enabling real-time collaboration for over 10,000 students",
+  },
+  {
+    image: "/assets/edu3.svg",
+    heading: "Student Analytics Dashboard for K-12 Schools",
+    description:
+      "Created a data-driven dashboard for K-12 schools, enabling teachers to monitor student progress and improve learning outcomes",
+  },
+];
+---
+
+<div
+  class="text-heading text-primary md:mb-12 mb-2 font-bold container mt-8 md:mt-20 lg:mt-40"
+>
+Industry Success Stories</div>
+<div>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-12 container px-5 md:px-0"
+  >
+    {cardData.map((card, index) => <SuccessStories key={index} {...card} />)}
+  </div>
+</div>

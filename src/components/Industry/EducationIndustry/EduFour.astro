@@ -1,0 +1,36 @@
+---
+import Star from "@/components/DynamicProps/Star.astro";
+
+const items = [
+  {
+    title: "Innovative Learning Tools",
+    description:
+      " Expert in AI, machine learning, and personalized learning systems.",
+  },
+  {
+    title: "Scalable Platforms",
+    description:
+      " Solutions designed to grow with educational institutions",
+  },
+  {
+    title: "Future-Ready Education",
+    description:
+      "  Creating digital learning environments that adapt to the evolving needs of students and educators",
+  },
+  
+];
+---
+
+<div class="py-8 mt-10 md:mt-20 lg:mt-20 xl:mt-30">
+  <div class="container px-5 md:px-0 flex justify-center items-center flex-col">
+    <h2
+      class="text-3xl font-medium mb-6 md:text-4xl lg:text-[54px] text-primary"
+    >
+      Why Generative AI is a Game Changer
+    </h2>
+
+    <div>
+      <Star items={items} />
+    </div>
+  </div>
+</div>

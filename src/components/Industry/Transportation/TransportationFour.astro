@@ -1,0 +1,35 @@
+---
+import Star from "@/components/DynamicProps/Star.astro";
+
+const items = [
+  {
+    title: "AI & IoT Expertise",
+    description:
+      " Extensive experience in leveraging AI, IoT, and automation to improve logistics and transportation operations",
+  },
+  {
+    title: "Optimized Supply Chains",
+    description:
+      "Proven success in increasing supply chain transparency and reducing operational costs",
+  },
+  {
+    title: "Future-Ready Solutions",
+    description:
+      "   Cutting-edge solutions, including autonomous logistics and AI-powered systems, that keep businesses ahead of the curve  ",
+  },
+];
+---
+
+<div class="py-8 mt-10 md:mt-20 lg:mt-20 xl:mt-30">
+  <div class="container px-5 md:px-0 flex justify-center items-center flex-col">
+    <h2
+      class="text-3xl font-medium mb-6 md:text-4xl lg:text-[54px] text-primary"
+    >
+      Why Spritle for Transportation & Logistics?
+    </h2>
+
+    <div>
+      <Star items={items} />
+    </div>
+  </div>
+</div>

@@ -1,19 +1,20 @@
+---
+import BtnSmall from "../DynamicProps/BtnSmall.astro";
+---
+
 <div
-  class="space-y-1 lg:space-y-6 md:space-y-3 lg:mt-40 md:mt:20 mt-15 px-5 container md:px-0"
-> 
+  class="space-y-1 lg:space-y-6 md:space-y-3 lg:mt-20 md:mt:20 mt-15 px-5 container md:px-0"
+>
   <div class="flex justify-between items-center mb-8">
     <div class="py-3">
-      <h2 class="text-heading text-primary md:mb-4 mb-2 font-bold">Blogs</h2>
+      <h2 class="text-heading text-primary md:mb-4 mb-2 font-medium">Blogs</h2>
       <p
-        class="text-subheading md:space-y-4 space-y-1 text-secondary font-medium"
+        class="text-subheading md:space-y-4 md:mb-10 md:mt-10 space-y-1 text-secondary font-medium"
       >
         Don't take our word for it. Trust our customers
       </p>
     </div>
-    <button
-      class="bg-[#15AED5] hover:bg-[#4f7881] text-white font-bold md:py-2 md:px-6 py-0 px-3 rounded-lg"
-      >Browse all</button
-    >
+    <BtnSmall text="Browse all" class="rounded-xl" />
   </div>
 
   <div class="grid md:grid-cols-3 gap-6">

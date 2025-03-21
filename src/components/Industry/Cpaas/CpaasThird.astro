@@ -1,0 +1,38 @@
+---
+// index.astro or your desired page
+import SuccessStories from "@/components/DynamicProps/SuccessStories.astro";
+
+const cardData = [
+  {
+    image: "/assets/cpass1.svg",
+    heading: "Real-Time Chat for E-commerce Platform",
+    description:
+      "Integrated a real-time messaging solution that improved customer service response time by 40% and increased sales by 20%",
+  },
+  {
+    image: "/assets/cpass2.svg",
+    heading: "Voice & IVR Integration for Healthcare Provider",
+    description:
+      "Developed a customized voice and IVR solution for a healthcare provider, reducing appointment scheduling errors and improving patient satisfaction",
+  },
+  {
+    image: "/assets/cpass3.svg",
+    heading: "Omnichannel CPaaS for a Retailer",
+    description:
+      "Created an omnichannel communication platform that helped a retailer increase customer retention by 15% through personalized, timely engagement",
+  },
+];
+---
+
+<div
+  class="text-heading text-primary md:mb-12 mb-2 font-bold container mt-8 md:mt-20 lg:mt-40"
+>
+  Industry Success Stories
+</div>
+<div>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-12 container px-5 md:px-0"
+  >
+    {cardData.map((card, index) => <SuccessStories key={index} {...card} />)}
+  </div>
+</div>

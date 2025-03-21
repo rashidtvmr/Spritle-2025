@@ -1,0 +1,34 @@
+---
+import Star from "@/components/DynamicProps/Star.astro";
+
+const items = [
+  {
+    title: " Advanced AI & IoT Solutions",
+    description: " Harnessing next-gen AI and IoT for smarter energy systems.",
+  },
+  {
+    title: "Sustainability-Focused",
+    description:
+      " Helping companies meet sustainability goals while driving operational efficiency.",
+  },
+  {
+    title: "Scalable & Cost-Effective",
+    description:
+      "  Solutions that scale with industry needs, reducing operational costs and enhancing energy distribution efficiency",
+  },
+];
+---
+
+<div class="py-8 mt-10 md:mt-20 lg:mt-20 xl:mt-30">
+  <div class="container px-5 md:px-0 flex justify-center items-center flex-col">
+    <h2
+      class="text-3xl font-medium mb-6 md:text-4xl lg:text-[54px] text-primary"
+    >
+      Why Spritle for Energy & Utilities?
+    </h2>
+
+    <div>
+      <Star items={items} />
+    </div>
+  </div>
+</div>
