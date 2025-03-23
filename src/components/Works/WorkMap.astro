@@ -12,7 +12,7 @@ const cards = [
     title: "Reach",
     partner: "Southeast Asia’s Largest Airport",
     description:
-      "A Truck Management App built to simplify the driver request process and create value for Service Providers. h",
+      "A Truck Management App built to simplify the driver request process and create value for Service Providers. ",
   },
   {
     logo: "/assets/changi.svg",
@@ -130,23 +130,23 @@ const cards = [
 ---
 
 <section
-  class="grid grid-cols-1 md:grid-cols-3 md:gap-5 xl:gap-y-18 gap-y-5 p-6 container lg:mt-30 md:mt-15 mt-5"
+  class="grid grid-cols-1 md:grid-cols-3 lg:gap-22 gap-5 px-5  md:px-0 container lg:mt-30 md:mt-15 mt-5"
 >
   {
     cards.map((card) => (
-      <div class="max-w-[501px] h-screen max-h-[388px] rounded-[10px] border-[0.2px] p-5 xl:p-[15px_30px_40px_40px] bg-[#313131] text-white md:pt-5 md:space-y-3 flex flex-col md:items-start items-center text-center md:text-left">
+      <div class=" rounded-xl pt-5   bg-[#313131] pb-10 pl-10 pr-10 space-y-3 flex flex-col md:items-start items-center text-center md:text-left">
         <img
           src={card.logo}
           alt="Logo"
-          class="max-w-[76px] max-h-[76px] mb-4"
+          class="max-w-[76px] max-h-[76px] "
         />
-        <h2 class="text-subheading font-medium text-[#EAEAEA] pt-5">
+        <h2 class="text-subheading font-medium text-[#EAEAEA]  md:py-5">
           {card.title}
         </h2>
         <h3 class="text-subheading text-[#EAEAEA] font-normal">
           {card.partner}
         </h3>
-        <p class="text-[#B0B0B0] font-normal text-subheading">
+        <p class="text-[#B0B0B0] font-normal text-subheading  md:pt-4">
           {card.description}
         </p>
       </div>

@@ -7,10 +7,8 @@ const { text, maxWidth } = Astro.props;
 ---
 
 <h1
-  class={`font-dmSans font-normal inline-block text-title bg-gradient-to-t from-white to-[rgba(255,255,255,0.3)] bg-clip-text text-transparent xl:leading-[118px] ${
-    maxWidth ? maxWidth : "max-w-[1411px]"
-  }`}
+  class="font-dmSans font-normal inline-block text-title bg-gradient-to-t from-white to-[rgba(255,255,255,0.3)] bg-clip-text text-transparent xl:leading-[118px]"
+  style={`max-width: ${maxWidth || "1411px"};`}
 >
   {text}
 </h1>
- 

@@ -1,14 +1,10 @@
 ---
 const { text = "Click Me", class: customClass = "", icon = "" } = Astro.props;
 const defaultClass =
-  "mt-6 bg-[#15AED5] text-white text-subheading font-medium px-11 py-2 rounded-full flex tracking-wider items-center gap-2";
+  "mt-6 bg-btnprimary text-white text-subheading font-medium  py-2 rounded-full flex tracking-wider items-center gap-2";
 ---
 
 <button class={`${defaultClass} ${customClass}`}>
   {text}
-  {
-    icon && (
-      <img src={icon} alt="icon" class="w-4 h-4 md:w-5 md:h-5 lg:w-4 lg:h-4" />
-    )
-  }
+  {icon && <img src={icon} alt="icon" class="w-4 h-4 md:w-5 md:h-5 lg:w-4 lg:h-4" />}
 </button>

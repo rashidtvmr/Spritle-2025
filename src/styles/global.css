@@ -16,6 +16,7 @@
     --color-primary: #E2E2E2;
     --color-secondary: #B0B0B0;
     --color-background: #252525;
+    --color-btnprimary: #15AED5;
 }
 
 body {
@@ -48,6 +49,10 @@ body::-webkit-scrollbar {
 .text-heading {
   @apply text-2xl  lg:text-4xl xl:text-[48px] font-dm-sans;
 }
+.text-centerheading {
+  @apply text-2xl  lg:text-4xl xl:text-[55px] font-dm-sans;
+}
+
 
 .text-subheading {
   @apply text-lg  lg:text-xl xl:text-2xl;

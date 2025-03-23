@@ -1,10 +1,11 @@
 ---
+import BtnBig from "@/components/DynamicProps/BtnBig.astro";
 import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
 ---
 
 <div class="mt-40">
   <div
-    class="flex flex-col justify-center items-center text-center h-auto px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background container"
+    class="flex flex-col justify-center items-center text-center h-auto px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background container px-5 md:px-0"
   >
     <div class="max-w-[1015px]">
       <GradientHeading text="Design That Feels Right, Every Time" />
@@ -17,15 +18,11 @@ import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
     <p class="font-normal mt-4 text-title-body text-primary max-w-[1000px]">
       Crafting digital experiences where users feel understood, not just served
     </p>
-    <button
-      class="mt-6 bg-[#15AED5] text-white text-base md:text-lg lg:text-xl font-medium px-4 py-2 md:px-6 md:py-3 lg:px-20 lg:py-2 rounded-full flex items-center gap-2"
-    >
-      Experience the Future of Design <img
-        src="/assets/arrowright.png"
-        alt="Right Arrow"
-        class="w-4 h-4 md:w-5 md:h-5 lg:w-4 lg:h-4"
-      />
-    </button>
+    <BtnBig
+      text="Experience the Future of Design"
+      icon="/assets/rightarrow.svg"
+      class="px-7"
+    />
     <h1 class="text-heading text-primary font-dmSans font-semibold mt-20">
       Why Great Design Begins with Empathy
     </h1>

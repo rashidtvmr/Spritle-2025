@@ -1,4 +1,5 @@
 ---
+import BtnBig from "@/components/DynamicProps/BtnBig.astro";
 import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
 ---
 
@@ -15,16 +16,11 @@ import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
     <p class="font-normal mt-4 text-title-body text-primary max-w-[1000px]">
       AI-Powered Image and Video Analysis for Unparalleled Insights
     </p>
-    <button
-      class="mt-6 bg-[#15AED5] text-white text-base md:text-lg lg:text-xl font-medium px-4 py-2 md:px-6 md:py-3 lg:px-20 lg:py-2 rounded-full flex items-center gap-2"
-    >
-      Discover Our AI Solutions
-      <img
-        src="/assets/arrowright.png"
-        alt="Right Arrow"
-        class="w-4 h-4 md:w-5 md:h-5 lg:w-4 lg:h-4"
-      />
-    </button>
+    <BtnBig
+      text="Discover Our AI Solutions"
+      icon="/assets/rightarrow.svg"
+      class="px-9"
+    />
     <h1 class="text-heading text-primary font-dmSans font-semibold mt-20">
       What is Vision AI ?
     </h1>

@@ -1,22 +1,22 @@
+---
+import BtnSmall from "../DynamicProps/BtnSmall.astro";
+---
 <div
-  class="space-y-1 lg:space-y-6 md:space-y-3 lg:mt-20 md:mt:20 mt-15 px-5 container md:px-0"
+  class="space-y-1 lg:space-y-6 md:space-y-3 lg:mt-10  mt-5 px-5 container md:px-0"
 >
-  <div class="flex  justify-between items-center mb-8">
-    <div class="py-3">
-      <h2 class="text-heading text-primary md:mb-4 mb-2 font-bold">AI Blogs</h2>
+  <div class="flex  justify-between items-center ">
+    <div class="py-0">
+      <h2 class="text-heading text-primary  font-bold ">AI Blogs</h2>
       <p
-        class="text-subheading md:space-y-4 space-y-1 text-secondary font-medium"
+        class="text-subheading mt-3 md:mt-8 text-secondary font-medium"
       >
         Don't take our word for it. Trust our customers
       </p>
     </div>
-    <button
-      class="bg-[#15AED5] hover:bg-[#4f7881] text-white font-bold md:py-2 md:px-6 py-0 px-3 rounded-full xl:h-screen w-full  xl:max-h-[46px] min-h-[36px] max-w-[130px] xl:max-w-[168px] "
-      >Browse all</button
-    >
+    <BtnSmall text="Browse all" class="rounded-full " />
   </div>
 
-  <div class="grid md:grid-cols-3 gap-6">
+  <div class="grid md:grid-cols-3 gap-6 mt-8 md:mt-20">
     <!-- Blog Card 1 -->
     <div class="text-white rounded-lg overflow-hidden">
       <img
@@ -58,7 +58,7 @@
       <img src="/assets/Aiblogs3.png" alt="Blog Image" class="w-full" />
       <div class="p-2 mt-2">
         <h3 class="text-subtitle font-medium text-primary">
-          How to add a countdown <br />timer to Framer
+          How to add a countdown timer <br />to Framer
         </h3>
         <p class="text-secondary font-medium text-body mt-2">
           Learn how to add a beautiful countdown to your Framer project in

@@ -2,9 +2,9 @@
 import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
 ---
 
-<div class="mt-40 flex flex-col justify-center items-center container">
+<div class="md:mt-10 mt-4 flex flex-col justify-center items-center container">
   <h1
-    class="lg:text-[55px] text-xl text-primary font-dmSans font-semibold mt-20"
+    class="text-centerheading text-primary font-dmSans font-semibold mt-20"
   >
     Start Your AI Journey
   </h1>
@@ -18,14 +18,17 @@ import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
 <div
   class="flex flex-col justify-center items-center text-center h-screen md:max-h-[666px] max-h-[400px] px-4 space-y-5 bg-[#313131] mt-5 lg:mt-20 kww"
 >
-  <GradientHeading text="Ready to Unlock the Power of AI for Your Business" />
+  <GradientHeading
+    text="Ready to Unlock the Power of AI for Your Business"
+    maxWidth="1200px"
+  />
   <p class="font-normal mt-4 text-subbody text-p rimary max-w-[1000px]">
     Let’s discuss how we can help your organization thrive in the age of
     artificial intelligence
   </p>
   <button
-    class="mt-6 bg-[#15AED5] text-white text-base md:text-lg lg:text-xl font-medium px-4 py-2 md:px-6 md:py-3 lg:px-20 lg:py-2 rounded-full flex items-center gap-2"
+    class="mt-6 bg-btnprimary text-white text-base md:text-lg lg:text-xl font-medium px-4 py-2 md:px-6 md:py-3 lg:px-20 lg:py-2 rounded-full flex items-center gap-2"
   >
-Get a Free Consultation Today 
- </button>
+    Get a Free Consultation Today
+  </button>
 </div>

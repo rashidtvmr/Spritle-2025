@@ -1,15 +1,16 @@
 ---
+import BtnBig from "@/components/DynamicProps/BtnBig.astro";
 import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
 ---
 
 <div class="mt-40">
   <div
-    class="flex flex-col justify-center items-center text-center h-auto px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background container"
+    class="flex flex-col justify-center items-center text-center h-auto px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background container px-5 md:px-0"
   >
     <div class="">
       <GradientHeading
         text="Proactive Maintenance & Reliable Support for Maximum Uptime"
-        maxWidth="max-w-[1587px]"
+        maxWidth="1487px"
       />
     </div>
     <!-- <h1
@@ -21,15 +22,11 @@ import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
       Ensuring flawless user experiences with comprehensive, AI-driven QA and
       testing solutions
     </p>
-    <button
-      class="mt-6 bg-[#15AED5] text-white text-base md:text-lg lg:text-xl font-medium px-4 py-2 md:px-6 md:py-3 lg:px-20 lg:py-2 rounded-full flex items-center gap-2"
-    >
-      Deliver Quality with Confidence<img
-        src="/assets/arrowright.png"
-        alt="Right Arrow"
-        class="w-4 h-4 md:w-5 md:h-5 lg:w-4 lg:h-4"
-      />
-    </button>
+    <BtnBig
+      text="Deliver Quality with Confidence"
+      icon="/assets/rightarrow.svg"
+      class="lg:px-7   px-2"
+    />
     <h1 class="text-heading text-primary font-dmSans font-semibold mt-20">
       Beyond Routine: Intelligent Maintenance for Lasting Performance
     </h1>

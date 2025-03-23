@@ -1,10 +1,11 @@
 ---
 import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
+import BtnBig from "../DynamicProps/BtnBig.astro";
 ---
 
-<div class="mt-40">
+<div class="mt-40 container md:px-0 px-5">
   <div
-    class="flex flex-col justify-center items-center text-center h-auto px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background container"
+    class="flex flex-col justify-center items-center text-center h-auto  space-y-2 lg:space-y-5 xl:space-y-10 bg-background "
   >
     <div class="max-w-[1015px]">
       <GradientHeading text="IT Consulting for the Digital Age" />
@@ -14,23 +15,19 @@ import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
             text-title bg-gradient-to-t from-white to-[rgba(255,255,255,0.3)] bg-clip-text text-transparent"
   >
   </h1> -->
-    <p class="font-normal mt-4 text-title-body text-primary max-w-[1000px]">
+    <p class="font-normal mt-4 text-title-body text-primary max-w-[600px]">
       Strategic insights, cutting-edge solutions, and future-proof technology
       for business transformation
     </p>
-    <button
-      class="mt-6 bg-[#15AED5] text-white text-base md:text-lg lg:text-xl font-medium px-4 py-2 md:px-6 md:py-3 lg:px-20 lg:py-2 rounded-full flex items-center gap-2"
-    >
-      Partner with Our Experts <img
-        src="/assets/arrowright.png"
-        alt="Right Arrow"
-        class="w-4 h-4 md:w-5 md:h-5 lg:w-4 lg:h-4"
-      />
-    </button>
+    <BtnBig
+      text="Partner with Our Experts"
+      icon="/assets/rightarrow.svg"
+      class="lg:px-9 px-2"
+    />
     <h1 class="text-heading text-primary font-dmSans font-semibold mt-20">
       From Insight to Impact
     </h1>
-    <p class="text-secondary mt-0 text-subbody font-normal text-center">
+    <p class="text-secondary mt-0 text-subbody font-normal text-center max-w-[1298px]">
       Our IT consulting approach starts with understanding your business goals
       and leveraging technology to solve your unique challenges
     </p>

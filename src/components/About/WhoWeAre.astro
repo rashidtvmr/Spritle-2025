@@ -10,7 +10,7 @@ const images = [
 ];
 ---
 
-<div class="mt-33">
+<div class="mt-33 ">
   <div
     class="flex flex-col justify-center items-center text-center space-y-5 container"
   >
@@ -28,32 +28,32 @@ const images = [
     <!-- Tab Content Containers -->
     <div id="whoWeAreContent" class="tab-content">
       <!-- Who We Are content is already in the page by default -->
-      <GradientHeading text="Meet Spritle's Talented Clan of Tech Experts" />
+      <GradientHeading text="Meet Spritle's Talented Clan of Tech Experts"  maxWidth="max-w-[1130px]" />
       <div class="w-screen flex justify-center items-center flex-col">
         <p
-          class="font-normal lg:mt-8 mt-4 text-title-body text-primary max-w-[700px]"
+          class="font-normal lg:mt-8 mt-4 text-title-body text-primary max-w-[700px] px-5 md:px-0"
         >
           Entranced by the alluring spell of innovative tech trends, we craft
           futuristic solutions for all!
         </p>
         <button
-          class="mt-6 bg-[#15AED5] text-[#1D1D1D] lg:w-screen lg:max-w-[194px] max-h-[46px] text-sm font-normal px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 rounded-full flex items-center justify-center gap-2"
+          class="mt-6 bg-btnprimary  lg:w-screen lg:max-w-[194px] max-h-[46px] text-base font-normal px-4 py-2 md:px-6 md:py-3 lg:px-8 lg:py-4 rounded-full flex items-center justify-center gap-2"
         >
           Get Started <img
-            src="/assets/arrowright.png"
+            src="/assets/rightarrow.svg"
             alt="Right Arrow"
-            class="w-4 h-4 invert"
+            class="w-4 h-4 "
           />
         </button>
 
         <h1
-          class="text-heading text-primary font-dmSans font-semibold
+          class="text-heading text-primary font-dmSans font-semibold px-5 md:px-0
             md:py-1.5 lg:py-1.5 xl:pt-18 pt-3 md:pt-3"
         >
           Mission and The Journey So Far
         </h1>
         <p
-          class="text-secondary mt-4 text-subbody font-normal max-w-[1424px] pt-10"
+          class="text-secondary mt-4 text-subbody font-normal max-w-[1424px] pt-10 px-5 md:px-0 "
         >
           Software is created for people, and so is our mission-focused towards
           people-centric solutions! From creating the questful ambiance for
@@ -63,7 +63,7 @@ const images = [
         </p>
       </div>
       <!-- Counter Section -->
-      <div class="py-18 xl:mt-20 mt-5" id="counterSection">
+      <div class="py-18 xl:mt-10 mt-5" id="counterSection">
         <div
           class="w-screen mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-[73.55px] text-center xl:px-30 px-5"
         >
@@ -131,8 +131,7 @@ const images = [
       <h1
         class="font-semibold lg:text-[54px] text-lg flex justify-center xl:mt-40 lg:mt-20 mt-0"
       >
-        Our Child Companies
-      </h1>
+Our Subsidiaries      </h1>
 
       <div class="xl:py-28 xl:py-12 py-5 h-auto xl:h-[300px]">
         <div class="xl:px-30 px-5 w-screen justify-center items-center">
@@ -166,12 +165,12 @@ const images = [
 
       <!-- Megaminds Behind Spritle Section -->
       <h1
-        class="text-xl font-medium md:text-[60px] flex justify-center lg:pt-30 lg:py-13"
+        class="text-xl font-medium md:text-[60px] flex justify-center lg:pt-30 mb-3 lg:py-13"
       >
         Megaminds Behind Spritle
       </h1>
       <div
-        class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 xl:gap-[150px] gap-10 justify-items-center justify-center items-center"
+        class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 xl:gap-[150px] gap-10 justify-items-center justify-center items-center container md:px-0 px-5"
       >
         {
           images.map((image) => (
