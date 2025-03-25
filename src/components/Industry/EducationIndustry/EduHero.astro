@@ -1,14 +1,16 @@
 ---
+import BtnBig from "@/components/DynamicProps/BtnBig.astro";
 import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
 ---
 
-<div class="mt-40">
+<div class="mt-40 container px-5 md:px-0">
   <div
-    class="flex flex-col justify-center items-center text-center h-auto px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background container"
+    class="flex flex-col justify-center items-center text-center h-auto px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background"
   >
     <div class="">
       <GradientHeading
         text="Redefining Education with Next-Gen Technology"
+        maxWidth="1200px"
       />
     </div>
     <!-- <h1
@@ -17,20 +19,24 @@ import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
   >
   </h1> -->
     <p class="font-normal mt-4 text-title-body text-primary max-w-[1000px]">
-Empowering educators and students through AI-driven solutions, personalized learning, and seamless digital platforms    </p>
-    <button
-      class="mt-6 bg-[#15AED5] text-white text-base md:text-lg lg:text-xl font-medium px-4 py-2 md:px-6 md:py-3 lg:px-20 lg:py-2 rounded-full flex items-center gap-2"
-    >
-     Discover Our EdTech Innovations<img
-        src="/assets/arrowright.png"
-        alt="Right Arrow"
-        class="w-4 h-4 md:w-5 md:h-5 lg:w-4 lg:h-4"
-      />
-    </button>
+      Empowering educators and students through AI-driven solutions,
+      personalized learning, and seamless digital platforms
+    </p>
+    <BtnBig
+      text="Discover Our EdTech Innovations"
+      icon="/assets/rightarrow.svg"
+      class="lg:px-7 px-2"
+    />
+
     <h1 class="text-heading text-primary font-dmSans font-semibold mt-20">
-Technology-Driven Education for the Digital Era   </h1>
-    <p class="text-secondary mt-0 text-subbody font-normal text-center">
-Spritle integrates AI, machine learning, and digital platforms to provide scalable, engaging, and effective educational solutions for learners, teachers, and institutions
+      Technology-Driven Education for the Digital Era
+    </h1>
+    <p
+      class="text-secondary mt-0 text-subbody font-normal text-center max-w-[1250px]"
+    >
+      Spritle integrates AI, machine learning, and digital platforms to provide
+      scalable, engaging, and effective educational solutions for learners,
+      teachers, and institutions
     </p>
   </div>
 </div>

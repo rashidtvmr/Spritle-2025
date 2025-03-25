@@ -1,10 +1,11 @@
 ---
+import BtnBig from "@/components/DynamicProps/BtnBig.astro";
 import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
 ---
 
 <div class="mt-40">
   <div
-    class="flex flex-col justify-center items-center text-center h-auto px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background container"
+    class="flex flex-col justify-center items-center text-center h-auto px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background container px-5 md:px-0"
   >
     <div class="">
       <GradientHeading
@@ -16,23 +17,19 @@ import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
             text-title bg-gradient-to-t from-white to-[rgba(255,255,255,0.3)] bg-clip-text text-transparent"
   >
   </h1> -->
-    <p class="font-normal mt-4 text-title-body text-primary max-w-[1000px]">
+    <p class="font-normal mt-4 text-title-body text-primary max-w-[900px]">
       Accelerating research, enhancing patient care, and streamlining operations
       with cutting-edge technology
     </p>
-    <button
-      class="mt-6 bg-[#15AED5] text-white text-base md:text-lg lg:text-xl font-medium px-4 py-2 md:px-6 md:py-3 lg:px-20 lg:py-2 rounded-full flex items-center gap-2"
-    >
-      Explore Our Life Sciences Solutions <img
-        src="/assets/arrowright.png"
-        alt="Right Arrow"
-        class="w-4 h-4 md:w-5 md:h-5 lg:w-4 lg:h-4"
-      />
-    </button>
+    <BtnBig
+      text="    Explore Our Life Sciences Solutions"
+      icon="/assets/rightarrow.svg"
+      class="lg:px-6 px-2"
+    />
     <h1 class="text-heading text-primary font-dmSans font-semibold mt-20">
       Technology Solutions Shaping the Future of Health and Research
     </h1>
-    <p class="text-secondary mt-0 text-subbody font-normal text-center">
+    <p class="text-secondary mt-0 text-subbody font-normal text-center max-w-[1400px]">
       Spritle integrates AI, machine learning, and big data analytics to
       transform life sciences, from research and development to patient care,
       optimizing outcomes and advancing innovation

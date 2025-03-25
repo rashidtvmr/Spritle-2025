@@ -22,14 +22,7 @@
 body {
     @apply bg-background text-primary font-dm-sans;
 }
-body {
-  /* scrollbar-width: none; For Firefox */
-  -ms-overflow-style: none; /* For Internet Explorer/Edge */
-}
 
-body::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
-}
 .text-title{
     @apply text-4xl lg:text-8xl ;
 

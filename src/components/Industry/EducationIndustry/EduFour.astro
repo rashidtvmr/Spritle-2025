@@ -9,28 +9,24 @@ const items = [
   },
   {
     title: "Scalable Platforms",
-    description:
-      " Solutions designed to grow with educational institutions",
+    description: " Solutions designed to grow with educational institutions",
   },
   {
     title: "Future-Ready Education",
     description:
       "  Creating digital learning environments that adapt to the evolving needs of students and educators",
   },
-  
 ];
 ---
 
-<div class="py-8 mt-10 md:mt-20 lg:mt-20 xl:mt-30">
+<div class="py-8 mt-10 md:mt-20 lg:mt-20 xl:mt-40">
   <div class="container px-5 md:px-0 flex justify-center items-center flex-col">
-    <h2
-      class="text-3xl font-medium mb-6 md:text-4xl lg:text-[54px] text-primary"
-    >
+    <h2 class="text-centerheading font-medium mb-6 text-primary">
       Why Generative AI is a Game Changer
     </h2>
 
     <div>
-      <Star items={items} />
+      <Star items={items} maxWidth="1500px"/>
     </div>
   </div>
 </div>

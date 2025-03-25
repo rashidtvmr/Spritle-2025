@@ -5,32 +5,28 @@ const items = [
   {
     title: "Industry Expertise",
     description:
-      "Generative AI allows businesses to produce content and solutions at a scale never before possible, meeting growing demands without increasing manual efforts.",
+      "Extensive experience working with healthcare providers, hospitals, and life sciences.",
   },
   {
     title: "Secure & Compliant",
     description:
-      "Solutions designed to meet strict healthcare regulations like HIPAA and GDPR",
+      "Solutions designed to meet strict healthcare regulations like HIPAA and GDPR.",
   },
   {
     title: "Innovation-Driven",
-    description:
-      "  Pioneering the use of AI, IoT, and cloud in healthcare",
+    description: "  Pioneering the use of AI, IoT, and cloud in healthcare.",
   },
-  
 ];
 ---
 
-<div class="py-8 mt-10 md:mt-20 lg:mt-20 xl:mt-30">
+<div class="py-8 mt-10 lg:mt-20 xl:mt-35 container px-5 md:px-0">
   <div class="container px-5 md:px-0 flex justify-center items-center flex-col">
-    <h2
-      class="text-3xl font-medium mb-6 md:text-4xl lg:text-[54px] text-primary"
-    >
+    <h2 class="text-centerheading font-medium mb-6 text-primary">
       Why Generative AI is a Game Changer
     </h2>
 
     <div>
-      <Star items={items} />
+      <Star items={items} maxWidth={1000} />
     </div>
   </div>
 </div>
