@@ -2,7 +2,7 @@
 const { items, maxWidth = "1212px" } = Astro.props; // Default value set to 1212px
 ---
 
-<div class="py-3">
+<div class="py-3 container px-5 md:px-0">
   {
     items.map((item, index) => (
       <div
@@ -10,7 +10,7 @@ const { items, maxWidth = "1212px" } = Astro.props; // Default value set to 1212
         class={`flex mb-0 md:mb-5 py-2`}
         style={`max-width: ${maxWidth};`}
       >
-        <div class="lg:mr-8 mr-3 min-h-15 min-w-15 md:min-h-20 md:min-w-20">
+        <div class="lg:mr-8 mr-3 min-h-12 min-w-12 md:min-h-20 md:min-w-20">
           <img
             src="/assets/star.svg"
             alt="Logo"

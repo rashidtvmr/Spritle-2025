@@ -1,0 +1,34 @@
+---
+import Star from "@/components/DynamicProps/Star.astro";
+
+const items = [
+  {
+    title: "Instant access to top cancer specialists from around the world.",
+  
+  },
+  {
+    title: "Streamlined, secure consultation process with real-time updates.",
+   
+  },
+  {
+    title: "Enhanced patient experience through an intuitive, user-friendly interface.",
+ 
+  },
+  {
+    title: "Efficient and compliant management of sensitive health data.",
+   
+  },
+];
+---
+
+<div class="py-8 mt-10 md:mt-20 lg:mt-20 xl:mt-30">
+  <div class="container px-5 md:px-0 flex justify-center items-center flex-col">
+    <h2 class="text-centerheading font-medium mb-6 text-primary">
+Key Benefits
+    </h2>
+
+    <div>
+      <Star items={items} maxWidth="1450px" />
+    </div>
+  </div>
+</div>

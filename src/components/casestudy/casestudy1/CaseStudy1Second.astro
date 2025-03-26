@@ -1,0 +1,37 @@
+---
+import CaseStudyCard from "@/components/DynamicProps/CaseStudyCard.astro";
+
+  const challenges = [
+    {
+      title: "Limited Reporting in ServiceDesk Plus",
+      description:
+        "Existing systems lacked advanced reporting capabilities, making it hard for teams to gain a clear view of key metrics such as technician performance and service trends.",
+      image: "/assets/unique1.svg",
+    },
+    {
+      title: "Manual Data Processing",
+      description:
+        "Time-consuming manual processes slowed down the creation of comprehensive reports, causing delays in proactive decision-making.",
+      image: "/assets/unique2.svg",
+    },
+    {
+      title: "Difficulty in Integrating Cross-Platform Data",
+      description:
+        "CAG faced challenges in connecting data across different IT systems to derive a holistic view of operations and insights.",
+      image: "/assets/unique3.svg",
+    },
+    {
+      title: "Need for Advanced Analytics",
+      description:
+        "The airport needed advanced, AI-powered analytics for proactive issue identification and trend analysis to drive operational improvement.",
+      image: "/assets/unique3.svg",
+    },
+  ];
+---
+  
+    <CaseStudyCard
+      title="Our Challenges"
+      description="CAG faced challenges in connecting data across different IT systems to derive a holistic view of operations and insights."
+      challenges={challenges}
+    />
+ 
