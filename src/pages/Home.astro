@@ -1,0 +1,38 @@
+---
+import "../styles/global.css";
+
+import TextAnimation from "../components/Home/TextAnimation.astro";
+import OurClients from "../components/Home/OurClients.astro";
+import UpSlider from "../components/Home/UpSlider.astro";
+import OurServices from "../components/Home/OurServices.astro";
+import IndustriesWeServe from "../components/Home/IndustriesWeServe.astro";
+import OurPartners from "../components/Home/OurPartners.astro";
+import Blogs from "../components/Home/Blogs.astro";
+
+import Swiper from "../components/Home/Swiper.astro";
+import Carousel from "../components/Home/Carousel.astro";
+import Customer from "../components/Home/Customer.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Swiper />
+<div class="container">
+<TextAnimation />
+</div>
+<Carousel />
+
+<OurClients />
+
+<UpSlider />
+<div class="container">
+
+<OurServices />
+
+<IndustriesWeServe />
+
+<OurPartners />
+
+<Customer />
+
+<Blogs />
+</div>

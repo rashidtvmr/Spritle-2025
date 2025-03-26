@@ -1,0 +1,77 @@
+---
+const {
+  imageUrl = "/assets/cs1.png",
+  text = "Smart Airport Management: Track, Maintain, and Optimize with Precision",
+  class: customClass = "",
+} = Astro.props;
+
+const defaultClass =
+  "font-normal text-3xl sm:text-7xl tracking-wide leading-[1.2] bg-gradient-to-t from-white to-[rgba(255,255,255,0.5)] text-transparent bg-clip-text";
+---
+
+<div class="relative w-full h-screen overflow-hidden">
+  <!-- Parallax background image -->
+  <img
+    src={imageUrl}
+    alt="Background"
+    class="w-full h-full object-cover absolute top-0 left-0 transform scale-110"
+    data-parallax
+    data-speed="0.5"
+    id="parallax-bg"
+  />
+
+  <!-- Parallax text content -->
+  <div class="absolute inset-0 mt-10 pt-26 max-w-7xl pl-25">
+    <span
+      class={`${defaultClass} ${customClass}`}
+      data-parallax
+      data-speed="0.2"
+      id="parallax-text"
+    >
+      {text}
+    </span>
+  </div>
+
+  <!-- JavaScript for parallax effect -->
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      const parallaxElements = document.querySelectorAll("[data-parallax]");
+
+      const handleParallax = () => {
+        const scrollPosition = window.pageYOffset;
+
+        parallaxElements.forEach((element) => {
+          const speed = parseFloat(element.getAttribute("data-speed")) || 0.5;
+          const offset = scrollPosition * speed;
+
+          if (element.id === "parallax-bg") {
+            element.style.transform = `scale(1.1) translateY(${offset}px)`;
+          } else {
+            element.style.transform = `translateY(${offset * 0.5}px)`;
+          }
+        });
+      };
+
+      window.addEventListener("scroll", handleParallax);
+      window.addEventListener("resize", handleParallax);
+
+      // Initialize
+      handleParallax();
+    });
+  </script>
+</div>
+
+<style is:global>
+  /* Smooth scrolling behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Ensure the parallax container takes full viewport height */
+  .parallax-container {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+</style>

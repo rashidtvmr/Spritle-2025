@@ -1,5 +1,7 @@
 <!-- Navbar -->
-<nav class="bg-[#171717] shadow-md fixed top-0 left-0 w-full z-50">
+<nav
+  class="backdrop-blur-md bg-[#171717]/80 shadow-md fixed top-0 left-0 w-full z-50 border-b border-[#ffffff]/10"
+>
   <div class="px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <!-- Home SVG Logo (Left Side) -->
@@ -22,14 +24,15 @@
       </div>
 
       <!-- Spritle Logo (Centered) -->
-      <div class="flex-1 flex justify-center md:justify-start">
-        <img
-          src="/assets/logo.png"
-          alt="Logo"
-          class="lg:h-8 lg:w-24 h-8 w-30"
-        />
-      </div>
-
+      <a href="/">
+        <div class="flex-1 flex justify-center md:justify-start">
+          <img
+            src="/assets/spritle.svg"
+            alt="Logo"
+            class="lg:h-8 lg:w-24 h-8 w-30"
+          />
+        </div>
+      </a>
       <!-- Menu Items for Laptop -->
       <div class="hidden md:flex space-x-6 items-center">
         <a
@@ -246,7 +249,7 @@
 <!-- Mobile Menu (Hidden by default) -->
 <div
   id="mobileMenu"
-  class="md:hidden bg-black shadow-md hidden fixed top-0 left-0 mt-15 w-full h-full z-60 overflow-y-auto"
+  class="md:hidden backdrop-blur-md bg-[#171717]/80 shadow-md hidden fixed top-0 left-0 mt-15 w-full h-full z-60 overflow-y-auto"
 >
   <div class="px-4 pt-2 pb-3 space-y-1">
     <a

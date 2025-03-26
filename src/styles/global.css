@@ -16,13 +16,15 @@
     --color-primary: #E2E2E2;
     --color-secondary: #B0B0B0;
     --color-background: #252525;
-    --color-btnprimary: #15AED5;
 }
 
 body {
     @apply bg-background text-primary font-dm-sans;
 }
 
+.btnprimary{
+      @apply  text-white  bg-[#15AED5] items-center  gap-2 mt-6    font-medium rounded-full flex tracking-wider;
+}
 .text-title{
     @apply text-4xl lg:text-8xl ;
 

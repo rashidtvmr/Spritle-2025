@@ -7,23 +7,10 @@ import IndustriesWeServe from "../components/Home/IndustriesWeServe.astro";
 import OurPartners from "../components/Home/OurPartners.astro";
 import Blogs from "../components/Home/Blogs.astro";
 
-import Swiper from "../components/Home/Swiper.astro";
-import Carousel from "../components/Home/Carousel.astro";
-import Customer from "../components/Home/Customer.astro";
-import Layout from "@/layouts/Layout.astro";
+import Layout from "../layouts/Layout.astro";
+import Home from "@/pages/Home.astro";
 ---
 
 <Layout title="Spritle Software">
-  <div class="pt-18">
-    <Swiper />
-  </div>
-  <TextAnimation />
-  <Carousel />
-  <OurClients />
-  <UpSlider />
-  <OurServices />
-  <IndustriesWeServe />
-  <OurPartners />
-  <Customer />
-  <Blogs />
+  <Home />
 </Layout>
