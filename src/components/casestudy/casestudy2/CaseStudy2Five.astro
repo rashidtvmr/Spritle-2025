@@ -1,0 +1,37 @@
+---
+const tableData = {
+  headers: ["PureInsight Platform", "Pure Patient Direct:"],
+  rows: [
+    ["Practitioners: 10,000", "Users: 6,000"],
+    ["Patients: 70,000", "Patients: 30,000"],
+    ["Reports Generated: 100,000+", "Total Orders: 16,962"],
+    ["", "Total Gross Sales: $1.6M"],
+  ],
+};
+---
+
+<div class="container px-5 md:px-0 md:mt-15 mt-7">
+  <h3 class="text-centerheading text-primary font-semibold">Results</h3>
+
+  <div class="max-w-[1307px] mt-7 md:mt-15 lg:mt-25 mx-auto rounded-lg border-4 border-white overflow-hidden">
+    <!-- Header -->
+    <div class="flex w-full border-b-4 border-white">
+      {tableData.headers.map((header, index) => (
+        <div class={`w-1/2 text-center p-4 font-medium text-xl lg:text-[44px] ${index === 1 ? 'border-l-4 border-white border-solid' : ''}`}>
+          {header}
+        </div>
+      ))}
+    </div>
+
+    <!-- Rows -->
+    {tableData.rows.map((row, rowIndex) => (
+      <div class="flex w-full    border-white last:border-none">
+        {row.map((cell, cellIndex) => (
+          <div class={`w-1/2 flex justify-center items-center text-subbody font-medium p-3 md:p-6 ${cellIndex === 1 ? 'border-l-4 border-white border-solid' : ''}`}>
+            {cell}
+          </div>
+        ))}
+      </div>
+    ))}
+  </div>
+</div>

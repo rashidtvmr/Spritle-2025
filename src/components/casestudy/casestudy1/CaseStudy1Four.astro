@@ -1,0 +1,38 @@
+---
+import Star from "@/components/DynamicProps/Star.astro";
+
+const items = [
+  {
+    title: "Seamless Integration",
+    description:
+      " Our solution integrates directly with the ManageEngine ecosystem, providing a smooth, cohesive experience for CAG’s operational teams.",
+  },
+  {
+    title: "Scalable and Customizable",
+    description:
+      "Built to grow with CAG’s evolving needs, the platform can handle increasing data volumes and new reporting requirements as operations expand.",
+  },
+  {
+    title: "AI-Enhanced Decision-Making",
+    description:
+      "  Predictive analytics powered by machine learning allows the team to proactively manage faults, reducing downtime and improving service response times.  ",
+  },
+  {
+    title: "Improved Operational Efficiency",
+    description:
+      " With real-time, accurate reports and insights, CAG can track, maintain, and optimize their airport facilities with precision, ensuring peak operational performance at all times.  ",
+  },
+];
+---
+
+<div class="py-8 mt-10 md:mt-20 lg:mt-20 xl:mt-30">
+  <div class="container px-5 md:px-0 flex justify-center items-center flex-col">
+    <h2 class="text-centerheading font-medium mb-6 text-primary">
+Key Benefits
+    </h2>
+
+    <div>
+      <Star items={items} maxWidth="1450px" />
+    </div>
+  </div>
+</div>

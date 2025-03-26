@@ -1,0 +1,48 @@
+---
+import Star from "@/components/DynamicProps/Star.astro";
+
+const items = [
+  {
+    title: "Extensive Course Selection  ",
+    description:
+      " A broad array of courses to suit diverse educational interests",
+  },
+  {
+    title: "Personalized Learning",
+    description:
+      " Flexible teacher-student interaction with bookable sessions for tailored guidance.",
+  },
+  {
+    title: "Community Engagement ",
+    description:
+      " Social media-style network that fosters collaboration and community-driven interaction.",
+  },
+  {
+    title: "24/7 Resource Access",
+    description:
+      " Unrestricted access to study materials anytime.  ",
+  },
+  {
+    title: "Real-Time Communication",
+    description:
+      " Unrestricted access to study materials anytime.  ",
+  },
+  {
+    title: "Scalability and Performance",
+    description:
+      "AWS-hosted platform ensures reliable and scalable performance for expanding user needs.",
+  },
+];
+---
+
+<div class="py-8 mt-10 md:mt-20 lg:mt-20 xl:mt-30">
+  <div class="container px-5 md:px-0 flex justify-center items-center flex-col">
+    <h2 class="text-centerheading font-medium mb-6 text-primary">
+Key Benefits
+    </h2>
+
+    <div>
+      <Star items={items} maxWidth="1450px" />
+    </div>
+  </div>
+</div>

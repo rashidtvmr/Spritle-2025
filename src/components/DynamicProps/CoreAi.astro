@@ -4,24 +4,21 @@ const { logo, heading, content } = Astro.props;
 ---
 
 <div
-  class="bg-[#2E2E2E] min-h-[337px] w-full h-auto  rounded-lg border-white border-2 p-4 flex flex-col items-center gap-7 mb-2"
+  class="bg-[#2E2E2E] w-full h-auto rounded-lg border-white border-2 p-4 flex flex-col items-center gap-5"
 >
   <!-- Logo -->
   <img src={logo} alt="Logo" class="max-w-[54px] max-h-[48px] mt-4" />
 
   <!-- Heading -->
-  <h1
-    class="text-center font-medium text-primary xl:text-[32px] text-xl mb-2
-]"
-  >
+  <h1 class="text-center font-medium text-primary xl:text-[32px] text-xl">
     {heading}
   </h1>
 
   <!-- Content Box (Pill Layout) -->
-  <div class="flex flex-wrap justify-between gap-[0.6rem] mb-4 p-3">
+  <div class="flex  items-center  flex-wrap gap-4 mb-4 p-3">
     {
       content.map((item) => (
-        <div class="px-4  py-1 border-white border-2 rounded-full text-white text-base md:text-lg flex items-center justify-center ">
+        <div class="px-5 py-2 w-full lg:w-auto flex justify-center items-center flex-wrap font-normal border-1 rounded-full text-white text-base md:text-lg  ">
           {item}
         </div>
       ))
