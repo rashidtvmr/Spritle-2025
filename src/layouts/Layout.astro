@@ -2,25 +2,34 @@
 import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+const {title}=Astro.props;
 ---
 
 <html lang="en">
   <head>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link
       rel="icon"
-      href="/assets/favicon.png"
+      href="/assets/img/logo/favicon-32x32.png"
       type="image/png"
       sizes="16x16"
     />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- OG Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="Sprilt Software - Delivering cutting-edge digital solutions and enterprise-grade software development services. We transform complex tech challenges into seamless user experiences for businesses of all sizes." />
+    <meta property="og:image" content="https://yourwebsite.com/og-image.jpg" />'
+    <meta property="og:url" content="https://www.spritle.com/" />'
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Spritle Software" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Spritle 2k25</title>
+    <title>{title}</title>
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
