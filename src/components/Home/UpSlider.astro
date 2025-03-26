@@ -45,10 +45,10 @@ const UpSliderData = [
   <div id="upSliderWrapper" class="flex flex-col">
     {
       UpSliderData.map((slide, index) => (
-        <div class="mt-20"></div>
+        <div class="md:mt-50 mt-20"></div>
         <div
           id={`slide-${index}`}
-          class={`upSliderSlide slide-${index}  flex max-lg:flex-col lg:flex-row w-full h-[90vh] lg:h-[80vh] flex-shrink-0 items-center justify-between bg-[#101010] rounded-lg sticky top-0 md:top-[10vh] p-3 lg:p-10 gap-6 lg:px-20 px-3 `}
+          class={`upSliderSlide slide-${index}  flex max-lg:flex-col lg:flex-row w-full h-[90vh] lg:h-[80vh] flex-shrink-0 items-center justify-between bg-[#101010] rounded-lg sticky top-[10vh] p-3 lg:p-10 gap-6 lg:px-20 px-3 `}
         >
           <div class="md:mb-10 lg:mb-0 max-lg:order-2 lg:w-1/2 space-y-6 md:space-y-4 lg:space-y-15 relative">
             <h2 class="text-xl md:text-2xl lg:text-4xl text-white font-medium ">{slide.title}</h2>
