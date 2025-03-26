@@ -2,6 +2,7 @@
 import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+const {title}=Astro.props;
 ---
 
 <html lang="en">
@@ -12,19 +13,46 @@ import "../styles/global.css";
     />
     <link
       rel="icon"
-      href="/assets/favicon.png"
+      href="/assets/img/logo/favicon.png"
       type="image/png"
       sizes="16x16"
     />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Spritle 2k25</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" We offer tailored software solutions for businesses worldwide. Step into the quest of transforming your ideas into reality! Contact us today!">
+    <meta name="author" content="ThemeTags">
+    <meta name="generator" content={Astro.generator}/>
+    <!-- OG Tags -->
+
+    <meta property="og:url" content="https://www.spritle.com/">
+    <meta name="og:title" content="Web &amp; Mobile Application Development Company | Spritle Software">
+    <meta property="og:description" content="We offer tailored software solutions for businesses worldwide. Step into the quest of transforming your ideas into reality! Contact us today!">
+    <!-- <meta property="og:image" content="https://www.spritle.com/images/AI_ML_Page/Gene-Analysis-Dashboard.png.pagespeed.ce.n1n8Y7RGdR.png"> -->
+    <!-- <meta property="og:image:secure_url" content="https://www.spritle.com/images/AI_ML_Page/Gene-Analysis-Dashboard.png.pagespeed.ce.n1n8Y7RGdR.png"> -->
+    <!-- <meta property="og:image:type" content="image/png"> -->
+    <!-- <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600"> -->
+    <meta name="keywords" content="Web application developmentmobile application developmentIoT developmentcustom software developmentai &amp; ml application development">
+
+    <!-- Twitter OG -->
+    <meta name="twitter:site" content="@themetags">
+    <meta name="twitter:creator" content="@themetags">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Web &amp; Mobile Application Development Company | Spritle Software">
+    <meta name="twitter:description" content="We offer tailored software solutions for businesses worldwide. Step into the quest of transforming your ideas into reality! Contact us today!">
+    <!-- <meta name="twitter:image" content="https://www.spritle.com/images/AI_ML_Page/Gene-Analysis-Dashboard.png.pagespeed.ce.n1n8Y7RGdR.png"> -->
+    <link rel="canonical" href="https://www.spritle.com/">
+
+    <!-- facebook og -->
+    <meta name="trustburn-site-verification" content="462cb5f0fa9ebf5c6c16e5369e18069f">
+    <!-- favicon icon -->
+
+    <link rel="icon" href="/assets/img/logo/favicon-32x32.png" type="image/png" sizes="16x16">
+
+    <title>{title}</title>
   </head>
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <NavBar />
     <slot />
