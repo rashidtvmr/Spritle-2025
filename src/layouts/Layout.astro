@@ -3,19 +3,17 @@ import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 const {title}=Astro.props;
-export const url = "https://www.spritle.com/" + Astro.url.pathname;
 ---
 
 <html lang="en">
   <head>
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link
       rel="icon"
-      href="/assets/img/logo/favicon-32x32.png"
+      href="/assets/img/logo/favicon.png"
       type="image/png"
       sizes="16x16"
     />
@@ -23,6 +21,7 @@ export const url = "https://www.spritle.com/" + Astro.url.pathname;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content=" We offer tailored software solutions for businesses worldwide. Step into the quest of transforming your ideas into reality! Contact us today!">
     <meta name="author" content="ThemeTags">
+    <meta name="generator" content={Astro.generator}/>
     <!-- OG Tags -->
 
     <meta property="og:url" content="https://www.spritle.com/">
