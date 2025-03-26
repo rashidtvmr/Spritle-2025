@@ -1,5 +1,4 @@
 ---
-// Data for the slider
 const UpSliderData = [
   {
     id: "slide1",
@@ -43,33 +42,31 @@ const UpSliderData = [
 ];
 ---
 
-<div
-  class="w-full flex justify-center items-center overflow-hidden rounded-2xl p-3 md:p-0 lg:p-2 xl:p-20"
->
+<div class="container px-0">
   <div
     id="upSliderWrapper"
-    class="md:w-[90%] h-[80vh] lg:w-full flex flex-col snap-y snap-mandatory overflow-y-scroll xl:h-[80vh] scroll-smooth relative mt-40"
+    class="flex flex-col gap-10"
     style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
   >
     {
       UpSliderData.map((slide, index) => (
         <div
           id={`slide-${index}`}
-          class={`upSliderSlide slide-${index} flex max-lg:flex-col lg:flex-row-reverse w-full h-[80vh] flex-shrink-0 items-center justify-between px-6 lg:px-10 bg-black rounded-lg overflow-hidden md:gap-[0px] gap-1`}
+          class={`upSliderSlide py-16 my-10 slide-${index} flex max-lg:flex-col lg:flex-row-reverse w-full  h-fit lhg:h-[80vh] flex-shrink-0 items-center justify-between px-6 lg:px-10 bg-black rounded-lg gap-1 sticky top-0 md:top-[20vh] `}
         >
-          <div class=" max-lg:order-1  flex justify-center relative h-auto ">
+          <div class="max-lg:order-1 flex justify-center relative h-auto">
             <img
               src={slide.image}
               alt="Map"
               class="max-lg:p-3 md:p-5 lg:p-0 max-lg:h-[30vh] h-[20vh] md:h-[35vh] lg:h-[469px] lg:w-[750px] w-full rounded-lg shadow-lg object-contain object-center "
             />
           </div>
-          <div class="max-lg:w-full max-lg:order-2 max-lg:pt-8  w-1/2 md:space-y-0 lg:space-y-6 xl:space-y-12  space-y-0 sm:space-y-0 lg:mt-25 xl:mt-0 mt-5 md:ml-10 ml-0 relative  positioncontainer  ">
-            <h2 class="text-4xl   text-white font-medium">{slide.title}</h2>
+          <div class="max-lg:w-full max-lg:order-2 max-lg:pt-8 w-1/2 md:space-y-0 lg:space-y-6 xl:space-y-12 space-y-0 sm:space-y-0 lg:mt-25 xl:mt-0  md:ml-10 ml-0 relative">
+            <h2 class="text-2xl text-white font-medium">{slide.title}</h2>
             <p class="text-subheading font-normal text-primary ">
               {slide.description}
             </p>
-            <p class="text-lg md:text-lg   xl:text-2xl font-normal text-primary">
+            <p class="text-lg md:text-lg xl:text-2xl font-normal text-primary">
               {slide.p}
             </p>
             <div class="flex flex-wrap gap-3 justify-center lg:justify-start logocontainer h-auto w-full">
@@ -87,195 +84,15 @@ const UpSliderData = [
     }
   </div>
 </div>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const slides = document.querySelectorAll(".upSliderSlide");
-
-    const observerOptions = {
-      root: document.querySelector("#upSliderWrapper"),
-      rootMargin: "0px",
-      threshold: 0.7, // Trigger when 50% of the slide is visible
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const slide = entry.target as HTMLElement; // Type assertion here
-        if (entry.isIntersecting) {
-          slide.style.transform = "scale(1)";
-          slide.style.filter = "grayscale(0%)";
-        } else {
-          // slide.style.transform = "scale(0.8)";
-          slide.style.filter = "grayscale(80%)";
-        }
-      });
-    }, observerOptions);
-
-    slides.forEach((slide) => {
-      observer.observe(slide);
-    });
-  });
-</script>
 
 <style>
-  /* Base style for all slides */
-  .upSliderSlide {
+  .sticky-card {
     position: sticky;
-    top: 0;
-    will-change: transform, filter;
-    transition:
-      transform 0.5s ease-out,
-      filter 0.5s ease-out;
+    top: 0vh;
+    transition: transform 0.5s ease-out;
   }
 
-  /* Custom scrollbar hiding */
-  #upSliderWrapper::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Adjust layout for screens below 1514px */
-  @media (max-width: 1514px) {
-    .upSliderSlide > div {
-      width: 100% !important;
-      height: auto;
-    }
-
-    .upSliderSlide img {
-      width: 100%;
-      height: 45vh;
-      object-fit: contain;
-      aspect-ratio: 16 / 9;
-    }
-    .upSliderSlide h2 {
-      font-size: 1.7rem; /* Adjust heading size for smaller screens */
-    }
-
-    .upSliderSlide p {
-      font-size: 1.2rem; /* Adjust paragraph size for smaller screens */
-    }
-
-    .upSliderSlide .flex-wrap img {
-      width: 80px; /* Larger logos for screens below 1514px */
-      height: auto;
-    }
-  }
-  @media (max-width: 1020px) {
-    .upSliderSlide {
-      flex-direction: column; /* Stack image and content vertically */
-      align-items: center; /* Center-align items */
-    }
-
-    .upSliderSlide > div {
-      width: 100% !important;
-      height: auto;
-    }
-
-    .upSliderSlide img {
-      width: 100%;
-      height: 45vh;
-      object-fit: scale-down;
-      aspect-ratio: 16 / 9;
-    }
-    .upSliderSlide h2 {
-      font-size: 1.5rem; /* Adjust heading size for smaller screens */
-    }
-
-    .upSliderSlide p {
-      font-size: 1.2rem; /* Adjust paragraph size for smaller screens */
-    }
-
-    .upSliderSlide .flex-wrap img {
-      width: 80px; /* Larger logos for screens below 1514px */
-      height: auto;
-      margin-bottom: 20px;
-    }
-    .positioncontainer {
-      bottom: 60px;
-      margin: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px; /* Equal vertical spacing */
-    }
-  }
-
-  /* Further adjustments for mobile screens */
-  @media (max-width: 900px) {
-    .upSliderSlide img {
-      width: 100%;
-      height: 38vh;
-      object-fit: scale-down;
-    }
-
-    .upSliderSlide h2 {
-      font-size: 1.5rem; /* Smaller heading for mobile */
-    }
-
-    .upSliderSlide p {
-      font-size: 1rem; /* Smaller paragraph for mobile */
-    }
-
-    .upSliderSlide .flex-wrap img {
-      width: 80px; /* Larger logos for screens below 1514px */
-    }
-    .positioncontainer {
-      bottom: 30px;
-      margin: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px; /* Equal vertical spacing */
-    }
-    .logocontainer {
-      max-width: 100%;
-      height: auto;
-      padding: 1px;
-    }
-
-    .logocontainer img {
-      max-width: 100%;
-      height: 50px;
-      object-fit: cover;
-    }
-  }
-
-  @media (max-width: 547px) {
-    .upSliderSlide img {
-      width: 100%;
-      height: 25vh;
-      object-fit: scaledown;
-    }
-
-    .upSliderSlide h2 {
-      margin-bottom: 1px;
-      line-height: 22px;
-      font-size: 1.3rem; /* Smaller heading for mobile */
-    }
-
-    .upSliderSlide p {
-      font-size: 15px; /* Smaller paragraph for mobile */
-      line-height: 20px;
-    }
-
-    .upSliderSlide .flex-wrap img {
-      max-height: 80px; /* Larger logos for screens below 1514px */
-      width: 80px;
-    }
-    .positioncontainer {
-      bottom: 71px;
-      gap: 20px; /* Equal vertical spacing */
-    }
-  }
-  @media (max-width: 375px) {
-    .upSliderSlide h2 {
-      line-height: 22px;
-      font-size: 1rem; /* Smaller heading for mobile */
-    }
-    .upSliderSlide img {
-      width: 100%;
-      height: 25vh;
-      object-fit:   contain;
-    }
-    .positioncontainer {
-      bottom: 67px;
-      gap: 0px; /* Equal vertical spacing */
-    }
+  .sticky-card {
+    transition: transform 0.5s ease-out;
   }
 </style>
