@@ -3,9 +3,9 @@ import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
 import BtnBig from "../DynamicProps/BtnBig.astro";
 ---
 
-<div class="mt-20 lg:mt-27">
+<div class="lg:mt-30 mt-25">
   <div
-    class="flex flex-col justify-center items-center text-center lg:h-screen px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background "
+    class="flex flex-col justify-center items-center text-center lg:h-screen px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background"
   >
     <GradientHeading
       text="  AI-Powered Solutions for Transforming Your Business"
@@ -15,11 +15,17 @@ import BtnBig from "../DynamicProps/BtnBig.astro";
             text-title bg-gradient-to-t from-white to-[rgba(255,255,255,0.3)] bg-clip-text text-transparent"
   >
   </h1> -->
-    <p class="font-normal mt-4 text-title-body text-primary max-w-[1000px]">
+    <p
+      class="font-normal mt-4 text-title-body text-gradientbody max-w-[1000px]"
+    >
       Unlock the potential of artificial intelligence to drive innovation,
       optimize operations, and enhance customer experiences
     </p>
-    <BtnBig text="Discover Our AI Solutions" icon="/assets/rightarrow.svg" class="px-17   " />
+    <BtnBig
+      text="Discover Our AI Solutions"
+      icon="/assets/rightarrow.svg"
+      class="px-11"
+    />
 
     <h1
       class="text-heading text-primary font-dmSans font-semibold
