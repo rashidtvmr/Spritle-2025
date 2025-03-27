@@ -24,15 +24,13 @@ const cardData = [
 ];
 ---
 
-<div
-  class="text-heading text-primary md:mb-12 mb-2 font-bold container px-5 md:px-0 mt-8 md:mt-20 lg:mt-30"
->
-  Industry Use Cases
-</div>
-<div>
-  <div
-    class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-8 md:mt-20 lg:mt-30 container px-5 md:px-0"
-  >
-    {cardData.map((card, index) => <SuccessStories key={index} {...card} />)}
+<div class="container px-5 md:px-0 my-10 md:my-20">
+  <div class="text-heading text-primary md:mb-12 mb-2 font-semibold">
+    Industry Use Cases
+  </div>
+  <div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5">
+      {cardData.map((card, index) => <SuccessStories key={index} {...card} />)}
+    </div>
   </div>
 </div>

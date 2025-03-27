@@ -30,16 +30,15 @@ const cardData = [
 ];
 ---
 
-<h1
-  class="text-centerheading text-primary font-dmSans font-semibold xl:mt-30 md:mt-10 mt-5 text-center"
->
-  Success Stories
-</h1>
-<div>
+<div class="my-10 md:my-20">
+  <h1
+    class="text-centerheading text-primary font-dmSans font-semibold  text-center"
+  >
+    Success Stories
+  </h1>
   <div
-    class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-12 container px-5 md:px-0"
+    class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-8 container px-5 md:px-0"
   >
     {cardData.map((card, index) => <SuccessStories key={index} {...card} />)}
   </div>
 </div>
-

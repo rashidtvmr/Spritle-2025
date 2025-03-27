@@ -2,27 +2,27 @@
 import UniqueValueCard from "@/components/DynamicProps/UniqueValueCard.astro";
 ---
 
-<div
-  class="text-heading text-primary md:mb-12 mb-2 font-semibold container px-5 md:px-0 mt-8 md:mt-20 lg:mt-40"
->
-  Transportation & Logistics Technology Solutions We Offer
-</div>
-<div
-  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-6 container px-5 md:px-0 mt-8 md:mt-20 lg:mt-30"
->
-  <UniqueValueCard
+<div class="container px-5 md:px-0 my-10 md:my-20">
+
+  <div class="text-heading text-primary md:mb-12 mb-2 font-semibold">
+    Transportation & Logistics Technology Solutions We Offer
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-6">
+    <UniqueValueCard
     logo="/assets/unique1.svg"
     title=" AI-Powered Fleet Management"
     description="Monitor and manage vehicle fleets in real time with AI-driven analytics that optimize routes, reduce fuel consumption, and enhance driver safety"
-  />
-  <UniqueValueCard
+    />
+    <UniqueValueCard
     logo="/assets/unique2.svg"
     title="Predictive Analytics for Demand Forecasting"
     description="Utilize predictive models to forecast demand, improve inventory management, and reduce delivery delays, ensuring timely logistics."
-  />
-  <UniqueValueCard
+    />
+    <UniqueValueCard
     logo="/assets/unique3.svg"
     title="IoT-Enabled Supply Chain Visibility"
     description="Implement IoT sensors to track shipments and assets in real-time, providing transparency throughout the entire supply chain"
-  />
+    />
+  </div>
+  
 </div>

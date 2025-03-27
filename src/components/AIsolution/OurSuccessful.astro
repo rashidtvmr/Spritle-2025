@@ -1,168 +1,127 @@
-<div class="md:space-y-10 space-y-0 lg:pl-0 md:pl-0 lg:mt-20 mt-5">
-  <!-- Heading Section -->
-  <div
-    class="font-dm-sans text-heading text-primary pl-3 md:pl-9 lg:pl-20 text-medium"
-  >
-Our Successful Implementation  </div>
-  <p
-    class="text-subbody text-secondary w-full md:mb-13 lg:pl-20 md:pl-9 pl-3 text-normal mb-3 mt-3 md:mt-0"
-  >
-    Transform your business with generative AI 
-  </p>
+---
+const carouselContent = [
+  {
+    href: "/casestudy1",
+    src: "../assets/Rectangle 93092.png",
+    alt: "Slide Image",
+    text: "How we helped Nestle create personalized nutrition through genetic insights",
+  },
+  {
+    href: "/casestudy2",
+    src: "../assets/flight.png",
+    alt: "Slide Image",
+    text: "Smart Airport Management: Track, Maintain, and Optimize with Precision",
+  },
+  {
+    href: "/casestudy3",
+    src: "../assets/run.png",
+    alt: "Slide Image",
+    text: "A platform for managing and coordinating every sports meet across USA",
+  },
+  {
+    href: "/casestudy4",
+    src: "../assets/van.png",
+    alt: "Slide Image",
+    text: "A major logistics company in the US achieved a 40% reduction in response time.",
+  },
+  {
+    href: "/casestudy5",
+    src: "../assets/Rectangle 93092.png",
+    alt: "Slide Image",
+    text: "Instant Access to Top Cancer Specialists Across the World – Safe & Effortless",
+  },
+  {
+    href: "/casestudy6",
+    src: "../assets/computer.png",
+    alt: "Slide Image",
+    text: "Unlocking Education with Smooth, Engaging Digital Learning",
+  },
+];
+---
 
-  <!-- Swiper Slider -->
-  <div class="overflow-hidden w-full flex flex-col items-start">
-    <div class="relative w-full mx-auto overflow-hidden">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <a href="/casestudy1" class="swiper-slide">
-            <div
-              class="flex w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[797px] slider-item relative overflow-hidden group rounded-2xl"
-            >
-              <div
-                class="relative overflow-hidden transition-transform duration-800 ease-in-out group-hover:scale-110 group-hover:shadow-xl w-full h-full"
-              >
-                <img
-                  src="../assets/Rectangle 93092.png"
-                  alt="Slide Image"
-                  class="w-full h-full object-cover rounded-lg shadow-lg"
-                />
-                <div
-                  class="absolute bottom-7 left-1/2 xl:left-3/5 xl:-translate-x-[60%] transform -translate-x-1/2 transition py-2 text-white text-lg text-heading leading-6 sm:leading-8 md:leading-5 lg:leading-[40px] xl:leading-[72px] tracking-tight w-[90%] sm:w-[80%] md:w-[300px] lg:w-[391px] xl:w-[691px] hover:shadow-2xl hover:transition duration-700 slider-text font-[poppins]"
-                >
-                  How we helped Nestle create personalized nutrition through
-                  genetic insights
-                </div>
-              </div>
-            </div>
-          </a>
+<style>
+  #tb-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .btn-disbaled {
+    cursor: not-allowed;
+    background: #121212;
+  }
+</style>
 
-          <!-- Slide 2 -->
-          <a href="/casestudy2" class="swiper-slide">
-            <div
-              class="flex w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[797px] slider-item relative overflow-hidden group rounded-2xl"
-            >
-              <div
-                class="relative overflow-hidden transition-transform duration-800 ease-in-out group-hover:scale-110 group-hover:shadow-xl w-full h-full"
-              >
-                <img
-                  src="../assets/flight.png"
-                  alt="Slide Image"
-                  class="w-full h-full object-cover rounded-lg shadow-lg"
-                />
-                <div
-                  class="absolute bottom-7 left-1/2 xl:left-3/5 xl:-translate-x-[60%] transform -translate-x-1/2 transition py-2 text-white text-lg text-heading leading-6 sm:leading-8 md:leading-5 lg:leading-[40px] xl:leading-[72px] tracking-tight w-[90%] sm:w-[80%] md:w-[300px] lg:w-[391px] xl:w-[691px] hover:shadow-2xl hover:transition duration-700 slider-text font-[poppins]"
-                >
-                  Smart Airport Management: Track, Maintain, and Optimize with
-                  Precision
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <!-- Slide 3 -->
-          <a href="/casestudy3" class="swiper-slide">
-            <div
-              class="flex w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[797px] slider-item relative overflow-hidden group rounded-2xl"
-            >
-              <div
-                class="relative overflow-hidden transition-transform duration-800 ease-in-out group-hover:scale-110 group-hover:shadow-xl w-full h-full"
-              >
-                <img
-                  src="../assets/run.png"
-                  alt="Slide Image"
-                  class="w-full h-full object-cover rounded-lg shadow-lg"
-                />
-                <div
-                  class="absolute bottom-7 left-1/2 xl:left-3/5 xl:-translate-x-[60%] transform -translate-x-1/2 transition py-2 text-white text-lg text-heading leading-6 sm:leading-8 md:leading-5 lg:leading-[40px] xl:leading-[72px] tracking-tight w-[90%] sm:w-[80%] md:w-[300px] lg:w-[391px] xl:w-[691px] hover:shadow-2xl hover:transition duration-700 slider-text font-[poppins]"
-                >
-                  A platform for managing and coordinating every sports meet
-                  across USA
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <!-- Slide 4 -->
-          <a href="/casestudy4" class="swiper-slide">
-            <div
-              class="flex w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[797px] slider-item relative overflow-hidden group rounded-2xl"
-            >
-              <div
-                class="relative overflow-hidden transition-transform duration-800 ease-in-out group-hover:scale-110 group-hover:shadow-xl w-full h-full"
-              >
-                <img
-                  src="../assets/van.png"
-                  alt="Slide Image"
-                  class="w-full h-full object-cover rounded-lg shadow-lg"
-                />
-                <div
-                  class="absolute bottom-7 left-1/2 xl:left-3/5 xl:-translate-x-[60%] transform -translate-x-1/2 transition py-2 text-white text-lg text-heading leading-6 sm:leading-8 md:leading-5 lg:leading-[40px] xl:leading-[72px] tracking-tight w-[90%] sm:w-[80%] md:w-[300px] lg:w-[391px] xl:w-[691px] hover:shadow-2xl hover:transition duration-700 slider-text font-[poppins]"
-                >
-                  A major logistics company in the US achieved a 40% reduction
-                  in response time.
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <!-- Slide 5 -->
-          <a href="/casestudy5" class="swiper-slide">
-            <div
-              class="flex w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[797px] slider-item relative overflow-hidden group rounded-2xl"
-            >
-              <div
-                class="relative overflow-hidden transition-transform duration-800 ease-in-out group-hover:scale-110 group-hover:shadow-xl w-full h-full"
-              >
-                <img
-                  src="../assets/Rectangle 93092.png"
-                  alt="Slide Image"
-                  class="w-full h-full object-cover rounded-lg shadow-lg"
-                />
-                <div
-                  class="absolute bottom-7 left-1/2 xl:left-3/5 xl:-translate-x-[60%] transform -translate-x-1/2 transition py-2 text-white text-lg text-heading leading-6 sm:leading-8 md:leading-5 lg:leading-[40px] xl:leading-[72px] tracking-tight w-[90%] sm:w-[80%] md:w-[300px] lg:w-[391px] xl:w-[691px] hover:shadow-2xl hover:transition duration-700 slider-text font-[poppins]"
-                >
-                  Instant Access to Top Cancer Specialists Across the World –
-                  Safe & Effortless
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <!-- Slide 6 -->
-          <a href="/casestudy6" class="swiper-slide">
-            <div
-              class="flex w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[797px] slider-item relative overflow-hidden group rounded-2xl"
-            >
-              <div
-                class="relative overflow-hidden transition-transform duration-800 ease-in-out group-hover:scale-110 group-hover:shadow-xl w-full h-full"
-              >
-                <img
-                  src="../assets/computer.png"
-                  alt="Slide Image"
-                  class="w-full h-full object-cover rounded-lg shadow-lg"
-                />
-                <div
-                  class="absolute bottom-7 left-1/2 xl:left-3/5 xl:-translate-x-[60%] transform -translate-x-1/2 transition py-2 text-white text-lg text-heading leading-6 sm:leading-8 md:leading-5 lg:leading-[40px] xl:leading-[72px] tracking-tight w-[90%] sm:w-[80%] md:w-[300px] lg:w-[391px] xl:w-[691px] hover:shadow-2xl hover:transition duration-700 slider-text font-[poppins]"
-                >
-                  Unlocking Education with Smooth, Engaging Digital Learning
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Navigation Buttons -->
-    <div
-      class="flex gap-3 flex-row justify-end items-center w-full md:pt-12 pt-4 px-5"
+<section>
+  <div class="container my-10">
+    <h1 class="font-dm-sans text-heading text-primary text-medium my-10">
+Our Successful Implementation       </h1>
+    <p class="text-subbody text-secondary w-full text-normal">
+      Transform your business with generative AI 
+    </p>
+  </div>
+  <div class="relative 2xl:container">
+    <ul
+      id="tb-carousel"
+      class="flex gap-10 overflow-x-auto scroll-smooth pb-3 scroll-snap-x snap-mandatory"
     >
+      {
+        carouselContent.map((content, index) => {
+          const textId = `card-text-${index}`;
+          return (
+            <li
+              class={`
+              ${
+                (index === 0 ? " ms-4 md:ms-6 2xl:ms-0" : "") +
+                (index === carouselContent.length - 1
+                  ? " me-4 md:me-6 2xl:me-0"
+                  : "")
+              }
+                tb-carousel-card relative group h-[250px] w-[250px] md:h-[450px] lg:h-[600px] md:w-[600px]
+              flex-shrink-0 bg-gray-300 rounded-xl scroll-snap-start flex justify-center items-center text-xl overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500   
+              `}
+              role="link"
+              aria-labelledby={textId}
+              tabindex="0"
+            >
+              <img
+                src={content.src}
+                alt={content.alt}
+                class="w-full h-full object-cover rounded-xl scale-[1.1] group-hover:scale-[1.2] transition-transform duration-300"
+              />
+              <div
+                id={textId}
+                class="absolute z-10 w-full text-left bottom-3 md:bottom-10 font-poppins text-white  px-2 md:px-12 text-xl md:text-4xl group-hover:scale-[1.1] transition-transform duration-300"
+              >
+                <p class="break-words">{content.text}</p>
+              </div>
+              <div
+                class="
+              absolute inset-0 z-0
+              pointer-events-none
+              opacity-0
+              group-hover:opacity-100
+              transition-opacity duration-300
+              [background:linear-gradient(to_bottom,rgba(0,0,0,0)_5%,rgba(0,0,0,.5)_100%)]
+            "
+              />
+              <a
+                href={content.href}
+                aria-labelledby={textId}
+                tabindex="-1"
+                class="
+                absolute
+                inset-0
+                z-20
+              
+              "
+              />
+            </li>
+          );
+        })
+      }
+    </ul>
+    <div class="flex justify-end p-4 gap-4">
       <button
         id="prevBtn"
-        class="rounded-full flex justify-center items-center cursor-pointer bg-[#15AED5] hover:bg-[#15AED5] opacity-50 w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] p-0 sm:p-2"
-        disabled
+        class="rounded-full flex justify-center items-center cursor-pointer bg-[#15AED5] text-white p-2 px-4"
       >
         <img
           src="../assets/arrowcarousel.png"
@@ -172,7 +131,7 @@ Our Successful Implementation  </div>
       </button>
       <button
         id="nextBtn"
-        class="rounded-full flex justify-center items-center cursor-pointer bg-[#15AED5] hover:bg-[#15AED5] text-white w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] p-2 sm:p-2"
+        class="rounded-full flex justify-center items-center cursor-pointer bg-[#15AED5] text-white p-2 px-4"
       >
         <img
           src="../assets/arrowcar2.png"
@@ -182,132 +141,44 @@ Our Successful Implementation  </div>
       </button>
     </div>
   </div>
+</section>
 
-  <!-- Custom Styles -->
-  <style>
-    .slider-text {
-      position: absolute;
-      text-align: left;
-      padding-right: 30px;
-    }
+<script lang="js">
+  const carousel = document.getElementById("tb-carousel");
+  const carouselStyles = window.getComputedStyle(carousel);
+  const carouselCard = document.querySelector(".tb-carousel-card");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
 
-    .slider-item:hover .slider-text {
-      text-shadow: 4px 14px 18px rgba(0, 0, 0, 0.9);
-      filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.8))
-        drop-shadow(0 0 70px rgba(0, 0, 0, 0.8));
-      transform: translateX(40px);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  function toggleArrowButtons() {
+    if (carousel.scrollLeft <= 0) {
+      prevBtn.classList.add("btn-disbaled");
+    } else {
+      prevBtn.classList.remove("btn-disbaled");
     }
+    if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth) {
+      nextBtn.classList.add("btn-disbaled");
+    } else {
+      nextBtn.classList.remove("btn-disbaled");
+    }
+  }
 
-    .slider-item:hover .slider-text::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.2);
-      z-index: -1;
-      filter: blur(50px);
-      border-radius: 10px;
-    }
-
-    .slider-text::before {
-      content: attr(data-text);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      color: transparent;
-      white-space: normal;
-      text-shadow:
-        6px 6px 15px rgba(0, 0, 0, 1),
-        -6px -6px 10px rgba(0, 0, 0, 1);
-    }
-
-    .swiper-slide {
-      opacity: 1;
-      transition: opacity 0.5s ease;
-    }
-
-    .swiper-container {
-      padding-left: 12px;
-    }
-
-    @media (min-width: 768px) {
-      .swiper-container {
-        padding-left: 30px;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .swiper-container {
-        padding-left: 80px;
-      }
-    }
-    @media screen and (max-width: 1800px) and (min-width: 1020px) {
-      .slider-text {
-        position: absolute;
-        left: 60%;
-        font-size: 40px;
-        width: 87%;
-      }
-    }
-  </style>
-</div>
-
-<!-- Script for Swiper -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const swiper = new Swiper(".swiper-container", {
-      modules: [Navigation],
-      spaceBetween: 20,
-      slidesPerView: 1.2,
-      loop: false,
-      autoplay: false,
-      navigation: {
-        prevEl: "#prevBtn",
-        nextEl: "#nextBtn",
-      },
-      on: {
-        init: function () {
-          updateButtonStates(this);
-        },
-        slideChange: function () {
-          updateButtonStates(this);
-        },
-      },
-      breakpoints: {
-        320: { slidesPerView: 1.2, spaceBetween: 20 },
-        768: { slidesPerView: 2.2, spaceBetween: 30 },
-        1024: { slidesPerView: 2.2, spaceBetween: 80 },
-      },
+  function handleScroll(direction) {
+    if (!carouselCard) return;
+    const cardWidth = carouselCard.offsetWidth;
+    const gap = parseInt(carouselStyles.gap, 10) || 0;
+    const scrollAmount = (cardWidth + gap) * direction;
+    carousel.scrollBy({
+      left: scrollAmount,
+      behavior: "smooth",
     });
+    setTimeout(toggleArrowButtons, 300);
+  }
 
-    function updateButtonStates(swiper) {
-      const prevBtn = document.getElementById("prevBtn");
-      const nextBtn = document.getElementById("nextBtn");
-
-      if (swiper.isBeginning) {
-        prevBtn.disabled = true;
-        prevBtn.classList.add("opacity-50", "cursor-not-allowed");
-      } else {
-        prevBtn.disabled = false;
-        prevBtn.classList.remove("opacity-50", "cursor-not-allowed");
-      }
-
-      if (swiper.isEnd) {
-        nextBtn.disabled = true;
-        nextBtn.classList.add("opacity-50", "cursor-not-allowed");
-      } else {
-        nextBtn.disabled = false;
-        nextBtn.classList.remove("opacity-50", "cursor-not-allowed");
-      }
-    }
+  document.addEventListener("DOMContentLoaded", () => {
+    toggleArrowButtons();
+    nextBtn.addEventListener("click", () => handleScroll(1));
+    prevBtn.addEventListener("click", () => handleScroll(-1));
+    carousel.addEventListener("scroll", toggleArrowButtons);
   });
-
-  import Swiper from "swiper";
-  import { Navigation } from "swiper/modules";
-  import "swiper/css";
-  import "swiper/css/navigation";
 </script>

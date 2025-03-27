@@ -21,12 +21,12 @@ const cardData = [
     description:
       "Developed a DevSecOps approach for a financial institution, ensuring compliance with industry standards and reducing cloud security incidents by 25%",
   },
- 
 ];
 ---
 
+<div class="my-10 md:my-20">
 <div
-  class="text-heading text-primary md:mb-12 mb-2 font-bold container md:px-0 px-5 mt-8 md:mt-20 lg:mt-40"
+  class="text-heading text-primary md:mb-12 mb-2 font-bold container md:px-0 px-5"
 >
   Industry Use Cases
 </div>
@@ -36,4 +36,5 @@ const cardData = [
   >
     {cardData.map((card, index) => <SuccessStories key={index} {...card} />)}
   </div>
+</div>
 </div>
