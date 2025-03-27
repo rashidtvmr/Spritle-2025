@@ -64,7 +64,7 @@ const cards = [
       "A holistic Airport Management System for maintaining all the terminals and runways in a single integrated platform. ",
   },
   {
-    logo: "/assets/nestle.svg",
+    logo: "/assets/ica.svg",
     title: "Nestlé Health Science",
     partner: "Functional Medicine",
     description:
@@ -135,15 +135,11 @@ const cards = [
   {
     cards.map((card) => (
       <div class=" rounded-xl pt-5   bg-[#313131] pb-10 pl-10 pr-10 space-y-3 flex flex-col md:items-start items-center text-center md:text-left">
-        <img
-          src={card.logo}
-          alt="Logo"
-          class="max-w-[76px] max-h-[76px] "
-        />
-        <h2 class="text-subheading font-medium text-[#EAEAEA]  md:py-5">
+        <img src={card.logo} alt="Logo" class="max-w-[76px] max-h-[76px] " />
+        <h2 class="text-subheading font-medium text-[#EAEAEA]  md:py-5 ">
           {card.title}
         </h2>
-        <h3 class="text-subheading text-[#EAEAEA] font-normal">
+        <h3 class="text-subheading text-[#EAEAEA] font-normal ">
           {card.partner}
         </h3>
         <p class="text-[#B0B0B0] font-normal text-subheading  md:pt-4">

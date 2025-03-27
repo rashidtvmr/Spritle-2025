@@ -21,6 +21,9 @@
 body {
     @apply bg-background text-primary font-dm-sans;
 }
+.text-gradientbody {
+    @apply bg-gradient-to-b from-[#fffcfc] to-[rgba(234,234,234,0.5)] bg-clip-text text-transparent;
+}
 
 .btnprimary{
       @apply  text-white  bg-[#15AED5] items-center  gap-2 mt-6    font-medium rounded-full flex tracking-wider;

@@ -80,7 +80,7 @@ const technologies = [
     ].map((item, index) => (
       <div
         key={index}
-        class="border-2 border-white p-6 flex flex-col  items-center text-center bg-[#313131] max-w-[560px] max-h-[337px]"
+        class="border-2 border-white p-6 flex flex-col  items-center text-center bg-[#313131] max-w-[560px] "
       >
         <div class="flex  items-center w-full">
           {Array.isArray(item.img) ? (
@@ -90,12 +90,13 @@ const technologies = [
           ) : (
             <img src={item.img} alt="" class="mr-4 xl:pt-[60px] " />
           )}
-          <h2 class="text-primary lg:text-[32px] text-xl font-medium flex-grow text-center xl:pt-[61px] xl:pr-[52px]">
+          <h2 class="text-primary lg:text-[32px] text-xl font-medium flex-grow text-center xl:pt-[61px] xl:pr-[52px]
+         h-30 ">
             {item.title}
           </h2>
         </div>
-        <p class="mt-2 text-[#B0B0B0] font-normal text-subheading xl:pt-[54px] xl:mb-[118px]">
-          {item.description}
+        <p class="mt-2 text-[#B0B0B0] font-normal text-subheading xl:pt-[54px] mb-3">
+          {item.description} 
         </p>
       </div>
     ))
