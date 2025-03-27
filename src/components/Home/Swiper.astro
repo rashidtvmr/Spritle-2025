@@ -1,145 +1,117 @@
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"
-></script>
-<style>
-  .mySwiper {
-    height: auto;
-    width: 100%;
-  }
+---
+import "swiper/css";
+import "swiper/css/effect-coverflow";
 
-  .mySwiper swiper-slide {
-    border-radius: 26px;
-    overflow: hidden;
-    transform: scale(0.8);
-    transition: transform 0.5s ease-in-out;
-    position: relative;
-  }
-  .mySwiper .swiper-slide-active {
-    transform: scaleX(1);
-  }
+const slides = [
+  {
+    text: "Spritle's Gen AI solutions drive operational cost savings for our clients",
+    img: "../assets/20995.png",
+    alt: "Gen AI",
+  },
+  {
+    text: "We help businesses improve efficiency using Vision AI",
+    img: "../assets/30713.png",
+    alt: "Vision AI",
+  },
+  {
+    text: "Spritle simplifies & accelerates digital transformation for your business",
+    img: "../assets/30714.png",
+    alt: "Digital Transformation",
+  },
+  {
+    text: "Spritle simplifies & accelerates digital transformation for your business",
+    img: "../assets/2151790123.png",
+    alt: "Transformation",
+  },
+  {
+    text: "We are the official partners of Nvidia & Google",
+    img: "../assets/20995 (1).png",
+    alt: "Official Partners",
+  },
+  {
+    text: "With 15+ years of experience, we create custom apps that transform your business",
+    img: "../assets/30713 (1).png",
+    alt: "Custom Apps",
+  },
+];
+---
 
-  .mySwiper .swiper-slide-prev img,
-  .mySwiper .swiper-slide-next img {
-    filter: blur(3px);
-    -webkit-filter: blur(3px);
-  }
-
-  .mySwiper .swiper-slide-prev::after,
-  .mySwiper .swiper-slide-next::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: #000;
-    opacity: 0.5;
-  }
-
-  swiper-container {
-    width: 100%;
-    height: auto;
-    margin-top: 45px;
-  }
-  swiper-container {
-    swiper-slide img {
-      width: 75.89vw !important;
-      height: min(60.83vh, auto); /* Respects min-height */
-      border-radius: 26px;
-      min-height: 33vh !important;
+<section
+  class="heroswiper swiper my-10 lg:my-20"
+  role="region"
+  aria-label="Hero Slides"
+>
+  <div class="hero-swiper swiper-wrapper" role="list">
+    {
+      slides.map((slide, index) => (
+        <div
+          class="swiper-slide focus:outline-2  focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          data-index={index}
+          role="listitem"
+          tabindex="0"
+        >
+          <div class="flex flex-col items-center justify-between text-center my-10 lg:my-0">
+            <h1 class="slide-text text-xl md:text-3xl lg:text-5xl h-30 lg:h-50 2xl:h-60 flex items-center text-center justify-center w-[95%] transition-all duration-500">
+              {slide.text}
+            </h1>
+            <div class="h-[200px] lg:h-[calc(90vh-250px)] w-full">
+              <img
+                class="slide-image w-full h-full transition-all duration-500"
+                src={slide.img}
+                alt={slide.alt}
+              />
+            </div>
+          </div>
+        </div>
+      ))
     }
-  }
-
-  swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .slide-text {
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-    right: 5%;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    border-radius: 10px;
-    text-align: center;
-  }
-</style>
-
-<div id="hero">
-  <swiper-container
-    class="mySwiper"
-    loop="true"
-    space-between="50"
-    slides-per-view="1.6"
-    centered-slides="true"
-    free-mode="true"
-    free-mode-momentum="true"
-    free-mode-momentum-ratio="0.5"
-    free-mode-momentum-bounce="true"
-    free-mode-momentum-bounce-ratio="0.8"
-  >
-  </swiper-container>
-</div>
+  </div>
+</section>
 
 <script>
-  const slides = [
-    {
-      text: "Spritle's Gen AI solutions drive operational cost savings for our clients",
-      img: "../assets/20995.png",
-    },
-    {
-      text: "We help businesses improve efficiency using Vision AI",
-      img: "../assets/30713.png",
-    },
-    {
-      text: "Spritle simplifies & accelerates digital transformation for your business",
-      img: "../assets/30714.png",
-    },
-    {
-      text: "Spritle simplifies & accelerates digital transformation for your business",
-      img: "../assets/2151790123.png",
-    },
-    {
-      text: "We are the official partners of Nvidia & Google",
-      img: "../assets/20995 (1).png",
-    },
-    {
-      text: "With 15+ years of experience, we create custom apps that transform your business",
-      img: "../assets/30713 (1).png",
-    },
-  ];
-
-  const swiperContainer = document.querySelector(".mySwiper");
-
-  slides.forEach((slide) => {
-    const swiperSlide = document.createElement("swiper-slide");
-    swiperSlide.innerHTML = ` 
-    <div class='w-full h-auto text-center flex justify-center items-center'>
-  
-        <div class="slide-text text-xl md:text-3xl lg:text-4xl xl:text-5xl font-dm-sans text-white text-center lg:font-medium font-light md:pt-10  pt-1 h-[100px] md:h-[150px]  font-dm-sans lg:font-medium font-light max-w-[960px] text-center  ">
-          ${slide.text}
-          </div>
-        </div> 
-        <img src="${slide.img}" alt="slide image  " class="h-auto w-full  xl:mt-5 "/>
-    `;
-    swiperContainer.appendChild(swiperSlide);
-  });
-
-  swiperContainer.setAttribute("autoplay", "true");
-  swiperContainer.setAttribute("autoplay-delay", "5000");
-  swiperContainer.setAttribute("autoplay-disable-on-interaction", "false");
-
-  swiperContainer.breakpoints = {
-    320: { slidesPerView: 1.3, spaceBetween: 10 },
-    640: { slidesPerView: 1.3, spaceBetween: 0 },
-    768: { slidesPerView: 1.3, spaceBetween: 30 },
-    1024: { slidesPerView: 1.3, spaceBetween: 50 },
-    1280: { slidesPerView: 1.3, spaceBetween: 100 },
-  };
-
   import Swiper from "swiper";
-  import "swiper/css";
-  import "swiper/css/effect-coverflow";
-  import "swiper/css/navigation";
   import { Autoplay } from "swiper/modules";
+
+  Swiper.use([Autoplay]);
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const swiper = new Swiper(".heroswiper", {
+      centeredSlides: true,
+      grabCursor: false,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        waitForTransition: false,
+      },
+      allowTouchMove: false,
+      loop: true,
+      breakpoints: {
+        320: { slidesPerView: 1.2, spaceBetween: 20 },
+        640: { slidesPerView: 1.3, spaceBetween: 10 },
+        768: { slidesPerView: 1.3, spaceBetween: 30 },
+        1024: { slidesPerView: 1.3, spaceBetween: 50 },
+        1280: { slidesPerView: 1.3, spaceBetween: 100 },
+        1500: { slidesPerView: 1.3, spaceBetween: 150 },
+      },
+    });
+
+    function updateSlideStyles() {
+      const slides = document.querySelectorAll(".swiper-slide");
+      slides.forEach((slide, i) => {
+        const img = slide.querySelector(".slide-image");
+        const text = slide.querySelector(".slide-text");
+        if (!img || !text) return;
+        if (i === swiper.activeIndex) {
+          img.classList.remove("blur-[2px]", "filter");
+          text.classList.remove("opacity-0");
+        } else {
+          img.classList.add("blur-[2px]", "filter");
+          text.classList.add("opacity-0");
+        }
+      });
+    }
+
+    updateSlideStyles();
+    swiper.on("slideChange", updateSlideStyles);
+  });
 </script>
