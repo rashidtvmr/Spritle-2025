@@ -1,0 +1,105 @@
+---
+import CaseStudyPageContent from "@/components/DynamicProps/CaseStudyPageContent.astro";
+import Layout from "../layouts/Layout.astro";
+
+const content = {
+  hero_text:
+    "A Platform for Managing and Coordinating Every Sports Meet Across the USA",
+  hero_image: {
+    url: "/assets/cs3.png",
+    alt: "A Platform for Managing and Coordinating Every Sports Meet Across the USA",
+  },
+  overview: {
+    title: "Overview",
+    description:
+      "   Spritle offers an all-in-one sports meet management platform designed to      streamline and automate the process of organizing both timed and untimed      sports events across the USA. This platform caters to timing companies,      coaches, athletes, and spectators by providing real-time updates, event      management tools, and seamless user interaction through web and mobile      interfaces.  ",
+  },
+  problem_statement: {
+    title: "Problem Statement",
+    description: "Nestlé Health Science aimed to solve the following issues:",
+    cards: [
+      {
+        title:
+          "Providing personalized recommendations for diet, exercise, and lifestyle based on patient-specific data.",
+        icon: "/assets/unique1.svg",
+      },
+      {
+        title:
+          "Transforming genetic information into targeted recommendations that practitioners can easily deliver to their patients.",
+        icon: "/assets/unique2.svg",
+      },
+      {
+        title:
+          "Creating a seamless experience where patients can purchase recommended supplements directly from the platform.",
+        icon: "/assets/unique3.svg",
+      },
+      {
+        title:
+          "The airport needed advanced, AI-powered analytics for proactive issue identification and trend analysis to drive operational improvement",
+        icon: "/assets/unique3.svg",
+      },
+    ],
+  },
+  our_solution: {
+    description:
+      "  Spritle Software partnered with Nestlé Health Science to create a platform      that integrates multiple data sources to offer highly tailored health and      nutritional recommendations for patients. The key components of the      solution include:",
+    cards: [
+      {
+        title: "Patient Report",
+        description:
+          "        A detailed health insights report generated using data from genetics,        smart questionnaires, and lab results. The report provides personalized       recommendations for diet, lifestyle, and supplements.",
+      },
+      {
+        title: "Genetic Analyzer",
+        description:
+          "Personalized genomic analysis tools that convert genetic data into        lifestyle and nutritional recommendations.",
+      },
+      {
+        title: "        Smart Questionnaire",
+        description:
+          "    Patients answer validated questions, resulting in personalized insights        that complement a practitioner’s care plan.",
+      },
+      {
+        title: "        Lab Report Analyzer",
+        description:
+          "An AI-powered engine that extracts critical data from lab reports and        generates relevant recommendations.",
+      },
+      {
+        title: "                E-commerce Integration",
+        description:
+          "An Patients can easily purchase supplements recommended by their        practitioners via an integrated e-commerce platform.",
+      },
+    ],
+  },
+  key_benefits: {
+    title: "Key Benefits",
+    cards: [
+      {
+        title: "Mobile and Web Access",
+        description:
+          " Our solution integrates directly with the ManageEngine ecosystem, providing a smooth, cohesive experience for CAG’s operational teams.Accessible via both web and mobile apps, built on a modern, scalable tech stack (React.js, Flutter, Node.js, MongoDB, AWS).",
+      },
+      {
+        title: "Real-time Updates",
+        description:
+          "Powered by WebSocket and Firebase, ensuring users stay informed on the latest event updates.",
+      },
+      {
+        title: "User-friendly Interface ",
+        description:
+          "  Predictive analytics powered by machine learning allows the team to proactively manage faults, reducing downtime and improving service response times.   Designed with accessibility in mind, making it easy for users of all levels to navigate and interact with the platform.   ",
+      },
+      {
+        title: "Data Analytics",
+        description:
+          " Integrated with Google Analytics and New Relic for performance tracking and user behavior analysis.  ",
+      },
+    ],
+  },
+ 
+};
+---
+
+<Layout>
+  <CaseStudyPageContent content={content} />
+</Layout>

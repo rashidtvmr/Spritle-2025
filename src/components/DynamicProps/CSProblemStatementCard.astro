@@ -1,0 +1,52 @@
+---
+// Destructure props
+const { title, description, challenges } = Astro.props;
+---
+
+<div class="">
+  <div class="md:flex gap-8 items-stretch">
+    {/* Left column - title & description */}
+    <div class="md:w-1/2 mb-10 md:mb-0 md:w-1/2">
+      <h2 class="lg:text-7xl text-3xl font-semibold mb-6 text-primary">
+        {title}
+      </h2>
+      <p class="font-normal lg:text-3xl text-xl text-secondary leading-normal">
+        {description}
+      </p>
+    </div>
+
+    {/* Right column - challenges grid */}
+    <div class="">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 h-full ">
+        {
+          challenges.map((challenge, index) => (
+            <div
+              key={index}
+              class="flex flex-col items-start border-2 border-primary p-4 px-6 rounded-lg shadow-lg bg-[#313131]"
+            >
+              <img
+                src={challenge.icon}
+                alt={challenge.title}
+                class="max-w-[47px] max-h-[42px]"
+                width="47"
+                height="42"
+                loading="lazy"
+              />
+              <h2 class="text-primary text-title-body font-medium py-5 ">
+                {challenge.title}
+              </h2>
+              {challenge.description && (
+                <>
+                  <hr class="w-full border-t-2 border-[#15AED5]" />
+                  <p class="text-secondary font-normal text-body py-5">
+                    {challenge.description}
+                  </p>
+                </>
+              )}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>

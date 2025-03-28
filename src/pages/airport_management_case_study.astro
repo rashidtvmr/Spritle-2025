@@ -1,0 +1,110 @@
+---
+import CaseStudyPageContent from "@/components/DynamicProps/CaseStudyPageContent.astro";
+import Layout from "../layouts/Layout.astro";
+
+const content = {
+  hero_text:
+    "Smart Airport Management: Track,  Maintain, and Optimize with Precision",
+  hero_image: {
+    url: "/assets/cs1.png",
+    alt: "Smart Airport Management: Track,  Maintain, and Optimize with Precision",
+  },
+  overview: {
+    title: "Overview",
+    description:
+      "At Changi Airport Group (CAG), Spritle has implemented an advanced FMS (Fault Management System) Analytics solution to revolutionize the way airport facilities are managed. By addressing critical challenges in fault reporting, data integration, and real-time insights, our solution transforms airport operations, empowering the Changi team to make data-driven decisions and ensure the highest levels of efficiency  ",
+  },
+  problem_statement: {
+    title: "Our Challenges",
+    description:
+      "CAG faced challenges in connecting data across different IT systems to derive a holistic view of operations and insights.",
+    cards: [
+      {
+        title: "Limited Reporting in ServiceDesk Plus",
+        description:
+          "Existing systems lacked advanced reporting capabilities, making it hard for teams to gain a clear view of key metrics such as technician performance and service trends.",
+        icon: "/assets/unique1.svg",
+      },
+      {
+        title: "Manual Data Processing",
+        description:
+          "Time-consuming manual processes slowed down the creation of comprehensive reports, causing delays in proactive decision-making.",
+        icon: "/assets/unique2.svg",
+      },
+      {
+        title: "Difficulty in Integrating Cross-Platform Data",
+        description:
+          "CAG faced challenges in connecting data across different IT systems to derive a holistic view of operations and insights.",
+        icon: "/assets/unique3.svg",
+      },
+      {
+        title: "Need for Advanced Analytics",
+        description:
+          "The airport needed advanced, AI-powered analytics for proactive issue identification and trend analysis to drive operational improvement.",
+        icon: "/assets/unique3.svg",
+      },
+    ],
+  },
+  our_solution: {
+    description:
+      "Spritle's FMS Analytics solution, built on ManageEngine Analytics Plus, integrates seamlessly with CAG's existing ServiceDesk Plus. The solution offers robust, real-time analytics capabilities for managing airport facilities with precision:",
+    cards: [
+      {
+        title: "AI-Driven Analytics",
+        description:
+          "Using Ask Zia, a conversational AI assistant, the team can query data using natural language and receive instant insights, visualizations, and predictive analytics on maintenance trends and service metrics.",
+      },
+      {
+        title: "Customizable Dashboards and Reporting",
+        description:
+          " The no-code, drag-and-drop reporting interface empowers non-technical users to build detailed, custom reports and dashboards without IT assistance, increasing efficiency and fostering a data-driven culture.",
+      },
+      {
+        title: "Unified Data View",
+        description:
+          " By integrating data across multiple IT systems, including ServiceDesk Plus and asset management tools, the solution offers a 360-degree view of operational data, enabling better strategic decision-making.",
+      },
+      {
+        title: "Automated Reporting",
+        description:
+          "FMS Analytics automates report generation, reducing errors and saving time. Real-time insights are readily available to guide continuous improvements in airport facilities management.",
+      },
+    ],
+  },
+  key_benefits  : {
+    title: "Key Benefits",
+    cards: [
+      {
+        title: "Seamless Integration",
+        description:
+          " Our solution integrates directly with the ManageEngine ecosystem, providing a smooth, cohesive experience for CAG’s operational teams.",
+      },
+      {
+        title: "Scalable and Customizable",
+        description:
+          "Built to grow with CAG’s evolving needs, the platform can handle increasing data volumes and new reporting requirements as operations expand.",
+      },
+      {
+        title: "AI-Enhanced Decision-Making",
+        description:
+          "  Predictive analytics powered by machine learning allows the team to proactively manage faults, reducing downtime and improving service response times.  ",
+      },
+      {
+        title: "Improved Operational Efficiency",
+        description:
+          " With real-time, accurate reports and insights, CAG can track, maintain, and optimize their airport facilities with precision, ensuring peak operational performance at all times.  ",
+      },
+    ],
+  },
+  conclusion: {
+    type: "card", // or "para"
+    title: "Result", // or "conclusion"
+    description:
+      "With Spritle's solution, CAG can now efficiently track and maintain facilities across Singapore Changi Airport, while improving service quality and fault resolution speed. The advanced analytics capabilities enable proactive decision-making and optimized airport management.",
+  },
+};
+---
+
+<Layout>
+  <CaseStudyPageContent content={content} />
+</Layout>

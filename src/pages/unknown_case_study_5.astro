@@ -1,0 +1,94 @@
+---
+import CaseStudyPageContent from "@/components/DynamicProps/CaseStudyPageContent.astro";
+import Layout from "../layouts/Layout.astro";
+
+const content = {
+  hero_text:
+    "Instant Access to Top Cancer Specialists Across the Worlds - Safe & Effortless",
+  hero_image: {
+    url: "/assets/cs5.png",
+    alt: "Instant Access to Top Cancer Specialists Across the Worlds - Safe & Effortless",
+  },
+  overview: {
+    title: "Overview",
+    description:
+      "A leading logistics company in the US Reach24, was facing inefficiencies in fleet management, truck maintenance, and incident resolution. These inefficiencies led to slower response times, higher operational costs, and disruptions in day-to-day operations. Truck owners had to rely on cumbersome paperwork and manual processes to manage inspections, repairs, and driver performance. These challenges created a bottleneck in their ability to streamline operations. ",
+  },
+  problem_statement: {
+    title: "Problem Statement",
+    description:
+      "CAG faced challenges in connecting data across different IT systems to derive a holistic view of operations and insights.",
+    cards: [
+      {
+        title: "Difficulty for patients to access global cancer expertise.",
+        icon: "/assets/unique1.svg",
+      },
+      {
+        title: "Inefficient and complex appointment scheduling processes.",
+        icon: "/assets/unique2.svg",
+      },
+      {
+        title: "Fragmented patient journeys leading to poor user experience.",
+        icon: "/assets/unique3.svg",
+      },
+      {
+        title:
+          "Lack of secure, compliant digital platforms to handle sensitive health data.",
+        icon: "/assets/unique3.svg",
+      },
+    ],
+  },
+  our_solution: {
+    description:
+      " Spritle’s platform addresses these pain points by offering a comprehensive      suite of tools, including:",
+    cards: [
+      {
+        title:
+          "A cross-platform web and mobile application for instant access to top        cancer specialists.",
+      },
+      {
+        title:
+          "  Real-time notifications and seamless appointment scheduling to        streamline the consultation process.",
+      },
+      {
+        title:
+          "        HIPAA & HL7 compliance for secure data management and interoperability.",
+      },
+      {
+        title:
+          "        EHR/EMR system integration for efficient data exchange.",
+      },
+    ],
+  },
+  key_benefits: {
+    title: "Key Benefits",
+    cards: [
+      {
+        title:
+          "Instant access to top cancer specialists from around the world.",
+      },
+      {
+        title:
+          "Streamlined, secure consultation process with real-time updates.",
+      },
+      {
+        title:
+          "Enhanced patient experience through an intuitive, user-friendly interface.",
+      },
+      {
+        title: "Efficient and compliant management of sensitive health data.",
+      },
+    ],
+  },
+  conclusion: {
+    type: "card", // or "para"
+    title: "Conclusion", // or "conclusion"
+    description:
+      "Spritle’s Expert Second Opinion App transformed cancer care by offering      patients effortless access to world-class specialists. By integrating      advanced technology and ensuring data security, the app has enhanced      consultations, increased user activity, and improved healthcare outcomes      for cancer patients globally.",
+  },
+};
+---
+
+<Layout>
+  <CaseStudyPageContent content={content} />
+</Layout>

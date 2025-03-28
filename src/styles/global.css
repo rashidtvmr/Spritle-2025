@@ -24,6 +24,9 @@ body {
 .text-gradientbody {
     @apply bg-gradient-to-b from-[#fffcfc] to-[rgba(234,234,234,0.5)] bg-clip-text text-transparent;
 }
+.text-csgradient {
+    @apply bg-gradient-to-b from-[rgb(234,234,234)] to-[#858282] text-transparent bg-clip-text;
+}
 
 .btnprimary{
       @apply  text-white  bg-[#15AED5] items-center  gap-2 mt-6    font-medium rounded-full flex tracking-wider;

@@ -1,0 +1,98 @@
+---
+import CaseStudyPageContent from "@/components/DynamicProps/CaseStudyPageContent.astro";
+import Layout from "../layouts/Layout.astro";
+
+const content = {
+  hero_text:
+    "A Major Logistics Company in the US Achieved a 40% Reduction in Response Time",
+  hero_image: {
+    url: "/assets/cs3.png",
+    alt: "A Major Logistics Company in the US Achieved a 40% Reduction in Response Time",
+  },
+  overview: {
+    title: "Overview",
+    description:
+      "    A leading logistics company in the US Reach24, was facing inefficiencies      in fleet management, truck maintenance, and incident resolution. These      inefficiencies led to slower response times, higher operational costs, and      disruptions in day-to-day operations. Truck owners had to rely on      cumbersome paperwork and manual processes to manage inspections, repairs,      and driver performance. These challenges created a bottleneck in their      ability to streamline operations. ",
+  },
+  problem_statement: {
+    title: "Problem Statement",
+    description: "Nestlé Health Science aimed to solve the following issues:",
+    cards: [
+      {
+        title: "Problem Statement",
+        icon: "/assets/unique1.svg",
+      },
+      {
+        title:
+          "Slower response times for truck maintenance and incident resolution.",
+        icon: "/assets/unique2.svg",
+      },
+      {
+        title: "High operational costs due to manual processes and paperwork.",
+        icon: "/assets/unique3.svg",
+      },
+      {
+        title: "Disruption in daily operations caused by outdated systems.",
+        icon: "/assets/unique3.svg",
+      },
+    ],
+  },
+  our_solution: {
+    description:
+      "   Spritle’s platform addresses these pain points by offering a comprehensive      suite of tools, including:",
+    cards: [
+      {
+        title: "        Vehicle inspection and maintenance",
+        description:
+          "    Automated and digitized vehicle inspection and maintenance workflows to        reduce paperwork by 80%",
+      },
+      {
+        title: "Real-time tracking",
+        description:
+          "        Real-time tracking for up-to-date vehicle condition monitoring.",
+      },
+      {
+        title: "                Optimized driver productivity",
+        description:
+          "            Optimized driver productivity through route and idle time management.",
+      },
+      {
+        title: "                Rapid incident management tools",
+        description:
+          "        Rapid incident management tools to enable quicker issue resolution.",
+      },
+    ],
+  },
+  key_benefits: {
+    title: "Key Benefits",
+    cards: [
+      {
+        title:
+          "40% reduction in response time for resolving maintenance and incident-related issues.",
+      },
+      {
+        title:
+          "Improved truck performance and reduced downtime through automated maintenance schedules.",
+      },
+      {
+        title:
+          "Enhanced driver productivity, optimizing routes and minimizing idle time.",
+      },
+      {
+        title:
+          "Reduction in manual processes and paperwork by 80%, improving administrative efficiency.",
+      },
+    ],
+  },
+  conclusion: {
+    type: "card", // or "para"
+    title: "Conclusion", // or "conclusion"
+    description:
+      " By implementing Spritle's AI-driven platform, Reach24 achieved a 40%      reduction in response time for maintenance and incident resolution,      significantly enhancing their operational efficiency. The automation o      maintenance schedules and real-time tracking led to improved truck      performance and reduced downtime. Administrative processes were      streamlined with an 80% reduction in paperwork, while driver productivity      was optimized through better route management and minimized idle time,      resulting in a more efficient and cost-effective operation.",
+  },
+};
+---
+
+<Layout>
+  <CaseStudyPageContent content={content} />
+</Layout>

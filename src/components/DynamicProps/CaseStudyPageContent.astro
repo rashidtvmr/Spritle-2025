@@ -1,0 +1,135 @@
+---
+import CSOurSolutionCard from "./CSOurSolutionCard.astro";
+import CSProblemStatementCard from "./CSProblemStatementCard.astro";
+import Star from "@/components/DynamicProps/Star.astro";
+
+const {
+  content: {
+    hero_text = "",
+    hero_image = { url: "", alt: "" },
+    overview = { title: "", description: "" },
+    problem_statement = { title: "", description: "", cards: [] },
+    our_solution = { description: "", cards: [] },
+    key_benefits = { title: "", cards: [] },
+    conclusion = { title: "", description: "" },
+  },
+} = Astro.props;
+---
+
+<main>
+  <!-- Hero Section -->
+  <section class="relative w-full h-screen overflow-hidden">
+    <!-- Image Container -->
+    <div class="absolute inset-0 w-full h-full">
+      <!-- h-100 sm:h-180 md:h-300 lg:h-auto -->
+      <img
+        src={hero_image.url}
+        alt={hero_image.alt}
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- Text Overlay -->
+    <div
+      class="absolute flex items-start px-5 md:px-15 lg:px-30 mt-30 justify-start max-w-7xl"
+    >
+      <h1
+        class="font-normal text-3xl sm:text-7xl tracking-wide leading-[1.2]
+        bg-gradient-to-t from-white to-[rgba(255,255,255,0.5)] text-transparent bg-clip-text break-words"
+      >
+        {hero_text}
+      </h1>
+    </div>
+  </section>
+  <div class="container my-10 md:my-20">
+    <!-- Overview -->
+    <section class="my-10 md:my-20">
+      <h2 class="text-centerheading text-primary font-semibold">
+        {overview.title}
+      </h2>
+      <p
+        class="font-normal text-subbody my-3 md:my-10 text-csgradient px-5 md:px-20 lg:px-33"
+      >
+        {overview.description}
+      </p>
+    </section>
+
+    <!-- Problem Statement -->
+    <section class="my-10 lg:my-20">
+      <div class="md:flex gap-5 items-center justify-between">
+        <div>
+          <h2 class="lg:text-7xl text-3xl font-semibold mb-6 text-primary">
+            {problem_statement.title}
+          </h2>
+          <p
+            class="font-normal lg:text-3xl text-xl text-secondary leading-normal mt-8 mb-10"
+          >
+            {problem_statement.description}
+          </p>
+        </div>
+        <div class="">
+          <!-- {
+          problem_statement.cards.map((problem) => (
+            <CSProblemStatementCard problem={problem} />
+          ))
+        } -->
+          {(<CSProblemStatementCard challenges={problem_statement.cards} />)}
+        </div>
+      </div>
+    </section>
+    <!-- Our Solution -->
+    <section class="my-10 md:my-20">
+      <h2 class="text-centerheading text-primary font-semibold">
+        Our Solution
+      </h2>
+      <p
+        class="font-normal text-subbody my-3 md:my-10 text-csgradient px-5 md:px-20 lg:px-33"
+      >
+        {our_solution.description}
+      </p>
+      <div>
+        <!-- {
+          our_solution.cards.map((solution) => (
+            <CSOurSolutionCard problem={solution} />
+          ))
+        } -->
+        {(<CSOurSolutionCard features={our_solution.cards} />)}
+      </div>
+    </section>
+
+    <!-- Key Benefits -->
+    <section class="my-10 md:my-20">
+      <h2 class="text-centerheading font-medium mb-6 text-primary text-center">
+        {key_benefits.title}
+      </h2>
+      <div class="flex justify-center items-center">
+        <!-- {
+          key_benefits.cards.map((benefit) => (
+            <div>
+              <div>
+                <img src="" alt="" />
+              </div>
+              <div>
+                <h3>{benefit.title}</h3>
+                <p>{benefit.description}</p>
+              </div>
+            </div>
+          ))
+        } -->
+        <Star items={key_benefits.cards} maxWidth="1450px" />
+      </div>
+    </section>
+
+    <!-- Results / Conclusion -->
+    <section class="my-10 lg:my-20">
+      <h2 class="text-centerheading text-primary font-semibold"   >
+        {conclusion.title}
+      </h2>
+      <p
+        class="font-normal text-subbody my-3 md:my-10 text-csgradient px-5 md:px-20 lg:px-33"
+      >
+        {conclusion.description}
+      </p>
+    </section>
+  </div>
+</main>
