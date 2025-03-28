@@ -6,7 +6,7 @@ const UpSliderData = [
     description:
       "Efficiently managing a large team demands a solid technological foundation. Our services offer robust, secure, and user-friendly solutions tailored to your needs. Picture a team of over 150 members, seamlessly collaborating with the aid of precisely crafted tools. This is the vision of future work that we're adept at bringing to fruition for enterprises.",
     p: "Large enterprise businesses that became our clients : ",
-    image: "../assets/enterprise1.png",
+    image: "../assets/Rectangle 93092.png",
     logos: [
       "../assets/nestlelogo.png",
       "../assets/hyundailogo.png",
@@ -22,7 +22,7 @@ const UpSliderData = [
     description:
       "Embrace growth with our flexible tech solutions tailored for mid-level companies. Stay agile as your business evolves, empowered by our support every step of the way, so you can focus on what truly matters—achieving your goals",
     p: "Up-and-coming companies we partnered with early on  ",
-    image: "../assets/enterprise2.png",
+    image: "../assets/Rectangle 93092.png",
     logos: ["../assets/trianglelogo.png", "../assets/pinnaclelogo.png"],
   },
   {
@@ -31,7 +31,7 @@ const UpSliderData = [
     description:
       "Are you a startup grappling with managing both your creative concepts and technical infrastructure? We understand the struggle. Our user-friendly solutions are designed to adapt as your startup expands. Focus on your passion while we handle the tech, accelerating your journey to realizing your dreams.",
     p: "Young companies we partnered with",
-    image: "../assets/enterprise3.png",
+    image: "../assets/Rectangle 93092.png",
     logos: [
       "../assets/treelogo.png",
       "../assets/timesportslogo.png",
@@ -41,17 +41,21 @@ const UpSliderData = [
   },
 ];
 ---
-<div class="">
-  <div id="upSliderWrapper" class="flex flex-col">
+
+<div class="container px-0">
+  <div
+    id="upSliderWrapper"
+    class="flex flex-col gap-10"
+    style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+  >
     {
       UpSliderData.map((slide, index) => (
-        <div class="md:mt-50 mt-20"></div>
         <div
           id={`slide-${index}`}
-          class={`slide-${index} upSliderSlide py-18 my-10 gap-10 flex flex-col lg:flex-row-reverse w-full  h-[100vh] lhg:h-[80vh] flex-shrink-0 items-center justify-between px-6 lg:px-10 bg-black rounded-lg gap-1 sticky top-0 lg:top-[20vh] overflow-hidden`}
+          class={`slide-${index} upSliderSlide py-18   my-10  gap-10 flex flex-col lg:flex-row-reverse w-full  h-[100vh] lg:h-[80vh] flex-shrink-0 items-center justify-between px-6 lg:px-10 bg-black rounded-lg  sticky top-0 lg:top-[20vh] overflow-hidden`}
         >
           <div class="w-full lg:w-1/2  flex justify-center relative h-auto">
-            <div class="h-[20vh] sm:h-[40vh] lg:h-[400px] lg:w-full rounded-lg shadow-lg overflow-hidden">
+            <div class="h-[20vh] sm:h-[40vh] lg:h-[400px] w-full rounded-lg shadow-lg overflow-hidden">
               <img
                 src={slide.image}
                 alt="Map"
@@ -59,33 +63,25 @@ const UpSliderData = [
               />
             </div>
           </div>
-          <div class="w-full lg:w-1/2 flex flex-col gap-2">
+          <div class="w-full lg:w-1/2 flex flex-col gap-2  sm:space-y-9 md:space-y-1 lg:md:space-y-4  ">
             <h2 class="text-2xl lg:text-4xl text-white font-medium ">
               {slide.title}
             </h2>
-            <p class="text-subheading font-normal text-primary ">
+            <p class="text-base md:text-lg xl:text-2xl font-normal text-primary ">
               {slide.description}
             </p>
-            <p class="text-base md:text-lg lg:text-2xl font-normal text-primary">
+            <p class="text-base md:text-lg xl:text-2xl font-normal text-primary">
               {slide.p}
             </p>
-            <div class="flex flex-wrap gap-3 justify-center lg:justify-start h-auto w-full">
+            <div class="flex flex-wrap gap-3 justify-center lg:justify-start  h-auto w-full">
               {slide.logos.map((logo) => (
                 <img
                   src={logo}
                   alt="Logo"
-                  class="h-[50px] md:h-[60px] rounded-lg object-cover"
+                  class="h-auto w-14 lg:w-20 bg-white rounded-lg object-contain"
                 />
               ))}
             </div>
-          </div>
-
-          <div class="max-lg:order-1  w-1/1 lg:w-1/2 flex justify-center relative h-full">
-            <img
-              src={slide.image}
-              alt="Map"
-              class="h-full w-full rounded-lg shadow-lg object-contain object-center"
-            />
           </div>
         </div>
       ))
