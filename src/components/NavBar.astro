@@ -213,11 +213,50 @@
           class="text-primary text-sm hover:bg-[#262626] px-3 py-2 rounded-lg transition duration-300"
           >About</a
         >
-        <a
-          href="#"
-          class="text-primary text-sm hover:bg-[#262626] px-3 py-2 rounded-lg transition duration-300"
-          >Blogs</a
-        >
+        <!-- Knowledge Dropdown for Desktop -->
+        <div class="relative group">
+          <a
+            href="#"
+            id="knowledgeDropdownToggleDesktop"
+            class="text-primary text-sm px-3 py-2 rounded-t-xl transition duration-300 flex items-center group-hover:bg-[#262626]"
+          >
+            Knowledge
+            <svg
+              id="knowledgeArrowDesktop"
+              class="w-4 h-4 ml-1 transform transition-transform group-hover:rotate-180 duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <!-- Dropdown Menu Knowledge -->
+          <div
+            id="knowledgeDropdownDesktop"
+            class="absolute hidden group-hover:block p-3 bg-[#262626] mt-[1px] rounded-lg rounded-tl-none shadow-lg w-48"
+          >
+            <a
+              href="/blogs"
+              class="block text-primary text-sm px-4 py-2 hover:bg-[#404040] hover:rounded-lg"
+              >Blogs</a
+            >
+            <a
+              href="/tips-of-the-week"
+              class="block text-primary text-sm px-4 py-2 hover:bg-[#404040] hover:rounded-lg"
+              >Tips of the Week</a
+            >
+            <a
+              href="/q&a"
+              class="block text-primary text-sm px-4 py-2 hover:bg-[#404040] hover:rounded-lg"
+              >Q&A</a
+            >
+          </div>
+        </div>
         <a
           href="/career"
           class="text-primary text-sm hover:bg-[#262626] px-3 py-2 rounded-lg transition duration-300"
@@ -427,9 +466,50 @@
       href="/about"
       class="block text-lg text-white hover:bg-[#171717] p-[16px]">About</a
     >
-    <a href="#" class="block text-lg text-white hover:bg-[#171717] p-[16px]"
-      >Blogs</a
-    >
+    <div>
+      <a
+        href="#"
+        id="knowledgeDropdownToggleMobile"
+        class="text-lg text-white hover:bg-[#262626] flex items-center p-[16px] rounded-t-xl"
+      >
+        Knowledge
+        <div class="flex justify-end w-full">
+          <svg
+            id="knowledgeArrowMobile"
+            class="w-5 h-5 transform transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </div>
+      </a>
+      <div
+        id="knowledgeDropdownMobile"
+        class="hidden rounded-b-xl bg-[#171717] pl-4 space-y-6"
+      >
+        <a
+          href="/blogs"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Blogs</a
+        >
+        <a
+          href="/tips-of-the-week"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Tips of the Week</a
+        >
+        <a
+          href="/q&a"
+          class="block text-[#a2a2a2] text-lg hover:bg-[#171717] rounded-br-xl rounded-bl-xl"
+          >Q&A</a
+        >
+      </div>
+    </div>
     <a
       href="/career"
       class="block text-lg text-white hover:bg-[#171717] p-[16px]">Career</a
@@ -500,5 +580,29 @@
     industriesDropdownMobile.classList.toggle("hidden");
     industriesArrowMobile.classList.toggle("rotate-180");
     industriesDropdownToggleMobile.classList.toggle("bg-[#171717]");
+  });
+  // Add these to your existing script
+  const knowledgeDropdownToggleDesktop = document.getElementById(
+    "knowledgeDropdownToggleDesktop"
+  );
+  const knowledgeDropdownDesktop = document.getElementById(
+    "knowledgeDropdownDesktop"
+  );
+  const knowledgeArrowDesktop = document.getElementById(
+    "knowledgeArrowDesktop"
+  );
+
+  const knowledgeDropdownToggleMobile = document.getElementById(
+    "knowledgeDropdownToggleMobile"
+  );
+  const knowledgeDropdownMobile = document.getElementById(
+    "knowledgeDropdownMobile"
+  );
+  const knowledgeArrowMobile = document.getElementById("knowledgeArrowMobile");
+
+  knowledgeDropdownToggleMobile.addEventListener("click", () => {
+    knowledgeDropdownMobile.classList.toggle("hidden");
+    knowledgeArrowMobile.classList.toggle("rotate-180");
+    knowledgeDropdownToggleMobile.classList.toggle("bg-[#171717]");
   });
 </script>

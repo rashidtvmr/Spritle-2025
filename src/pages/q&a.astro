@@ -1,0 +1,62 @@
+---
+import BlogsPage from "@/components/DynamicProps/BlogsPage.astro";
+
+const contents = {
+  hero_text: "Accelerating Innovations For Better Technology Solutions",
+  hero_description: {
+    description:
+      "A team with a plan never gives up. Below are a few of our masterpieces created for the greatest masterminds around the world.",
+    buttons: "Get Started",
+  },
+  blogs_card: [],
+  Tip_card: [
+    {
+      image: "/assets/pavithra.svg",
+      title: "How Torque Clustering Is Transforming Unsupervised AI Learning",
+      description:
+        "Advanced code solutions added directly inside of Webflow at the click of a button.",
+      date: "18 April 2025",
+    },
+    {
+      image: "/assets/gowri.png",
+      title: "How Torque Clustering Is Transforming Unsupervised AI Learning",
+      description:
+        "Advanced code solutions added directly inside of Webflow at the click of a button.",
+      date: "18 April 2025",
+    },
+    {
+      image: "/assets/pavithra.svg",
+      title: "How Torque Clustering Is Transforming Unsupervised AI Learning",
+      description:
+        "Advanced code solutions added directly inside of Webflow at the click of a button.",
+      date: "18 April 2025",
+    },
+    {
+      image: "/assets/gowri.png",
+      title: "How Torque Clustering Is Transforming Unsupervised AI Learning",
+      description:
+        "Advanced code solutions added directly inside of Webflow at the click of a button.",
+      date: "18 April 2025",
+    },
+    {
+      image: "/assets/pavithra.svg",
+      title: "How Torque Clustering Is Transforming Unsupervised AI Learning",
+      description:
+        "Advanced code solutions added directly inside of Webflow at the click of a button.",
+      date: "18 April 2025",
+    },
+    {
+      image: "/assets/gowri.png",
+      title: "How Torque Clustering Is Transforming Unsupervised AI Learning",
+      description:
+        "Advanced code solutions added directly inside of Webflow at the click of a button.",
+      date: "18 April 2025",
+    },
+  ],
+};
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <BlogsPage contents={contents} />
+</Layout>
