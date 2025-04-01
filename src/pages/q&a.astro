@@ -1,6 +1,5 @@
 ---
-import BlogsPage from "@/components/DynamicProps/BlogsPage.astro";
-
+import BlogsPageContent from "@/components/DynamicProps/BlogsPageContent.astro";
 const contents = {
   hero_text: "Accelerating Innovations For Better Technology Solutions",
   hero_description: {
@@ -8,8 +7,9 @@ const contents = {
       "A team with a plan never gives up. Below are a few of our masterpieces created for the greatest masterminds around the world.",
     buttons: "Get Started",
   },
-  blogs_card: [],
-  Tip_card: [
+  blogs_card: [], // Empty for now, but ready for future blog data
+  tip_card: [
+    // Change Tip_card to tip_card
     {
       image: "/assets/pavithra.svg",
       title: "How Torque Clustering Is Transforming Unsupervised AI Learning",
@@ -54,9 +54,10 @@ const contents = {
     },
   ],
 };
+
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <BlogsPage contents={contents} />
+  <BlogsPageContent contents={contents} />
 </Layout>

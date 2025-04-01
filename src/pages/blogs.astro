@@ -1,5 +1,6 @@
 ---
-import BlogsPage from "@/components/DynamicProps/BlogsPage.astro";
+import BlogsPageContent from "@/components/DynamicProps/BlogsPageContent.astro";
+import Layout from "../layouts/Layout.astro";
 
 const contents = {
   hero_text: "Accelerating Innovations For Better Technology Solutions",
@@ -90,12 +91,12 @@ const contents = {
       date: "18 April 2025",
       readTime: "2 Min Read",
     },
+   
   ],
-  Tip_card:[]
+  tip_card: [],
 };
-import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <BlogsPage contents={contents} />
+  <BlogsPageContent contents={contents} />
 </Layout>
