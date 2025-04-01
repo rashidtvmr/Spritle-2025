@@ -1,0 +1,36 @@
+---
+interface BlogItem {
+  image: string;
+  title: string;
+  description: string;
+  date: string;
+}
+
+interface Props {
+  items: BlogItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="">
+  {items.map((item) => (
+    <div class="p-3 border rounded-xl shadow-md hover:shadow-lg transition-shadow">
+      <!-- Image section -->
+      <div class="border rounded-xl lg:h-[500px] w-full">
+        <img 
+          src={item.image} 
+          alt={item.title} 
+          class="w-full h-full object-cover rounded-lg"
+        />
+      </div>
+
+      <!-- Content section -->
+      <div class="space-y-6 mb-3">
+        <h3 class="text-primary font-medium text-subtitle mt-5">{item.title}</h3>
+        <p class="text-secondary text-body">{item.description}</p>
+        <div class="text-xs mt-2">{item.date}</div>
+      </div>
+    </div>
+  ))}
+</div>

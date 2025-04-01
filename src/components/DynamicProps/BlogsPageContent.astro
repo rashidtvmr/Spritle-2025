@@ -1,0 +1,74 @@
+---
+import BlogsCardContainer from "./BlogsCardContainer.astro";
+import GradientHeading from "./GradientHeading.astro";
+import TipCardContainer from "@/components/DynamicProps/TipCardContainer.astro";
+
+// Define TypeScript interfaces
+interface BlogItem {
+  image: string;
+  title: string;
+  description: string;
+  date: string;
+}
+
+interface HeroDescription {
+  description: string;
+  buttons: string;
+}
+
+interface Contents {
+  hero_text: string;
+  hero_description: HeroDescription;
+  blogs_card: BlogItem[];
+  tip_card: BlogItem[];
+}
+
+// Get props from Astro
+const { hero_text, hero_description, blogs_card, tip_card } = Astro.props
+  .contents as Contents;
+
+// Determine which cards to display
+const cardType = blogs_card.length > 0 ? "blog" : "tip";
+const cards = cardType === "blog" ? blogs_card : tip_card;
+---
+
+<main class="container">
+  <!-- Hero Section -->
+  <section class="mt-20 md:mt-45 flex flex-col items-center text-center">
+    <h2>
+      <GradientHeading text={hero_text} maxWidth="1300px" />
+    </h2>
+    <p class="text-csgradient text-title-body mt-4 lg:px-20">
+      {hero_description.description}
+    </p>
+    <div class="mt-5 md:mt-12">
+      <button
+        class="btnprimary lg:w-screen lg:max-w-[194px] max-h-[46px] text-base font-normal px-8 py-4 flex items-center justify-center"
+      >
+        {hero_description.buttons}
+        <img
+          src="/assets/rightarrow.svg"
+          alt="Right Arrow"
+          class="w-4 h-4 ml-2"
+        />
+      </button>
+    </div>
+  </section>
+
+  <!-- Blog or Tip Cards Section -->
+  <section class="my-10 md:my-30">
+    <div
+      class={`grid gap-3 md:gap-5 ${cardType === "blog" ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 " : "grid-cols-1 md:grid-cols-2"}`}
+    >
+      {
+        cards.map((card) =>
+          cardType === "blog" ? (
+            <BlogsCardContainer item={card} />
+          ) : (
+            <TipCardContainer items={[card]} />
+          )
+        )
+      }
+    </div>
+  </section>
+</main>
