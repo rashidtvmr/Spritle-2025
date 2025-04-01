@@ -18,10 +18,10 @@ const { items, maxWidth = "1212px" } = Astro.props; // Default value set to 1212
           />
         </div>
         <div class="mt-0">
-          <h4 class="font-medium font-primary text-subbody">
+          <h4 class="font-medium font-primary text-subbody leading-none">
             {item.title}
             {item.description && `: `}
-            <span class="md:text-[28px] text-base font-medium text-secondary">
+            <span class="md:text-[28px] text-base font-medium text-secondary leading-none">
               {item.description}
             </span>
           </h4>
