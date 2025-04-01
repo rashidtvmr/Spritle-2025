@@ -20,7 +20,7 @@ const {
   <!-- Hero Section -->
   <section class="relative w-full h-screen overflow-hidden">
     <!-- Image Container -->
-    <div class="absolute inset-0 w-full h-full">
+    <div class="fixed inset-0 -z-1">
       <!-- h-100 sm:h-180 md:h-300 lg:h-auto -->
       <img
         src={hero_image.url}
@@ -41,7 +41,7 @@ const {
       </h1>
     </div>
   </section>
-  <div class="container my-10 md:my-20">
+  <div class="px-5 md:px-20 lg:px-30 py-2 md:py-5 bg-background">
     <!-- Overview -->
     <section class="my-10 md:my-20">
       <h2 class="text-centerheading text-primary font-semibold">
@@ -121,12 +121,12 @@ const {
     </section>
 
     <!-- Results / Conclusion -->
-    <section class="my-10 lg:my-20">
-      <h2 class="text-centerheading text-primary font-semibold"   >
+    <section class="">
+      <h2 class="text-centerheading text-primary font-semibold my-3 md:my-10">
         {conclusion.title}
       </h2>
       <p
-        class="font-normal text-subbody my-3 md:my-10 text-csgradient px-5 md:px-20 lg:px-33"
+        class="font-normal text-subbody text-csgradient px-5 md:px-20 lg:px-33"
       >
         {conclusion.description}
       </p>
