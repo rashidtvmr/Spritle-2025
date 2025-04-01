@@ -17,7 +17,7 @@ const { title, description, challenges } = Astro.props;
 
     {/* Right column - challenges grid */}
     <div class="">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 h-full ">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
         {
           challenges.map((challenge, index) => (
             <div
@@ -32,13 +32,15 @@ const { title, description, challenges } = Astro.props;
                 height="42"
                 loading="lazy"
               />
-              <h2 class="text-primary text-title-body font-medium py-5 ">
+              <h2
+                class={`text-primary text-title-body font-medium my-5 ${challenge.description ? "lg:h-20" : "h-auto"}`}
+              >
                 {challenge.title}
               </h2>
               {challenge.description && (
                 <>
                   <hr class="w-full border-t-2 border-[#15AED5]" />
-                  <p class="text-secondary font-normal text-body py-5">
+                  <p class="text-secondary font-normal text-body mt-3">
                     {challenge.description}
                   </p>
                 </>
