@@ -7,7 +7,7 @@ const { items, maxWidth = "1212px" } = Astro.props; // Default value set to 1212
     items.map((item, index) => (
       <div
         key={index}
-        class={`flex mb-0 md:mb-5 py-2`}
+        class={`flex items-center mb-0 md:mb-5 py-2`}
         style={`max-width: ${maxWidth};`}
       >
         <div class="lg:mr-8 mr-3 min-h-12 min-w-12 md:min-h-20 md:min-w-20">
@@ -17,11 +17,11 @@ const { items, maxWidth = "1212px" } = Astro.props; // Default value set to 1212
             class="h-full w-full md:mt-0"
           />
         </div>
-        <div class="mt-0">
-          <h4 class="font-medium font-primary text-subbody">
+        <div class="flex items-center">
+          <h4 class="font-medium font-primary text-subbody leading-none">
             {item.title}
             {item.description && `: `}
-            <span class="md:text-[28px] text-base font-medium text-secondary">
+            <span class="md:text-[28px] text-base font-medium text-secondary leading-none">
               {item.description}
             </span>
           </h4>
