@@ -1,17 +1,101 @@
 ---
-import AviationHero from "@/components/Industry/AviationIndustry/AviationHero.astro"
-import AviationSecond from "@/components/Industry/AviationIndustry/AviationSecond.astro"
-import AviationThird from "@/components/Industry/AviationIndustry/AviationThird.astro"
-import AviationFour from "@/components/Industry/AviationIndustry/AviationFour.astro"
-import AviationFive from "@/components/Industry/AviationIndustry/AviationFive.astro"
-import Layout from "../layouts/Layout.astro"
+// src/pages/industries/aviation.astro
+import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
+import Layout from "../layouts/Layout.astro";
 
-
+const aviationContent = {
+  heroSection: {
+    heading: "Innovating Aviation with Data-Driven Solutions",
+    description:
+      "Leveraging AI, IoT, and cloud to redefine efficiency, safety, and customer experiences in aviation",
+    buttonText: "Explore Our Aviation Technologies",
+    buttonIcon: "/assets/rightarrow.svg",
+    subHeading: "Technology-Driven Transformation in the Skies",
+    subDescription:
+      "Spritle's aviation solutions help airlines, airports, and ground operations embrace digital transformation for smarter, safer, and more efficient operations",
+  },
+  solutionsSection: {
+    title: "Aviation Technology Solutions We Offer",
+    solutions: [
+      {
+        logo: "/assets/unique1.svg",
+        title: "Predictive Maintenance",
+        description:
+          "Use AI and IoT to predict aircraft maintenance needs, reducing downtime and improving fleet reliability.",
+      },
+      {
+        logo: "/assets/unique2.svg",
+        title: "Airport Data Analytics",
+        description:
+          "Optimize airport operations with real-time data analytics, enhancing passenger flow and resource management",
+      },
+      {
+        logo: "/assets/unique3.svg",
+        title: "Smart Baggage Tracking",
+        description:
+          "Implement IoT-based baggage tracking systems to ensure smooth handling and minimize lost luggage incidents",
+      },
+      {
+        logo: "/assets/unique3.svg",
+        title: "AI-Powered Safety & Security",
+        description:
+          "Deploy AI tools for enhancing safety protocols, threat detection, and ensuring compliance with industry standards",
+      },
+    ],
+  },
+  useCasesSection: {
+    title: "Industry Use Cases",
+    cases: [
+      {
+        image: "/assets/aviation1.svg",
+        heading: "Predictive Aircraft Maintenance for a Major Airline",
+        description:
+          "Implemented an AI-powered maintenance system, reducing unscheduled downtime by 35%",
+      },
+      {
+        image: "/assets/aviation2.svg",
+        heading: "Real-Time Data Analytics for Airport Operations",
+        description:
+          "Designed a real-time data platform, improving passenger throughput and reducing delays at a major international airport",
+      },
+      {
+        image: "/assets/aviation3.svg",
+        heading: "IoT-Driven Baggage Tracking",
+        description:
+          "Enabled a seamless baggage tracking system, decreasing lost baggage rates by 40% across multiple airports",
+      },
+    ],
+  },
+  whyChooseSection: {
+    title: "Why Spritle for Aviation Tech?",
+    items: [
+      {
+        title: "Aviation Expertise",
+        description:
+          "Proven experience in working with airlines, airports, and ground services",
+      },
+      {
+        title: "Safety-First Approach",
+        description:
+          "Prioritize regulatory compliance and safety enhancements through cutting-edge technology.",
+      },
+      {
+        title: "Operational Efficiency",
+        description:
+          "Solutions that streamline processes, reduce costs, and enhance passenger experiences.",
+      },
+    ],
+  },
+  ctaSection: {
+    heading: "Future-Proof Your Aviation Operations",
+    description:
+      "Partner with us to unlock the power of AI, IoT, and data for the aviation industry",
+    buttonText: "Connect with Our Aviation Experts",
+    buttonIcon: "/assets/btnstar.svg",
+  },
+};
 ---
-<Layout title="Airport Management System">
-<AviationHero/>
-<AviationSecond/>
-<AviationThird/>
-<AviationFour/>
-<AviationFive/>
+
+<Layout>
+  <IndustryPageContent {...aviationContent} />
 </Layout>

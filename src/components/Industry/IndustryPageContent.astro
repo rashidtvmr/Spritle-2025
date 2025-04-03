@@ -1,0 +1,169 @@
+---
+// src/components/DynamicProps/IndustryPageContent.astro
+import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
+import BtnBig from "@/components/DynamicProps/BtnBig.astro";
+import UniqueValueCard from "@/components/DynamicProps/UniqueValueCard.astro";
+import SuccessStories from "@/components/DynamicProps/SuccessStories.astro";
+import Star from "@/components/DynamicProps/Star.astro";
+
+interface HeroSection {
+  heading: string;
+  description: string;
+  buttonText: string;
+  buttonIcon: string;
+  subHeading?: string;
+  subDescription?: string;
+}
+
+interface SolutionsSection {
+  title: string;
+  solutions: {
+    logo: string;
+    title: string;
+    description: string;
+  }[];
+}
+
+interface UseCasesSection {
+  title: string;
+  cases: {
+    image: string;
+    heading: string;
+    description: string;
+  }[];
+}
+
+interface WhyChooseSection {
+  title: string;
+  items: {
+    title: string;
+    description: string;
+  }[];
+}
+
+interface CtaSection {
+  heading: string;
+  description: string;
+  buttonText: string;
+  buttonIcon: string;
+}
+
+interface Props {
+  heroSection: HeroSection;
+  solutionsSection: SolutionsSection;
+  useCasesSection: UseCasesSection;
+  whyChooseSection: WhyChooseSection;
+  ctaSection: CtaSection;
+}
+
+const {
+  heroSection,
+  solutionsSection,
+  useCasesSection,
+  whyChooseSection,
+  ctaSection,
+} = Astro.props;
+---
+
+<main class="">
+  <div class="container">
+    <!-- Hero Section -->
+    <div class="mt-40">
+      <div
+        class="flex flex-col justify-center items-center text-center h-auto px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background"
+      >
+        <div class="">
+          <GradientHeading text={heroSection.heading} />
+        </div>
+        <p
+          class="font-normal mt-4 text-title-body text-gradientbody max-w-[600px]"
+        >
+          {heroSection.description}
+        </p>
+        <BtnBig
+          text={heroSection.buttonText}
+          icon={heroSection.buttonIcon}
+          class="px-5"
+        />
+
+        {
+          heroSection.subHeading && (
+            <h1 class="text-heading text-primary font-dmSans font-semibold mt-20">
+              {heroSection.subHeading}
+            </h1>
+          )
+        }
+        {
+          heroSection.subDescription && (
+            <p class="text-secondary mt-0 text-subbody font-normal text-center max-w-[1200px]">
+              {heroSection.subDescription}
+            </p>
+          )
+        }
+      </div>
+    </div>
+
+    <!-- Solutions Section -->
+    <div class="my-10 md:my-20">
+      <div class="text-heading text-primary md:mb-12 mb-2 font-semibold">
+        {solutionsSection.title}
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-6">
+        {
+          solutionsSection.solutions.map((solution) => (
+            <UniqueValueCard
+              logo={solution.logo}
+              title={solution.title}
+              description={solution.description}
+            />
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Use Cases Section -->
+    <div class="my-10 md:my-20">
+      <div class="text-heading text-primary md:mb-12 mb-2 font-semibold">
+        {useCasesSection.title}
+      </div>
+      <div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5">
+          {
+            useCasesSection.cases.map((caseItem, index) => (
+              <SuccessStories key={index} {...caseItem} />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Choose Section -->
+    <div class="my-10 md:my-20">
+      <div class="flex justify-center items-center flex-col">
+        <h2 class="text-centerheading font-medium mb-8 text-primary">
+          {whyChooseSection.title}
+        </h2>
+        <div>
+          <Star items={whyChooseSection.items} maxWidth={1000} />
+        </div>
+      </div>     
+    </div>
+  </div>
+  <!-- CTA Section -->
+  <div
+    class="flex flex-col justify-center items-center text-center h-screen md:max-h-[666px] max-h-[500px] px-4 space-y-5 bg-[#313131] my-10 md:my-20"
+  >
+    <GradientHeading text={ctaSection.heading} />
+    <p class="font-normal mt-4 text-subbody text-primary">
+      {ctaSection.description}
+    </p>
+    <button class="mt-6 btnprimary text-subheading px-6 py-2">
+      <img
+        src={ctaSection.buttonIcon}
+        alt="Right Arrow"
+        class="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6"
+      />
+      {ctaSection.buttonText}
+    </button>
+  </div>
+</main>

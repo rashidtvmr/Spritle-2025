@@ -1,15 +1,98 @@
 ---
-import EnergyHero from "@/components/Industry/Energy/EnergyHero.astro";
+// src/pages/industries/energy-utilities.astro
+
+import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
 import Layout from "../layouts/Layout.astro";
-import EnergySecond from "@/components/Industry/Energy/EnergySecond.astro";
-import EnergyThird from "@/components/Industry/Energy/EnergyThird.astro";
-import EnergyFour from "@/components/Industry/Energy/EnergyFour.astro";
-import EnergyFive from "@/components/Industry/Energy/EnergyFive.astro";
+
+const energyContent = {
+  heroSection: {
+    heading:
+      "Powering the Future of Energy & Utilities with Advanced Technology",
+    description:
+      "Driving sustainability, efficiency, and smarter grid solutions with AI, IoT, and Big Data",
+    buttonText: "Explore Our Energy & Utilities Solutions",
+    buttonIcon: "/assets/rightarrow.svg",
+    subHeading:
+      "Innovative Solutions for Sustainable Growth and Operational Excellence",
+    subDescription:
+      "Spritle integrates cutting-edge AI, IoT, and data-driven technologies to enhance operational efficiency, reduce costs, and support sustainability initiatives in energy generation, distribution, and utilities",
+  },
+  solutionsSection: {
+    title: "Energy & Utilities Technology Solutions We Offer",
+    solutions: [
+      {
+        logo: "/assets/unique1.svg",
+        title: "Smart Grid & IoT Integration",
+        description:
+          "Optimize energy distribution with IoT-enabled smart grids that provide real-time monitoring and predictive analytics for more efficient energy usage",
+      },
+      {
+        logo: "/assets/unique2.svg",
+        title: "Predictive Maintenance for Power Plants",
+        description:
+          "Leverage machine learning and AI to predict equipment failures and optimize maintenance schedules, minimizing downtime and reducing operational costs",
+      },
+      {
+        logo: "/assets/unique3.svg",
+        title: "AI for Energy Consumption Forecasting",
+        description:
+          "Utilize AI and big data analytics to predict energy consumption patterns, enabling better resource allocation and reducing energy wastage",
+      },
+    ],
+  },
+  useCasesSection: {
+    title: "Industry Success Stories",
+    cases: [
+      {
+        image: "/assets/energy1.svg",
+        heading: "AI-Powered Predictive Maintenance for a Power Plant",
+        description:
+          "Implemented AI-driven predictive maintenance, reducing unplanned downtime by 30% and extending the lifespan of critical assets",
+      },
+      {
+        image: "/assets/energy2.svg",
+        heading: "IoT-Enabled Smart Grid for Energy Distributor",
+        description:
+          "Deployed IoT sensors for a smart grid, enhancing energy distribution efficiency and providing real-time insights to prevent outages",
+      },
+      {
+        image: "/assets/energy3.svg",
+        heading: "AI for Energy Forecasting in a Utility Company",
+        description:
+          "Developed an AI-based energy consumption forecasting model, optimizing energy allocation and reducing wastage by 20%",
+      },
+    ],
+  },
+  whyChooseSection: {
+    title: "Why Spritle for Energy & Utilities?",
+    items: [
+      {
+        title: "Advanced AI & IoT Solutions",
+        description:
+          "Harnessing next-gen AI and IoT for smarter energy systems",
+      },
+      {
+        title: "Sustainability-Focused",
+        description:
+          "Helping companies meet sustainability goals while driving operational efficiency",
+      },
+      {
+        title: "Scalable & Cost-Effective",
+        description:
+          "Solutions that scale with industry needs, reducing operational costs and enhancing energy distribution efficiency",
+      },
+    ],
+  },
+  ctaSection: {
+    heading: "Drive the Future of Energy with Spritle",
+    description:
+      "Partner with us to integrate cutting-edge technologies for efficient, sustainable energy and utilities operations",
+    buttonText: "Talk to Our Energy Experts",
+    buttonIcon: "/assets/btnstar.svg",
+  },
+};
 ---
-<Layout title="Energy Utility Services">
-    <EnergyHero/>
-   <EnergySecond/>
-   <EnergyThird/>
-   <EnergyFour/>
-   <EnergyFive/>
-<Layout />
+
+<Layout>
+  <IndustryPageContent {...energyContent} />
+</Layout>

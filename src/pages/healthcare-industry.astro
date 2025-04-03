@@ -1,16 +1,100 @@
 ---
-import HealthHero from "@/components/Industry/Health/HealthHero.astro"
-import HealthSecond from "@/components/Industry/Health/HealthSecond.astro"
-import HealthThird from "@/components/Industry/Health/HealthThird.astro"
-import HealthFour from "@/components/Industry/Health/HealthFour.astro"
-import HealthFive from "@/components/Industry/Health/HealthFive.astro"
-import Layout from "../layouts/Layout.astro"
+// src/pages/industries/healthcare.astro
+import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
 
+const healthcareContent = {
+  heroSection: {
+    heading: "Transforming Healthcare with Cutting-Edge Technology",
+    description:
+      "Empowering providers and patients with digital solutions that drive better outcomes",
+    buttonText: "Explore Our Healthcare Innovations",
+    buttonIcon: "/assets/rightarrow.svg",
+    subHeading: "Digital Transformation for Modern Healthcare",
+    subDescription:
+      "We bridge the gap between healthcare needs and technology, creating secure, scalable solutions that enhance patient care and streamline operations",
+  },
+  solutionsSection: {
+    title: "Healthcare Solutions We Offer",
+    solutions: [
+      {
+        logo: "/assets/unique1.svg",
+        title: "AI-Powered Diagnostics",
+        description:
+          "Leverage AI to enhance diagnostic accuracy and accelerate medical decision-making with intelligent data-driven insights",
+      },
+      {
+        logo: "/assets/unique2.svg",
+        title: "Telemedicine Platforms",
+        description:
+          "Move to the cloud with confidence. We design cloud architectures that are secure, scalable, and cost-efficient",
+      },
+      {
+        logo: "/assets/unique3.svg",
+        title: "Electronic Health Records (EHR) Systems",
+        description:
+          "Implement robust EHR systems that ensure efficient patient data management, HIPAA compliance, and seamless care coordination",
+      },
+      {
+        logo: "/assets/unique3.svg",
+        title: "IoT for Healthcare",
+        description:
+          "Enhance patient care with IoT-enabled devices, enabling real-time monitoring and proactive health interventions",
+      },
+    ],
+  },
+  useCasesSection: {
+    title: "Industry Use Cases",
+    cases: [
+      {
+        image: "/assets/health1.svg",
+        heading: "Remote Patient Monitoring Platform",
+        description:
+          "Developed a real-time monitoring system for cardiac patients, reducing hospital readmissions by 25%",
+      },
+      {
+        image: "/assets/health2.svg",
+        heading: "Telemedicine Solution for Rural Healthcare",
+        description:
+          "Implemented a telemedicine platform, improving access to care for patients in remote areas and decreasing wait times",
+      },
+      {
+        image: "/assets/health3.svg",
+        heading: "AI-Driven Radiology Tool",
+        description:
+          "Created an AI-powered radiology tool that increased diagnostic accuracy by 40%, helping radiologists detect abnormalities faster.",
+      },
+    ],
+  },
+  whyChooseSection: {
+    title: "Why Generative AI is a Game Changer",
+    items: [
+      {
+        title: "Industry Expertise",
+        description:
+          "Extensive experience working with healthcare providers, hospitals, and life sciences.",
+      },
+      {
+        title: "Secure & Compliant",
+        description:
+          "Solutions designed to meet strict healthcare regulations like HIPAA and GDPR.",
+      },
+      {
+        title: "Innovation-Driven",
+        description: "Pioneering the use of AI, IoT, and cloud in healthcare.",
+      },
+    ],
+  },
+  ctaSection: {
+    heading: "Let's Build the Future of Health Together",
+    description:
+      "Transform your practice with state-of-the-art healthcare technology",
+    buttonText: "Get in Touch with Our Healthcare Experts",
+    buttonIcon: "/assets/btnstar.svg",
+  },
+};
+import Layout from "../layouts/Layout.astro";
 ---
-<Layout title="Healthcare Application Development">
-<HealthHero/>
-<HealthSecond/>
-<HealthThird/>
-<HealthFour/>
-<HealthFive/>
+
+<Layout>
+  <IndustryPageContent {...healthcareContent} />
 </Layout>

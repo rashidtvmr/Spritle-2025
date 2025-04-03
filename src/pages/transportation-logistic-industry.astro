@@ -1,16 +1,95 @@
 ---
-import TransportationFive from "@/components/Industry/Transportation/TransportationFive.astro";
-import TransportationFour from "@/components/Industry/Transportation/TransportationFour.astro";
-import TransportationHero from "@/components/Industry/Transportation/TransportationHero.astro";
-import TransportationSecond from "@/components/Industry/Transportation/TransportationSecond.astro";
-import TransportationThird from "@/components/Industry/Transportation/TransportationThird.astro";
-import Layout from "@/layouts/Layout.astro";
+// src/pages/industries/transportation-logistics.astro
+import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
+import Layout from "../layouts/Layout.astro";
+
+const logisticsContent = {
+  heroSection: {
+    heading: "Accelerating Transportation & Logistics with AI and IoT",
+    description:
+      "Optimize operations, streamline supply chains, and drive efficiency with next-gen technology solutions",
+    buttonText: "Explore Our Logistics Innovations",
+    buttonIcon: "/assets/rightarrow.svg",
+    subHeading: "Smart Solutions for Seamless, Data-Driven Logistics",
+    subDescription:
+      "Spritle leverages AI, IoT, and big data to revolutionize logistics, optimizing supply chain visibility, fleet management, and real-time operations for enhanced efficiency and cost savings",
+  },
+  solutionsSection: {
+    title: "Transportation & Logistics Technology Solutions We Offer",
+    solutions: [
+      {
+        logo: "/assets/unique1.svg",
+        title: "AI-Powered Fleet Management",
+        description:
+          "Monitor and manage vehicle fleets in real time with AI-driven analytics that optimize routes, reduce fuel consumption, and enhance driver safety",
+      },
+      {
+        logo: "/assets/unique2.svg",
+        title: "Predictive Analytics for Demand Forecasting",
+        description:
+          "Utilize predictive models to forecast demand, improve inventory management, and reduce delivery delays, ensuring timely logistics",
+      },
+      {
+        logo: "/assets/unique3.svg",
+        title: "IoT-Enabled Supply Chain Visibility",
+        description:
+          "Implement IoT sensors to track shipments and assets in real-time, providing transparency throughout the entire supply chain",
+      },
+    ],
+  },
+  useCasesSection: {
+    title: "Industry Success Stories",
+    cases: [
+      {
+        image: "/assets/transport1.svg",
+        heading: "AI Fleet Management for Logistics Provider",
+        description:
+          "Developed an AI-powered fleet management system, reducing fuel costs by 15% and improving delivery times by 20%",
+      },
+      {
+        image: "/assets/transport2.svg",
+        heading: "IoT-Enhanced Supply Chain Tracking",
+        description:
+          "Implemented IoT sensors for a global logistics company, providing real-time shipment visibility and reducing losses by 25%",
+      },
+      {
+        image: "/assets/transport3.svg",
+        heading: "Predictive Analytics for Demand Planning",
+        description:
+          "Built a demand forecasting model that improved stock management for a retailer, reducing excess inventory by 18%",
+      },
+    ],
+  },
+  whyChooseSection: {
+    title: "Why Spritle for Transportation & Logistics?",
+    items: [
+      {
+        title: "AI & IoT Expertise",
+        description:
+          "Extensive experience in leveraging AI, IoT, and automation to improve logistics and transportation operations",
+      },
+      {
+        title: "Optimized Supply Chains",
+        description:
+          "Proven success in increasing supply chain transparency and reducing operational costs",
+      },
+      {
+        title: "Future-Ready Solutions",
+        description:
+          "Cutting-edge solutions, including autonomous logistics and AI-powered systems, that keep businesses ahead of the curve",
+      },
+    ],
+  },
+  ctaSection: {
+    heading: "Empower Your Supply Chain with Spritle",
+    description:
+      "Partner with us to drive operational efficiency, cost savings, and real-time insights through innovative logistics solutions",
+    buttonText: "Connect with Our Logistics Experts",
+    buttonIcon: "/assets/btnstar.svg",
+  },
+};
 ---
 
-<Layout page="Transportation & Logistic Industry">
-  <TransportationHero />
-  <TransportationSecond />
-  <TransportationThird />
-  <TransportationFour />
-  <TransportationFive />
+<Layout>
+  <IndustryPageContent {...logisticsContent} />
 </Layout>

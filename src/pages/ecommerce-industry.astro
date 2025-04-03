@@ -1,16 +1,100 @@
 ---
-import EcommerceFive from "@/components/Industry/Ecommerce/EcommerceFive.astro";
-import EcommerceFour from "@/components/Industry/Ecommerce/EcommerceFour.astro";
-import EcommerceHero from "@/components/Industry/Ecommerce/EcommerceHero.astro";
-import EcommerceSecond from "@/components/Industry/Ecommerce/EcommerceSecond.astro";
-import EcommerceThird from "@/components/Industry/Ecommerce/EcommerceThird.astro";
-import Layout from "@/layouts/Layout.astro";
+// src/pages/industries/ecommerce.astro
+import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
+import Layout from "../layouts/Layout.astro";
+
+const ecommerceContent = {
+  heroSection: {
+    heading: "Powering the Future of E-commerce with AI and Cloud Solutions",
+    description:
+      "Innovative technology to drive customer engagement, streamline operations, and accelerate growth in the digital marketplace",
+    buttonText: "Explore Our E-commerce Innovations",
+    buttonIcon: "/assets/rightarrow.svg",
+    subHeading: "Smart Solutions for a Seamless Shopping Experience",
+    subDescription:
+      "Spritle delivers scalable, intelligent e-commerce solutions that enhance user experience, optimize backend operations, and personalize customer journeys through AI and data-driven strategies",
+  },
+  solutionsSection: {
+    title: "E-commerce Technology Solutions We Offer",
+    solutions: [
+      {
+        logo: "/assets/unique1.svg",
+        title: "AI-Driven Personalization Engines",
+        description:
+          "Increase conversions with AI-powered recommendation systems that deliver personalized product suggestions and targeted promotions",
+      },
+      {
+        logo: "/assets/unique2.svg",
+        title: "Omnichannel Commerce Platforms",
+        description:
+          "Implement omnichannel solutions for a unified shopping experience across web, mobile, and physical stores, powered by robust cloud infrastructure",
+      },
+      {
+        logo: "/assets/unique3.svg",
+        title: "Predictive Analytics for Demand Forecasting",
+        description:
+          "Use advanced analytics and machine learning to forecast demand, optimize inventory, and reduce stockouts and overstocking",
+      },
+      {
+        logo: "/assets/unique3.svg",
+        title: "Seamless Payment & Checkout Integration",
+        description:
+          "Streamline payments with secure, multi-currency payment gateways and seamless checkout processes, reducing cart abandonment rates",
+      },
+    ],
+  },
+  useCasesSection: {
+    title: "Industry Success Stories",
+    cases: [
+      {
+        image: "/assets/ecommerce1.svg",
+        heading: "AI Personalization for an Apparel Brand",
+        description:
+          "Implemented an AI-powered recommendation engine, boosting conversion rates by 25% and average order value by 15%",
+      },
+      {
+        image: "/assets/ecommerce2.svg",
+        heading: "Omnichannel Solution for a Global Retailer",
+        description:
+          "Deployed an omnichannel commerce platform that unified inventory management across physical and online stores, increasing operational efficiency by 30%",
+      },
+      {
+        image: "/assets/ecommerce3.svg",
+        heading: "Predictive Analytics for E-commerce",
+        description:
+          "Built a demand forecasting tool for an electronics retailer, reducing stockouts by 20% and optimizing inventory management",
+      },
+    ],
+  },
+  whyChooseSection: {
+    title: "Why Spritle for E-commerce Tech?",
+    items: [
+      {
+        title: "Cutting-Edge AI & Analytics",
+        description:
+          "Expert in AI, machine learning, and personalized learning systems.",
+      },
+      {
+        title: "Scalable & Secure Platforms",
+        description: "Solutions designed to grow with educational institutions",
+      },
+      {
+        title: "Future-Ready Solutions",
+        description:
+          "Creating digital learning environments that adapt to the evolving needs of students and educators",
+      },
+    ],
+  },
+  ctaSection: {
+    heading: "Supercharge Your E-commerce with Spritle",
+    description:
+      "Partner with us to create future-ready, AI-powered e-commerce solutions that drive growth and customer loyalty",
+    buttonText: "Talk to Our E-commerce Experts",
+    buttonIcon: "/assets/btnstar.svg",
+  },
+};
 ---
 
-<Layout title="Ecommerce Industry">
-  <EcommerceHero />
-  <EcommerceSecond />
-  <EcommerceThird />
-  <EcommerceFour />
-  <EcommerceFive />
+<Layout>
+  <IndustryPageContent {...ecommerceContent} />
 </Layout>

@@ -1,16 +1,102 @@
 ---
-import LifescienceFive from "@/components/Industry/LifeScienceIndustry/LifescienceFive.astro";
-import LifescienceFour from "@/components/Industry/LifeScienceIndustry/LifescienceFour.astro";
-import LifescienceHero from "@/components/Industry/LifeScienceIndustry/LifescienceHero.astro";
-import Lifesciencesecond from "@/components/Industry/LifeScienceIndustry/Lifesciencesecond.astro";
-import LifescienceThird from "@/components/Industry/LifeScienceIndustry/LifescienceThird.astro";
-import Layout from "@/layouts/Layout.astro";
+// src/pages/industries/lifesciences.astro
+import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
+import Layout from "../layouts/Layout.astro";
+
+const lifesciencesContent = {
+  heroSection: {
+    heading: "Transforming Life Sciences with AI and Data-Driven Innovation",
+    description:
+      "Accelerating research, enhancing patient care, and streamlining operations with cutting-edge technology",
+    buttonText: "Explore Our Life Sciences Solutions",
+    buttonIcon: "/assets/rightarrow.svg",
+    subHeading:
+      "Technology Solutions Shaping the Future of Health and Research",
+    subDescription:
+      "Spritle integrates AI, machine learning, and big data analytics to transform life sciences, from research and development to patient care, optimizing outcomes and advancing innovation",
+  },
+  solutionsSection: {
+    title: "Life Sciences Technology Solutions We Offer",
+    solutions: [
+      {
+        logo: "/assets/unique1.svg",
+        title: "AI-Powered Drug Discovery & Research",
+        description:
+          "Accelerate drug discovery with AI-driven models that predict drug efficacy, optimize molecule selection, and speed up research timelines",
+      },
+      {
+        logo: "/assets/unique2.svg",
+        title: "Genomics Data Integration & Analysis",
+        description:
+          "Leverage big data analytics to integrate, process, and analyze complex genomic data, enabling personalized medicine and targeted therapies",
+      },
+      {
+        logo: "/assets/unique3.svg",
+        title: "IoT for Remote Patient Monitoring",
+        description:
+          "Deploy IoT-enabled devices for real-time patient monitoring, improving healthcare outcomes and enabling early intervention",
+      },
+      {
+        logo: "/assets/unique3.svg",
+        title: "Predictive Analytics in Clinical Trials",
+        description:
+          "Use predictive models to optimize clinical trial designs, improving patient recruitment, retention, and reducing trial timelines",
+      },
+    ],
+  },
+  useCasesSection: {
+    title: "Industry Success Stories",
+    cases: [
+      {
+        image: "/assets/lifescience1.svg",
+        heading: "AI Drug Discovery for Pharma",
+        description:
+          "Developed an AI-based platform that reduced drug discovery timelines by 40%, helping a pharmaceutical company bring innovative therapies to market faster",
+      },
+      {
+        image: "/assets/lifescience2.svg",
+        heading: "Genomics Data Platform for Personalized Medicine",
+        description:
+          "Built a data integration platform that analyzed large-scale genomic data for a precision medicine initiative, enabling personalized treatment plans",
+      },
+      {
+        image: "/assets/lifescience3.svg",
+        heading: "Remote Monitoring for Healthcare Providers",
+        description:
+          "Deployed IoT solutions for remote patient monitoring, improving chronic disease management and reducing hospital readmissions by 30%",
+      },
+    ],
+  },
+  whyChooseSection: {
+    title: "Why Spritle for Life Sciences Tech?",
+    items: [
+      {
+        title: "Expertise in AI & Data Science",
+        description:
+          "Specialized in harnessing AI, machine learning, and big data for healthcare and life sciences",
+      },
+      {
+        title: "Innovative, Compliant Solutions",
+        description:
+          "Delivering innovative, regulatory-compliant solutions for life sciences, from research labs to hospitals",
+      },
+      {
+        title: "Improved Patient Outcomes",
+        description:
+          "Helping organizations leverage technology to enhance patient care, speed research, and reduce costs",
+      },
+    ],
+  },
+  ctaSection: {
+    heading: "Empowering Life Sciences with AI and Data",
+    description:
+      "Partner with us to drive innovation and improve patient outcomes through cutting-edge technologies",
+    buttonText: "Connect with Our Life Sciences Experts",
+    buttonIcon: "/assets/btnstar.svg",
+  },
+};
 ---
 
-<Layout title="Life Science Industry">
-  <LifescienceHero />
-  <Lifesciencesecond />
-  <LifescienceThird />
-  <LifescienceFour />
-  <LifescienceFive />
+<Layout>
+  <IndustryPageContent {...lifesciencesContent} />
 </Layout>
