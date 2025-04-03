@@ -1,17 +1,20 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  base: '/', // Add your repo name here
-  site: 'https://Suryasu5678.github.io/Spritle-2025/', // Your GitHub Pages URL
-  output: 'static', // GitHub Pages needs static output
-
-  integrations: [react()],
-
+  base: '/',
+  site: 'https://spritle-new.vercel.app/',
+  output: 'static',
+  integrations: [react(), sitemap()],
   vite: {
     plugins: [tailwindcss()]
+  },
+  experimental: {
+    svg: {
+      mode: 'sprite'
+    }
   }
 });
