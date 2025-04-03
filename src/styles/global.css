@@ -43,7 +43,7 @@ body {
 
 }
 .text-subbody{
-    @apply text-xl lg:text-[34px] ;
+    @apply text-xl md:text-2xl lg:text-[34px] ;
 
 }
 
