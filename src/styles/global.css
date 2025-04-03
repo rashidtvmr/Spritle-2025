@@ -32,19 +32,31 @@ body {
       @apply  text-white  bg-[#15AED5] items-center  gap-2 mt-6    font-medium rounded-full flex tracking-wider;
 }
 .text-title{
-    @apply text-4xl lg:text-8xl ;
-
+    @apply text-4xl lg:text-7xl ;
 }
+
+.btn-main{
+  padding: 13.3px 42.55px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #007bff; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
 .text-title-body{
-     @apply text-xl lg:text-[26.6px] ;
+    @apply text-xl lg:text-[26.6px] ;
 }
-.text-subtitle{
-    @apply text-xl lg:text-3xl ;
 
+.text-subtitle {
+  @apply text-lg sm:text-xl md:text-[22px] lg:text-2xl xl:text-[26px];
 }
+
 .text-subbody{
-    @apply text-xl lg:text-[34px] ;
-
+    @apply text-base sm:text-lg md:text-xl lg:text-[28px];
 }
 
 .text-heading {
@@ -54,9 +66,8 @@ body {
   @apply text-2xl  lg:text-4xl xl:text-[55px] font-dm-sans;
 }
 
-
 .text-subheading {
-  @apply text-lg  lg:text-xl xl:text-2xl;
+  @apply text-base sm:text-lg md:text-[17px] lg:text-lg xl:text-xl;
 }
 .text-body{
 @apply text-lg  lg:text-xl
