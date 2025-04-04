@@ -1,4 +1,11 @@
 ---
+import mobile from "../../images/assets/mobileicon.png"
+import thunder from "../../images/assets/thundericon.png"
+import star from  "../../images/assets/circlestaricon.png"
+import  clickicon from "../../images/assets/webdesignericon.png"
+import contactarrow from "../../images/assets/contactarrow.png"
+import {Image} from "astro:assets";
+
 const jobs = [
   {
     title: "Mobile App Developer",
@@ -7,7 +14,7 @@ const jobs = [
     experience: "Minimum 2 years of mobile app development experience.",
     skills:
       "Skills - Proficiency in iOS or Android development (Swift, Kotlin), knowledge of mobile app design patterns, experience with mobile testing and debugging.",
-    logo: "/assets/mobileicon.png",
+    logo: mobile
   },
   {
     title: "Digital Marketing Specialist",
@@ -16,7 +23,7 @@ const jobs = [
     experience: "Minimum 3 years of digital marketing experience.",
     skills:
       "Proficiency in SEO, SEM, and social media marketing, experience with analytics tools (Google Analytics, etc.), content marketing expertise.",
-    logo: "/assets/thundericon.png",
+    logo: thunder
   },
   {
     title: "Project Manager",
@@ -26,7 +33,7 @@ const jobs = [
     experience: "Minimum 3 years of digital marketing experience.",
     skills:
       "Proficiency in SEO, SEM, and social media marketing, experience with analytics tools (Google Analytics, etc.), content marketing expertise.",
-    logo: "/assets/circlestaricon.png",
+    logo: star
   },
   {
     title: "Project Manager",
@@ -36,7 +43,7 @@ const jobs = [
     experience: "Minimum 3 years of digital marketing experience.",
     skills:
       "Proficiency in SEO, SEM, and social media marketing, experience with analytics tools (Google Analytics, etc.), content marketing expertise.",
-    logo: "/assets/circlestaricon.png",
+    logo: star
   },
   {
     title: "Web Designer",
@@ -45,7 +52,7 @@ const jobs = [
     experience: "Minimum 1 year of professional web design experience.",
     skills:
       "Proficiency in Adobe Creative Suite (Photoshop, Illustrator, etc.), strong understanding of UI/UX design principles, responsive design expertise.",
-    logo: "/assets/webdesignericon.png",
+    logo: clickicon
   },
   {
     title: "Web Designer",
@@ -54,7 +61,7 @@ const jobs = [
     experience: "Minimum 1 year of professional web design experience.",
     skills:
       "Proficiency in Adobe Creative Suite (Photoshop, Illustrator, etc.), strong understanding of UI/UX design principles, responsive design expertise.",
-    logo: "/assets/webdesignericon.png",
+    logo: clickicon
   },
 ];
 ---
@@ -73,9 +80,11 @@ const jobs = [
         <div class="p-6 border-primary border-2 rounded-2xl flex flex-col space-y-5 xl:space-y-9 p-4 mt-5 relative xl:h-screen xl:w-full xl:max-w-[850px] xl:max-h-[404px] px-15">
           <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 justify-between">
             <div class="flex items-center space-x-4">
-              <img
+              <Image
                 src={job.logo}
                 alt={job.title}
+                height={56}
+                width={56}
                 class="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24"
               />
               <div class="text-center sm:text-left">
@@ -92,10 +101,13 @@ const jobs = [
                 <span class="text-white font-normal text-base lg:text-lg">
                   Apply Now
                 </span>
-                <img
-                  src="/assets/applynowarrow.png"
+                <Image
+                  src={contactarrow}
                   alt="arrow"
-                  class="w-10 h-10 md:w-10 md:h-10 lg:w-17 lg:h-12  "
+                  width={28}
+                  height={28}
+                  inferSize={true}
+                  class="w-10 h-10 md:w-10 md:h-10 lg:w-17 lg:h-12"
                 />
               </button>
             </div>
