@@ -1,6 +1,9 @@
 ---
 import GradientHeading from "../DynamicProps/GradientHeading.astro";
 import Ourprocess from "./Ourprocess.astro";
+import { Image } from "astro:assets";
+
+import RightArrow from "../../assets/icons/rightarrow.svg";
 
 const images = [
   { src: "/assets/loganathan.png", alt: "Loganathan" },
@@ -8,28 +11,19 @@ const images = [
   { src: "/assets/balaji.png", alt: "Balaji" },
   { src: "/assets/suren.png", alt: "Suren" },
 ];
-
 ---
 
-<div class="mt-33 ">
+<div class="">
   <div
     class="flex flex-col justify-center items-center text-center space-y-5 container"
   >
-    <div class="flex mb-15">
-      <!-- Who We Are Button -->
-   <a  id="whoWeAreBtn" class="rounded-l-full border-2 border-white px-5 py-2 cursor-pointer bg-white text-background text-body font-semibold">
-  Who We Are
-</a>
-<a   id="ourProcessBtn"  class="rounded-r-full cursor-pointer px-5 py-2 border-2 text-body font-semibold">
-  Our Process
-</a>
-
-    </div>
-
     <!-- Tab Content Containers -->
     <div id="whoWeAreContent" class="tab-content">
       <!-- Who We Are content is already in the page by default -->
-      <GradientHeading text="Meet Spritle's Talented Clan of Tech Experts"  maxWidth="max-w-[1130px]" />
+      <GradientHeading
+        text="Meet Spritle's Talented Clan of Tech Experts"
+        maxWidth="max-w-[1130px]"
+      />
       <div class="w-screen flex justify-center items-center flex-col">
         <p
           class="font-normal lg:mt-8 mt-4 text-title-body text-primary max-w-[700px] px-5 md:px-0"
@@ -37,14 +31,9 @@ const images = [
           Entranced by the alluring spell of innovative tech trends, we craft
           futuristic solutions for all!
         </p>
-        <button
-          class="mt-6 btnprimary  lg:w-screen lg:max-w-[194px] max-h-[46px] text-base font-normal px-8 py-4  "
-        >
-          Get Started <img
-            src="/assets/rightarrow.svg"
-            alt="Right Arrow"
-            class="w-4 h-4 "
-          />
+        <button class="mt-6 btnprimary text-base font-normal px-8 py-4">
+          Get Started
+          <RightArrow class="w-4 h-4" />
         </button>
 
         <h1
@@ -54,7 +43,7 @@ const images = [
           Mission and The Journey So Far
         </h1>
         <p
-          class="text-secondary mt-4 text-subbody font-normal max-w-[1424px] pt-10 container "
+          class="text-secondary mt-4 text-subbody font-normal max-w-[1424px] pt-10 container"
         >
           Software is created for people, and so is our mission-focused towards
           people-centric solutions! From creating the questful ambiance for
@@ -66,7 +55,7 @@ const images = [
       <!-- Counter Section -->
       <div class="py-18 xl:mt-10 mt-5" id="counterSection">
         <div
-          class="w-screen mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-[73.55px] text-center xl:px-30 px-5"
+          class="mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-[73.55px] text-center xl:px-30 px-5"
         >
           <!-- Box 1 -->
           <div
@@ -130,9 +119,10 @@ const images = [
 
       <!-- Child Companies Section -->
       <h1
-        class="font-semibold text-centerheading  flex justify-center xl:mt-40 lg:mt-20 mt-0"
+        class="font-semibold text-centerheading flex justify-center xl:mt-40 lg:mt-20 mt-0"
       >
-Our Subsidiaries      </h1>
+        Our Subsidiaries
+      </h1>
 
       <div class="xl:py-28 xl:py-12 py-5 h-auto xl:h-[300px]">
         <div class="xl:px-30 px-5 w-screen justify-center items-center">
@@ -171,46 +161,25 @@ Our Subsidiaries      </h1>
         Megaminds Behind Spritle
       </h1>
       <div
-        class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 xl:gap-[150px] gap-10 justify-items-center justify-center items-center container "
+        class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 xl:gap-[150px] gap-10 justify-items-center justify-center items-center container"
       >
         {
           images.map((image) => (
-            <img
-              key={image.alt}
+            <Image
               src={image.src}
               alt={image.alt}
-              class="w-full max-w-xs object-cover"
+              height={200}
+              width={200}
+              class="w-full h-full max-w-xs object-cover"
             />
           ))
         }
       </div>
     </div>
-
-    <!-- Our Process Content Container -->
-    <div id="ourProcessContent" class="tab-content hidden">
-      <Ourprocess />
-    </div>
   </div>
 </div>
 
 <script>
-  // Tab switching functionality
-  const whoWeAreBtn = document.getElementById("whoWeAreBtn");
-  const ourProcessBtn = document.getElementById("ourProcessBtn");
-  const whoWeAreContent = document.getElementById("whoWeAreContent");
-  const ourProcessContent = document.getElementById("ourProcessContent");
-
-  whoWeAreBtn.addEventListener("click", () => {
-   whoWeAreContent.classList.remove("hidden");
-    ourProcessContent.classList.add("hidden");
-  });
-
-  ourProcessBtn.addEventListener("click", () => {
-    
-    ourProcessContent.classList.remove("hidden");
-    whoWeAreContent.classList.add("hidden");
-  });
-
   // Counter animation functionality
   function animateCounter(id, target, duration) {
     let start = 0;
@@ -252,9 +221,3 @@ Our Subsidiaries      </h1>
     observer.observe(counterSection);
   }
 </script>
-
-<style>
-  .hidden {
-    display: none;
-  }
-</style>

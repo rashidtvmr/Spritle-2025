@@ -1,39 +1,92 @@
 ---
 import GradientHeading from "../DynamicProps/GradientHeading.astro";
 import ScrollCard from "../About/ScrollCard.astro";
-
-
+import RightArrow from "../../assets/icons/rightarrow.svg";
+import OurProcessSvg from "../../assets/our_process.svg";
 ---
-<div class=" ">
 
-<GradientHeading
-  text="Accelerating Innovations For Better Technology Solutions "  maxWidth="max-w-[1230px]"
-/>
-
-<div class="container  flex justify-center items-center flex-col ">
-  <p
-    class="font-normal lg:mt-8 mt-4 text-title-body text-primary max-w-[1020px]"
-  >
-    A team with a plan never gives up. Below are a few of our masterpieces
-    created for the greatest masterminds around the world.
-  </p>
-
-  <button
-          class="mt-6 btnprimary  lg:w-screen lg:max-w-[194px] max-h-[46px] text-base font-normal px-8 py-4  "
-        >
-    Get Started
-    <img
-      src="/assets/arrowright.png"
-      alt="Right Arrow"
-      class="w-4 h-4 "
+<div class="">
+  <div class="text-center">
+    <GradientHeading
+      text="Accelerating Innovations For Better Technology Solutions "
+      maxWidth="max-w-[1230px]"
     />
-  </button>
+  </div>
+
+  <div class="container flex justify-center items-center flex-col text-center">
+    <p
+      class="font-normal lg:mt-8 mt-4 text-title-body text-primary max-w-[1020px]"
+    >
+      A team with a plan never gives up. Below are a few of our masterpieces
+      created for the greatest masterminds around the world.
+    </p>
+
+    <button class="btnprimary text-lg font-normal px-8 py-2 my-10">
+      Get Started
+      <RightArrow class="w-4 h-4" />
+    </button>
+  </div>
+
+  <div class="xl:mt-36 mt-8 flex justify-center">
+    <OurProcessSvg mode="inline" class="svg-path" />
+  </div>
+
+  <ScrollCard />
 </div>
 
-<div class="xl:mt-36 mt-8 flex justify-center">
- <img src="/assets/fulls6.svg" alt="">
- 
-</div>
+<style is:global>
+  @keyframes slideUP {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  Masking rectangles with staggered animations .mask-rect1,
+  .mask-rect2,
+  .mask-rect5,
+  .mask-rect6 {
+    transform: translateY(100%);
+  }
+  .mask-rect3,
+  .mask-rect4 {
+    transform: translateY(-100%);
+  }
+  .mask-rect1 {
+    animation: slideUP 2s ease-in-out forwards;
+  }
 
-<ScrollCard/>
-</div>
+  .mask-rect2 {
+    animation: slideUP 1s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+
+  .mask-rect3 {
+    animation: slideDown 1s ease-in-out forwards;
+    animation-delay: 2s;
+  }
+
+  .mask-rect4 {
+    animation: slideDown 1s ease-in-out forwards;
+    animation-delay: 3s;
+  }
+
+  .mask-rect5 {
+    animation: slideUP 1s ease-in-out forwards;
+    animation-delay: 4s;
+  }
+
+  .mask-rect6 {
+    animation: slideUP 1s ease-in-out forwards;
+    animation-delay: 5s;
+  }
+</style>
