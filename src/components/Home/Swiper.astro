@@ -1,36 +1,43 @@
 ---
 import "swiper/css";
 import "swiper/css/effect-coverflow";
+import nurse from  "../../images/assets/nurse.png"
+import manworking from "../../images/assets/manworking.png";
+import laptopstats from "../../images/assets/laptopstats.png";
+import team from "../../images/assets/team.png";
+import nvidiagoogle from "../../images/assets/nvidiagoogle.png";
+import devices from "../../images/assets/devices.png";
+import {Image} from "astro:assets";
 
 const slides = [
   {
     text: "Spritle's Gen AI solutions drive operational cost savings for our clients",
-    img: "../assets/20995.png",
+    img: nurse,
     alt: "Gen AI",
   },
   {
     text: "We help businesses improve efficiency using Vision AI",
-    img: "../assets/30713.png",
+    img: manworking,
     alt: "Vision AI",
   },
   {
     text: "Spritle simplifies & accelerates digital transformation for your business",
-    img: "../assets/30714.png",
+    img: laptopstats,
     alt: "Digital Transformation",
   },
   {
     text: "Spritle simplifies & accelerates digital transformation for your business",
-    img: "../assets/2151790123.png",
+    img: team,
     alt: "Transformation",
   },
   {
     text: "We are the official partners of Nvidia & Google",
-    img: "../assets/20995 (1).png",
+    img: nvidiagoogle,
     alt: "Official Partners",
   },
   {
     text: "With 15+ years of experience, we create custom apps that transform your business",
-    img: "../assets/30713 (1).png",
+    img:devices,
     alt: "Custom Apps",
   },
 ];
@@ -55,11 +62,13 @@ const slides = [
               {slide.text}
             </h1>
             <div class="h-[200px] lg:h-[calc(90vh-250px)] w-full">
-              <img
-                class="slide-image w-full h-full transition-all duration-500"
-                src={slide.img}
-                alt={slide.alt}
-              />
+            <Image
+              src={slide.img}  
+              alt={slide.alt}
+              width={1920}
+              height={627} 
+              inferSize={true}
+             />
             </div>
           </div>
         </div>

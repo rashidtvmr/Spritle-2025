@@ -1,5 +1,9 @@
 ---
 import BtnSmall from "../DynamicProps/BtnSmall.astro";
+import {Image} from "astro:assets";
+import blog1 from  "../../images/assets/saaslyblog1.png"
+import blog2 from "../../images/assets/saaslyblog2.png"
+import blog3 from "../../images/assets/saaslyblog3.png"
 ---
 <div
   class="space-y-1 lg:space-y-6 md:space-y-3 my-10 md:my-20 "
@@ -19,10 +23,13 @@ import BtnSmall from "../DynamicProps/BtnSmall.astro";
   <div class="grid md:grid-cols-3 gap-6 mt-8 md:mt-25">
     <!-- Blog Card 1 -->
     <div class="text-white rounded-lg overflow-hidden">
-      <img
-        src="/assets/Aiblogs1.png"
+      <Image 
+        src={blog1}
         alt="Blog Image"
         class="w-full h-auto"
+        width={550.21}
+        height={363.82}
+        inferSize={true}
       />
       <div class="p-2 mt-2">
         <h3 class="text-subtitle  mt-2 md:mt-5 font-medium text-primary">
@@ -37,10 +44,13 @@ import BtnSmall from "../DynamicProps/BtnSmall.astro";
 
     <!-- Blog Card 2 -->
     <div class="text-white rounded-lg overflow-hidden">
-      <img
-        src="/assets/blog2.png"
+      <Image
+        src={blog2}
         alt="Blog Image"
+        width={550}
+        height={362}
         class="w-full h-auto"
+        inferSize={true}
       />
       <div class="p-2 mt-2">
         <h3 class="text-subtitle  mt-2 md:mt-5 font-medium text-primary">
@@ -55,7 +65,14 @@ import BtnSmall from "../DynamicProps/BtnSmall.astro";
 
     <!-- Blog Card 3 -->
     <div class="text-white rounded-lg overflow-hidden">
-      <img src="/assets/Aiblogs3.png" alt="Blog Image" class="w-full" />
+      <Image 
+      src={blog3}
+      alt="Blog Image" 
+      width={550.21} 
+      height={363.82} 
+      class="w-full" 
+      inferSize={true}
+      />
       <div class="p-2 mt-2">
         <h3 class="text-subtitle  mt-2 md:mt-5 font-medium text-primary">
           How to add a countdown timer <br />to Framer
