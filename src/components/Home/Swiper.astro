@@ -1,12 +1,13 @@
 ---
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import nurse from  "../../images/assets/nurse.png"
-import manworking from "../../images/assets/manworking.png";
-import laptopstats from "../../images/assets/laptopstats.png";
-import team from "../../images/assets/team.png";
-import nvidiagoogle from "../../images/assets/nvidiagoogle.png";
-import devices from "../../images/assets/devices.png";
+import nurse from "../../assets/images/home/nurse.png";
+import manworking from "../../assets/images/home/manworking.png";
+import laptopstats from "../../assets/images/home/laptopstats.png";
+import team from "../../assets/images/home/team.png";
+import nvidiagoogle from "../../assets/images/home/nvidiagoogle.png";
+import devices from "../../assets/images/home/devices.png";
+
 import {Image} from "astro:assets";
 
 const slides = [
@@ -65,9 +66,6 @@ const slides = [
             <Image
               src={slide.img}  
               alt={slide.alt}
-              width={1920}
-              height={627} 
-              inferSize={true}
              />
             </div>
           </div>

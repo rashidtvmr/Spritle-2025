@@ -1,7 +1,7 @@
 ---
-import ronaldrichards from "../../images/assets/ronaldrichards.png"
-import savannah from "../../images/assets/savannah.png"
-import floydmiles from "../../images/assets/floydmiles.png"
+import ronaldrichards from "../../assets/images/home/ronaldrichards.png";
+import savannah from "../../assets/images/home/savannah.png";
+import floydmiles from "../../assets/images/home/floydmiles.png";
 import {Image} from "astro:assets";
 
 
@@ -121,9 +121,6 @@ const testimonials = [
                 <Image
                   src={t.image}
                   alt={t.name}
-                  width={80}
-                  height={80}
-                  inferSize={true}
                   class="w-16 h-16 lg:w-[80px] lg:h-[80px] mb-4 md:mb-0"
                   
                 />

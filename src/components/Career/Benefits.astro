@@ -1,17 +1,17 @@
 ---
 import {Image} from "astro:assets";
-import career1 from "../../images/assets/career1icon.png"
-import career2 from "../../images/assets/career2icon.png"
-import career3 from "../../images/assets/career3icon.png"
-import career4 from "../../images/assets/career4icon.png"
-import career5 from "../../images/assets/career5icon.png"
-import career6 from "../../images/assets/career6icon.png"
-import career7 from "../../images/assets/career7icon.png"
-import career8 from "../../images/assets/career8icon.png"
-import career9 from "../../images/assets/career9icon.png"
-import career10 from "../../images/assets/career10icon.png"
-import career11 from "../../images/assets/career11icon.png"
-import career12 from "../../images/assets/career12icon.png"
+import career1 from "../../assets/images/careers/career1icon.png";
+import career2 from "../../assets/images/careers/career2icon.png";
+import career3 from "../../assets/images/careers/career3icon.png";
+import career4 from "../../assets/images/careers/career4icon.png";
+import career5 from "../../assets/images/careers/career5icon.png";
+import career6 from "../../assets/images/careers/career6icon.png";
+import career7 from "../../assets/images/careers/career7icon.png";
+import career8 from "../../assets/images/careers/career8icon.png";
+import career9 from "../../assets/images/careers/career9icon.png";
+import career10 from "../../assets/images/careers/career10icon.png";
+import career11 from "../../assets/images/careers/career11icon.png";
+import career12 from "../../assets/images/careers/career12icon.png";
 
 
 const logos = [
@@ -78,9 +78,6 @@ const cards = cardTitles.map((title,i) => ({
         <Image
           src={card.logo}
           alt="Career Icon"
-          width={74}
-          height={74}
-          inferSize={true}
           class="max-size-18 object-contain"
         />
         <p class="text-primary font-dm-sans text-subheading p-5 pl-5">{card.title}</p>

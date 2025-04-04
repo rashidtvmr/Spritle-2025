@@ -1,11 +1,12 @@
 ---
 import {Image} from "astro:assets";
-import doctor from "../../images/assets/doctor.png";
-import aeroplane from "../../images/assets/aeroplane.png";
-import girlrunning from "../../images/assets/girlrunning.png"
-import truck from "../../images/assets/truck.png"
-import doctribbon from "../../images/assets/doctribbon.png"
-import girleducation from "../../images/assets/girleducation.png"
+import doctor from "../../assets/images/home/doctor.png";
+import aeroplane from "../../assets/images/home/aeroplane.png";
+import girlrunning from "../../assets/images/home/girlrunning.png";
+import truck from "../../assets/images/home/truck.png";
+import doctribbon from "../../assets/images/home/doctribbon.png";
+import girleducation from "../../assets/images/home/girleducation.png";
+
 
 const carouselContent = [
   {
@@ -91,7 +92,6 @@ const carouselContent = [
               tabindex="0"
             >
               <Image
-                inferSize={true}
                 src={content.src}
                 alt={content.alt}
                 class="w-full h-full object-cover rounded-xl scale-[1.1] group-hover:scale-[1.2] transition-transform duration-300"
