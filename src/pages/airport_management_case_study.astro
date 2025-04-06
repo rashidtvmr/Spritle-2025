@@ -1,12 +1,16 @@
 ---
 import CaseStudyPageContent from "@/components/DynamicProps/CaseStudyPageContent.astro";
 import Layout from "../layouts/Layout.astro";
+import aeroplane from "../../src/assets/images/casestudy/aeroplane.png";
+import u1 from "../../src/assets/icons/casestudy/u1.svg";
+import u2 from "../../src/assets/icons/casestudy/u2.svg";
+import u3 from "../../src/assets/icons/casestudy/u3.svg";
 
 const content = {
   hero_text:
     "Smart Airport Management: Track,  Maintain, and Optimize with Precision",
   hero_image: {
-    url: "/assets/cs1.png",
+    url: aeroplane,
     alt: "Smart Airport Management: Track,  Maintain, and Optimize with Precision",
   },
   overview: {
@@ -23,25 +27,25 @@ const content = {
         title: "Limited Reporting in ServiceDesk Plus",
         description:
           "Existing systems lacked advanced reporting capabilities, making it hard for teams to gain a clear view of key metrics such as technician performance and service trends.",
-        icon: "/assets/unique1.svg",
+        icon: u1,
       },
       {
         title: "Manual Data Processing",
         description:
           "Time-consuming manual processes slowed down the creation of comprehensive reports, causing delays in proactive decision-making.",
-        icon: "/assets/unique2.svg",
+        icon: u2,
       },
       {
         title: "Difficulty in Integrating Cross-Platform Data",
         description:
           "CAG faced challenges in connecting data across different IT systems to derive a holistic view of operations and insights.",
-        icon: "/assets/unique3.svg",
+        icon: u3,
       },
       {
         title: "Need for Advanced Analytics",
         description:
           "The airport needed advanced, AI-powered analytics for proactive issue identification and trend analysis to drive operational improvement.",
-        icon: "/assets/unique3.svg",
+        icon: u3,
       },
     ],
   },
@@ -71,13 +75,13 @@ const content = {
       },
     ],
   },
-  key_benefits  : {
+  key_benefits: {
     title: "Key Benefits",
     cards: [
       {
         title: "Seamless Integration",
         description:
-          " Our solution integrates directly with the ManageEngine ecosystem, providing a smooth, cohesive experience for CAG’s operational teams.",
+          "Our solution integrates directly with the ManageEngine ecosystem, providing a smooth, cohesive experience for CAG’s operational teams.",
       },
       {
         title: "Scalable and Customizable",

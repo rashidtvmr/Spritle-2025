@@ -1,11 +1,15 @@
 ---
 import CaseStudyPageContent from "@/components/DynamicProps/CaseStudyPageContent.astro";
 import Layout from "../layouts/Layout.astro";
+import digitallearning from "../../src/assets/images/casestudy/digitallearning.png";
+import u1 from "../../src/assets/icons/casestudy/u1.svg";
+import u2 from "../../src/assets/icons/casestudy/u2.svg";
+import u3 from "../../src/assets/icons/casestudy/u3.svg";
 
 const content = {
   hero_text: "Unlocking Education with Smooth, Engaging Digital Learning",
   hero_image: {
-    url: "/assets/cs1.png",
+    url: digitallearning,
     alt: "Unlocking Education with Smooth, Engaging Digital Learning",
   },
   overview: {
@@ -21,22 +25,22 @@ const content = {
       {
         title:
           "Fragmented learning resources across multiple platforms for courses, materials, and communication.",
-        icon: "/assets/unique1.svg",
+        icon: u1,
       },
       {
         title:
           "Scattered spaces for student-teacher and peer engagement, limiting interaction.",
-        icon: "/assets/unique2.svg",
+        icon: u2,
       },
       {
         title:
           "Limited course offerings, restricting students' educational options.",
-        icon: "/assets/unique3.svg",
+        icon: u3,
       },
       {
         title:
           "Virtual isolation, with students feeling disconnected due to a lack of engaging community interactions.",
-        icon: "/assets/unique3.svg",
+        icon: u3,
       },
     ],
   },

@@ -1,18 +1,22 @@
 ---
 import CaseStudyPageContent from "@/components/DynamicProps/CaseStudyPageContent.astro";
 import Layout from "../layouts/Layout.astro";
+import nestle from "../../src/assets/images/casestudy/nestle.png";
+import u1 from "../../src/assets/icons/casestudy/u1.svg";
+import u2 from "../../src/assets/icons/casestudy/u2.svg";
+import u3 from "../../src/assets/icons/casestudy/u3.svg";
 
 const content = {
   hero_text:
     "How We Helped Nestlé Create Personalized Nutrition Through Genetic Insights",
   hero_image: {
-    url: "/assets/cs2.png",
+    url: nestle,
     alt: "How We Helped Nestlé Create Personalized Nutrition Through Genetic Insights",
   },
   overview: {
     title: "Overview",
     description:
-      "  Nestlé Health Science, a leader in science-based nutrition, sought to      develop an innovative platform that would allow healthcare practitioners      to provide personalized recommendations for diet, exercise, and      supplements based on patient-specific data. This data included genetic  reports, responses from a smart questionnaire, and lab results uploaded by      patients. The challenge was to seamlessly integrate these data sources      into a single, user-friendly solution that would empower both patients and      practitioners with personalized, actionable health insights.  ",
+      "Nestlé Health Science, a leader in science-based nutrition, sought to develop an innovative platform that would allow healthcare practitioners      to provide personalized recommendations for diet, exercise, and      supplements based on patient-specific data. This data included genetic  reports, responses from a smart questionnaire, and lab results uploaded by      patients. The challenge was to seamlessly integrate these data sources      into a single, user-friendly solution that would empower both patients and      practitioners with personalized, actionable health insights.  ",
   },
   problem_statement: {
     title: "Problem Statement",
@@ -22,25 +26,25 @@ const content = {
         title: "Limited Reporting in ServiceDesk Plus",
         description:
           "Providing personalized recommendations for diet, exercise, and lifestyle based on patient-specific data.",
-        icon: "/assets/unique1.svg",
+        icon: u1,
       },
       {
         title: "Manual Data Processing",
         description:
           "Transforming genetic information into targeted recommendations that practitioners can easily deliver to their patients.",
-        icon: "/assets/unique2.svg",
+        icon: u2,
       },
       {
         title: "Difficulty in Integrating Cross-Platform Data",
         description:
           "Creating a seamless experience where patients can purchase recommended supplements directly from the platform.",
-        icon: "/assets/unique3.svg",
+        icon: u3,
       },
       {
         title: "Need for Advanced Analytics",
         description:
           "The airport needed advanced, AI-powered analytics for proactive issue identification and trend analysis to drive operational improvement",
-        icon: "/assets/unique3.svg",
+        icon: u3,
       },
     ],
   },
@@ -98,8 +102,7 @@ const content = {
   conclusion: {
     type: "card", // or "para"
     title: "Results", // or "conclusion"
-    description:
-      "",
+    description: "",
   },
 };
 const tableData = {

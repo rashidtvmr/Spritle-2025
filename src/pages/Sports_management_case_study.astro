@@ -1,18 +1,22 @@
 ---
 import CaseStudyPageContent from "@/components/DynamicProps/CaseStudyPageContent.astro";
 import Layout from "../layouts/Layout.astro";
+import sports from "../../src/assets/images/casestudy/sports.png";
+import u1 from "../../src/assets/icons/casestudy/u1.svg";
+import u2 from "../../src/assets/icons/casestudy/u2.svg";
+import u3 from "../../src/assets/icons/casestudy/u3.svg";
 
 const content = {
   hero_text:
     "A Platform for Managing and Coordinating Every Sports Meet Across the USA",
   hero_image: {
-    url: "/assets/cs3.png",
+    url: sports,
     alt: "A Platform for Managing and Coordinating Every Sports Meet Across the USA",
   },
   overview: {
     title: "Overview",
     description:
-      "   Spritle offers an all-in-one sports meet management platform designed to      streamline and automate the process of organizing both timed and untimed      sports events across the USA. This platform caters to timing companies,      coaches, athletes, and spectators by providing real-time updates, event      management tools, and seamless user interaction through web and mobile      interfaces.  ",
+      "Spritle offers an all-in-one sports meet management platform designed to      streamline and automate the process of organizing both timed and untimed      sports events across the USA. This platform caters to timing companies,      coaches, athletes, and spectators by providing real-time updates, event      management tools, and seamless user interaction through web and mobile      interfaces.  ",
   },
   problem_statement: {
     title: "Problem Statement",
@@ -21,51 +25,51 @@ const content = {
       {
         title:
           "Providing personalized recommendations for diet, exercise, and lifestyle based on patient-specific data.",
-        icon: "/assets/unique1.svg",
+        icon: u1,
       },
       {
         title:
           "Transforming genetic information into targeted recommendations that practitioners can easily deliver to their patients.",
-        icon: "/assets/unique2.svg",
+        icon: u2,
       },
       {
         title:
           "Creating a seamless experience where patients can purchase recommended supplements directly from the platform.",
-        icon: "/assets/unique3.svg",
+        icon: u3,
       },
       {
         title:
           "The airport needed advanced, AI-powered analytics for proactive issue identification and trend analysis to drive operational improvement",
-        icon: "/assets/unique3.svg",
+        icon: u3,
       },
     ],
   },
   our_solution: {
     description:
-      "  Spritle Software partnered with Nestlé Health Science to create a platform      that integrates multiple data sources to offer highly tailored health and      nutritional recommendations for patients. The key components of the      solution include:",
+      "  Spritle Software partnered with Nestlé Health Science to create a platform that integrates multiple data sources to offer highly tailored health and nutritional recommendations for patients. The key components of the      solution include:",
     cards: [
       {
         title: "Patient Report",
         description:
-          "        A detailed health insights report generated using data from genetics,        smart questionnaires, and lab results. The report provides personalized       recommendations for diet, lifestyle, and supplements.",
+          " A detailed health insights report generated using data from genetics,  smart questionnaires, and lab results. The report provides personalized  recommendations for diet, lifestyle, and supplements.",
       },
       {
         title: "Genetic Analyzer",
         description:
-          "Personalized genomic analysis tools that convert genetic data into        lifestyle and nutritional recommendations.",
+          "Personalized genomic analysis tools that convert genetic data into lifestyle and nutritional recommendations.",
       },
       {
-        title: "        Smart Questionnaire",
+        title: " Smart Questionnaire",
         description:
-          "    Patients answer validated questions, resulting in personalized insights        that complement a practitioner’s care plan.",
+          "Patients answer validated questions, resulting in personalized insights that complement a practitioner’s care plan.",
       },
       {
-        title: "        Lab Report Analyzer",
+        title: " Lab Report Analyzer",
         description:
           "An AI-powered engine that extracts critical data from lab reports and        generates relevant recommendations.",
       },
       {
-        title: "                E-commerce Integration",
+        title: "E-commerce Integration",
         description:
           "An Patients can easily purchase supplements recommended by their        practitioners via an integrated e-commerce platform.",
       },
@@ -96,7 +100,6 @@ const content = {
       },
     ],
   },
- 
 };
 ---
 

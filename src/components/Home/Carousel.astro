@@ -6,7 +6,8 @@ import girlrunning from "../../assets/images/home/girlrunning.png";
 import truck from "../../assets/images/home/truck.png";
 import doctribbon from "../../assets/images/home/doctribbon.png";
 import girleducation from "../../assets/images/home/girleducation.png";
-
+import arrowcarousel1 from "../../assets/images/home/arrowcarousel.png"
+import arrowcarousal2 from "../../assets/images/home/arrowcar2.png"
 
 const carouselContent = [
   {
@@ -133,20 +134,21 @@ const carouselContent = [
         id="prevBtn"
         class="rounded-full flex justify-center items-center cursor-pointer bg-[#15AED5] text-white p-2 px-4"
       >
-        <img
-          src="../assets/arrowcarousel.png"
-          alt="Previous"
-          class="w-4 p-1 sm:w-5 md:w-6"
+        <Image
+        src={arrowcarousel1}
+        alt="Previous"
+        class="w-4 p-1 sm:w-5 md:w-6"
         />
+
       </button>
       <button
         id="nextBtn"
         class="rounded-full flex justify-center items-center cursor-pointer bg-[#15AED5] text-white p-2 px-4"
       >
-        <img
-          src="../assets/arrowcar2.png"
-          alt="Next"
-          class="w-4 p-1 sm:w-5 md:w-6"
+        <Image
+        src={arrowcarousal2}
+        alt="Next"
+        class="w-4 p-1 sm:w-5 md:w-6"
         />
       </button>
     </div>

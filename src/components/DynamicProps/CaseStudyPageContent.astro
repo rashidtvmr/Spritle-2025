@@ -2,7 +2,7 @@
 import CSOurSolutionCard from "./CSOurSolutionCard.astro";
 import CSProblemStatementCard from "./CSProblemStatementCard.astro";
 import Star from "@/components/DynamicProps/Star.astro";
-
+import {Image} from "astro:assets";
 const {
   content: {
     hero_text = "",
@@ -22,7 +22,7 @@ const {
     <!-- Image Container -->
     <div class="fixed inset-0 -z-1">
       <!-- h-100 sm:h-180 md:h-300 lg:h-auto -->
-      <img
+      <Image
         src={hero_image.url}
         alt={hero_image.alt}
         class="w-full h-full object-cover"

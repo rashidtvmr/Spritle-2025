@@ -11,6 +11,9 @@ export default defineConfig({
 
   integrations: [react()],
 
+  experimental: {
+    svg: true,
+  },
   vite: {
     plugins: [tailwindcss()]
   }
