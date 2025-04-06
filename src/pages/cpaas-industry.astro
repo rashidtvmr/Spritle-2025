@@ -1,15 +1,103 @@
 ---
-import CpaasFive from "@/components/Industry/Cpaas/CpaasFive.astro";
-import CpaasFour from "@/components/Industry/Cpaas/CpaasFour.astro";
-import CpaasHero from "@/components/Industry/Cpaas/CpaasHero.astro";
-import CpaasSecond from "@/components/Industry/Cpaas/CpaasSecond.astro";
-import CpaasThird from "@/components/Industry/Cpaas/CpaasThird.astro";
-import Layout from "@/layouts/Layout.astro";
+// src/pages/industries/cpaas.astro
+import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
+import Layout from "../layouts/Layout.astro";
+
+const cpaasContent = {
+  heroSection: {
+    heading: "Empowering Seamless Communication with CPaaS Solutions",
+    description:
+      "Integrating voice, video, messaging, and collaboration tools into your apps for a unified, scalable communication experience",
+    buttonText: "Discover Our CPaaS Solutions",
+    buttonIcon: "/assets/rightarrow.svg",
+    subHeading: "Revolutionizing Business Communication",
+    subDescription:
+      "Spritle provides cutting-edge CPaaS solutions that simplify integration of communication features, enabling businesses to engage customers seamlessly across channels with real-time, AI-powered capabilities",
+  },
+  solutionsSection: {
+    title: "CPaaS Technology Solutions We Offer",
+    solutions: [
+      {
+        logo: "/assets/unique1.svg",
+        title: "Real-Time Messaging & Chat Solutions",
+        description:
+          "Enable real-time, in-app messaging and chat features that enhance customer engagement and support",
+      },
+      {
+        logo: "/assets/unique2.svg",
+        title: "Video Conferencing Integration",
+        description:
+          "Integrate HD video conferencing into your applications for virtual meetings, customer support, and webinars",
+      },
+      {
+        logo: "/assets/unique3.svg",
+        title: "Voice & IVR Systems",
+        description:
+          "Develop AI-enhanced voice systems with IVR (Interactive Voice Response) that offer intelligent call routing and improved customer service",
+      },
+      {
+        logo: "/assets/unique3.svg",
+        title: "Omnichannel Communication Platform",
+        description:
+          "Unify SMS, email, push notifications, and social media into a single platform to streamline communication across multiple touchpoints",
+      },
+    ],
+  },
+  useCasesSection: {
+    title: "Industry Success Stories",
+    cases: [
+      {
+        image: "/assets/cpass1.svg",
+        heading: "Real-Time Chat for E-commerce Platform",
+        description:
+          "Integrated a real-time messaging solution that improved customer service response time by 40% and increased sales by 20%",
+      },
+      {
+        image: "/assets/cpass2.svg",
+        heading: "Voice & IVR Integration for Healthcare Provider",
+        description:
+          "Developed a customized voice and IVR solution for a healthcare provider, reducing appointment scheduling errors and improving patient satisfaction",
+      },
+      {
+        image: "/assets/cpass3.svg",
+        heading: "Omnichannel CPaaS for a Retailer",
+        description:
+          "Created an omnichannel communication platform that helped a retailer increase customer retention by 15% through personalized, timely engagement",
+      },
+    ],
+  },
+  whyChooseSection: {
+    title: "Why Spritle for CPaaS?",
+    items: [
+      {
+        title: "Comprehensive Communication Solutions",
+        description:
+          "We offer everything from messaging, voice, and video to omnichannel platforms",
+      },
+      {
+        title: "Scalable & Customizable",
+        description:
+          "Tailored solutions to meet the needs of startups to enterprises, ensuring scalability",
+      },
+      {
+        title: "AI-Powered Integration",
+        description:
+          "Integrating artificial intelligence to enhance communication efficiency and automation",
+      },
+    ],
+  },
+  ctaSection: {
+    heading: "Unlock Seamless Communication with Spritle",
+    description:
+      "Collaborate with us to integrate innovative CPaaS solutions that provide scalable, efficient, and engaging communication",
+    buttonText: "Connect with Our CPaaS Experts",
+    buttonIcon: "/assets/btnstar.svg",
+  },
+};
 ---
-<Layout title="CPaaS Industry">
-<CpaasHero/>
-<CpaasSecond/>
-<CpaasThird/>
-<CpaasFour/>
-<CpaasFive/>
+
+<Layout>
+  <IndustryPageContent {...cpaasContent} />
 </Layout>
+
+

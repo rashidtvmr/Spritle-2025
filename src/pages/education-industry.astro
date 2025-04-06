@@ -1,18 +1,100 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import EduHero from "@/components/Industry/EducationIndustry/EduHero.astro"
-import EduSecond from "@/components/Industry/EducationIndustry/EduSecond.astro"
-import EduThird from "@/components/Industry/EducationIndustry/EduThird.astro"
-import EduFour from "@/components/Industry/EducationIndustry/EduFour.astro"
-import EduFive from "@/components/Industry/EducationIndustry/EduFive.astro"
+// src/pages/industries/education.astro
+import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
+import Layout from "../layouts/Layout.astro";
 
+const educationContent = {
+  heroSection: {
+    heading: "Redefining Education with Next-Gen Technology",
+    description:
+      "Empowering educators and students through AI-driven solutions, personalized learning, and seamless digital platforms",
+    buttonText: "Discover Our EdTech Innovations",
+    buttonIcon: "/assets/rightarrow.svg",
+    subHeading: "Technology-Driven Education for the Digital Era",
+    subDescription:
+      "Spritle integrates AI, machine learning, and digital platforms to provide scalable, engaging, and effective educational solutions for learners, teachers, and institutions",
+  },
+  solutionsSection: {
+    title: "EdTech Solutions We Offer",
+    solutions: [
+      {
+        logo: "/assets/unique1.svg",
+        title: "AI-Enhanced Learning Management Systems",
+        description:
+          "Transform learning environments with AI-powered platforms that adapt to individual student needs, providing personalized learning paths and real-time performance insights",
+      },
+      {
+        logo: "/assets/unique2.svg",
+        title: "Virtual Classrooms & Collaboration Tools",
+        description:
+          "Deliver seamless online education experiences with interactive virtual classrooms, enabling collaboration between students and educators, anywhere in the world",
+      },
+      {
+        logo: "/assets/unique3.svg",
+        title: "Intelligent Tutoring Systems",
+        description:
+          "Use machine learning to create intelligent tutoring systems that provide real-time support and feedback to students, enhancing their learning outcomes",
+      },
+      {
+        logo: "/assets/unique3.svg",
+        title: "Data-Driven Student Performance Analytics",
+        description:
+          "Leverage data analytics to track student progress, identify learning gaps, and offer tailored interventions that help students achieve their full potential",
+      },
+    ],
+  },
+  useCasesSection: {
+    title: "Industry Success Stories",
+    cases: [
+      {
+        image: "/assets/edu1.svg",
+        heading: "AI-Powered LMS for Higher Education",
+        description:
+          "Developed an AI-driven learning platform for a leading university, increasing student engagement by 40% and improving retention rates",
+      },
+      {
+        image: "/assets/edu2.svg",
+        heading: "Virtual Classroom for Global Education Provider",
+        description:
+          "Implemented a virtual classroom solution for a global education provider, enabling real-time collaboration for over 10,000 students",
+      },
+      {
+        image: "/assets/edu3.svg",
+        heading: "Student Analytics Dashboard for K-12 Schools",
+        description:
+          "Created a data-driven dashboard for K-12 schools, enabling teachers to monitor student progress and improve learning outcomes",
+      },
+    ],
+  },
+  whyChooseSection: {
+    title: "Why Generative AI is a Game Changer",
+    items: [
+      {
+        title: "Innovative Learning Tools",
+        description:
+          "Expert in AI, machine learning, and personalized learning systems.",
+      },
+      {
+        title: "Scalable Platforms",
+        description: "Solutions designed to grow with educational institutions",
+      },
+      {
+        title: "Future-Ready Education",
+        description:
+          "Creating digital learning environments that adapt to the evolving needs of students and educators",
+      },
+    ],
+  },
+  ctaSection: {
+    heading: "Transform Learning with Technology",
+    description:
+      "Partner with Spritle to create engaging, effective, and future-proof educational solutions",
+    buttonText: "Start Your EdTech Journey",
+    buttonIcon: "/assets/staricon.png",
+  },
+};
 ---
 
-<Layout title ="Education Industry">
-    <EduHero/>
-    <EduSecond/>
-     <EduThird/>
-      <EduFour/>
-       <EduFive/>
+<Layout>
+  <IndustryPageContent {...educationContent} />
 </Layout>
-
