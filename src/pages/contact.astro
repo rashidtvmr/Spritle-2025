@@ -1,6 +1,14 @@
 ---
 import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
 import Layout from "@/layouts/Layout.astro";
+import  callicon from "../../src/assets/images/contactme/callicon.png"
+import contactarrow from "../../src/assets/images/contactme/contactarrow.png"
+import msgicon from "../../src/assets/images/contactme/contacticon.png"
+import instagram from "../../src/assets/images/contactme/instagram.png"
+import linkedin from "../../src/assets/images/contactme/linkedin.png"
+import twitter from "../../src/assets/images/contactme/twitter.png"
+import arrowright from "../../src/assets/images/contactme/arrowright.png"
+import {Image} from "astro:assets";
 ---
 <Layout title="Contact us">
 <div class="mt-20 lg:mt-52">
@@ -31,6 +39,7 @@ import Layout from "@/layouts/Layout.astro";
 
 <section class="my-10 md:my-20">
   <div class="container space-y-5">
+
     {/* Contact Us Via Email */}
     <h2 class="text-subbody text-primary font-semibold my-10 md:my-20">
       Contact Us Via Email
@@ -47,12 +56,16 @@ import Layout from "@/layouts/Layout.astro";
           class="flex items-center rounded-[100px] border border-[#D6D6D6] px-4 md:px-6 py-2 hover:border-blue-500 w-full max-w-full lg:max-w-[472.67px]"
         >
           <span class="flex-grow flex items-center text-white font-normal text-body truncate">
-            <img src="/assets/contacticon.png" alt="" class="mr-2 flex-shrink-0"/>
+            <Image 
+            src={msgicon}
+            alt="msgicon" 
+            class="mr-2 flex-shrink-0"
+            />
             <span class="truncate">info@spritle.com</span>
           </span>
 
-          <img
-            src="/assets/applynowarrow.png"
+          <Image
+            src={contactarrow}
             alt="arrow"
             class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 ml-2 flex-shrink-0"
           />
@@ -67,14 +80,19 @@ import Layout from "@/layouts/Layout.astro";
           class="flex items-center rounded-[100px] border border-[#D6D6D6] px-4 md:px-6 py-2 hover:border-blue-500 w-full max-w-full lg:max-w-[472.67px]"
         >
           <span class="flex-grow flex items-center text-white font-normal text-body truncate">
-            <img src="/assets/contacticon.png" alt="" class="mr-2 flex-shrink-0"/>
+            <Image 
+            src={msgicon}
+            alt="msgicon" 
+            class="mr-2 flex-shrink-0"
+            />
             <span class="truncate">partnerships@digitx.com</span>
-          </span>
-          <img
-            src="/assets/applynowarrow.png"
+            <Image
+            src={contactarrow}
             alt="arrow"
             class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 ml-2 flex-shrink-0"
           />
+          </span>
+          
         </a>
       </div>
       <div class="max-w-full md:max-w-[472.67px] lg:max-h-[124px]">
@@ -86,11 +104,15 @@ import Layout from "@/layouts/Layout.astro";
           class="flex items-center rounded-[100px] border border-[#D6D6D6] px-4 md:px-6 py-2 hover:border-blue-500 w-full max-w-full lg:max-w-[472.67px]"
         >
           <span class="flex-grow flex items-center text-white font-normal text-body truncate">
-            <img src="/assets/contacticon.png" alt="" class="mr-2 flex-shrink-0" />
+            <Image 
+            src={msgicon}
+            alt="msgicon" 
+            class="mr-2 flex-shrink-0"
+            />
             <span class="truncate">jobs@spritle.com</span>
           </span>
-          <img
-            src="/assets/applynowarrow.png"
+          <Image
+            src={contactarrow}
             alt="arrow"
             class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 ml-2 flex-shrink-0"
           />
@@ -114,11 +136,13 @@ import Layout from "@/layouts/Layout.astro";
           class="flex items-center rounded-[100px] border border-[#D6D6D6] px-4 md:px-6 py-2 hover:border-blue-500 w-full"
         >
           <span class="flex-grow flex items-center text-white font-normal text-body truncate">
-            <img src="/assets/callicon.png" alt="" class="mr-2 flex-shrink-0" />
+            <Image 
+            src= {callicon} 
+            alt=""
+            class="mr-2 flex-shrink-0" />
             <span class="truncate">+1 614 664 7677</span>
-          </span>
-          <img
-            src="/assets/applynowarrow.png"
+          <Image
+            src={contactarrow}
             alt="arrow"
             class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 ml-2 flex-shrink-0"
           />
@@ -134,11 +158,15 @@ import Layout from "@/layouts/Layout.astro";
           class="flex items-center rounded-[100px] border border-[#D6D6D6] px-4 md:px-6 py-2 hover:border-blue-500 w-full"
         >
           <span class="flex-grow flex items-center text-white font-normal text-body truncate">
-            <img src="/assets/callicon.png" alt=""  class="mr-2 flex-shrink-0" />
+            <Image 
+            src= {callicon} 
+            alt=""
+            class="mr-2 flex-shrink-0"
+             />
             <span class="truncate">+65 6652 5475</span>
           </span>
-          <img
-            src="/assets/applynowarrow.png"
+          <Image
+            src={contactarrow}
             alt="arrow"
             class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 ml-2 flex-shrink-0"
           />
@@ -154,14 +182,17 @@ import Layout from "@/layouts/Layout.astro";
           class="flex items-center rounded-[100px] border border-[#D6D6D6] px-4 md:px-6 py-2 hover:border-blue-500 w-full"
         >
           <span class="flex-grow flex items-center text-white font-normal text-body truncate">
-            <img src="/assets/callicon.png" alt="" class="mr-2 flex-shrink-0"/>
+            <Image 
+            src= {callicon} 
+            alt=""
+            class="mr-2 flex-shrink-0" />
             <span class="truncate">+91 44 4784 3003</span>
           </span>
-          <img
-            src="/assets/applynowarrow.png"
-            alt="arrow"
-            class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 ml-2 flex-shrink-0"
-          />
+          <Image
+          src={contactarrow}
+          alt="arrow"
+          class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 ml-2 flex-shrink-0"
+        />
         </a>
       </div>
     </div>
@@ -469,17 +500,17 @@ import Layout from "@/layouts/Layout.astro";
   <div class="flex flex-col items-center justify-center py-10 md:py-16 lg:py-19 px-4 text-center">
     <div class="flex space-x-4 md:space-x-6 mb-4 md:mb-12 lg:mb-19">
       <a href="" target="_blank">
-        <img src="/assets/linkedin.png" alt="LinkedIn" class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:size-[74px]" />
+        <Image src={linkedin} alt="LinkedIn" class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:size-[74px]" />
       </a>
       <a href="" target="_blank">
-        <img
-          src="/assets/instagram.png"
+        <Image
+          src={instagram}
           alt="Instagram"
           class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:size-[74px]"
         />
       </a>
       <a href="" target="_blank">
-        <img src="/assets/twitter.png" alt="Twitter" class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:size-[74px]" />
+        <Image src={twitter} alt="Twitter" class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:size-[74px]" />
       </a>
     </div>
   </div>

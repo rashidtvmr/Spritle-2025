@@ -1,4 +1,34 @@
 ---
+import {Image} from "astro:assets";
+import career1 from "../../assets/images/careers/career1icon.png";
+import career2 from "../../assets/images/careers/career2icon.png";
+import career3 from "../../assets/images/careers/career3icon.png";
+import career4 from "../../assets/images/careers/career4icon.png";
+import career5 from "../../assets/images/careers/career5icon.png";
+import career6 from "../../assets/images/careers/career6icon.png";
+import career7 from "../../assets/images/careers/career7icon.png";
+import career8 from "../../assets/images/careers/career8icon.png";
+import career9 from "../../assets/images/careers/career9icon.png";
+import career10 from "../../assets/images/careers/career10icon.png";
+import career11 from "../../assets/images/careers/career11icon.png";
+import career12 from "../../assets/images/careers/career12icon.png";
+
+
+const logos = [
+  career1,
+  career2,
+  career3,
+  career4,
+  career5,
+  career6,
+  career7,
+  career8,
+  career9,
+  career10,
+  career11,
+  career12,
+];
+
 const cardTitles = [
   "Competitive Compensation",
   "Flexible Work Arrangements",
@@ -14,8 +44,8 @@ const cardTitles = [
   "Work-Life Balance Support",
 ];
 
-const cards = cardTitles.map((title, i) => ({
-  logo: `/assets/career${i + 1}icon.png`,
+const cards = cardTitles.map((title,i) => ({
+  logo:logos[i],
   title,
 }));
 ---
@@ -45,7 +75,7 @@ const cards = cardTitles.map((title, i) => ({
         key={index}
         class="flex items-center bg-[#333333] rounded-[10px] p-[10px]   h-[94px]  "
       >
-        <img
+        <Image
           src={card.logo}
           alt="Career Icon"
           class="max-size-18 object-contain"
