@@ -1,39 +1,97 @@
 ---
 import GradientHeading from "../DynamicProps/GradientHeading.astro";
 import ScrollCard from "../About/ScrollCard.astro";
-
-
+import RightArrow from "../../assets/icons/rightarrow.svg";
+import OurProcessSvg from "../../assets/our_process.svg";
 ---
-<div class=" ">
 
-<GradientHeading
-  text="Accelerating Innovations For Better Technology Solutions "  maxWidth="max-w-[1230px]"
-/>
-
-<div class="container  flex justify-center items-center flex-col ">
-  <p
-    class="font-normal lg:mt-8 mt-4 text-title-body text-primary max-w-[1020px]"
-  >
-    A team with a plan never gives up. Below are a few of our masterpieces
-    created for the greatest masterminds around the world.
-  </p>
-
-  <button
-          class="mt-6 btnprimary  lg:w-screen lg:max-w-[194px] max-h-[46px] text-base font-normal px-8 py-4  "
-        >
-    Get Started
-    <img
-      src="/assets/arrowright.png"
-      alt="Right Arrow"
-      class="w-4 h-4 "
+<div class="">
+  <div class="text-center">
+    <GradientHeading
+      text="Accelerating Innovations For Better Technology Solutions "
+      maxWidth="max-w-[1230px]"
     />
-  </button>
+  </div>
+
+  <div class="container flex justify-center items-center flex-col text-center">
+    <p
+      class="font-normal lg:mt-8 mt-4 text-title-body text-primary max-w-[1020px]"
+    >
+      A team with a plan never gives up. Below are a few of our masterpieces
+      created for the greatest masterminds around the world.
+    </p>
+
+    <button class="btnprimary text-lg font-normal px-8 py-2 my-10">
+      Get Started
+      <RightArrow class="w-4 h-4" />
+    </button>
+  </div>
+
+  <div class="xl:mt-36 mt-8 flex justify-center">
+    <OurProcessSvg mode="inline" class="svg-path" />
+  </div>
+
+  <ScrollCard />
 </div>
 
-<div class="xl:mt-36 mt-8 flex justify-center">
- <img src="/assets/fulls6.svg" alt="">
- 
-</div>
+<script lang="js">
+  document.addEventListener("DOMContentLoaded", () => {
+    // const path1 = document.querySelector(".mask-rect1");
+    // const path2 = document.querySelector(".mask-rect2");
+    // const path3 = document.querySelector(".mask-rect3");
+    // const path4 = document.querySelector(".mask-rect4");
+    // const path5 = document.querySelector(".mask-rect5");
+    // const path6 = document.querySelector(".mask-rect6");
+    // function animateMasks() {
+    //   path1.style.animate = "slideUP 2s ease-in-out infinie running";
+    //   path2.style.animate = "slideUP 2s ease-in-out infinie running";
+    //   path5.style.animate = "slideUP 2s ease-in-out infinie running";
+    //   path6.style.animate = "slideUP 2s ease-in-out infinie running";
+    //   path3.style.animate = "slideDown 2s ease-in-out infinite running";
+    //   path4.style.animate = "slideDown 2s ease-in-out infinite running";
+    // }
+    // animateMasks();
+  });
+</script>
 
-<ScrollCard/>
-</div>
+<style is:global>
+  @keyframes slideUP {
+    0% {
+      transform: translateY(30%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-30%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+
+  .mask-rect1,
+  .mask-rect2,
+  .mask-rect5,
+  .mask-rect6 {
+    transform: translateY(30%);
+    animation: slideUP 1.5s ease-in-out infinite running;
+  }
+  .mask-rect3,
+  .mask-rect4 {
+    transform: translateY(-30%);
+    animation: slideDown 1.5s ease-in-out infinite running;
+  }
+
+  .mask-rect1,
+  .mask-rect2,
+  .mask-rect3,
+  .mask-rect4,
+  .mask-rect5,
+  .mask-rect6 {
+    transition: transform 2s ease-in-out;
+  }
+</style>
