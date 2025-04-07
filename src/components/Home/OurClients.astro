@@ -1,174 +1,175 @@
 ---
-import stanford from "../../assets/images/home/stanford.png";
-import hyundai from "../../assets/images/home/hyundai.png";
-import nestle from "../../assets/images/home/nestle.png"; 
-import panasonic from "../../assets/images/home/panasonic.png";
-import LnT from "../../assets/images/home/l&t.png";
-import STeng from "../../assets/images/home/STeng.png";
-import motorola from "../../assets/images/home/motorola.png";
+import { Image } from "astro:assets";
+import Stanford from "../../assets/images/home/stanford.png";
+import Hyundai from "../../assets/images/home/hyundai.png";
+import Nestle from "../../assets/images/home/nestle.png";
+import Panasonic from "../../assets/images/home/panasonic.png";
+import LNT from "../../assets/images/home/l&t.png";
+import Steng from "../../assets/images/home/STeng.png";
+import Motorola from "../../assets/images/home/motorola.png";
 import UN from "../../assets/images/home/UN.png";
-import royalenfield from "../../assets/images/home/royalenfield.png";
-import changi from "../../assets/images/home/changi.png";
-import livingmatrix from "../../assets/images/home/livingmatrix.png";
-import reach from "../../assets/images/home/reach.png";
-import innerkraft from "../../assets/images/home/innerkraft.png";
-import moddo from "../../assets/images/home/moddo.png";
-import shareandremember from "../../assets/images/home/shareandremember.png";
-import nanny from "../../assets/images/home/nanny.png";
-import {Image} from "astro:assets";
+import RE from "../../assets/images/home/royalenfield.png";
+import Changi from "../../assets/images/home/changi.png";
+import LM from "../../assets/images/home/livingmatrix.png";
+import Reach from "../../assets/images/home/reach.png";
+import InnerKraft from "../../assets/images/home/innerkraft.png";
+import Moddo from "../../assets/images/home/moddo.png";
+import SRM from "../../assets/images/home/shareandremember.png";
+import Nanny from "../../assets/images/home/nanny.png";
+
+const OurClientLogos = [
+  {
+    logo: Nestle,
+    alt: "Nestle Brand Logo",
+  },
+  {
+    logo: Stanford,
+    alt: "Stanford Brand Logo",
+  },
+  {
+    logo: Hyundai,
+    alt: "Hyundai Brand Logo",
+  },
+  {
+    logo: Panasonic,
+    alt: "Panasonic Brand Logo",
+  },
+  {
+    logo: LNT,
+    alt: "L&T Brand Logo",
+  },
+  {
+    logo: Steng,
+    alt: "Steng Brand Logo",
+  },
+  {
+    logo: Motorola,
+    alt: "Motorola Brand Logo",
+  },
+
+  {
+    logo: UN,
+    alt: "UN Logo",
+  },
+  {
+    logo: RE,
+    alt: "Royal Enfield Brand Logo",
+  },
+  {
+    logo: Changi,
+    alt: "Changi Airport Logo",
+  },
+  {
+    logo: LM,
+    alt: "Living Matrix Brand Logo",
+  },
+  {
+    logo: Reach,
+    alt: "Reach Brand Logo",
+  },
+  {
+    logo: InnerKraft,
+    alt: "InnerKraft Brand Logo",
+  },
+  {
+    logo: Moddo,
+    alt: "Moddo Brand Logo",
+  },
+  {
+    logo: SRM,
+    alt: "Share And Remember Brand Logo",
+  },
+  {
+    logo: Nanny,
+    alt: "Nanny Brand Logo",
+  },
+];
 ---
+
 <div
-  class="lg:mt-40 md:mt-20 mt-4"
+  class=""
   style={{
     background: "linear-gradient(to bottom, #20202066, #00000047, #17171766)",
   }}
 >
-  <div class="clients-container xl:py-5 py-6 mt-10 md:mt-15">
-    <div
-      class="clients-content space-y-1 md:space-y-10 h-[auto] md:h-[53vh] lg:h-[903px] w-[100%] mt-6 mb-1"
-    >
-      <div
-        class="clients-heading text-heading text-primary font-medium pl-3 xl:pl-26"
-      >
-        Our Clients
-      </div>
-      <p
-        class="clients-subheading max-w-100% mb-5 md:mb-10 text-[#EAEAEA] text-subbody px-5 pl-3 xl:pl-26 font-medium"
-      >
-        Transform your business with generative AI
-      </p>
+  <div class="container my-20 py-5">
+    <h2 class="clients-heading text-heading text-primary font-medium my-5">
+      Our Clients
+    </h2>
+    <p class="clients-subheading text-card-text text-subbody font-medium">
+      Transform your business with generative AI
+    </p>
 
-      <!-- Marquee for Mobile and Tablet  -->
-      <div class="clients-marquee-wrapper md:block lg:hidden">
-        <div class="clients-marquee-container">
-          <!-- Left to Right Marquee  -->
-          <div class="clients-marquee-block">
-            <div class="clients-marquee-inner clients-marquee-right">
-              <span>
-                <div class="clients-marquee-item">
-                  <Image src={nestle} alt="Nestle" width={280.08} height={82} inferSize={true}/>
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={stanford} alt="Stanford" width={134} height={134} inferSize={true}/>
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={hyundai} alt="Hyundai" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={panasonic} alt="Panasonic" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={LnT} alt="Larsen"  />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={STeng} alt="STEngg" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={motorola} alt="Motorola" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={UN} alt="UN" />
-                </div>
-              </span>
-              <span>
-                <div class="clients-marquee-item">
-                  <Image src={nestle} alt="Nestle"/>
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={stanford} alt="Stanford" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={hyundai} alt="Hyundai" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={panasonic} alt="Panasonic" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={LnT} alt="Larsen"  />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={STeng} alt="STEngg" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={motorola} alt="Motorola"  />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={UN} alt="UN"/>
-                </div>
-              </span>
-            </div>
+    <!-- Marquee for Mobile and Tablet  -->
+    <div class="relative overflow-hidden lg:hidden">
+      <div class="clients-marquee-container">
+        <!-- Left to Right Marquee  -->
+        <div class="clients-marquee-block">
+          <div class="clients-marquee-inner clients-marquee-right">
+            <span>
+              {
+                OurClientLogos.slice(0, 8).map((brand) => (
+                  <div class="clients-marquee-item">
+                    <Image src={brand.logo} alt={brand.alt} />
+                  </div>
+                ))
+              }
+            </span>
+            <span>
+              {
+                OurClientLogos.slice(0, 8).map((brand) => (
+                  <div class="clients-marquee-item">
+                    <Image src={brand.logo} alt={brand.alt} />
+                  </div>
+                ))
+              }
+            </span>
           </div>
+        </div>
 
-          <!-- Right to Left Marquee with Small Gap  -->
-          <div class="clients-marquee-block">
-            <div class="clients-marquee-inner clients-marquee-left">
-              <span>
-                <div class="clients-marquee-item">
-                  <Image src={royalenfield} alt="RE" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={changi} alt="Changi" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={livingmatrix} alt="Living Matrix" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={reach} alt="Reach" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={innerkraft} alt="Innerkraft"/>
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={moddo} alt="Moddo"/>
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={shareandremember} alt="Shareandremember" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={nanny} alt="Nanny" />
-                </div>
-              </span>
-              <span>
-                <div class="clients-marquee-item">
-                  <Image src={royalenfield} alt="RE"  />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={changi} alt="Changi" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={livingmatrix} alt="Living Matrix" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={reach} alt="Reach" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={innerkraft} alt="Innerkraft" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={moddo} alt="Moddo" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={shareandremember} alt="Shareandremember" />
-                </div>
-                <div class="clients-marquee-item">
-                  <Image src={nanny} alt="Nanny" />
-                </div>
-              </span>
-            </div>
+        <!-- Right to Left Marquee with Small Gap  -->
+        <div class="clients-marquee-block">
+          <div class="clients-marquee-inner clients-marquee-left">
+            <span>
+              {
+                OurClientLogos.slice(8).map((brand) => (
+                  <div class="clients-marquee-item">
+                    <Image src={brand.logo} alt={brand.alt} />
+                  </div>
+                ))
+              }
+            </span>
+            <span>
+              {
+                OurClientLogos.slice(8).map((brand) => (
+                  <div class="clients-marquee-item">
+                    <Image src={brand.logo} alt={brand.alt} />
+                  </div>
+                ))
+              }
+            </span>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Existing Desktop Logo Grid -->
+    <div class="hidden lg:block my-20">
       <div
-        class="clients-logo-grid hidden lg:flex flex-col items-center h-auto w-auto p-5 md:p-0 mt-20"
+        id="clients-logo-container"
+        class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-5"
       >
-        <div
-          id="clients-logo-container"
-          class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 md:gap-x-15 md:gap-y-15 lg:gap-x-15 xl:gap-x-55 lg:gap-y-23 gap-x-0 gap-y-0 object-contain px-10"
-          style="max-width: 1621px; height: 629px;"
-        >
-        </div>
+        {
+          OurClientLogos.map((brand) => (
+            <div class="w-full h-48 p-2 hover:bg-card rounded-primary content-center">
+              <Image
+                src={brand.logo}
+                alt={brand.alt}
+                class={`clients-logo object-contain m-auto 
+                    ${brand.logo.src.includes("nanny") ? "max-h-30" : ""}`}
+              />
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>
@@ -188,9 +189,7 @@ import {Image} from "astro:assets";
     float: left;
     width: 50%;
   }
-  /* Base styles (shared across devices) */
 
-  /* Laptop-specific styles */
   .clients-marquee-block {
     --total-marquee-items: 8;
     height: 150px;
@@ -224,19 +223,17 @@ import {Image} from "astro:assets";
     display: block;
     margin: 0 auto;
   }
-  .clients-marquee-item::after {
-    background-color: #3f3f46;
-    transition: background-color 0.3s ease;
-  }
 
-  .clients-marquee-item:hover::after {
-    background-color: #3f3f46;
-  }
   .clients-marquee-left {
     animation: marqueeLeft 40s linear infinite;
   }
   .clients-marquee-right {
     animation: marqueeRight 40s linear infinite;
+  }
+
+  .clients-marquee-left:hover,
+  .clients-marquee-right:hover {
+    animation-play-state: paused;
   }
   @keyframes marqueeLeft {
     0% {
@@ -259,56 +256,3 @@ import {Image} from "astro:assets";
     }
   }
 </style>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const logos = [
-      "nestle.png",
-      "stanford.png",
-      "hyundai.png",
-      "panasonic.png",
-      "larsen.png",
-      "stengg.png",
-      "motorola.png",
-      "un.png",
-      "re.png",
-      "changi.png",
-      "livingmatrix.png",
-      "reach.png",
-      "innerkraft.png",
-      "moddo.png",
-      "share.png",
-      "nanny.png",
-    ];
-
-    const container = document.getElementById("clients-logo-container");
-    if (container) {
-      container.innerHTML = logos
-        .map(
-          (logo) =>
-            `<img src="/assets/${logo}" alt="${logo.split(".")[0]}" class="clients-logo mx-auto size-30 lg:size-60 ${logo === "nanny.png" ? "max-h-30 pb-10" : "max-h-24"} object-contain">`
-        )
-        .join("");
-    }
-  });
-  const vertical = false;
-  const pauseOnHover = true;
-  const reverse = true;
-
-  const element = document.createElement("div");
-  element.style.display = vertical ? "flex" : "block";
-  element.style.flexDirection = vertical ? "column" : "row";
-  element.style.animation = "marquee 10s linear infinite";
-  element.style.animationDirection = reverse ? "reverse" : "normal";
-
-  if (pauseOnHover) {
-    element.addEventListener("mouseenter", () => {
-      element.style.animationPlayState = "paused";
-    });
-    element.addEventListener("mouseleave", () => {
-      element.style.animationPlayState = "running";
-    });
-  }
-
-  // element.innerText = "Marquee Content";
-  document.body.appendChild(element);
-</script>
