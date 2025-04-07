@@ -53,7 +53,7 @@ const slides = [
     {
       slides.map((slide, index) => (
         <div
-          class="swiper-slide focus:outline-2  focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          class="swiper-slide"
           data-index={index}
           role="listitem"
           tabindex="0"
@@ -63,11 +63,12 @@ const slides = [
               {slide.text}
             </h1>
             <div class="h-[200px] lg:h-[calc(90vh-250px)] w-full">
-            <Image
-              class="slide-image w-full h-full transition-all duration-500"
-              src={slide.img}  
-              alt={slide.alt}
-             />
+              <Image
+                loading="eager"
+                class="slide-image w-full h-full"
+                src={slide.img}
+                alt={slide.alt}
+              />
             </div>
           </div>
         </div>
@@ -87,9 +88,8 @@ const slides = [
       centeredSlides: true,
       grabCursor: false,
       autoplay: {
-        delay: 2000,
+        delay: 3500,
         disableOnInteraction: false,
-        waitForTransition: false,
       },
       allowTouchMove: false,
       loop: true,
