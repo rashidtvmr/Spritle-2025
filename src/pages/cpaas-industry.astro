@@ -1,6 +1,12 @@
 ---
 // src/pages/industries/cpaas.astro
 import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
+import realtimechat from "../assets/images/industry/cPaas/realtimechat.png";
+import retailer from "../assets/images/industry/cPaas/retailer.png"
+import voice from "../assets/images/industry/cPaas/voice.png"
+import u1 from "../../src/assets/icons/casestudy/u1.svg"
+import u2 from "../../src/assets/icons/casestudy/u2.svg";
+import u3 from "../../src/assets/icons/casestudy/u3.svg";
 import Layout from "../layouts/Layout.astro";
 
 const cpaasContent = {
@@ -18,25 +24,25 @@ const cpaasContent = {
     title: "CPaaS Technology Solutions We Offer",
     solutions: [
       {
-        logo: "/assets/unique1.svg",
+        logo: u1,
         title: "Real-Time Messaging & Chat Solutions",
         description:
           "Enable real-time, in-app messaging and chat features that enhance customer engagement and support",
       },
       {
-        logo: "/assets/unique2.svg",
+        logo: u2,
         title: "Video Conferencing Integration",
         description:
           "Integrate HD video conferencing into your applications for virtual meetings, customer support, and webinars",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo:u3,
         title: "Voice & IVR Systems",
         description:
           "Develop AI-enhanced voice systems with IVR (Interactive Voice Response) that offer intelligent call routing and improved customer service",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo: u3,
         title: "Omnichannel Communication Platform",
         description:
           "Unify SMS, email, push notifications, and social media into a single platform to streamline communication across multiple touchpoints",
@@ -47,19 +53,19 @@ const cpaasContent = {
     title: "Industry Success Stories",
     cases: [
       {
-        image: "/assets/cpass1.svg",
+        image: realtimechat,
         heading: "Real-Time Chat for E-commerce Platform",
         description:
           "Integrated a real-time messaging solution that improved customer service response time by 40% and increased sales by 20%",
       },
       {
-        image: "/assets/cpass2.svg",
+        image: voice,
         heading: "Voice & IVR Integration for Healthcare Provider",
         description:
           "Developed a customized voice and IVR solution for a healthcare provider, reducing appointment scheduling errors and improving patient satisfaction",
       },
       {
-        image: "/assets/cpass3.svg",
+        image: retailer,
         heading: "Omnichannel CPaaS for a Retailer",
         description:
           "Created an omnichannel communication platform that helped a retailer increase customer retention by 15% through personalized, timely engagement",

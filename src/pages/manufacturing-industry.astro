@@ -2,6 +2,12 @@
 // src/pages/industries/manufacturing.astro
 import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
 import Layout from "../layouts/Layout.astro";
+import factory from "../assets/images/industry/manufacture/factory.png";
+import globalmanufacturer from "../assets/images/industry/manufacture/globalmanufacturer.png"
+import robotics from "../assets/images/industry/manufacture/robotics.png"
+import u1 from "../../src/assets/icons/casestudy/u1.svg"
+import u2 from "../../src/assets/icons/casestudy/u2.svg";
+import u3 from "../../src/assets/icons/casestudy/u3.svg";
 
 const manufacturingContent = {
   heroSection: {
@@ -18,25 +24,25 @@ const manufacturingContent = {
     title: "Manufacturing Technology Solutions We Offer",
     solutions: [
       {
-        logo: "/assets/unique1.svg",
+        logo: u1,
         title: "Predictive Maintenance & Asset Optimization",
         description:
           "Transform learning environments with AI-powered platforms that adapt to individual student needs, providing personalized learning paths and real-time performance insights",
       },
       {
-        logo: "/assets/unique2.svg",
+        logo: u2,
         title: "IoT-Enabled Smart Factories",
         description:
           "Deliver seamless online education experiences with interactive virtual classrooms, enabling collaboration between students and educators, anywhere in the world",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo: u3,
         title: "Robotics & Automation Integration",
         description:
           "Use machine learning to create intelligent tutoring systems that provide real-time support and feedback to students, enhancing their learning outcomes",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo: u3,
         title: "Digital Twin & Simulation",
         description:
           "Leverage data analytics to track student progress, identify learning gaps, and offer tailored interventions that help students achieve their full potential",
@@ -47,19 +53,19 @@ const manufacturingContent = {
     title: "Industry Success Stories",
     cases: [
       {
-        image: "/assets/manufacturing1.svg",
+        image:globalmanufacturer,
         heading: "Predictive Maintenance for a Global Manufacturer",
         description:
           "Implemented AI-based predictive maintenance, reducing equipment downtime by 30% and maintenance costs by 25%",
       },
       {
-        image: "/assets/manufacturing2.svg",
+        image: factory,
         heading: "IoT-Driven Smart Factory Solution",
         description:
           "Designed and deployed an IoT platform for a leading automotive manufacturer, improving operational efficiency by 20%",
       },
       {
-        image: "/assets/manufacturing3.svg",
+        image: robotics,
         heading: "Robotics Automation for Electronics Manufacturing",
         description:
           "Integrated a robotics solution that streamlined assembly processes, reducing human error and increasing output by 35%",

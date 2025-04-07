@@ -2,6 +2,12 @@
 // src/pages/industries/aviation.astro
 import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
 import Layout from "../layouts/Layout.astro";
+import aircraft from "../assets/images/industry/aviation/aircraft.png";
+import analytics from "../assets/images/industry/aviation/analytics.png"
+import tracking from "../assets/images/industry/aviation/tracking.png"
+import u1 from "../../src/assets/icons/casestudy/u1.svg"
+import u2 from "../../src/assets/icons/casestudy/u2.svg";
+import u3 from "../../src/assets/icons/casestudy/u3.svg";
 
 const aviationContent = {
   heroSection: {
@@ -18,25 +24,25 @@ const aviationContent = {
     title: "Aviation Technology Solutions We Offer",
     solutions: [
       {
-        logo: "/assets/unique1.svg",
+        logo:u1,
         title: "Predictive Maintenance",
         description:
           "Use AI and IoT to predict aircraft maintenance needs, reducing downtime and improving fleet reliability.",
       },
       {
-        logo: "/assets/unique2.svg",
+        logo: u2,
         title: "Airport Data Analytics",
         description:
           "Optimize airport operations with real-time data analytics, enhancing passenger flow and resource management",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo: u3,
         title: "Smart Baggage Tracking",
         description:
           "Implement IoT-based baggage tracking systems to ensure smooth handling and minimize lost luggage incidents",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo: u3,
         title: "AI-Powered Safety & Security",
         description:
           "Deploy AI tools for enhancing safety protocols, threat detection, and ensuring compliance with industry standards",
@@ -47,19 +53,19 @@ const aviationContent = {
     title: "Industry Use Cases",
     cases: [
       {
-        image: "/assets/aviation1.svg",
+        image:aircraft,
         heading: "Predictive Aircraft Maintenance for a Major Airline",
         description:
           "Implemented an AI-powered maintenance system, reducing unscheduled downtime by 35%",
       },
       {
-        image: "/assets/aviation2.svg",
+        image: analytics,
         heading: "Real-Time Data Analytics for Airport Operations",
         description:
           "Designed a real-time data platform, improving passenger throughput and reducing delays at a major international airport",
       },
       {
-        image: "/assets/aviation3.svg",
+        image: tracking,
         heading: "IoT-Driven Baggage Tracking",
         description:
           "Enabled a seamless baggage tracking system, decreasing lost baggage rates by 40% across multiple airports",

@@ -2,6 +2,14 @@
 // src/pages/industries/education.astro
 import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
 import Layout from "../layouts/Layout.astro";
+import dashboard from "../assets/images/industry/education/dashboard.png";
+import LMS from "../assets/images/industry/education/LMS.png"
+import virtualclass from "../assets/images/industry/education/virtualclass.png"
+import u1 from "../../src/assets/icons/casestudy/u1.svg"
+import u2 from "../../src/assets/icons/casestudy/u2.svg";
+import u3 from "../../src/assets/icons/casestudy/u3.svg";
+
+
 
 const educationContent = {
   heroSection: {
@@ -18,25 +26,25 @@ const educationContent = {
     title: "EdTech Solutions We Offer",
     solutions: [
       {
-        logo: "/assets/unique1.svg",
+        logo: u1,
         title: "AI-Enhanced Learning Management Systems",
         description:
           "Transform learning environments with AI-powered platforms that adapt to individual student needs, providing personalized learning paths and real-time performance insights",
       },
       {
-        logo: "/assets/unique2.svg",
+        logo: u2,
         title: "Virtual Classrooms & Collaboration Tools",
         description:
           "Deliver seamless online education experiences with interactive virtual classrooms, enabling collaboration between students and educators, anywhere in the world",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo: u3,
         title: "Intelligent Tutoring Systems",
         description:
           "Use machine learning to create intelligent tutoring systems that provide real-time support and feedback to students, enhancing their learning outcomes",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo: u3,
         title: "Data-Driven Student Performance Analytics",
         description:
           "Leverage data analytics to track student progress, identify learning gaps, and offer tailored interventions that help students achieve their full potential",
@@ -47,19 +55,19 @@ const educationContent = {
     title: "Industry Success Stories",
     cases: [
       {
-        image: "/assets/edu1.svg",
+        image: LMS,
         heading: "AI-Powered LMS for Higher Education",
         description:
           "Developed an AI-driven learning platform for a leading university, increasing student engagement by 40% and improving retention rates",
       },
       {
-        image: "/assets/edu2.svg",
+        image: virtualclass,
         heading: "Virtual Classroom for Global Education Provider",
         description:
           "Implemented a virtual classroom solution for a global education provider, enabling real-time collaboration for over 10,000 students",
       },
       {
-        image: "/assets/edu3.svg",
+        image: dashboard,
         heading: "Student Analytics Dashboard for K-12 Schools",
         description:
           "Created a data-driven dashboard for K-12 schools, enabling teachers to monitor student progress and improve learning outcomes",

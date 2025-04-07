@@ -1,11 +1,15 @@
 ---
-const { logo, title, description } = Astro.props;
+const { title, description } = Astro.props;
+const { logo: Logo } = Astro.props;
+
 ---
 
 <div
   class="flex flex-col items-center justify-between text-center border-2 border-primary p-3 md:p-6 pt-3 xl:pt-10 rounded-lg shadow-lg bg-[#313131] h-full w-full "
 >
-  <img src={logo} alt="Logo" class="mb-4 max-w-[54px] max-h-[52px] mt-0" />
+
+  <Logo class="mb-4 max-w-[54px] max-h-[52px] mt-0" />
+
   <h2
     class="text-primary text-subtitle  font-medium text-center md:py-5 lg:h-30  xl:h-20"
   >
