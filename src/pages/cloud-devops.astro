@@ -1,6 +1,6 @@
 ---
 // Example usage in a page
-import ServicePageContent from "@/components/DynamicProps/ServicePageContent.astro";
+import ServicePageContent from "@/components/ServiceDropdown/ServicePageContent.astro";
 import Layout from "@/layouts/Layout.astro";
 
 const heroSection = {
@@ -127,7 +127,7 @@ const sections = [
   },
 ];
 ---
-<Layout>
-<ServicePageContent heroSection={heroSection} sections={sections} />
-</Layout/>
 
+<Layout>
+  <ServicePageContent heroSection={heroSection} sections={sections} />
+</Layout>

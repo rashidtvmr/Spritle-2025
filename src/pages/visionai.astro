@@ -1,5 +1,5 @@
 ---
-import ServicePageContent from "@/components/DynamicProps/ServicePageContent.astro";
+import ServicePageContent from "@/components/ServiceDropdown/ServicePageContent.astro";
 
 const visionAIPageData = {
   heroSection: {
@@ -149,11 +149,9 @@ const visionAIPageData = {
     },
   ],
 };
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 ---
 
-
 <Layout>
-  
   <ServicePageContent {...visionAIPageData} />
 </Layout>
