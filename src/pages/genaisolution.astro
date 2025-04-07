@@ -1,20 +1,150 @@
 ---
-import GenAiHero from "@/components/ServiceDropdown/GenAiSol/GenAiHero.astro";
-import Layout from "@/layouts/Layout.astro";
-import GenAiSecond from "@/components/ServiceDropdown/GenAiSol/GenAiSecond.astro";
-import GenAiThird from "@/components/ServiceDropdown/GenAiSol/GenAiThird.astro";
-import GenAiFourth from "@/components/ServiceDropdown/GenAiSol/GenAiFourth.astro";
-import GenAiFive from "@/components/ServiceDropdown/GenAiSol/GenAiFive.astro";
-import GenAiSixth from "@/components/ServiceDropdown/GenAiSol/GenAiSixth.astro";
-import GenAiLast from "@/components/ServiceDropdown/GenAiSol/GenAiLast.astro";
+import ServicePageContent from "@/components/DynamicProps/ServicePageContent.astro";
+
+const pageData = {
+  heroSection: {
+    heading: "Revolutionize Your Business with Generative AI",
+    description: "AI-Powered Innovation to Accelerate Your Growth",
+    buttonText: "Discover Our AI Solutions",
+    buttonIcon: "/assets/rightarrow.svg",
+    subHeading: "What is Generative AI?",
+    subDescription:
+      "Generative AI is a transformative technology that uses machine learning models to create new content, from text and images to music and code. Whether it's automating content creation or generating personalized experiences, Generative AI empowers businesses to unlock new possibilities, streamline operations, and improve customer engagement.",
+  },
+  sections: [
+    {
+      type: "value-proposition",
+      title: "Our Unique Value Proposition",
+      cards: [
+        {
+          logo: "/assets/unique1.svg",
+          title: "Custom AI Models for Your Business",
+          description:
+            "Every industry and business has unique needs. We develop AI models specifically tailored to your industry, whether it's retail, healthcare, entertainment, or manufacturing.",
+        },
+        {
+          logo: "/assets/unique2.svg",
+          title: "AI-Powered Creativity & Efficiency",
+          description:
+            "From generating compelling marketing content to automating complex design tasks, our solutions help you reduce costs, save time, and stay ahead of the competition by leveraging cutting-edge AI.",
+        },
+        {
+          logo: "/assets/unique3.svg",
+          title: "Deep Industry Expertise",
+          description:
+            "With years of experience deploying AI solutions across various sectors, we understand how to drive meaningful impact using Generative AI",
+        },
+      ],
+    },
+    {
+      type: "use-cases",
+      title: "AI Solutions Across Industries",
+      description:
+        "Innovate faster with new capabilities, a choice of industry-leading FMs, and infrastructure that delivers high performance while lowering costs.",
+      cases: [
+        {
+          image: "/assets/secthree1.png",
+          title: "Healthcare: AI Summarization for Patient Reports",
+          description:
+            "Our AI-powered solution for a leading healthcare provider processes vast amounts of patient data to generate concise, accurate summaries of health reports. This reduced manual work by 50% and allowed doctors to focus on patient care",
+        },
+        {
+          image: "/assets/secthree2.png",
+          title: "Generative AI in Manufacturing Design",
+          description:
+            "We implemented a generative AI model for a large automotive manufacturer to automatically create design iterations of new vehicle models. This sped up the prototyping phase by 35%, resulting in faster time-to-market for new products",
+        },
+      ],
+    },
+    {
+      type: "value-proposition",
+      title: "Solutions We Offer",
+      cards: [
+        {
+          logo: "/assets/unique1.svg",
+          title: "Virtual Assistant for Sales",
+          description:
+            "Empower your sales team with AI-driven virtual assistants that engage with leads, answer inquiries, and schedule follow-ups. By automating repetitive tasks, these assistants help boost sales productivity and enhance customer interactions.",
+        },
+        {
+          logo: "/assets/unique2.svg",
+          title: "AI-Powered Data Summarization",
+          description:
+            "From legal documents to healthcare records, our AI solutions generate concise, accurate summaries, making decision-making faster and more efficient.",
+        },
+        {
+          logo: "/assets/unique3.svg",
+          title: "AI-Driven Product Design & Prototyping",
+          description:
+            "Generate multiple design iterations quickly, whether you're in the automotive, manufacturing, or creative industries. Our AI helps you explore creative possibilities at scale",
+        },
+        {
+          logo: "/assets/unique3.svg",
+          title: "Customer Support Automation",
+          description:
+            "Enhance your customer service with AI-generated responses that provide accurate, human-like interactions in real time",
+        },
+      ],
+    },
+    {
+      type: "benefits",
+      title: "Why Generative AI is a Game Changer",
+      items: [
+        {
+          title: "Scalability",
+          description:
+            "Generative AI allows businesses to produce content and solutions at a scale never before possible, meeting growing demands without increasing manual efforts.",
+        },
+        {
+          title: "Personalization",
+          description:
+            "AI can tailor content and solutions to individual user needs, increasing engagement, loyalty, and satisfaction",
+        },
+        {
+          title: "Efficiency",
+          description:
+            "Automating tasks that previously required hours of human work—whether it's writing, designing, or analyzing data—allows businesses to save time and reduce operational costs",
+        },
+      ],
+    },
+    {
+      type: "success-stories",
+      title: "Success Stories",
+      stories: [
+        {
+          image: "/assets/succ1.svg",
+          heading:
+            "Retail Giant Sees 35% Uplift in Customer Engagement with AI-Generated Content:",
+          description:
+            "A large online retailer implemented our Generative AI to create personalized product recommendations and content for customers. The result was a 35% uplift in customer engagement and a 20% increase in conversion rates.",
+        },
+        {
+          image: "/assets/succ2.svg",
+          heading:
+            "Automated Video Annotations Boost Healthcare Precision by 30%:",
+          description:
+            "Our AI-generated video annotation tool for a surgical video analysis platform increased the precision of detecting surgical errors by 30%, enabling healthcare professionals to make more informed decisions",
+        },
+      ],
+    },
+    {
+      type: "intermediate-cta",
+      heading: "Start Your AI Journey",
+      description:
+        "Ready to leverage the power of Generative AI for your business? We offer tailor-made AI solutions that bring efficiency, innovation, and scalability to your operations.",
+    },
+    {
+      type: "final-cta",
+      heading: "Ready to Unlock the Power of AI for Your Business",
+      description:
+        "Let's discuss how we can help your organization thrive in the age of artificial intelligence",
+      buttonText: "Get a Free Consultation Today",
+    },
+  ],
+};
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Generative AI Services for Innovation">
-  <GenAiHero />
-  <GenAiSecond/>
-  <GenAiThird/>
-  <GenAiFourth/>
-  <GenAiFive/>
-  <GenAiSixth/>
-  <GenAiLast />
+<Layout>
+  <ServicePageContent {...pageData} />
 </Layout>

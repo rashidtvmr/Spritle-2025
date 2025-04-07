@@ -1,16 +1,121 @@
 ---
-import AiMlHero from "@/components/ServiceDropdown/GenAiSolution/AiMl/AiMlHero.astro";
-import AiMlSecond from "@/components/ServiceDropdown/GenAiSolution/AiMl/AiMlSecond.astro";
-import AiMlSuccess from "@/components/ServiceDropdown/GenAiSolution/AiMl/AiMlSuccess.astro";
-import AiMlStar from "@/components/ServiceDropdown/GenAiSolution/AiMl/AiMlStar.astro";
-import AiMlLast from "@/components/ServiceDropdown/GenAiSolution/AiMl/AiMlLast.astro";
-import Layout from "@/layouts/Layout.astro";
+// src/pages/ai-ml-services.astro
+import ServicePageContent from "@/components/DynamicProps/ServicePageContent.astro";
+import Layout from "../layouts/Layout.astro";
+
+const heroSection = {
+  heading: "AI & ML Solutions that Drive Innovation",
+  description: "Harness advanced AI and machine learning to automate, predict, and transform your business",
+  buttonText: "Explore Our AI & ML Services",
+  buttonIcon: "/assets/rightarrow.svg",
+  subHeading: "Empowering Businesses with Cutting-Edge AI & ML",
+  subDescription: "Spritle delivers custom AI and machine learning solutions that automate processes, predict outcomes, and enable smarter decision-making. Our expertise across industries ensures you unlock the full potential of AI, driving your business forward"
+};
+
+const sections = [
+  {
+    type: "Core-Ai",
+    title: "Core AI & ML Services",
+    cards: [
+      {
+        logo: "/assets/unique1.svg",
+        heading: "Predictive Analytics",
+        content: ["Customer churn prediction", "Sales forecasting", "Demand forecasting"]
+      },
+      {
+        logo: "/assets/unique1.svg",
+        heading: "Natural Language Processing (NLP)",
+        content: ["Virtual assistants", "AI chatbots", "Sentiment analysis"]
+      },
+      {
+        logo: "/assets/unique1.svg",
+        heading: "Computer Vision",
+        content: ["Facial recognition", "Medical imaging analysis", "Automated quality control"]
+      },
+      {
+        logo: "/assets/unique1.svg",
+        heading: "Reinforcement Learning",
+        content: ["Autonomous systems", "Robotics", "Gaming strategies"]
+      },
+      {
+        logo: "/assets/unique1.svg",
+        heading: "AI-Powered Automation",
+        content: ["Robotic process automation (RPA)", "Intelligent workflows"]
+      },
+      {
+        logo: "/assets/unique1.svg",
+        heading: "Deep Learning Models",
+        content: ["Personalized recommendations", "Fraud detection", "Fraud detection"]
+      }
+    ]
+  },
+  {
+    type: "intermediate-cta",
+    heading: "Tailored AI Solutions for Your Business",
+    description: "Whether you need AI models for specific applications or fully integrated AI systems, our custom development services ensure AI fits seamlessly into your business workflow"
+  },
+  {
+    type: "Core-Ai",
+    title: "Industry-Specific AI Solutions",
+    cards: [
+      {
+        logo: "/assets/unique1.svg",
+        heading: "Healthcare",
+        content: ["AI-powered diagnostic tools", "Virtual healthcare assistants", "Predictive patient analytics"]
+      },
+      {
+        logo: "/assets/unique1.svg",
+        heading: "Manufacturing",
+        content: ["Predictive maintenance", "Automated quality control", "Smart factory operations"]
+      },
+      {
+        logo: "/assets/unique1.svg",
+        heading: "Retail & E-commerce",
+        content: ["Personalized recommendations", "Inventory forecasting", "Dynamic pricing models"]
+      },
+      {
+        logo: "/assets/unique1.svg",
+        heading: "Finance",
+        content: ["Fraud detection", "Credit risk assessment", "Algorithmic trading"]
+      }
+    ]
+  },
+  {
+    type: "success-stories",
+    title: "Success Stories",
+    stories: [
+      {
+        image: "/assets/succ3.svg",
+        heading: "AI-Based Predictive Maintenance for Manufacturing",
+        description: "Reduced machine downtime by 30% using predictive maintenance algorithms, leading to a 20% increase in operational efficiency"
+      },
+      {
+        image: "/assets/succ4.svg",
+        heading: "NLP-Powered Sentiment Analysis for Retail",
+        description: "Developed a sentiment analysis tool for a retail giant, enabling them to gauge customer satisfaction in real-time, increasing customer retention by 15%."
+      }
+    ]
+  },
+  {
+    type: "benefits",
+    title: "Why Spritle for AI & ML Solutions",
+    items: [
+      { title: "Proven expertise in AI model development." },
+      { title: "Agile and scalable deployment of AI systems" },
+      { title: "End-to-end support from development to integration" },
+      { title: "Focus on security, compliance, and data privacy." }
+    ]
+  },
+  {
+    type: "final-cta",
+    heading: "Unlock the Power of AI & ML for Your Business",
+    description: "Get in touch to discover how Spritle's AI and machine learning expertise can transform your business",
+    buttonText: "Start Your AI Transformation"
+  }
+];
 ---
 
-<Layout title="Spritle AI/ML Solutions">
-  <AiMlHero />
-  <AiMlSecond />
-  <AiMlSuccess />
-  <AiMlStar />
-  <AiMlLast />
+<Layout>
+  <ServicePageContent heroSection={heroSection} sections={sections} />
 </Layout>
+
