@@ -1,0 +1,17 @@
+---
+const { label, id, errorMessage, ...props } = Astro.props;
+---
+
+<div class="w-full">
+  <label for={id} class="block text-card-text text-lg font-medium mb-2">
+    {label}
+  </label>
+  <input
+    id={id}
+    class="form-input w-full text-sm border border-secondary rounded-full text-primary p-4 bg-background"
+    {...props}
+  />
+  <span id={id + "Error"} class="text-red-500 text-sm opacity-0 mt-1"
+    >{errorMessage}</span
+  >
+</div>

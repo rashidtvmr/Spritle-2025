@@ -4,6 +4,10 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			borderRadius: {
+				primary: '10px',
+				secondary: '20px',
+			},
 			animation: {
 				'moving-line': 'scrolling 2s linear infinite',
 			},
@@ -22,5 +26,5 @@ export default {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/forms'),],
 };

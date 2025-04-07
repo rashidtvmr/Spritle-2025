@@ -16,48 +16,71 @@
     --color-primary: #E2E2E2;
     --color-secondary: #B0B0B0;
     --color-background: #252525;
+    --color-card: #313131;
+    --color-card-text: #EAEAEA;
+    --color-button: #15AED5;
 }
 
 body {
     @apply bg-background text-primary font-dm-sans;
 }
+
 .text-gradientbody {
-    @apply bg-gradient-to-b from-[#fffcfc] to-[rgba(234,234,234,0.5)] bg-clip-text text-transparent;
+    @apply bg-gradient-to-b from-[#fffcfc] to-[rgba(234_234_234_0.5)] bg-clip-text text-transparent;
 }
+
 .text-csgradient {
-    @apply bg-gradient-to-b from-[rgb(234,234,234)] to-[#858282] text-transparent bg-clip-text;
+    @apply bg-gradient-to-b from-[rgb(234_234_234)] to-[#858282] text-transparent bg-clip-text;
 }
 
-.btnprimary{
-      @apply  text-white  bg-[#15AED5] items-center  gap-2 mt-6    font-medium rounded-full flex tracking-wider;
+.btnprimary {
+    @apply text-white bg-[#15AED5] items-center gap-2 mt-6 font-medium rounded-full flex tracking-wider;
 }
-.text-title{
-    @apply text-4xl lg:text-8xl ;
+
+.text-title {
+    @apply text-4xl lg:text-8xl;
 
 }
-.text-title-body{
-     @apply text-xl lg:text-[26.6px] ;
+
+.text-title-body {
+    @apply text-xl lg:text-[26.6px];
 }
-.text-subtitle{
-    @apply text-xl lg:text-3xl ;
+
+.text-subtitle {
+    @apply text-xl lg:text-3xl;
 
 }
-.text-subbody{
-    @apply text-xl md:text-2xl lg:text-[34px] ;
+
+.text-subbody {
+    @apply text-xl md:text-2xl lg:text-[34px];
 
 }
 
 .text-heading {
-  @apply text-2xl  lg:text-4xl xl:text-[48px] font-dm-sans;
+    @apply text-2xl lg:text-4xl xl:text-[48px] font-dm-sans;
 }
+
 .text-centerheading {
-  @apply text-2xl  lg:text-4xl xl:text-[55px] font-dm-sans;
+    @apply text-2xl lg:text-4xl xl:text-[55px] font-dm-sans;
 }
 
 
 .text-subheading {
-  @apply text-lg  lg:text-xl xl:text-2xl;
+    @apply text-lg lg:text-xl xl:text-2xl;
 }
-.text-body{
-@apply text-lg  lg:text-xl
+
+.text-body {
+    @apply text-lg lg:text-xl
+}
+
+.card {
+    @apply bg-card text-primary rounded-primary shadow-lg p-5;
+}
+
+.card_bordered {
+    @apply bg-card text-primary rounded-primary shadow-lg p-5 border-2 border-primary;
+}
+
+.card_outlined {
+    @apply bg-background rounded-secondary shadow-lg border border-1 border-primary p-5 lg:p-10;
 }

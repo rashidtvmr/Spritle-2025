@@ -1,8 +1,8 @@
 ---
 import GradientHeading from "../DynamicProps/GradientHeading.astro";
 import ScrollCard from "../About/ScrollCard.astro";
-import RightArrow from "../../assets/icons/rightarrow.svg";
-import OurProcessSvg from "../../assets/our_process.svg";
+import OurProcessSvg from "@/assets/our_process.svg";
+import Button from "@/components/common/button.astro";
 ---
 
 <div class="">
@@ -21,10 +21,13 @@ import OurProcessSvg from "../../assets/our_process.svg";
       created for the greatest masterminds around the world.
     </p>
 
-    <button class="btnprimary text-lg font-normal px-8 py-2 my-10">
-      Get Started
-      <RightArrow class="w-4 h-4" />
-    </button>
+    <Button
+      arrow={true}
+      text="Get Started"
+      className="my-10 px-20"
+      type="link"
+      href="#"
+    />
   </div>
 
   <div class="xl:mt-36 mt-8 flex justify-center">

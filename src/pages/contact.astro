@@ -1,493 +1,207 @@
 ---
 import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
 import Layout from "@/layouts/Layout.astro";
-import  callicon from "../../src/assets/images/contactme/callicon.png"
-import contactarrow from "../../src/assets/images/contactme/contactarrow.png"
-import msgicon from "../../src/assets/images/contactme/contacticon.png"
-import instagram from "../../src/assets/images/contactme/instagram.png"
-import linkedin from "../../src/assets/images/contactme/linkedin.png"
-import twitter from "../../src/assets/images/contactme/twitter.png"
-import arrowright from "../../src/assets/images/contactme/arrowright.png"
-import {Image} from "astro:assets";
+import LinkInput from "@/components/contact/LinkInput.astro";
+import TextInput from "@/components/contact/TextInput.astro";
+import Button from "@/components/common/button.astro";
+import TwitterIcon from "@/assets/icons/twitter.svg";
+import LinkedInIcon from "@/assets/icons/linkedin.svg";
+import IgIcon from "@/assets/icons/ig.svg";
+import XIcon from "@/assets/icons/x.svg";
 ---
+
 <Layout title="Contact us">
-<div class="mt-20 lg:mt-52">
-  <div
-    class="flex flex-col justify-center items-center text-center  container space-y-5 mt-10 md:mt-30"
-  >
-    <GradientHeading
-      text=" High-performing remote teams. The future of work."
-    />
-
-    <!-- <h1 
-    class="
-    font-dmSans
-    font-normal
-    text-title"
-    style="background: linear-gradient(360deg, #ffffff 0%, rgba(255, 255, 255, 0.3) 100%); 
-             -webkit-background-clip: text;
-             -webkit-text-fill-color: transparent;"
-  >
-    High-performing remote teams. <br /> The future of work.
-  </GradientHeading> -->
-    <p class="font-normal md:mt-4 text-title-body text-primary max-w-[1021px]">
-      Powerful, self-serve team engagement tools and analytics. Supercharge your
-      managers & keep employees engaged from anywhere.
-    </p>
-  </div>
-</div>
-
-<section class="my-10 md:my-20">
-  <div class="container space-y-5">
-
-    {/* Contact Us Via Email */}
-    <h2 class="text-subbody text-primary font-semibold my-10 md:my-20">
-      Contact Us Via Email
-    </h2>
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:mb-13 mb-6 rounded-[20px] border-2 border-[#D6D6D6] lg:max-w-[1718px] lg:max-h-[224px] gap-[20px] md:gap-[30px] lg:gap-[50px] p-[20px] md:p-[30px] lg:p-[50px]"
-    >
-      <div class="max-w-full lg:max-w-[472.67px] lg:max-h-[124px]">
-        <h3 class="font-semibold text-primary text-subheading mb-4">
-          For General Inquiries
-        </h3>
-        <a
-          href="mailto:info@spritle.com"
-          class="flex items-center rounded-[100px] border border-[#D6D6D6] px-4 md:px-6 py-2 hover:border-blue-500 w-full max-w-full lg:max-w-[472.67px]"
-        >
-          <span class="flex-grow flex items-center text-white font-normal text-body truncate">
-            <Image 
-            src={msgicon}
-            alt="msgicon" 
-            class="mr-2 flex-shrink-0"
-            />
-            <span class="truncate">info@spritle.com</span>
-          </span>
-
-          <Image
-            src={contactarrow}
-            alt="arrow"
-            class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 ml-2 flex-shrink-0"
-          />
-        </a>
-      </div>
-      <div class="max-w-full md:max-w-[472.67px] lg:max-h-[124px]">
-        <h3 class="font-semibold text-primary text-subheading mb-4">
-          For Business Collaborations
-        </h3>
-        <a
-          href="mailto:partnerships@digitx.com"
-          class="flex items-center rounded-[100px] border border-[#D6D6D6] px-4 md:px-6 py-2 hover:border-blue-500 w-full max-w-full lg:max-w-[472.67px]"
-        >
-          <span class="flex-grow flex items-center text-white font-normal text-body truncate">
-            <Image 
-            src={msgicon}
-            alt="msgicon" 
-            class="mr-2 flex-shrink-0"
-            />
-            <span class="truncate">partnerships@digitx.com</span>
-            <Image
-            src={contactarrow}
-            alt="arrow"
-            class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 ml-2 flex-shrink-0"
-          />
-          </span>
-          
-        </a>
-      </div>
-      <div class="max-w-full md:max-w-[472.67px] lg:max-h-[124px]">
-        <h3 class="font-semibold text-primary text-subheading mb-4">
-          For Job Opportunities
-        </h3>
-        <a
-          href="mailto:jobs@spritle.com"
-          class="flex items-center rounded-[100px] border border-[#D6D6D6] px-4 md:px-6 py-2 hover:border-blue-500 w-full max-w-full lg:max-w-[472.67px]"
-        >
-          <span class="flex-grow flex items-center text-white font-normal text-body truncate">
-            <Image 
-            src={msgicon}
-            alt="msgicon" 
-            class="mr-2 flex-shrink-0"
-            />
-            <span class="truncate">jobs@spritle.com</span>
-          </span>
-          <Image
-            src={contactarrow}
-            alt="arrow"
-            class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 ml-2 flex-shrink-0"
-          />
-        </a>
-      </div>
-    </div>
-
-    {/* Contact Us By Phone */}
-    <h2 class="text-subbody text-primary font-semibold my-10 md:my-20 ">
-      Contact Us By Phone
-    </h2>
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:mb-13 mb-6 rounded-[20px] border-2 border-[#D6D6D6] lg:max-w-[1718px] lg:max-h-[224px] gap-[20px] md:gap-[30px] lg:gap-[50px] p-[20px] md:p-[30px] lg:p-[50px]"
-    >
-      <div class="max-w-full lg:max-w-[472.67px] lg:max-h-[124px]">
-        <h3 class="font-semibold text-primary text-subheading mb-4">
-          Ohio, USA
-        </h3>
-        <a
-          href="tel:+16146647677"
-          class="flex items-center rounded-[100px] border border-[#D6D6D6] px-4 md:px-6 py-2 hover:border-blue-500 w-full"
-        >
-          <span class="flex-grow flex items-center text-white font-normal text-body truncate">
-            <Image 
-            src= {callicon} 
-            alt=""
-            class="mr-2 flex-shrink-0" />
-            <span class="truncate">+1 614 664 7677</span>
-          <Image
-            src={contactarrow}
-            alt="arrow"
-            class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 ml-2 flex-shrink-0"
-          />
-        </a>
-      </div>
-
-      <div class="max-w-full lg:max-w-[472.67px] lg:max-h-[124px]">
-        <h3 class="font-semibold text-primary text-subheading mb-4">
-          Singapore
-        </h3>
-        <a
-          href="tel:+6566525475"
-          class="flex items-center rounded-[100px] border border-[#D6D6D6] px-4 md:px-6 py-2 hover:border-blue-500 w-full"
-        >
-          <span class="flex-grow flex items-center text-white font-normal text-body truncate">
-            <Image 
-            src= {callicon} 
-            alt=""
-            class="mr-2 flex-shrink-0"
-             />
-            <span class="truncate">+65 6652 5475</span>
-          </span>
-          <Image
-            src={contactarrow}
-            alt="arrow"
-            class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 ml-2 flex-shrink-0"
-          />
-        </a>
-      </div>
-
-      <div class="max-w-full lg:max-w-[472.67px] lg:max-h-[124px]">
-        <h3 class="font-semibold text-primary text-subheading mb-4">
-          Chennai, India
-        </h3>
-        <a
-          href="tel:+914447843003"
-          class="flex items-center rounded-[100px] border border-[#D6D6D6] px-4 md:px-6 py-2 hover:border-blue-500 w-full"
-        >
-          <span class="flex-grow flex items-center text-white font-normal text-body truncate">
-            <Image 
-            src= {callicon} 
-            alt=""
-            class="mr-2 flex-shrink-0" />
-            <span class="truncate">+91 44 4784 3003</span>
-          </span>
-          <Image
-          src={contactarrow}
-          alt="arrow"
-          class="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 ml-2 flex-shrink-0"
+  <main class="container">
+    <div class="mt-20 lg:mt-52">
+      <div
+        class="flex flex-col justify-center items-center text-center container space-y-5 mt-10 md:mt-30"
+      >
+        <GradientHeading
+          text=" High-performing remote teams. The future of work."
         />
-        </a>
+
+        <p
+          class="font-normal md:mt-4 text-title-body text-primary max-w-[1021px]"
+        >
+          Powerful, self-serve team engagement tools and analytics. Supercharge
+          your managers & keep employees engaged from anywhere.
+        </p>
       </div>
     </div>
 
-    {/* Online Inquiry Form */}
-    <div class='my-10 md:my-20'>
-      <h2 class="text-subbody text-primary font-semibold mb-5">
-        Online Inquiry Form
+    <section class="my-20">
+      <h2 class="text-4xl text-primary font-bold my-10">
+        Contact Us Via Email
       </h2>
-      <p class="xl:mb-13 mb-6 text-[#B0B0B0] font-medium text-subheading">
-        Please fill in the following details, and we'll get back to you within 24
-        hours.
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 card_outlined"
+      >
+        <div class="">
+          <h3 class="font-semibold text-primary text-subheading mb-4">
+            For General Inquiries
+          </h3>
+          <LinkInput email="info@spritle.com" type="message" />
+        </div>
+        <div class="">
+          <h3 class="font-semibold text-primary text-subheading mb-4">
+            For Business Collaborations
+          </h3>
+          <LinkInput email="partnerships@digitx.com" type="message" />
+        </div>
+        <div class="">
+          <h3 class="font-semibold text-primary text-subheading mb-4">
+            For Job Opportunities
+          </h3>
+          <LinkInput email="jobs@spritle.com" />
+        </div>
+      </div>
+    </section>
+
+    <section class="my-20">
+      <h2 class="text-4xl text-primary font-semibold my-10">
+        Contact Us By Phone
+      </h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 card_outlined gap-10"
+      >
+        <div class="">
+          <h3 class="font-semibold text-primary text-subheading mb-4">
+            Ohio, USA
+          </h3>
+          <LinkInput email="+1 614 664 7677" type="phone" />
+        </div>
+
+        <div class="">
+          <h3 class="font-semibold text-primary text-subheading mb-4">
+            Singapore
+          </h3>
+          <LinkInput email="+65 6652 5475" type="phone" />
+        </div>
+
+        <div class="">
+          <h3 class="font-semibold text-primary text-subheading mb-4">
+            Chennai, India
+          </h3>
+          <LinkInput email="+91 44 4784 3003" type="phone" />
+        </div>
+      </div>
+    </section>
+
+    <!-- form -->
+    <section>
+      <div class="my-10">
+        <h2 class="text-subbody text-primary font-semibold my-3">
+          Online Inquiry Form
+        </h2>
+        <p class="text-lg text-secondary">
+          Please fill in the following details, and we'll get back to you within
+          24 hours.
+        </p>
+      </div>
+
+      <form
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 card_outlined gap-10"
+        id="contactForm"
+      >
+        <TextInput
+          type="text"
+          id="firstName"
+          placeholder="Enter your First Name"
+          label="First Name"
+          required
+        />
+        <TextInput
+          type="text"
+          id="lastName"
+          placeholder="Enter your Last Name"
+          label="Last Name"
+          required
+        />
+
+        <TextInput
+          type="email"
+          id="email"
+          placeholder="Enter your Email"
+          label="Email"
+          required
+        />
+
+        <div>
+          <label
+            for="service"
+            class="block text-card-text text-lg font-medium mb-2"
+          >
+            Select Service
+          </label>
+          <select
+            id="service"
+            class="form-select w-full text-sm border border-secondary rounded-full text-primary p-4 bg-background"
+            required
+          >
+            <option value="">Select your Service</option>
+            <option value="service1">Service 1</option>
+            <option value="service2">Service 2</option>
+            <option value="service3">Service 3</option>
+          </select>
+          <span id="serviceError" class="text-red-500 text-sm hidden mt-1"
+          ></span>
+        </div>
+
+        <TextInput
+          type="tel"
+          id="phone"
+          placeholder="Enter your Phone Number"
+          label="Phone Number"
+          required
+        />
+
+        <TextInput
+          type="text"
+          id="company"
+          placeholder="Enter Company/Organization Name"
+          label="  Company / Organization Name"
+          required
+        />
+
+        <!-- Message row -->
+        <div class="col-span-1 md:col-span-2 lg:col-span-3">
+          <label
+            for="message"
+            class="block text-[#EAEAEA] text-subheading font-medium mb-2 lg:mb-[14px]"
+          >
+            Message
+          </label>
+          <textarea
+            id="message"
+            rows="4"
+            class="form-input w-full text-sm border border-secondary rounded-secondary text-[#888888] p-4 bg-background"
+            placeholder="Enter your Message"
+            required></textarea>
+          <span id="messageError" class="text-red-500 text-sm hidden mt-1"
+          ></span>
+        </div>
+
+        <div
+          class="col-span-1 md:col-span-2 lg:col-span-3 flex justify-center items-center mt-2 lg:mt-4"
+        >
+          <Button arrow={true} type="submit" href="" text="Send your inquiry" />
+        </div>
+      </form>
+    </section>
+
+    <div
+      id="formMessage"
+      class="col-span-1 md:col-span-2 lg:col-span-3 text-center hidden"
+    >
+      <p id="successMessage" class="text-green-500 font-medium text-lg hidden">
+        Your message has been sent successfully!
+      </p>
+      <p id="errorMessage" class="text-red-500 font-medium text-lg hidden">
+        There was an error submitting the form. Please try again.
       </p>
     </div>
 
-    <form
-    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full max-w-[1718px] min-h-[500px] lg:h-[808px] mx-auto rounded-[20px] border-[2px] border-white p-4 sm:p-8 md:p-12 lg:p-20 gap-4 sm:gap-6 md:gap-8 lg:gap-[50px]"
-    id="contactForm"
-  >
-    <!-- First row -->
-    <div class="w-full h-auto lg:h-[120px] mb-4 lg:mb-0">
-      <label
-        for="firstName"
-        class="block text-[#EAEAEA] text-subheading font-medium mb-2 lg:mb-[14px]"
-      >
-        First Name
-      </label>
-      <input
-        type="text"
-        id="firstName"
-        class="h-12 md:h-14 lg:h-[70px] block w-full text-body border border-[#D6D6D6] rounded-full text-[#888888] px-4 py-2"
-        placeholder="Enter your Name"
-        required
-      />
-      <span id="firstNameError" class="text-red-500 text-sm hidden mt-1"></span>
-    </div>
-    
-    <div class="w-full h-auto lg:h-[120px] mb-4 lg:mb-0">
-      <label
-        for="lastName"
-        class="block text-[#EAEAEA] text-subheading font-medium mb-2 lg:mb-[14px]"
-      >
-        Last Name
-      </label>
-      <input
-        type="text"
-        id="lastName"
-        class="h-12 md:h-14 lg:h-[70px] block w-full text-body border border-[#D6D6D6] rounded-full text-[#888888] px-4 py-2"
-        placeholder="Enter your Name"
-        required
-      />
-      <span id="lastNameError" class="text-red-500 text-sm hidden mt-1"></span>
-    </div>
-    
-    <div class="w-full h-auto lg:h-[120px] mb-4 lg:mb-0">
-      <label
-        for="email"
-        class="block text-[#EAEAEA] text-subheading font-medium mb-2 lg:mb-[14px]"
-      >
-        Email
-      </label>
-      <input
-        type="email"
-        id="email"
-        class="h-12 md:h-14 lg:h-[70px] block w-full text-body border border-[#D6D6D6] rounded-full text-[#888888] px-4 py-2"
-        placeholder="Enter your Email"
-        required
-      />
-      <span id="emailError" class="text-red-500 text-sm hidden mt-1"></span>
-    </div>
-    
-    <!-- Second row -->
-    <div class="w-full h-auto lg:h-[120px] mb-4 lg:mb-0">
-      <label
-        for="service"
-        class="block text-[#EAEAEA] text-subheading font-medium mb-2 lg:mb-[14px]"
-      >
-        Select Service
-      </label>
-      <select
-        id="service"
-        class="h-12 md:h-14 lg:h-[70px] block w-full text-body border border-[#D6D6D6] rounded-full text-[#888888] px-4 py-2"
-        required
-      >
-        <option value="">Select your Service</option>
-        <option value="service1">Service 1</option>
-        <option value="service2">Service 2</option>
-        <option value="service3">Service 3</option>
-      </select>
-      <span id="serviceError" class="text-red-500 text-sm hidden mt-1"></span>
-    </div>
-    
-    <div class="w-full h-auto lg:h-[120px] mb-4 lg:mb-0">
-      <label
-        for="phone"
-        class="block text-[#EAEAEA] text-subheading font-medium mb-2 lg:mb-[14px]"
-      >
-        Phone Number
-      </label>
-      <input
-        type="tel"
-        id="phone"
-        class="h-12 md:h-14 lg:h-[70px] block w-full text-body border border-[#D6D6D6] rounded-full text-[#888888] px-4 py-2"
-        placeholder="Enter your Phone Number"
-       pattern="^\+?[0-9]{10,15}$"
-       title="Phone number must be between 10 and 15 digits. You can optionally start with '+' for country code."
-       minlength="10"
-       maxlength="15"
-        required
-      />
-      <span id="phoneError" class="text-red-500 text-sm hidden mt-1"></span>
-    </div>
-    
-    <div class="w-full h-auto lg:h-[120px] mb-4 lg:mb-0">
-      <label
-        for="company"
-        class="block text-[#EAEAEA] text-subheading font-medium mb-2 lg:mb-[14px]"
-      >
-        Company / Organization Name
-      </label>
-      <input
-        type="text"
-        id="company"
-        class="h-12 md:h-14 lg:h-[70px] block w-full text-body border border-[#D6D6D6] rounded-full text-[#888888] px-4 py-2"
-        placeholder="Enter Name"
-      />
-      <span id="companyError" class="text-red-500 text-sm hidden mt-1"></span>
-    </div>
-    
-    <!-- Message row -->
-    <div class="col-span-1 md:col-span-2 lg:col-span-3 w-full h-auto lg:h-[194px] mb-6 lg:mb-0">
-      <label
-        for="message"
-        class="block text-[#EAEAEA] text-subheading font-medium mb-2 lg:mb-[14px]"
-      >
-        Message
-      </label>
-      <textarea
-        id="message"
-        rows="4"
-        class="h-32 md:h-40 lg:h-[153px] block w-full rounded-[20px] border-[#D6D6D6] border shadow-sm focus:border-blue-500 focus:ring-blue-500 text-body text-[#888888] px-4 py-2"
-        placeholder="Enter your Message"
-        required
-      ></textarea>
-      <span id="messageError" class="text-red-500 text-sm hidden mt-1"></span>
-    </div>
-    
-    <!-- Button container -->
-    <div class="col-span-1 md:col-span-2 lg:col-span-3 flex justify-center items-center mt-2 lg:mt-4">
-      <button
-        type="submit"
-        class="inline-flex items-center justify-center w-full sm:w-auto sm:min-w-[160px] md:w-[200px] lg:w-[234px] h-12 md:h-14 lg:h-[64px] rounded-full lg:rounded-[74px] border border-transparent bg-[#15AED5] px-4 sm:px-5 md:px-6 lg:px-6 py-3 lg:py-[18px] text-sm md:text-base font-semibold text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 gap-1 lg:gap-[6px]"
-      >
-        Send your inquiry
-        <img src="/assets/arrowright.png" alt="arrow" class="w-4 h-4 md:w-5 md:h-5 ml-1" />
-      </button>
-    </div>
-    
-    <!-- Form submission message -->
-    <div id="formMessage" class="col-span-1 md:col-span-2 lg:col-span-3 text-center hidden">
-      <p id="successMessage" class="text-green-500 font-medium text-lg hidden">Your message has been sent successfully!</p>
-      <p id="errorMessage" class="text-red-500 font-medium text-lg hidden">There was an error submitting the form. Please try again.</p>
-    </div>
-  </form>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById('contactForm');
-      
-      if (form) {
-        form.addEventListener('submit', (event) => {
-          event.preventDefault();
-          
-          // Reset previous error messages
-          const errorElements = document.querySelectorAll('[id$="Error"]');
-          errorElements.forEach(element => {
-            element.textContent = '';
-            element.classList.add('hidden');
-          });
-          
-          // Get form elements
-          const firstName = document.getElementById('firstName');
-          const lastName = document.getElementById('lastName');
-          const email = document.getElementById('email');
-          const service = document.getElementById('service');
-          const phone = document.getElementById('phone');
-          const message = document.getElementById('message');
-          
-          let isValid = true;
-          
-          // Validate first name
-          if (!firstName.value.trim()) {
-            showError('firstName', 'First name is required');
-            isValid = false;
-          } else if (firstName.value.trim().length < 2) {
-            showError('firstName', 'First name must be at least 2 characters');
-            isValid = false;
-          }
-          
-          // Validate last name
-          if (!lastName.value.trim()) {
-            showError('lastName', 'Last name is required');
-            isValid = false;
-          } else if (lastName.value.trim().length < 2) {
-            showError('lastName', 'Last name must be at least 2 characters');
-            isValid = false;
-          }
-          
-          // Validate email
-          if (!email.value.trim()) {
-            showError('email', 'Email is required');
-            isValid = false;
-          } else if (!isValidEmail(email.value.trim())) {
-            showError('email', 'Please enter a valid email address');
-            isValid = false;
-          }
-          
-          // Validate service
-          if (!service.value) {
-            showError('service', 'Please select a service');
-            isValid = false;
-          }
-          
-          // Validate phone number
-          if (!phone.value.trim()) {
-            showError('phone', 'Phone number is required');
-            isValid = false;
-          } else if (!isValidPhone(phone.value.trim())) {
-            showError('phone', 'Please enter a valid phone number (10-15 digits)');
-            isValid = false;
-          }
-          
-          // Validate message
-          if (!message.value.trim()) {
-            showError('message', 'Message is required');
-            isValid = false;
-          } else if (message.value.trim().length < 10) {
-            showError('message', 'Message must be at least 10 characters');
-            isValid = false;
-          }
-          
-          // Submit form if valid
-          if (isValid) {
-            document.getElementById('formMessage').classList.remove('hidden');
-            document.getElementById('successMessage').classList.remove('hidden');
-            form.reset();
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-              document.getElementById('formMessage').classList.add('hidden');
-              document.getElementById('successMessage').classList.add('hidden');
-            }, 5000);
-          }
-        });
-        
-        // Add event listeners to inputs to clear errors when user starts typing
-        document.querySelectorAll('input, select, textarea').forEach(element => {
-          element.addEventListener('input', function() {
-            this.classList.remove('border-red-500');
-            const errorId = `${this.id}Error`;
-            if (document.getElementById(errorId)) {
-              document.getElementById(errorId).classList.add('hidden');
-            }
-          });
-        });
-      }
-      
-      function showError(fieldId, message) {
-        const errorElement = document.getElementById(`${fieldId}Error`);
-        if (errorElement) {
-          errorElement.textContent = message;
-          errorElement.classList.remove('hidden');
-          
-          // Highlight the input field
-          const field = document.getElementById(fieldId);
-          if (field) {
-            field.classList.add('border-red-500');
-          }
-        }
-      }
-      
-      function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-      }
-      
-      function isValidPhone(phone) {
-        const phoneRegex = /^[0-9]{10,15}$/;
-        return phoneRegex.test(phone);
-      }
-    });
-  </script>
-
-    {/* Join Us on Social Media */}
-    <div class="mt-12 text-center">
+    <section class="my-20 text-center">
       <h2 class="text-subbody text-white font-semibold mb-4">
         Join Us on Social Media
       </h2>
@@ -495,38 +209,34 @@ import {Image} from "astro:assets";
         Stay updated with our latest projects, industry insights, and company
         news by following us on social media
       </p>
-    </div>
-  </div>
-  <div class="flex flex-col items-center justify-center py-10 md:py-16 lg:py-19 px-4 text-center">
-    <div class="flex space-x-4 md:space-x-6 mb-4 md:mb-12 lg:mb-19">
-      <a href="" target="_blank">
-        <Image src={linkedin} alt="LinkedIn" class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:size-[74px]" />
-      </a>
-      <a href="" target="_blank">
-        <Image
-          src={instagram}
-          alt="Instagram"
-          class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:size-[74px]"
-        />
-      </a>
-      <a href="" target="_blank">
-        <Image src={twitter} alt="Twitter" class="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 xl:size-[74px]" />
-      </a>
-    </div>
-  </div>
-</section>
+    </section>
 
-<div
-  class="xl:h-[450px] container border-[#1F1F1F] border-2 flex items-center justify-center rounded-lg flex-col"
->
-  <h1 class="font-dm-sans font-semibold md:text-6xl text-4xl md:mb-10 mb-4">
-    Thank You !
-  </h1>
-  <p
-    class="font-dm-sans font-medium text-subheading max-w-[1058px] text-[#8C8C8C] text-center"
-  >
-    For considering DigitX for your digital needs. We look forward to connecting
-    with you and being part of your digital success!
-  </p>
-</div>
+    <div
+      class="border-card border-2 flex items-center justify-center rounded-primary flex-col my-10 p-2 lg:p-10"
+    >
+      <div class="flex space-x-4 md:space-x-6 my-5 lg:my-10">
+        <a
+          href="https://www.linkedin.com/company/spritle-software"
+          target="_blank"
+        >
+          <LinkedInIcon class="size-20" />
+        </a>
+        <a href="https://www.instagram.com/spritlesoftware/" target="_blank">
+          <IgIcon class="size-20" />
+        </a>
+        <a href="https://x.com/spritlesoftware" target="_blank">
+          <XIcon class="size-20" />
+        </a>
+      </div>
+      <h1 class="font-dm-sans font-semibold md:text-6xl text-4xl my-5">
+        Thank You !
+      </h1>
+      <p
+        class="font-dm-sans font-medium text-subheading max-w-[1058px] text-secondary text-center"
+      >
+        For considering DigitX for your digital needs. We look forward to
+        connecting with you and being part of your digital success!
+      </p>
+    </div>
+  </main>
 </Layout>

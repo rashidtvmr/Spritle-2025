@@ -8,7 +8,7 @@ import team from "../../assets/images/home/team.png";
 import nvidiagoogle from "../../assets/images/home/nvidiagoogle.png";
 import devices from "../../assets/images/home/devices.png";
 
-import {Image} from "astro:assets";
+import { Image } from "astro:assets";
 
 const slides = [
   {
@@ -38,7 +38,7 @@ const slides = [
   },
   {
     text: "With 15+ years of experience, we create custom apps that transform your business",
-    img:devices,
+    img: devices,
     alt: "Custom Apps",
   },
 ];
@@ -63,10 +63,7 @@ const slides = [
               {slide.text}
             </h1>
             <div class="h-[200px] lg:h-[calc(90vh-250px)] w-full">
-            <Image
-              src={slide.img}  
-              alt={slide.alt}
-             />
+              <Image class="h-full w-full" src={slide.img} alt={slide.alt} />
             </div>
           </div>
         </div>
