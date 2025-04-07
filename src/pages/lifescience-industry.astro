@@ -2,6 +2,12 @@
 // src/pages/industries/lifesciences.astro
 import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
 import Layout from "../layouts/Layout.astro";
+import medicine from "../assets/images/industry/lifescience/medicine.png";
+import pharma from "../assets/images/industry/lifescience/pharma.png"
+import remotemonitor from "../assets/images/industry/lifescience/remotemonitor.png"
+import u1 from "../../src/assets/icons/casestudy/u1.svg"
+import u2 from "../../src/assets/icons/casestudy/u2.svg";
+import u3 from "../../src/assets/icons/casestudy/u3.svg";
 
 const lifesciencesContent = {
   heroSection: {
@@ -19,25 +25,25 @@ const lifesciencesContent = {
     title: "Life Sciences Technology Solutions We Offer",
     solutions: [
       {
-        logo: "/assets/unique1.svg",
+        logo: u1,
         title: "AI-Powered Drug Discovery & Research",
         description:
           "Accelerate drug discovery with AI-driven models that predict drug efficacy, optimize molecule selection, and speed up research timelines",
       },
       {
-        logo: "/assets/unique2.svg",
+        logo:u2,
         title: "Genomics Data Integration & Analysis",
         description:
           "Leverage big data analytics to integrate, process, and analyze complex genomic data, enabling personalized medicine and targeted therapies",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo: u3,
         title: "IoT for Remote Patient Monitoring",
         description:
           "Deploy IoT-enabled devices for real-time patient monitoring, improving healthcare outcomes and enabling early intervention",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo: u3,
         title: "Predictive Analytics in Clinical Trials",
         description:
           "Use predictive models to optimize clinical trial designs, improving patient recruitment, retention, and reducing trial timelines",
@@ -48,19 +54,19 @@ const lifesciencesContent = {
     title: "Industry Success Stories",
     cases: [
       {
-        image: "/assets/lifescience1.svg",
+        image: pharma,
         heading: "AI Drug Discovery for Pharma",
         description:
           "Developed an AI-based platform that reduced drug discovery timelines by 40%, helping a pharmaceutical company bring innovative therapies to market faster",
       },
       {
-        image: "/assets/lifescience2.svg",
+        image: medicine,
         heading: "Genomics Data Platform for Personalized Medicine",
         description:
           "Built a data integration platform that analyzed large-scale genomic data for a precision medicine initiative, enabling personalized treatment plans",
       },
       {
-        image: "/assets/lifescience3.svg",
+        image: remotemonitor,
         heading: "Remote Monitoring for Healthcare Providers",
         description:
           "Deployed IoT solutions for remote patient monitoring, improving chronic disease management and reducing hospital readmissions by 30%",

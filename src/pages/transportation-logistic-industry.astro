@@ -2,6 +2,12 @@
 // src/pages/industries/transportation-logistics.astro
 import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
 import Layout from "../layouts/Layout.astro";
+import logistics from "../assets/images/industry/transportation/logistics.png";
+import planning from "../assets/images/industry/transportation/planning.png";
+import chaintracking from "../assets/images/industry/transportation/chaintracking.png";
+import u1 from "../../src/assets/icons/casestudy/u1.svg"
+import u2 from "../../src/assets/icons/casestudy/u2.svg";
+import u3 from "../../src/assets/icons/casestudy/u3.svg";
 
 const logisticsContent = {
   heroSection: {
@@ -18,19 +24,19 @@ const logisticsContent = {
     title: "Transportation & Logistics Technology Solutions We Offer",
     solutions: [
       {
-        logo: "/assets/unique1.svg",
+        logo:u1,
         title: "AI-Powered Fleet Management",
         description:
           "Monitor and manage vehicle fleets in real time with AI-driven analytics that optimize routes, reduce fuel consumption, and enhance driver safety",
       },
       {
-        logo: "/assets/unique2.svg",
+        logo: u2,
         title: "Predictive Analytics for Demand Forecasting",
         description:
           "Utilize predictive models to forecast demand, improve inventory management, and reduce delivery delays, ensuring timely logistics",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo: u3,
         title: "IoT-Enabled Supply Chain Visibility",
         description:
           "Implement IoT sensors to track shipments and assets in real-time, providing transparency throughout the entire supply chain",
@@ -41,19 +47,19 @@ const logisticsContent = {
     title: "Industry Success Stories",
     cases: [
       {
-        image: "/assets/transport1.svg",
+        image: logistics,
         heading: "AI Fleet Management for Logistics Provider",
         description:
           "Developed an AI-powered fleet management system, reducing fuel costs by 15% and improving delivery times by 20%",
       },
       {
-        image: "/assets/transport2.svg",
+        image: chaintracking,
         heading: "IoT-Enhanced Supply Chain Tracking",
         description:
           "Implemented IoT sensors for a global logistics company, providing real-time shipment visibility and reducing losses by 25%",
       },
       {
-        image: "/assets/transport3.svg",
+        image:planning,
         heading: "Predictive Analytics for Demand Planning",
         description:
           "Built a demand forecasting model that improved stock management for a retailer, reducing excess inventory by 18%",

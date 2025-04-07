@@ -3,6 +3,12 @@
 
 import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
 import Layout from "../layouts/Layout.astro";
+import distributor from "../assets/images/industry/energyutilisation/distributor.png";
+import maintanence from "../assets/images/industry/energyutilisation/maintanence.png"
+import utilitycompany from "../assets/images/industry/energyutilisation/utilitycompany.png"
+import u1 from "../../src/assets/icons/casestudy/u1.svg"
+import u2 from "../../src/assets/icons/casestudy/u2.svg";
+import u3 from "../../src/assets/icons/casestudy/u3.svg";
 
 const energyContent = {
   heroSection: {
@@ -21,19 +27,19 @@ const energyContent = {
     title: "Energy & Utilities Technology Solutions We Offer",
     solutions: [
       {
-        logo: "/assets/unique1.svg",
+        logo: u1,
         title: "Smart Grid & IoT Integration",
         description:
           "Optimize energy distribution with IoT-enabled smart grids that provide real-time monitoring and predictive analytics for more efficient energy usage",
       },
       {
-        logo: "/assets/unique2.svg",
+        logo: u2,
         title: "Predictive Maintenance for Power Plants",
         description:
           "Leverage machine learning and AI to predict equipment failures and optimize maintenance schedules, minimizing downtime and reducing operational costs",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo: u3,
         title: "AI for Energy Consumption Forecasting",
         description:
           "Utilize AI and big data analytics to predict energy consumption patterns, enabling better resource allocation and reducing energy wastage",
@@ -44,19 +50,19 @@ const energyContent = {
     title: "Industry Success Stories",
     cases: [
       {
-        image: "/assets/energy1.svg",
+        image: maintanence,
         heading: "AI-Powered Predictive Maintenance for a Power Plant",
         description:
           "Implemented AI-driven predictive maintenance, reducing unplanned downtime by 30% and extending the lifespan of critical assets",
       },
       {
-        image: "/assets/energy2.svg",
+        image: distributor,
         heading: "IoT-Enabled Smart Grid for Energy Distributor",
         description:
           "Deployed IoT sensors for a smart grid, enhancing energy distribution efficiency and providing real-time insights to prevent outages",
       },
       {
-        image: "/assets/energy3.svg",
+        image: utilitycompany,
         heading: "AI for Energy Forecasting in a Utility Company",
         description:
           "Developed an AI-based energy consumption forecasting model, optimizing energy allocation and reducing wastage by 20%",

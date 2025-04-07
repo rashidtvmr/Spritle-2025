@@ -1,6 +1,15 @@
 ---
 // src/pages/industries/healthcare.astro
 import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
+import patient from "../assets/images/industry/healthcare/patient.png";
+import radiology from "../assets/images/industry/healthcare/radiology.png"
+import telemedicine from "../assets/images/industry/healthcare/telemedicine.png"
+import u1 from "../../src/assets/icons/casestudy/u1.svg"
+import u2 from "../../src/assets/icons/casestudy/u2.svg";
+import u3 from "../../src/assets/icons/casestudy/u3.svg";
+import arrow from "../../src/assets/icons/arrow.svg"
+
+
 
 const healthcareContent = {
   heroSection: {
@@ -17,25 +26,25 @@ const healthcareContent = {
     title: "Healthcare Solutions We Offer",
     solutions: [
       {
-        logo: "/assets/unique1.svg",
+        logo:u1,
         title: "AI-Powered Diagnostics",
         description:
           "Leverage AI to enhance diagnostic accuracy and accelerate medical decision-making with intelligent data-driven insights",
       },
       {
-        logo: "/assets/unique2.svg",
+        logo:u2,
         title: "Telemedicine Platforms",
         description:
           "Move to the cloud with confidence. We design cloud architectures that are secure, scalable, and cost-efficient",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo: u3,
         title: "Electronic Health Records (EHR) Systems",
         description:
           "Implement robust EHR systems that ensure efficient patient data management, HIPAA compliance, and seamless care coordination",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo:u3,
         title: "IoT for Healthcare",
         description:
           "Enhance patient care with IoT-enabled devices, enabling real-time monitoring and proactive health interventions",
@@ -46,19 +55,19 @@ const healthcareContent = {
     title: "Industry Use Cases",
     cases: [
       {
-        image: "/assets/health1.svg",
+        image: patient,
         heading: "Remote Patient Monitoring Platform",
         description:
           "Developed a real-time monitoring system for cardiac patients, reducing hospital readmissions by 25%",
       },
       {
-        image: "/assets/health2.svg",
+        image: telemedicine,
         heading: "Telemedicine Solution for Rural Healthcare",
         description:
           "Implemented a telemedicine platform, improving access to care for patients in remote areas and decreasing wait times",
       },
       {
-        image: "/assets/health3.svg",
+        image: radiology,
         heading: "AI-Driven Radiology Tool",
         description:
           "Created an AI-powered radiology tool that increased diagnostic accuracy by 40%, helping radiologists detect abnormalities faster.",

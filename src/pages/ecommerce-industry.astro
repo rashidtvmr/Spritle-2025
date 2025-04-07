@@ -2,6 +2,12 @@
 // src/pages/industries/ecommerce.astro
 import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
 import Layout from "../layouts/Layout.astro";
+import fashion from "../assets/images/industry/ecommerce/fashion.png";
+import globalretailer from "../assets/images/industry/ecommerce/globalretail.png"
+import predictiveanalysis from "../assets/images/industry/ecommerce/predictiveanalysis.png"
+import u1 from "../../src/assets/icons/casestudy/u1.svg"
+import u2 from "../../src/assets/icons/casestudy/u2.svg";
+import u3 from "../../src/assets/icons/casestudy/u3.svg";
 
 const ecommerceContent = {
   heroSection: {
@@ -18,25 +24,25 @@ const ecommerceContent = {
     title: "E-commerce Technology Solutions We Offer",
     solutions: [
       {
-        logo: "/assets/unique1.svg",
+        logo: u1,
         title: "AI-Driven Personalization Engines",
         description:
           "Increase conversions with AI-powered recommendation systems that deliver personalized product suggestions and targeted promotions",
       },
       {
-        logo: "/assets/unique2.svg",
+        logo: u2,
         title: "Omnichannel Commerce Platforms",
         description:
           "Implement omnichannel solutions for a unified shopping experience across web, mobile, and physical stores, powered by robust cloud infrastructure",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo: u3,
         title: "Predictive Analytics for Demand Forecasting",
         description:
           "Use advanced analytics and machine learning to forecast demand, optimize inventory, and reduce stockouts and overstocking",
       },
       {
-        logo: "/assets/unique3.svg",
+        logo: u3,
         title: "Seamless Payment & Checkout Integration",
         description:
           "Streamline payments with secure, multi-currency payment gateways and seamless checkout processes, reducing cart abandonment rates",
@@ -47,19 +53,19 @@ const ecommerceContent = {
     title: "Industry Success Stories",
     cases: [
       {
-        image: "/assets/ecommerce1.svg",
+        image: fashion,
         heading: "AI Personalization for an Apparel Brand",
         description:
           "Implemented an AI-powered recommendation engine, boosting conversion rates by 25% and average order value by 15%",
       },
       {
-        image: "/assets/ecommerce2.svg",
+        image: globalretailer,
         heading: "Omnichannel Solution for a Global Retailer",
         description:
           "Deployed an omnichannel commerce platform that unified inventory management across physical and online stores, increasing operational efficiency by 30%",
       },
       {
-        image: "/assets/ecommerce3.svg",
+        image:predictiveanalysis,
         heading: "Predictive Analytics for E-commerce",
         description:
           "Built a demand forecasting tool for an electronics retailer, reducing stockouts by 20% and optimizing inventory management",
