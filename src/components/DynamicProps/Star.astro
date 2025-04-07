@@ -1,5 +1,6 @@
 ---
 const { items, maxWidth = "1212px" } = Astro.props; // Default value set to 1212px
+import Star from "../../assets/icons/casestudy/star.svg"
 ---
 
 <div class="py-3">
@@ -10,10 +11,9 @@ const { items, maxWidth = "1212px" } = Astro.props; // Default value set to 1212
         style={`max-width: ${maxWidth};`}
       >
         <div class="lg:mr-8 mr-3 min-h-12 min-w-12 md:min-h-20 md:min-w-20">
-          <img
-            src="/assets/star.svg"
-            alt="Logo"
-            class="h-full w-full md:mt-0"
+          <Star
+          alt="Logo"
+          class="h-full w-full md:mt-0"
           />
         </div>
         <div class="flex items-center">

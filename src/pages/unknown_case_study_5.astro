@@ -1,12 +1,16 @@
 ---
 import CaseStudyPageContent from "@/components/DynamicProps/CaseStudyPageContent.astro";
 import Layout from "../layouts/Layout.astro";
+import doctor from "../../src/assets/images/casestudy/doctor.png";
+import u1 from "../../src/assets/icons/casestudy/u1.svg";
+import u2 from "../../src/assets/icons/casestudy/u2.svg";
+import u3 from "../../src/assets/icons/casestudy/u3.svg";
 
 const content = {
   hero_text:
     "Instant Access to Top Cancer Specialists Across the Worlds - Safe & Effortless",
   hero_image: {
-    url: "/assets/cs5.png",
+    url: doctor,
     alt: "Instant Access to Top Cancer Specialists Across the Worlds - Safe & Effortless",
   },
   overview: {
@@ -21,20 +25,20 @@ const content = {
     cards: [
       {
         title: "Difficulty for patients to access global cancer expertise.",
-        icon: "/assets/unique1.svg",
+        icon: u1,
       },
       {
         title: "Inefficient and complex appointment scheduling processes.",
-        icon: "/assets/unique2.svg",
+        icon: u2,
       },
       {
         title: "Fragmented patient journeys leading to poor user experience.",
-        icon: "/assets/unique3.svg",
+        icon: u3,
       },
       {
         title:
           "Lack of secure, compliant digital platforms to handle sensitive health data.",
-        icon: "/assets/unique3.svg",
+        icon: u3,
       },
     ],
   },

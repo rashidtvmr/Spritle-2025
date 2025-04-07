@@ -1,39 +1,43 @@
 ---
 import CaseStudyPageContent from "@/components/DynamicProps/CaseStudyPageContent.astro";
 import Layout from "../layouts/Layout.astro";
+import logistics from "../../src/assets/images/casestudy/logistics.png";
+import u1 from "../../src/assets/icons/casestudy/u1.svg";
+import u2 from "../../src/assets/icons/casestudy/u2.svg";
+import u3 from "../../src/assets/icons/casestudy/u3.svg";
 
 const content = {
   hero_text:
     "A Major Logistics Company in the US Achieved a 40% Reduction in Response Time",
   hero_image: {
-    url: "/assets/cs3.png",
+    url: logistics,
     alt: "A Major Logistics Company in the US Achieved a 40% Reduction in Response Time",
   },
   overview: {
     title: "Overview",
     description:
-      "    A leading logistics company in the US Reach24, was facing inefficiencies      in fleet management, truck maintenance, and incident resolution. These      inefficiencies led to slower response times, higher operational costs, and      disruptions in day-to-day operations. Truck owners had to rely on      cumbersome paperwork and manual processes to manage inspections, repairs,      and driver performance. These challenges created a bottleneck in their      ability to streamline operations. ",
+      " A leading logistics company in the US Reach24, was facing inefficiencies      in fleet management, truck maintenance, and incident resolution. These      inefficiencies led to slower response times, higher operational costs, and      disruptions in day-to-day operations. Truck owners had to rely on      cumbersome paperwork and manual processes to manage inspections, repairs,      and driver performance. These challenges created a bottleneck in their      ability to streamline operations. ",
   },
   problem_statement: {
     title: "Problem Statement",
     description: "Nestlé Health Science aimed to solve the following issues:",
     cards: [
       {
-        title: "Problem Statement",
-        icon: "/assets/unique1.svg",
+        title: "Inefficient fleet management processes",
+        icon: u1,
       },
       {
         title:
           "Slower response times for truck maintenance and incident resolution.",
-        icon: "/assets/unique2.svg",
+        icon:u2
       },
       {
         title: "High operational costs due to manual processes and paperwork.",
-        icon: "/assets/unique3.svg",
+        icon: u3,
       },
       {
         title: "Disruption in daily operations caused by outdated systems.",
-        icon: "/assets/unique3.svg",
+        icon: u3,
       },
     ],
   },

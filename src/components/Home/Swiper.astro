@@ -63,7 +63,11 @@ const slides = [
               {slide.text}
             </h1>
             <div class="h-[200px] lg:h-[calc(90vh-250px)] w-full">
-              <Image class="h-full w-full" src={slide.img} alt={slide.alt} />
+            <Image
+              class="slide-image w-full h-full transition-all duration-500"
+              src={slide.img}  
+              alt={slide.alt}
+             />
             </div>
           </div>
         </div>

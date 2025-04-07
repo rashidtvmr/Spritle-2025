@@ -17,20 +17,19 @@ const { title, description, challenges } = Astro.props;
 
     {/* Right column - challenges grid */}
     <div class="">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
+      <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 h-full">
         {
           challenges.map((challenge, index) => (
             <div
               key={index}
               class="flex flex-col items-start border-2 border-primary p-4 px-6 rounded-lg shadow-lg bg-[#313131]"
             >
-              <img
-                src={challenge.icon}
-                alt={challenge.title}
-                class="max-w-[47px] max-h-[42px]"
+              <challenge.icon
+                class="w-[47px] h-[42px]"
                 width="47"
                 height="42"
-                loading="lazy"
+                role="img"
+                aria-label={challenge.title}
               />
               <h2
                 class={`text-primary text-title-body font-medium my-5 ${challenge.description ? "lg:h-20" : "h-auto"}`}
