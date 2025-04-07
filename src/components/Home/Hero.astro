@@ -1,592 +1,125 @@
-<!-- <div class="flex items-center justify-center">
-  <div class="hero-carousel-container mt-12">
-    <div class="hero-carousel">
-      <div class="hero-slide">
-        <div class="slide-content">
-          <h1
-            class="text-[12px] lg:text-[48px] text-[#f5f5f5] font-bold slide-title"
-          >
-            Spritle's Gen AI solutions drive operational cost savings for our
-            clients
-          </h1>
+---
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import nurse from "../../assets/images/home/nurse.png";
+import manworking from "../../assets/images/home/manworking.png";
+import laptopstats from "../../assets/images/home/laptopstats.png";
+import team from "../../assets/images/home/team.png";
+import nvidiagoogle from "../../assets/images/home/nvidiagoogle.png";
+import devices from "../../assets/images/home/devices.png";
+
+import { Image } from "astro:assets";
+
+const slides = [
+  {
+    text: "Spritle's Gen AI solutions drive operational cost savings for our clients",
+    img: nurse,
+    alt: "Gen AI",
+  },
+  {
+    text: "We help businesses improve efficiency using Vision AI",
+    img: manworking,
+    alt: "Vision AI",
+  },
+  {
+    text: "Spritle simplifies & accelerates digital transformation for your business",
+    img: laptopstats,
+    alt: "Digital Transformation",
+  },
+  {
+    text: "Spritle simplifies & accelerates digital transformation for your business",
+    img: team,
+    alt: "Transformation",
+  },
+  {
+    text: "We are the official partners of Nvidia & Google",
+    img: nvidiagoogle,
+    alt: "Official Partners",
+  },
+  {
+    text: "With 15+ years of experience, we create custom apps that transform your business",
+    img: devices,
+    alt: "Custom Apps",
+  },
+];
+---
+
+<section
+  class="heroswiper swiper my-10 lg:my-20"
+  role="region"
+  aria-label="Hero Slides"
+>
+  <div class="hero-swiper swiper-wrapper" role="list">
+    {
+      slides.map((slide, index) => (
+        <div
+          class="swiper-slide focus:outline-2  focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+          data-index={index}
+          role="listitem"
+          tabindex="0"
+        >
+          <div class="flex flex-col items-center justify-between text-center my-10 lg:my-0">
+            <h1 class="slide-text text-xl md:text-3xl lg:text-5xl h-30 lg:h-50 2xl:h-60 flex items-center text-center justify-center w-[95%] transition-all duration-500">
+              {slide.text}
+            </h1>
+            <div class="h-[200px] lg:h-[calc(90vh-250px)] w-full">
+            <Image
+              class="slide-image w-full h-full transition-all duration-500"
+              src={slide.img}  
+              alt={slide.alt}
+             />
+            </div>
+          </div>
         </div>
-        <div class="image-container">
-          <img src="../assets/20995.png" alt="Image 1" />
-        </div>
-      </div>
-      <div class="hero-slide">
-        <div class="slide-content">
-          <h1
-            class="text-[12px] lg:text-[48px] text-[#f5f5f5] font-bold slide-title"
-          >
-            We help businesses improve efficiency using Vision AI
-          </h1>
-        </div>
-        <div class="image-container">
-          <img src="../assets/30713.png" alt="Image 2" />
-        </div>
-      </div>
-      <div class="hero-slide">
-        <div class="slide-content">
-          <h1
-            class="text-[12px] lg:text-[48px] text-[#f5f5f5] font-bold slide-title"
-          >
-            Spritle simplifies & accelerates digital transformation for your
-            business
-          </h1>
-        </div>
-        <div class="image-container">
-          <img src="../assets/30714.png" alt="Image 3" />
-        </div>
-      </div>
-      <div class="hero-slide">
-        <div class="slide-content">
-          <h1
-            class="text-[12px] lg:text-[48px] text-[#f5f5f5] font-bold slide-title"
-          >
-            Spritle simplifies & accelerates digital transformation for your
-            business
-          </h1>
-        </div>
-        <div class="image-container">
-          <img src="../assets/2151790123.png" alt="Image 4" />
-        </div>
-      </div>
-      <div class="hero-slide">
-        <div class="slide-content">
-          <h1
-            class="text-[12px] lg:text-[48px] text-[#f5f5f5] font-bold slide-title"
-          >
-            We are the official partners of Nvidia & Google
-          </h1>
-        </div>
-        <div class="image-container">
-          <img src="../assets/20995 (1).png" alt="Image 5" />
-        </div>
-      </div>
-      <div class="hero-slide">
-        <div class="slide-content">
-          <h1
-            class="text-[12px] lg:text-[48px] text-[#f5f5f5] font-bold slide-title"
-          >
-            With 15+ years of experience, we create custom apps that transform
-            your business
-          </h1>
-        </div>
-        <div class="image-container">
-          <img src="../assets/30713 (1).png" alt="Image 6" />
-        </div>
-      </div>
-    </div>
-    <button class="hero-carousel-button hero-prev">❮</button>
-    <button class="hero-carousel-button hero-next">❯</button>
+      ))
+    }
   </div>
-</div>
+</section>
 
-<style>
-  .hero-slide img {
-    width: 100%;
-    height: 100%;
-  }
-  .hero-carousel-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    padding: 0 20px;
-    width: 100%;
-    max-width: 2560px;
-    margin: 0 auto;
-    /* height: calc(100vh - (100px)); */
-  }
-
-  .hero-carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    position: relative;
-  }
-
-  .hero-slide {
-    min-width: 1300px;
-    margin: 0 30px;
-    position: relative;
-    opacity: 0.2;
-    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-
-    transform: scale(0.8);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .hero-slide:not(.active) .slide-content {
-    opacity: 0;
-    transform: translateX(-50px);
-    visibility: hidden;
-    animation: spring-slide-out 0.7s cubic-bezier(0.17, 0.67, 0.83, 1.7);
-  }
-  .hero-slide.active {
-    opacity: 1;
-    transform: scale(1);
-    animation: spring-slide-in 1s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-
-  @keyframes spring-slide-in {
-    0% {
-      transform: translateX(30px) scale(0.9);
-      opacity: 0;
-    }
-    40% {
-      transform: translateX(-10px) scale(1.1);
-      opacity: 1;
-    }
-    65% {
-      transform: translateX(5px) scale(0.98);
-    }
-    80% {
-      transform: translateX(-3px) scale(1.02);
-    }
-    100% {
-      transform: translateX(0px) scale(1);
-    }
-  }
-
-  @keyframes spring-slide-out {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    20% {
-      transform: scale(1.05);
-      opacity: 0.8;
-    }
-    50% {
-      transform: scale(0.9);
-    }
-    100% {
-      transform: scale(0.8);
-      opacity: 0.2;
-    }
-  }
-  .slide-content {
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    opacity: 0;
-    transition:
-      opacity 1s ease-in-out,
-      transform 1s ease-in-out;
-    transform: translateY(70px);
-    visibility: hidden;
-  }
-
-  .hero-slide.active .slide-content {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-  }
-
-  .image-container {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 8px;
-  }
-
-  .hero-slide img {
-    width: 100%;
-    height: 657px;
-  }
-
-  .slide-title {
-    font-family: "DM Sans", sans-serif;
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 62.5px;
-    letter-spacing: 0%;
-    text-align: center;
-    color: #f5f5f5;
-    max-width: 950px;
-    width: 100%;
-    height: 124px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    transition:
-      opacity 1s ease-in-out,
-      transform 1s ease-in-out;
-    transform: translateY(-10px);
-  }
-
-  .hero-carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.7);
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 20px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s;
-    z-index: 10;
-  }
-
-  .hero-carousel-button:hover {
-    background: rgba(255, 255, 255, 0.9);
-  }
-
-  .hero-prev {
-    left: 30px;
-  }
-
-  .hero-next {
-    right: 30px;
-  }
-
-  @media (max-width: 1024px) {
-    .hero-slide {
-      min-width: 100vw;
-      width: 100vw;
-      margin: 0;
-      padding: 0 15px;
-    }
-
-    .hero-carousel-container {
-      padding: 0;
-    }
-
-    .hero-slide:not(.active) {
-    }
-
-    .hero-slide img {
-      height: 400px;
-    }
-
-    .slide-content {
-      padding: 15px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .slide-title {
-      font-size: 1.5rem;
-    }
-
-    .hero-slide img {
-      height: 350px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .slide-title {
-      font-size: 1.25rem;
-    }
-
-    .hero-slide img {
-      height: 250px;
-    }
-
-    .slide-content {
-      padding: 15px;
-    }
-  }
-</style>
 <script>
-  interface HTMLElementWithOffset extends HTMLElement {
-    offsetWidth: number;
-  }
+  import Swiper from "swiper";
+  import { Autoplay } from "swiper/modules";
+
+  Swiper.use([Autoplay]);
 
   document.addEventListener("DOMContentLoaded", () => {
-    const heroCarousel = document.querySelector(
-      ".hero-carousel"
-    ) as HTMLElement;
-    const heroSlides = document.querySelectorAll(".hero-slide");
-    const heroPrevButton = document.querySelector(
-      ".hero-prev"
-    ) as HTMLButtonElement;
-    const heroNextButton = document.querySelector(
-      ".hero-next"
-    ) as HTMLButtonElement;
+    const swiper = new Swiper(".heroswiper", {
+      centeredSlides: true,
+      grabCursor: false,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        waitForTransition: false,
+      },
+      allowTouchMove: false,
+      loop: true,
+      breakpoints: {
+        320: { slidesPerView: 1.2, spaceBetween: 20 },
+        640: { slidesPerView: 1.3, spaceBetween: 10 },
+        768: { slidesPerView: 1.3, spaceBetween: 30 },
+        1024: { slidesPerView: 1.3, spaceBetween: 50 },
+        1280: { slidesPerView: 1.3, spaceBetween: 100 },
+        1500: { slidesPerView: 1.3, spaceBetween: 150 },
+      },
+    });
 
-    let heroCurrentIndex = 0;
-    const heroTotalSlides = heroSlides.length;
-
-    const heroFirstClone = heroSlides[0].cloneNode(true) as HTMLElement;
-    const heroLastClone = heroSlides[heroTotalSlides - 1].cloneNode(
-      true
-    ) as HTMLElement;
-
-    heroCarousel.appendChild(heroFirstClone);
-    heroCarousel.insertBefore(heroLastClone, heroSlides[0]);
-
-    const heroUpdateActiveSlide = () => {
-      const allSlides = document.querySelectorAll(".hero-slide");
-      allSlides.forEach((slide, index) => {
-        slide.classList.remove("active");
-        // Reset text animation
-        const content = slide.querySelector(".slide-content") as HTMLElement;
-        if (content) {
-          content.style.transition = "all 0.5s ease-in-out";
-          content.style.visibility = "hidden";
-          content.style.opacity = "0";
-          content.style.transform = "translateX(-50px)";
-        }
-
-        if (index === heroCurrentIndex + 1) {
-          slide.classList.add("active");
-          // Trigger text animation for active slide
-          const activeContent = slide.querySelector(
-            ".slide-content"
-          ) as HTMLElement;
-          if (activeContent) {
-            setTimeout(() => {
-              activeContent.style.visibility = "visible";
-              activeContent.style.opacity = "1";
-              activeContent.style.transform = "translateX(0)";
-            }, 100);
-          }
+    function updateSlideStyles() {
+      const slides = document.querySelectorAll(".swiper-slide");
+      slides.forEach((slide, i) => {
+        const img = slide.querySelector(".slide-image");
+        const text = slide.querySelector(".slide-text");
+        if (!img || !text) return;
+        if (i === swiper.activeIndex) {
+          img.classList.remove("blur-[2px]", "filter");
+          text.classList.remove("opacity-0");
+        } else {
+          img.classList.add("blur-[2px]", "filter");
+          text.classList.add("opacity-0");
         }
       });
-    };
+    }
 
-    const heroUpdateCarousel = () => {
-      const isDesktop = window.innerWidth > 1024;
-      const heroSlideWidth = isDesktop ? 1360 : window.innerWidth;
-      const container = document.querySelector(
-        ".hero-carousel-container"
-      ) as HTMLElementWithOffset;
-      const heroOffset = isDesktop
-        ? (container.offsetWidth - heroSlideWidth) / 2
-        : 0;
-
-      heroCarousel.style.transform = `translateX(${-(heroCurrentIndex + 1) * heroSlideWidth + heroOffset}px)`;
-
-      heroUpdateActiveSlide();
-    };
-
-    heroUpdateCarousel();
-
-    const heroNextSlide = () => {
-      if (heroCurrentIndex >= heroTotalSlides - 1) {
-        heroCurrentIndex = -1;
-        heroCarousel.style.transition = "none";
-        heroUpdateCarousel();
-        setTimeout(() => {
-          heroCarousel.style.transition = "transform 0.5s ease-in-out";
-          heroCurrentIndex++;
-          heroUpdateCarousel();
-        }, 10);
-      } else {
-        heroCurrentIndex++;
-        heroUpdateCarousel();
-      }
-    };
-
-    const heroPrevSlide = () => {
-      if (heroCurrentIndex < 0) {
-        heroCurrentIndex = heroTotalSlides - 1;
-        heroCarousel.style.transition = "none";
-        heroUpdateCarousel();
-        setTimeout(() => {
-          requestAnimationFrame(() => {
-            heroCarousel.style.transition = "transform 0.1s ease-in-out";
-            heroCurrentIndex++;
-            heroUpdateCarousel();
-          });
-        }, 5);
-      } else {
-        heroCurrentIndex--;
-        heroUpdateCarousel();
-      }
-    };
-
-    heroNextButton.addEventListener("click", heroNextSlide);
-    heroPrevButton.addEventListener("click", heroPrevSlide);
-
-    heroCarousel.addEventListener("transitionend", () => {
-      if (heroCurrentIndex === -1) {
-        heroCurrentIndex = heroTotalSlides - 1;
-        heroCarousel.style.transition = "0.5";
-        heroUpdateCarousel();
-      }
-      if (heroCurrentIndex === heroTotalSlides) {
-        heroCurrentIndex = 0;
-        heroCarousel.style.transition = "none";
-        heroUpdateCarousel();
-      }
-    });
-
-    setInterval(heroNextSlide, 3000);
-
-    window.addEventListener("resize", () => { 
-      heroCarousel.style.transition = "none";
-      heroUpdateCarousel();
-      setTimeout(() => {
-        heroCarousel.style.transition = "transform 0.5s ease-in-out";
-      }, 50);
-    });
+    updateSlideStyles();
+    swiper.on("slideChange", updateSlideStyles);
   });
-</script> -->
-import React, { useEffect, useRef, useState } from 'react';
-import { register } from 'swiper/element/bundle';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-
-register();
-
-const ImageSlider = () => {
-  const swiperElRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const slides = [
-    { text: "Spritle's Gen AI solutions drive operational cost savings for our clients", img: "../assets/20995.png" },
-    { text: "We help businesses improve efficiency using Vision AI", img: "../assets/30713.png" },
-    { text: "Spritle simplifies & accelerates digital transformation for your business", img: "../assets/30714.png" },
-    { text: "Spritle simplifies & accelerates digital transformation for your business", img: "../assets/2151790123.png" },
-    { text: "We are the official partners of Nvidia & Google", img: "../assets/20995 (1).png" },
-    { text: "With 15+ years of experience, we create custom apps that transform your business", img: "../assets/30713 (1).png" }
-  ];
-
-  useEffect(() => {
-    const swiperParams = {
-      effect: 'coverflow',
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      loop: true,
-      speed: 1000,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0, // Default gap (adjusted in breakpoints)
-        depth: 100,
-        modifier: 1.5,
-        slideShadows: false,
-      },
-      breakpoints: {
-        // Mobile (up to 650px)
-        320: {
-          coverflowEffect: {
-            stretch: 50, // No gap on mobile
-            modifier: 1, // Reduce modifier for a better look
-          },
-        },
-        // Tablet (651px to 1023px)
-        651: {
-          coverflowEffect: {
-            stretch: 50, // Smaller gap on tablet
-            depth: 100, // Restore depth
-            modifier: 1.5, // Restore modifier
-          },
-        },
-        // Desktop (1024px and above)
-        1024: {
-          coverflowEffect: {
-            stretch: 107, // Original gap for desktop
-          },
-        },
-      },
-      on: {
-        slideChange: (swiper) => setActiveIndex(swiper.realIndex), // Update active index
-      },
-    };
-
-    Object.assign(swiperElRef.current, swiperParams);
-    swiperElRef.current.initialize();
-  }, []);
-
-  return (
-    <div className="relative w-full overflow-hidden flex justify-center items-center py-10">
-      <swiper-container ref={swiperElRef} class="w-full h-full" init="false">
-        {slides.map((slide, index) => (
-          <swiper-slide key={index}>
-            <div className="relative">
-              {/* Text container */}
-              <div
-                className="flex justify-center items-center mb-[10px] transition-opacity duration-500"
-                style={{ opacity: activeIndex === index ? 1 : 0, width: '100%', maxWidth: '900px', maxHeight: '180px', margin: '0 auto' }}
-              >
-                <p className="text-[#F5F5F5] text-center pb-5 font-dm-sans font-medium text-sm sm:text-lg md:text-2xl lg:text-4xl leading-[1.5] md:leading-[62.5px] lg:pt-10 pt-0">
-                  {slide.text}
-                </p>
-              </div>
-
-              {/* Image */}
-              <div className="relative h-full">
-                <img
-                  src={slide.img}
-                  alt={slide.text}
-                  className="object-cover rounded-xl shadow-xl mx-auto"
-                  style={{ width: '100%', height: 'auto', maxWidth: '100%', maxHeight: '657px' }}
-                />
-              </div>
-            </div>
-          </swiper-slide>
-        ))}
-      </swiper-container>
-
-      <style jsx global>{`
-        swiper-container {
-          display: flex !important;
-          justify-content: center !important;
-          align-items: center !important;
-          overflow: visible !important;
-        }
-
-        swiper-slide {
-          width: 80% !important;
-          height: auto !important;
-          opacity: 0.5 !important;
-          transition: all 1000ms ease !important;
-          display: flex !important;
-          justify-content: center !important;
-          align-items: center !important;
-        }
-
-        @media (min-width: 320px) {
-          swiper-slide {
-            max-width: 70% !important;
-            max-height: 35vh !important; /* Adjusted height for mobile */
-          }
-        }
-
-        @media (min-width: 651px) {
-          swiper-slide {
-            max-width: 70% !important;
-            max-height: 45vh !important; /* Adjusted height for tablet */
-          }
-        }
-
-        @media (min-width: 1024px) {
-          swiper-slide {
-            max-width: 1457px !important;
-            max-height: 80vh !important; /* Adjusted height for desktop */
-          }
-        }
-
-        swiper-slide.swiper-slide-active {
-          opacity: 1 !important;
-          transform: scale(1) !important;
-        }
-
-        swiper-slide.swiper-slide-prev,
-        swiper-slide.swiper-slide-next {
-          opacity: 0.5 !important;
-          transform: scale(0.85) !important;
-        }
-
-        .swiper-wrapper {
-          align-items: center;
-        }
-      `}</style>
-    </div>
-  );
-};
-
-export default ImageSlider;
+</script>

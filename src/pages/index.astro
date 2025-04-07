@@ -1,16 +1,32 @@
 ---
-import TextAnimation from "../components/Home/TextAnimation.astro";
-import OurClients from "../components/Home/OurClients.astro";
-import UpSlider from "../components/Home/UpSlider.astro";
-import OurServices from "../components/Home/OurServices.astro";
-import IndustriesWeServe from "../components/Home/IndustriesWeServe.astro";
-import OurPartners from "../components/Home/OurPartners.astro";
-import Blogs from "../components/Home/Blogs.astro";
-
-import Layout from "../layouts/Layout.astro";
-import Home from "@/pages/Home.astro";
+import Layout from "@/layouts/Layout.astro";
+import TextAnimation from "@/components/Home/TextAnimation.astro";
+import Text from "@/components/Home/Text.astro";
+import OurClients from "@/components/Home/OurClients.astro";
+import UpSlider from "@/components/Home/UpSlider.astro";
+import OurServices from "@/components/Home/OurServices.astro";
+import IndustriesWeServe from "@/components/Home/IndustriesWeServe.astro";
+import OurPartners from "@/components/Home/OurPartners.astro";
+import Blogs from "@/components/Home/Blogs.astro";
+import Hero from "@/components/Home/Hero.astro";
+import Carousel from "@/components/Home/Carousel.astro";
+import Customer from "@/components/Home/Customer.astro";
 ---
 
 <Layout title="Spritle Software">
-  <Home />
+  <Hero />
+  <div class="container">
+    <TextAnimation />
+    <Text />
+  </div>
+  <Carousel />
+  <OurClients />
+  <div class="container">
+    <UpSlider />
+    <OurServices />
+    <IndustriesWeServe />
+    <OurPartners />
+    <Customer />
+    <Blogs />
+  </div>
 </Layout>
