@@ -42,7 +42,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
           <li>
             <a
               href="/aisolution"
-              class="text-primary text-md hover:bg-card focus:bg-card px-3 py-2 rounded-primary transition duration-300 focus:outline-none"
+              class="font-normal text-primary text-md hover:bg-card focus:bg-card px-3 py-3 rounded-primary transition-[background] duration-300 focus:outline-none"
               >AI Solutions</a
             >
           </li>
@@ -51,7 +51,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
           <li class="relative group">
             <button
               id="servicesToggle"
-              class="text-primary text-md px-2 py-2 aria-expanded:rounded-b-none rounded-primary transition-colors duration-300 flex items-center hover:bg-card focus:bg-card focus:outline-none aria-expanded:bg-card"
+              class="group text-primary font-normal text-md px-3 py-2 aria-expanded:rounded-b-none rounded-primary transition-[background] duration-300 flex items-center hover:bg-card focus:bg-card focus:outline-none aria-expanded:bg-card"
               aria-haspopup="true"
               aria-expanded="false"
               aria-controls="servicesMenu"
@@ -59,97 +59,95 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
               Services
               <ArrowDown
                 id="servicesArrow"
-                class="w-4 h-4 ml-1 transition-transform duration-300"
+                class={`group-aria-expanded:-rotate-180 size-4 ml-1 transition-[rotate] duration-150`}
               />
             </button>
-            <div
+            <ul
               id="servicesMenu"
-              class="absolute hidden p-2 bg-card rounded-tl-none rounded-primary w-64 z-50 border-t-3 border-[#171717]/80"
+              class="absolute hidden p-2 bg-card rounded-tl-none rounded-primary z-50 border-t-3 border-[#171717]/80 w-72"
               role="menu"
               aria-label="Services"
             >
-              <ul>
-                <li>
-                  <a
-                    href="/genaisolution"
-                    role="menuitem"
-                    tabindex="0"
-                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
-                    >Gen AI Solution</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/visionai"
-                    role="menuitem"
-                    tabindex="0"
-                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
-                    >Vision AI</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/custom"
-                    role="menuitem"
-                    tabindex="0"
-                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
-                    >Custom Software Development</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/ai-ml-solutions"
-                    role="menuitem"
-                    tabindex="0"
-                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
-                    >AI & ML Solutions</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/datascience-bigdata"
-                    role="menuitem"
-                    tabindex="0"
-                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
-                    >DataScience & BigData</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/cloud-devops"
-                    role="menuitem"
-                    tabindex="0"
-                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
-                    >Cloud & Devops</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/it-consulting"
-                    role="menuitem"
-                    tabindex="0"
-                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
-                    >IT Consulting</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="/quality-assurance-testing"
-                    role="menuitem"
-                    tabindex="0"
-                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
-                    >Quality Assurance & Testing</a
-                  >
-                </li>
-              </ul>
-            </div>
+              <li>
+                <a
+                  href="/genaisolution"
+                  role="menuitem"
+                  tabindex="0"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  >Gen AI Solution</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/visionai"
+                  role="menuitem"
+                  tabindex="0"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  >Vision AI</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/custom"
+                  role="menuitem"
+                  tabindex="0"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  >Custom Software Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/ai-ml-solutions"
+                  role="menuitem"
+                  tabindex="0"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  >AI & ML Solutions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/datascience-bigdata"
+                  role="menuitem"
+                  tabindex="0"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  >DataScience & BigData</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/cloud-devops"
+                  role="menuitem"
+                  tabindex="0"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  >Cloud & Devops</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/it-consulting"
+                  role="menuitem"
+                  tabindex="0"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  >IT Consulting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/quality-assurance-testing"
+                  role="menuitem"
+                  tabindex="0"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  >Quality Assurance & Testing</a
+                >
+              </li>
+            </ul>
           </li>
 
           <!-- Industries Dropdown for Laptop -->
           <li class="relative group">
             <button
               id="industriesDropdownToggleDesktop"
-              class="text-primary text-md px-3 py-2 aria-expanded:rounded-b-none rounded-primary transition duration-300 flex items-center group-hover:bg-card focus:outline-none hover:bg-card focus:bg-card aria-expanded:bg-card"
+              class="group text-primary font-normal text-md px-3 py-2 aria-expanded:rounded-b-none rounded-primary transition-[background] duration-300 flex items-center hover:bg-card focus:bg-card focus:outline-none aria-expanded:bg-card"
               aria-haspopup="true"
               aria-expanded="false"
               aria-controls="industriesDropdownDesktop"
@@ -157,20 +155,20 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
               Industries
               <ArrowDown
                 id="industriesArrowDesktop"
-                class="w-4 h-4 ml-1 transition-transform duration-300"
+                class={`group-aria-expanded:-rotate-180 size-4 ml-1 transition-[rotate] duration-150`}
               />
             </button>
             <!-- Dropdown Menu Industries -->
             <ul
               id="industriesDropdownDesktop"
-              class="absolute hidden bg-card p-2 rounded-primary rounded-tl-none w-64 border-t-3 border-[#171717]/80"
+              class="absolute hidden p-2 bg-card rounded-tl-none rounded-primary z-50 border-t-3 border-[#171717]/80 w-72"
               role="menu"
               aria-label="Industries Dropdown"
             >
               <li role="none">
                 <a
                   href="/healthcare-industry"
-                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
                   tabindex="-1"
                 >
@@ -180,7 +178,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
               <li role="none">
                 <a
                   href="/aviation-industry"
-                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
                   tabindex="-1"
                 >
@@ -190,7 +188,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
               <li role="none">
                 <a
                   href="/education-industry"
-                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
                   tabindex="-1"
                 >
@@ -200,7 +198,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
               <li role="none">
                 <a
                   href="/manufacturing-industry"
-                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
                   tabindex="-1"
                 >
@@ -210,7 +208,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
               <li role="none">
                 <a
                   href="/ecommerce-industry"
-                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
                   tabindex="-1"
                 >
@@ -220,7 +218,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
               <li role="none">
                 <a
                   href="/lifescience-industry"
-                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
                   tabindex="-1"
                 >
@@ -230,7 +228,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
               <li role="none">
                 <a
                   href="/transportation-logistic-industry"
-                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
                   tabindex="-1"
                 >
@@ -240,7 +238,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
               <li role="none">
                 <a
                   href="/cpaas-industry"
-                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
                   tabindex="-1"
                 >
@@ -250,7 +248,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
               <li role="none">
                 <a
                   href="/energy-utility-services"
-                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
                   tabindex="-1"
                 >
@@ -263,7 +261,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
           <li>
             <a
               href="/works"
-              class="text-primary text-md hover:bg-card focus:bg-card px-3 py-2 rounded-primary transition duration-300 focus:outline-none"
+              class="font-normal text-primary text-md hover:bg-card focus:bg-card px-3 py-3 rounded-primary transition-[background] duration-300 focus:outline-none"
               >Works</a
             >
           </li>
@@ -271,7 +269,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
           <li>
             <a
               href="/about"
-              class="text-primary text-md hover:bg-card focus:bg-card px-3 py-2 rounded-primary transition duration-300 focus:outline-none"
+              class="font-normal text-primary text-md hover:bg-card focus:bg-card px-3 py-3 rounded-primary transition-[background] duration-300 focus:outline-none"
               >About</a
             >
           </li>
@@ -280,28 +278,27 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
           <li class="relative group">
             <button
               id="knowledgeDropdownToggleDesktop"
-              class="text-primary text-md px-3 py-2 aria-expanded:rounded-b-none rounded-primary transition duration-300 flex items-center group-hover:bg-card focus:outline-none hover:bg-card focus:bg-card aria-expanded:bg-card"
+              class="group text-primary font-normal text-md px-3 py-2 aria-expanded:rounded-b-none rounded-primary transition-[background] duration-300 flex items-center hover:bg-card focus:bg-card focus:outline-none aria-expanded:bg-card"
               aria-haspopup="true"
               aria-expanded="false"
               aria-controls="knowledgeDropdownDesktop"
             >
               Knowledge
               <ArrowDown
-                id="knowledgeArrowDesktop"
-                class="w-4 h-4 ml-1 transition-transform duration-300"
+                class={`group-aria-expanded:-rotate-180 size-4 ml-1 transition-[rotate] duration-150`}
               />
             </button>
             <!-- Dropdown Menu Industries -->
             <ul
               id="knowledgeDropdownDesktop"
-              class="absolute hidden bg-card p-2 rounded-primary rounded-tl-none w-64 border-t-3 border-[#171717]/80"
+              class="absolute hidden p-2 bg-card rounded-tl-none rounded-primary z-50 border-t-3 border-[#171717]/80 w-52"
               role="menu"
               aria-label="Knowledge Dropdown"
             >
               <li role="none">
                 <a
                   href="/blogs"
-                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
                   tabindex="-1"
                 >
@@ -311,7 +308,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
               <li role="none">
                 <a
                   href="/tips-of-the-week"
-                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
                   tabindex="-1"
                 >
@@ -321,7 +318,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
               <li role="none">
                 <a
                   href="/q_and_a"
-                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  class="block font-normal text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
                   tabindex="-1"
                 >
@@ -334,7 +331,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
           <li>
             <a
               href="/career"
-              class="text-primary text-md hover:bg-card focus:bg-card px-3 py-2 rounded-primary transition duration-300 focus:outline-none"
+              class="font-normal text-primary text-md hover:bg-card focus:bg-card px-3 py-3 rounded-primary transition-[background] duration-300 focus:outline-none"
               >Career</a
             >
           </li>
@@ -342,7 +339,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
           <li>
             <a
               href="/contact"
-              class="bg-button text-primary px-4 py-2 rounded-full hover:bg-card focus:bg-card transition-colors duration-300 text-md focus:outline-none"
+              class="bg-button text-primary px-4 py-2 rounded-full hover:bg-card focus:bg-card transition-[background] duration-300 text-md focus:outline-none"
               >Contact us</a
             >
           </li>
@@ -389,7 +386,7 @@ import ArrowDown from "@/assets/icons/chevron-down.svg";
       const expanded = toggle.getAttribute("aria-expanded") === "true";
       toggle.setAttribute("aria-expanded", !expanded);
       menu.classList.toggle("hidden");
-      if (arrow) arrow.classList.toggle("rotate-180");
+      // if (arrow) arrow.classList.toggle("rotate-180");
     });
 
     toggle.addEventListener("keydown", (e) => {
