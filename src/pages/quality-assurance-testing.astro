@@ -1,7 +1,13 @@
 ---
 // src/pages/qa-testing-services.astro
 import ServicePageContent from "@/components/services/ServicePageContent.astro";
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
+import u1 from "@/assets/icons/casestudy/u1.svg";
+
+import ecommerce from "@/assets/images/service/testing/ecommerce.png";
+import healthcare from "@/assets/images/service/testing/healthcare.png";
+import regression from "@/assets/images/service/testing/regression.png";
+import media from "@/assets/images/service/devscope/media.png";
 
 const pageData = {
   heroSection: {
@@ -20,31 +26,31 @@ const pageData = {
       title: "Key QA & Testing Services We Offer",
       cards: [
         {
-          logo: "/assets/unique1.svg",
+          logo: u1,
           title: "Automated Testing & CI/CD Integration",
           description:
             "Leverage AI-driven automated testing frameworks integrated with CI/CD pipelines for faster, reliable, and continuous testing processes",
         },
         {
-          logo: "/assets/unique1.svg",
+          logo: u1,
           title: "Performance Testing & Load Simulation",
           description:
             "Simulate real-world conditions to evaluate system performance, scalability, and reliability under load, ensuring seamless user experience even during peak usage",
         },
         {
-          logo: "/assets/unique1.svg",
+          logo: u1,
           title: "Security Testing & Vulnerability Assessment",
           description:
             "Identify and eliminate potential security vulnerabilities with in-depth penetration testing and security assessments to safeguard applications",
         },
         {
-          logo: "/assets/unique1.svg",
+          logo: u1,
           title: "AI-Powered Regression Testing",
           description:
             "Utilize machine learning algorithms to predict and identify high-impact test cases for efficient regression testing, ensuring stability after code changes",
         },
         {
-          logo: "/assets/unique1.svg",
+          logo: u1,
           title: "User Experience (UX) Testing",
           description:
             "Ensure intuitive, user-friendly interfaces through comprehensive usability testing that assesses the functionality and accessibility of applications",
@@ -56,23 +62,29 @@ const pageData = {
       title: "Industry Use Cases",
       stories: [
         {
-          image: "/assets/dev1.svg",
+          image: regression,
           heading: "Retail – Cloud Migration for E-commerce Scalability",
           description:
             "Developed a big data solution for precision agriculture, analyzing soil health and weather patterns to optimize crop yield, increasing productivity by 25%",
         },
         {
-          image: "/assets/dev2.svg",
+          image: ecommerce,
           heading:
             "Healthcare – CI/CD Implementation for Telemedicine Platform",
           description:
             "Implemented CI/CD pipelines for a telemedicine provider, accelerating software releases by 50%, ensuring regulatory compliance, and improving system stability.",
         },
         {
-          image: "/assets/dev3.svg",
+          image: healthcare,
           heading: "Banking – DevSecOps for Cloud Security",
           description:
             "Developed a DevSecOps approach for a financial institution, ensuring compliance with industry standards and reducing cloud security incidents by 25%",
+        },
+        {
+          image: media,
+          heading: "Media – Containerization for Streaming Services",
+          description:
+            "Enabled containerized microservices for a media streaming company, increasing resource efficiency and ensuring smooth service during traffic spikes",
         },
       ],
     },
