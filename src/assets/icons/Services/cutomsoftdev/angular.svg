@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="51" fill="none"><g clip-path="url(#a)"><path fill="#E23237" d="M.02 8.535 23.608.131l24.224 8.255-3.923 31.21-20.301 11.243L3.624 39.745.02 8.535Z"/><path fill="#B52E31" d="M47.831 8.386 23.607.13v50.708L43.91 39.614 47.83 8.386Z"/><path fill="#fff" d="M23.646 6.051 8.947 38.755l5.491-.094 2.951-7.377h13.186l3.23 7.47 5.249.094L23.646 6.051Zm.037 10.478 4.968 10.384h-9.338l4.37-10.384Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h48v51H0z"/></clipPath></defs></svg>
+=======
 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1637_6601)">
 <path d="M0.0136719 6.02501L17.705 0.0922852L35.8727 5.91952L32.9311 27.9497L17.705 35.8863L2.71712 28.0552L0.0136719 6.02501Z" fill="#E23237"/>
@@ -10,3 +13,4 @@
 </clipPath>
 </defs>
 </svg>
+>>>>>>> 142f24f7b6b8f965dce16e5ca3cfda12bf3f768a

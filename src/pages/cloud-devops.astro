@@ -2,6 +2,13 @@
 // Example usage in a page
 import ServicePageContent from "@/components/services/ServicePageContent.astro";
 import Layout from "@/layouts/Layout.astro";
+import u1 from "../../../../assets/icons/casestudy/u1.svg";
+import u2 from "../../../../assets/icons/casestudy/u1.svg";
+import u3 from "../../../../assets/icons/casestudy/u1.svg";
+import ecommerce from "../../../../assets/images/service/testing/ecommerce.png";
+import healthcare from "../../../../assets/images/service/testing/healthcare.png";
+import regression from "../../../../assets/images/service/testing/regression.png";
+import media from "../../../../assets/images/service/devscope/media.png";
 
 const heroSection = {
   heading: "Cloud & DevOps Solutions for Scalable, Secure Operations",
@@ -20,42 +27,42 @@ const sections = [
     title: "Core Cloud & DevOps Services",
     cards: [
       {
-        logo: "/assets/unique1.svg",
+        logo: { u1 },
         heading: "Cloud Infrastructure Design & Migration",
         content: ["AWS", "Azure", "Google Cloud"],
         description:
           "Seamlessly migrate your legacy systems to the cloud, or design robust cloud architectures from scratch",
       },
       {
-        logo: "/assets/unique1.svg",
+        logo: { u2 },
         heading: "CI/CD Pipeline Automation",
         content: ["Jenkins", "GitLab CI", "CircleCI", "cassandra"],
         description:
           "Streamline your development lifecycle with automated Continuous Integration and Continuous Delivery pipelines, ensuring rapid and error-free deployments",
       },
       {
-        logo: "/assets/unique1.svg",
+        logo: { u3 },
         heading: "Infrastructure as Code (IaC)",
         content: ["Terraform", "AWS CloudFormation", "Ansible"],
         description:
           "Automate and standardize infrastructure management using IaC tools, improving consistency and reducing deployment time",
       },
       {
-        logo: "/assets/unique1.svg",
+        logo: { u3 },
         heading: "Containerization & Orchestration",
         content: ["Docker", "Kubernetes", "OpenShift"],
         description:
           "Optimize your microservices with containerized environments and orchestration tools for enhanced scalability and fault tolerance",
       },
       {
-        logo: "/assets/unique1.svg",
+        logo: { u3 },
         heading: "Cloud Security & Monitoring",
         content: ["Prometheus", "Grafana", "AWS CloudWatch"],
         description:
           "Implement robust cloud security protocols and real-time monitoring to ensure your systems are protected and performant",
       },
       {
-        logo: "/assets/unique1.svg",
+        logo: { u3 },
         heading: "DevOps Consultation & Implementation",
         content: [
           "DevOps culture",
@@ -72,25 +79,25 @@ const sections = [
     title: "Industry Use Cases",
     stories: [
       {
-        image: "/assets/dev1.svg",
+        image: regression,
         heading: "Retail – Cloud Migration for E-commerce Scalability",
         description:
           "Developed a big data solution for precision agriculture, analyzing soil health and weather patterns to optimize crop yield, increasing productivity by 25%",
       },
       {
-        image: "/assets/dev2.svg",
+        image: ecommerce,
         heading: "Healthcare – CI/CD Implementation for Telemedicine Platform",
         description:
           "Implemented CI/CD pipelines for a telemedicine provider, accelerating software releases by 50%, ensuring regulatory compliance, and improving system stability.",
       },
       {
-        image: "/assets/dev3.svg",
+        image: healthcare,
         heading: "Banking – DevSecOps for Cloud Security",
         description:
           "Developed a DevSecOps approach for a financial institution, ensuring compliance with industry standards and reducing cloud security incidents by 25%",
       },
       {
-        image: "/assets/dev4.svg",
+        image: media,
         heading: "Media – Containerization for Streaming Services",
         description:
           "Enabled containerized microservices for a media streaming company, increasing resource efficiency and ensuring smooth service during traffic spikes",

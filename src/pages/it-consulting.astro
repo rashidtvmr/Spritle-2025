@@ -2,6 +2,12 @@
 // src/pages/it-consulting-services.astro
 import ServicePageContent from "@/components/services/ServicePageContent.astro";
 import Layout from "../layouts/Layout.astro";
+import u1 from "../../assets/icons/casestudy/u1.svg";
+import u2 from "../../assets/icons/casestudy/u2.svg";
+import u3 from "../../assets/icons/casestudy/u3.svg";
+import finance from "../../assets/images/service/itConsulting/finance.png";
+import healthcare from "../../assets/images/service/itConsulting/healthcare.png";
+import manufacture from "../../assets/images/service/itConsulting/manufacture.png";
 
 const pageData = {
   heroSection: {
@@ -20,25 +26,25 @@ const pageData = {
       title: "Strategic Consulting Services",
       cards: [
         {
-          logo: "/assets/unique1.svg",
+          logo: { u1 },
           title: "IT Strategy & Roadmap Development",
           description:
             "We help you define a clear, actionable IT strategy that aligns with your business growth, ensuring scalability and resilience",
         },
         {
-          logo: "/assets/unique2.svg",
+          logo: { u2 },
           title: "Cloud Strategy & Transformation",
           description:
             "Move to the cloud with confidence. We design cloud architectures that are secure, scalable, and cost-efficient",
         },
         {
-          logo: "/assets/unique3.svg",
+          logo: { u3 },
           title: "Digital Transformation & Modernization",
           description:
             "We enable organizations to embrace digital transformation by modernizing legacy systems and introducing new digital workflows",
         },
         {
-          logo: "/assets/unique3.svg",
+          logo: { u3 },
           title: "Cybersecurity Risk Management",
           description:
             "Protect your business with a comprehensive security strategy, mitigating risk across your digital landscape",
@@ -50,19 +56,19 @@ const pageData = {
       title: "Industry Use Cases",
       stories: [
         {
-          image: "/assets/it1.svg",
+          image: manufacture,
           heading: "Manufacturing – IT Infrastructure Overhaul",
           description:
             "We guided a manufacturing company through an end-to-end IT infrastructure transformation, reducing operational costs by 30%",
         },
         {
-          image: "/assets/it2.svg",
+          image: healthcare,
           heading: "Healthcare – Cloud Strategy Consulting",
           description:
             "Advised a healthcare provider on cloud migration, ensuring HIPAA compliance and reducing data storage costs by 40%",
         },
         {
-          image: "/assets/it3.svg",
+          image: finance,
           heading: "Finance – Digital Modernization",
           description:
             "Helped a financial institution modernize their IT systems, enabling faster, more secure transactions and improved customer experience",

@@ -1,5 +1,12 @@
 ---
 import ServicePageContent from "@/components/services/ServicePageContent.astro";
+import u1 from "../../../assets/icons/casestudy/u1.svg";
+import u2 from "../../../assets/icons/casestudy/u2.svg";
+import u3 from "../../../assets/icons/casestudy/u3.svg";
+import doctor from "../../../assets/images/service/genAI/doctor.png";
+import manufacturer from "../../../assets/images/service/genAI/manufacturer.png";
+import crm from "../../../assets/images/service/genAI/crm.png";
+import healthcare from "../../../assets/images/service/genAI/healthcare.png";
 
 const pageData = {
   heroSection: {
@@ -17,19 +24,19 @@ const pageData = {
       title: "Our Unique Value Proposition",
       cards: [
         {
-          logo: "/assets/unique1.svg",
+          logo: { u1 },
           title: "Custom AI Models for Your Business",
           description:
             "Every industry and business has unique needs. We develop AI models specifically tailored to your industry, whether it's retail, healthcare, entertainment, or manufacturing.",
         },
         {
-          logo: "/assets/unique2.svg",
+          logo: { u2 },
           title: "AI-Powered Creativity & Efficiency",
           description:
             "From generating compelling marketing content to automating complex design tasks, our solutions help you reduce costs, save time, and stay ahead of the competition by leveraging cutting-edge AI.",
         },
         {
-          logo: "/assets/unique3.svg",
+          logo: { u3 },
           title: "Deep Industry Expertise",
           description:
             "With years of experience deploying AI solutions across various sectors, we understand how to drive meaningful impact using Generative AI",
@@ -43,13 +50,13 @@ const pageData = {
         "Innovate faster with new capabilities, a choice of industry-leading FMs, and infrastructure that delivers high performance while lowering costs.",
       cases: [
         {
-          image: "/assets/secthree1.png",
+          image: doctor,
           title: "Healthcare: AI Summarization for Patient Reports",
           description:
             "Our AI-powered solution for a leading healthcare provider processes vast amounts of patient data to generate concise, accurate summaries of health reports. This reduced manual work by 50% and allowed doctors to focus on patient care",
         },
         {
-          image: "/assets/secthree2.png",
+          image: manufacturer,
           title: "Generative AI in Manufacturing Design",
           description:
             "We implemented a generative AI model for a large automotive manufacturer to automatically create design iterations of new vehicle models. This sped up the prototyping phase by 35%, resulting in faster time-to-market for new products",
@@ -61,25 +68,25 @@ const pageData = {
       title: "Solutions We Offer",
       cards: [
         {
-          logo: "/assets/unique1.svg",
+          logo: { u1 },
           title: "Virtual Assistant for Sales",
           description:
             "Empower your sales team with AI-driven virtual assistants that engage with leads, answer inquiries, and schedule follow-ups. By automating repetitive tasks, these assistants help boost sales productivity and enhance customer interactions.",
         },
         {
-          logo: "/assets/unique2.svg",
+          logo: { u2 },
           title: "AI-Powered Data Summarization",
           description:
             "From legal documents to healthcare records, our AI solutions generate concise, accurate summaries, making decision-making faster and more efficient.",
         },
         {
-          logo: "/assets/unique3.svg",
+          logo: { u3 },
           title: "AI-Driven Product Design & Prototyping",
           description:
             "Generate multiple design iterations quickly, whether you're in the automotive, manufacturing, or creative industries. Our AI helps you explore creative possibilities at scale",
         },
         {
-          logo: "/assets/unique3.svg",
+          logo: { u3 },
           title: "Customer Support Automation",
           description:
             "Enhance your customer service with AI-generated responses that provide accurate, human-like interactions in real time",
@@ -112,14 +119,14 @@ const pageData = {
       title: "Success Stories",
       stories: [
         {
-          image: "/assets/succ1.svg",
+          image: crm,
           heading:
             "Retail Giant Sees 35% Uplift in Customer Engagement with AI-Generated Content:",
           description:
             "A large online retailer implemented our Generative AI to create personalized product recommendations and content for customers. The result was a 35% uplift in customer engagement and a 20% increase in conversion rates.",
         },
         {
-          image: "/assets/succ2.svg",
+          image: healthcare,
           heading:
             "Automated Video Annotations Boost Healthcare Precision by 30%:",
           description:

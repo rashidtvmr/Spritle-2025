@@ -1,6 +1,10 @@
 ---
 // CustomerCard.astro
+<<<<<<< HEAD
+import {Image} from "astro:assets";
+=======
 import { Image } from "astro:assets";
+>>>>>>> 142f24f7b6b8f965dce16e5ca3cfda12bf3f768a
 const { image, heading, description } = Astro.props;
 ---
 
@@ -14,6 +18,16 @@ const { image, heading, description } = Astro.props;
       class="w-full rounded-lg object-cover h-full"
     /> -->
 
+<<<<<<< HEAD
+    <Image 
+    src = {image}
+    alt="Logo" 
+    class="w-full rounded-lg object-cover h-full"
+    
+    />
+    <!-- class="mb-4 max-w-[54px] max-h-[52px] mt-0" -->
+
+=======
 
     <Image
       src={image}
@@ -23,6 +37,7 @@ const { image, heading, description } = Astro.props;
       class="w-full rounded-lg object-cover h-full"
     />
     <!-- class="mb-4 max-w-[54px] max-h-[52px] mt-0" -->
+>>>>>>> 142f24f7b6b8f965dce16e5ca3cfda12bf3f768a
   </div>
   <div class="w-full gap-4 flex flex-col">
     <h2 class="font-medium text-subtitle text-primary h-18 lg:h-25 xl:h-16">

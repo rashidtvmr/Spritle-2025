@@ -2,7 +2,11 @@
 // src/pages/data-science-services.astro
 import ServicePageContent from "@/components/services/ServicePageContent.astro";
 import Layout from "@/layouts/Layout.astro";
-
+import u1 from "../../assets/icons/casestudy/u1.svg";
+import agriculture from "../../assets/images/service/datascience/agriculture.png";
+import logistics from "../../assets/images/service/datascience/logistics.png";
+import team from "../../assets/images/service/datascience/team.png";
+import telecommunication from "../../assets/images/service/datascience/telecommunication.png";
 const heroSection = {
   heading: "Data Science & Big Data Solutions for Smarter Decisions",
   description:
@@ -20,7 +24,7 @@ const sections = [
     title: "Core Data Science & Big Data Services",
     cards: [
       {
-        logo: "/assets/unique1.svg",
+        logo: { u1 },
         heading: "Advanced Analytics & Predictive Modeling",
         content: [
           "Customer segmentation",
@@ -31,28 +35,28 @@ const sections = [
           "We create predictive models using machine learning and statistical techniques to forecast trends and behaviors",
       },
       {
-        logo: "/assets/unique1.svg",
+        logo: { u1 },
         heading: "Big Data Platform Development",
         content: ["Hadoop", "Spark", "kafka", "cassandra"],
         description:
           "Designing scalable, distributed systems to process massive datasets with low latency. Expertise in handling structured and unstructured data.",
       },
       {
-        logo: "/assets/unique1.svg",
+        logo: { u1 },
         heading: "Data Engineering & Pipelines",
         content: ["Apache NiFi", "AWS Data Pipeline", "Airflow"],
         description:
           "Building efficient data pipelines for real-time processing and analysis. We ensure seamless data flow across your organization",
       },
       {
-        logo: "/assets/unique1.svg",
+        logo: { u1 },
         heading: "Data Visualization & BI Tools",
         content: ["Power BI", "Tableau", "looker"],
         description:
           "Transform complex data into intuitive dashboards and visual reports, driving data-driven decisions at every level",
       },
       {
-        logo: "/assets/unique1.svg",
+        logo: { u1 },
         heading: "Cloud Data Solutions",
         content: [
           "Customer segmentation",
@@ -63,7 +67,7 @@ const sections = [
           "We deploy scalable data solutions in cloud environments, ensuring high availability and security while handling vast data volumes.",
       },
       {
-        logo: "/assets/unique1.svg",
+        logo: { u1 },
         heading: "AI-Powered Data Insights",
         content: [
           "Real-time monitoring",
@@ -80,31 +84,31 @@ const sections = [
     title: "Core AI & ML Services",
     cards: [
       {
-        logo: "/assets/unique1.svg",
+        logo: "{u1}",
         title: "Big Data Technologies",
         description:
           "Expertise in Hadoop, Apache Spark, NoSQL databases like MongoDB, and distributed processing.",
       },
       {
-        logo: "/assets/unique1.svg",
+        logo: "{u1}",
         title: "Machine Learning & AI Integration",
         description:
           "From generaProficiency in applying AI models for predictive analytics and automating data processes",
       },
       {
-        logo: "/assets/unique1.svg",
+        logo: "{u1}",
         title: "Cloud Data Engineering",
         description:
           "Expertise in deploying, managing, and scaling data platforms on AWS, Azure, and GCP",
       },
       {
-        logo: "/assets/unique1.svg",
+        logo: "{u1}",
         title: "Data Security & Compliance",
         description:
           "Deep knowledge of GDPR, HIPAA, and industry-specific regulations to ensure data integrity and security",
       },
       {
-        logo: "/assets/unique1.svg",
+        logo: "{u1}",
         title: "Data Integration & ETL",
         description:
           "Mastery in integrating data from multiple sources and designing ETL workflows for seamless operations",
@@ -116,25 +120,25 @@ const sections = [
     title: "Success Stories",
     stories: [
       {
-        image: "/assets/succ5.svg",
+        image: agriculture,
         heading: "Agriculture – AI-Powered Crop Monitoring",
         description:
           "Developed a big data solution for precision agriculture, analyzing soil health and weather patterns to optimize crop yield, increasing productivity by 25%",
       },
       {
-        image: "/assets/succ6.svg",
+        image: team,
         heading: "Energy – Predictive Analytics for Power Grid Efficiency",
         description:
           "Implemented machine learning models to predict energy demand and prevent outages for a utility company, reducing downtime by 20%",
       },
       {
-        image: "/assets/succ7.svg",
+        image: logistics,
         heading: "Logistics – Route Optimization for Fleet Management",
         description:
           "Built a real-time route optimization system using data analytics for a logistics firm, reducing fuel costs by 15% and improving delivery efficiency",
       },
       {
-        image: "/assets/succ8.svg",
+        image: telecommunication,
         heading: "Telecommunications – Churn Prediction",
         description:
           "Created a customer churn prediction model for a telecom provider, identifying at-risk customers and improving retention by 18%.",

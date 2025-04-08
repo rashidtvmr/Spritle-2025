@@ -1,3 +1,43 @@
+---
+import u1 from "../../assets/icons/casestudy/u1.svg";
+import u2 from "../../assets/icons/casestudy/u2.svg";
+import u3 from "../../assets/icons/casestudy/u3.svg";
+import { Image } from "astro:assets";
+
+const cards = [
+  {
+    logo: u1,
+    title: "Generative AI",
+    description:
+      "Developing AI models that create content, generate new ideas, and enhance innovation across various sectors",
+  },
+  {
+    logo: u2,
+    title: "Vision AI",
+    description:
+      "Leveraging machine learning to uncover hidden insights, enhance decision-making, and automate critical processes",
+  },
+  {
+    logo: u3,
+    title: "Machine Learning",
+    description:
+      "Harnessing NLP to process, analyze, and generate human-like text for applications in customer support, content generation, and more",
+  },
+  {
+    logo: u1,
+    title: "Predictive analytics",
+    description:
+      "Empowering businesses with predictive insights to forecast trends, optimize resources, and make data-driven decisions",
+  },
+  {
+    logo: u2,
+    title: "Natural language Processing",
+    description:
+      "Implementing computer vision for image and video analysis that can drive automation and enhance customer experiences  ",
+  },
+];
+---
+
 <div class="my-10 md:my-20">
   <div class="text-heading text-primary md:mb-6 mb-3 font-medium">
     Our Core AI Competencies
@@ -9,40 +49,7 @@
   >
   </div>
 </div>
-<script>
-  const cards = [
-    {
-      logo: "/assets/ailogo1.svg",
-      title: "Generative AI",
-      description:
-        "Developing AI models that create content, generate new ideas, and enhance innovation across various sectors",
-    },
-    {
-      logo: "/assets/ailogo2.svg",
-      title: "Vision AI",
-      description:
-        "Leveraging machine learning to uncover hidden insights, enhance decision-making, and automate critical processes",
-    },
-    {
-      logo: "/assets/ailogo3.svg",
-      title: "Machine Learning",
-      description:
-        "Harnessing NLP to process, analyze, and generate human-like text for applications in customer support, content generation, and more",
-    },
-    {
-      logo: "/assets/ailogo4.svg",
-      title: "Predictive analytics",
-      description:
-        "Empowering businesses with predictive insights to forecast trends, optimize resources, and make data-driven decisions",
-    },
-    {
-      logo: "/assets/ailogo5.svg",
-      title: "Natural language Processing",
-      description:
-        "Implementing computer vision for image and video analysis that can drive automation and enhance customer experiences  ",
-    },
-  ];
-
+<script lang="js">
   const cardContainer = document.getElementById("cardContainer");
 
   cardContainer.innerHTML = cards
@@ -51,12 +58,13 @@
      <div
   class="flex flex-col items-center justify-between text-center border-2 border-primary p-6 xl:pt-10 rounded-lg shadow-lg bg-[#313131]  h-full w-full xl:max-w-[550px] py-3  lg:min-h-100"
 >
-  <img src="${card.logo}" alt="${card.title}" class="size-16" />
+  // <img src="${card.logo}" alt="${card.title}" class="size-16" />
+  <Image src={card.logo} alt={card.title} class="size-16" />
   <h2 class="text-primary text-subtitle font-medium pt-3 md:pt-6 h-10">${card.title}</h2>
   <p class="text-secondary text-subheading flex-1 pt-3 md:pt-20">${card.description}</p>
 </div>
 
-    `
+    `,
     )
     .join("");
 </script>
