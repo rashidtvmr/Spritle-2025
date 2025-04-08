@@ -1,38 +1,47 @@
 ---
+import { Image } from "astro:assets";
+import doctor from "@/assets/images/home/doctor.png";
+import aeroplane from "@/assets/images/home/aeroplane.png";
+import girlrunning from "@/assets/images/home/girlrunning.png";
+import truck from "@/assets/images/home/truck.png";
+import doctribbon from "@/assets/images/home/doctribbon.png";
+import girleducation from "@/assets/images/home/girleducation.png";
+import arrowcarousel1 from "@/assets/images/home/arrowcarousel.png";
+import arrowcarousal2 from "@/assets/images/home/arrowcar2.png";
 const carouselContent = [
   {
     href: "/airport_management_case_study",
-    src: "../assets/Rectangle 93092.png",
+    src: doctor,
     alt: "Slide Image",
     text: "How we helped Nestle create personalized nutrition through genetic insights",
   },
   {
     href: "/unknown_case_study_2",
-    src: "../assets/flight.png",
+    src: aeroplane,
     alt: "Slide Image",
     text: "Smart Airport Management: Track, Maintain, and Optimize with Precision",
   },
   {
     href: "/Sports_management_case_study",
-    src: "../assets/run.png",
+    src: girlrunning,
     alt: "Slide Image",
     text: "A platform for managing and coordinating every sports meet across USA",
   },
   {
     href: "/logistics_company_sports_management_case_study",
-    src: "../assets/van.png",
+    src: truck,
     alt: "Slide Image",
     text: "A major logistics company in the US achieved a 40% reduction in response time.",
   },
   {
     href: "/unknown_case_study_5",
-    src: "../assets/Rectangle 93092.png",
+    src: doctribbon,
     alt: "Slide Image",
     text: "Instant Access to Top Cancer Specialists Across the World – Safe & Effortless",
   },
   {
     href: "/unknown_case_study_6",
-    src: "../assets/computer.png",
+    src: girleducation,
     alt: "Slide Image",
     text: "Unlocking Education with Smooth, Engaging Digital Learning",
   },
@@ -82,7 +91,7 @@ const carouselContent = [
               aria-labelledby={textId}
               tabindex="0"
             >
-              <img
+              <Image
                 src={content.src}
                 alt={content.alt}
                 class="w-full h-full object-cover rounded-xl scale-[1.1] group-hover:scale-[1.2] transition-transform duration-300"
@@ -124,8 +133,8 @@ const carouselContent = [
         id="prevBtn"
         class="rounded-full flex justify-center items-center cursor-pointer bg-[#15AED5] text-white p-2 px-4"
       >
-        <img
-          src="../assets/arrowcarousel.png"
+        <Image
+          src={arrowcarousel1}
           alt="Previous"
           class="w-4 p-1 sm:w-5 md:w-6"
         />
@@ -134,11 +143,7 @@ const carouselContent = [
         id="nextBtn"
         class="rounded-full flex justify-center items-center cursor-pointer bg-[#15AED5] text-white p-2 px-4"
       >
-        <img
-          src="../assets/arrowcar2.png"
-          alt="Next"
-          class="w-4 p-1 sm:w-5 md:w-6"
-        />
+        <Image src={arrowcarousal2} alt="Next" class="w-4 p-1 sm:w-5 md:w-6" />
       </button>
     </div>
   </div>
