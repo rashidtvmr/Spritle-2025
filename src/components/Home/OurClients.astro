@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 import stanford from "../../assets/images/home/stanford.png";
 import hyundai from "../../assets/images/home/hyundai.png";
 import nestle from "../../assets/images/home/nestle.png"; 
@@ -19,10 +20,102 @@ import {Image} from "astro:assets";
 ---
 <div
   class="lg:mt-40 md:mt-20 mt-4"
+=======
+import { Image } from "astro:assets";
+import Stanford from "../../assets/images/home/stanford.png";
+import Hyundai from "../../assets/images/home/hyundai.png";
+import Nestle from "../../assets/images/home/nestle.png";
+import Panasonic from "../../assets/images/home/panasonic.png";
+import LNT from "../../assets/images/home/l&t.png";
+import Steng from "../../assets/images/home/STeng.png";
+import Motorola from "../../assets/images/home/motorola.png";
+import UN from "../../assets/images/home/UN.png";
+import RE from "../../assets/images/home/royalenfield.png";
+import Changi from "../../assets/images/home/changi.png";
+import LM from "../../assets/images/home/livingmatrix.png";
+import Reach from "../../assets/images/home/reach.png";
+import InnerKraft from "../../assets/images/home/innerkraft.png";
+import Moddo from "../../assets/images/home/moddo.png";
+import SRM from "../../assets/images/home/shareandremember.png";
+import Nanny from "../../assets/images/home/nanny.png";
+
+const OurClientLogos = [
+  {
+    logo: Nestle,
+    alt: "Nestle Brand Logo",
+  },
+  {
+    logo: Stanford,
+    alt: "Stanford Brand Logo",
+  },
+  {
+    logo: Hyundai,
+    alt: "Hyundai Brand Logo",
+  },
+  {
+    logo: Panasonic,
+    alt: "Panasonic Brand Logo",
+  },
+  {
+    logo: LNT,
+    alt: "L&T Brand Logo",
+  },
+  {
+    logo: Steng,
+    alt: "Steng Brand Logo",
+  },
+  {
+    logo: Motorola,
+    alt: "Motorola Brand Logo",
+  },
+
+  {
+    logo: UN,
+    alt: "UN Logo",
+  },
+  {
+    logo: RE,
+    alt: "Royal Enfield Brand Logo",
+  },
+  {
+    logo: Changi,
+    alt: "Changi Airport Logo",
+  },
+  {
+    logo: LM,
+    alt: "Living Matrix Brand Logo",
+  },
+  {
+    logo: Reach,
+    alt: "Reach Brand Logo",
+  },
+  {
+    logo: InnerKraft,
+    alt: "InnerKraft Brand Logo",
+  },
+  {
+    logo: Moddo,
+    alt: "Moddo Brand Logo",
+  },
+  {
+    logo: SRM,
+    alt: "Share And Remember Brand Logo",
+  },
+  {
+    logo: Nanny,
+    alt: "Nanny Brand Logo",
+  },
+];
+---
+
+<div
+  class=""
+>>>>>>> 142f24f7b6b8f965dce16e5ca3cfda12bf3f768a
   style={{
     background: "linear-gradient(to bottom, #20202066, #00000047, #17171766)",
   }}
 >
+<<<<<<< HEAD
   <div class="clients-container xl:py-5 py-6 mt-10 md:mt-15">
     <div
       class="clients-content space-y-1 md:space-y-10 h-[auto] md:h-[53vh] lg:h-[903px] w-[100%] mt-6 mb-1"
@@ -169,6 +262,86 @@ import {Image} from "astro:assets";
           style="max-width: 1621px; height: 629px;"
         >
         </div>
+=======
+  <div class="container my-20 py-5">
+    <h2 class="clients-heading text-heading text-primary font-medium my-5">
+      Our Clients
+    </h2>
+    <p class="clients-subheading text-card-text text-subbody font-medium">
+      Transform your business with generative AI
+    </p>
+
+    <!-- Marquee for Mobile and Tablet  -->
+    <div class="relative overflow-hidden lg:hidden">
+      <div class="clients-marquee-container">
+        <!-- Left to Right Marquee  -->
+        <div class="clients-marquee-block">
+          <div class="clients-marquee-inner clients-marquee-right">
+            <span>
+              {
+                OurClientLogos.slice(0, 8).map((brand) => (
+                  <div class="clients-marquee-item">
+                    <Image src={brand.logo} alt={brand.alt} />
+                  </div>
+                ))
+              }
+            </span>
+            <span>
+              {
+                OurClientLogos.slice(0, 8).map((brand) => (
+                  <div class="clients-marquee-item">
+                    <Image src={brand.logo} alt={brand.alt} />
+                  </div>
+                ))
+              }
+            </span>
+          </div>
+        </div>
+
+        <!-- Right to Left Marquee with Small Gap  -->
+        <div class="clients-marquee-block">
+          <div class="clients-marquee-inner clients-marquee-left">
+            <span>
+              {
+                OurClientLogos.slice(8).map((brand) => (
+                  <div class="clients-marquee-item">
+                    <Image src={brand.logo} alt={brand.alt} />
+                  </div>
+                ))
+              }
+            </span>
+            <span>
+              {
+                OurClientLogos.slice(8).map((brand) => (
+                  <div class="clients-marquee-item">
+                    <Image src={brand.logo} alt={brand.alt} />
+                  </div>
+                ))
+              }
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden lg:block my-20">
+      <div
+        id="clients-logo-container"
+        class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-5"
+      >
+        {
+          OurClientLogos.map((brand) => (
+            <div class="w-full h-48 p-2 hover:bg-card rounded-primary content-center">
+              <Image
+                src={brand.logo}
+                alt={brand.alt}
+                class={`clients-logo object-contain m-auto 
+                    ${brand.logo.src.includes("nanny") ? "max-h-30" : ""}`}
+              />
+            </div>
+          ))
+        }
+>>>>>>> 142f24f7b6b8f965dce16e5ca3cfda12bf3f768a
       </div>
     </div>
   </div>
@@ -188,9 +361,13 @@ import {Image} from "astro:assets";
     float: left;
     width: 50%;
   }
+<<<<<<< HEAD
   /* Base styles (shared across devices) */
 
   /* Laptop-specific styles */
+=======
+
+>>>>>>> 142f24f7b6b8f965dce16e5ca3cfda12bf3f768a
   .clients-marquee-block {
     --total-marquee-items: 8;
     height: 150px;
@@ -224,6 +401,7 @@ import {Image} from "astro:assets";
     display: block;
     margin: 0 auto;
   }
+<<<<<<< HEAD
   .clients-marquee-item::after {
     background-color: #3f3f46;
     transition: background-color 0.3s ease;
@@ -232,12 +410,23 @@ import {Image} from "astro:assets";
   .clients-marquee-item:hover::after {
     background-color: #3f3f46;
   }
+=======
+
+>>>>>>> 142f24f7b6b8f965dce16e5ca3cfda12bf3f768a
   .clients-marquee-left {
     animation: marqueeLeft 40s linear infinite;
   }
   .clients-marquee-right {
     animation: marqueeRight 40s linear infinite;
   }
+<<<<<<< HEAD
+=======
+
+  .clients-marquee-left:hover,
+  .clients-marquee-right:hover {
+    animation-play-state: paused;
+  }
+>>>>>>> 142f24f7b6b8f965dce16e5ca3cfda12bf3f768a
   @keyframes marqueeLeft {
     0% {
       left: 0;
@@ -259,6 +448,7 @@ import {Image} from "astro:assets";
     }
   }
 </style>
+<<<<<<< HEAD
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const logos = [
@@ -312,3 +502,5 @@ import {Image} from "astro:assets";
   // element.innerText = "Marquee Content";
   document.body.appendChild(element);
 </script>
+=======
+>>>>>>> 142f24f7b6b8f965dce16e5ca3cfda12bf3f768a

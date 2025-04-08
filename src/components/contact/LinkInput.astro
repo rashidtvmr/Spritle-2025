@@ -1,0 +1,33 @@
+---
+const { type = "message", email } = Astro.props;
+import MessageIcon from "@/assets/icons/message.svg";
+import CallIcon from "@/assets/icons/call.svg";
+import RightArrow from "@/assets/icons/rightarrow.svg";
+---
+
+<a
+  href={`${type === "message" ? "mailto" : "tel"}:${email}`}
+  class="flex items-center border border-secondary rounded-full px-3 py-2 group justify-between"
+>
+  <span
+    class="flex items-center text-secondary font-normal text-base group-hover:text-primary truncate transition-background"
+  >
+    {
+      type === "message" ? (
+        <MessageIcon class="mx-1 size-6 text-primary" mode="sprite" />
+      ) : (
+        <CallIcon class="mx-1 size-6 text-primary" mode="sprite" />
+      )
+    }
+    <span class="truncate flex-grow">{email}</span>
+  </span>
+
+  <div
+    class="bg-[#1a1a1a] rounded-full p-4 px-6 group-hover:bg-primary flex-shrink-0 transition-background duration-300 ease-in-out"
+  >
+    <RightArrow
+      class="size-4 text-white rounded-full group-hover:text-black"
+      mode="sprite"
+    />
+  </div>
+</a>

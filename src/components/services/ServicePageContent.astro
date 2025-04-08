@@ -1,0 +1,183 @@
+---
+// src/components/DynamicProps/ServicePageContent.astro
+import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
+import BtnBig from "@/components/DynamicProps/BtnBig.astro";
+import UniqueValueCard from "@/components/DynamicProps/UniqueValueCard.astro";
+import AiCard from "@/components/DynamicProps/AiCard.astro";
+import Star from "@/components/DynamicProps/Star.astro";
+import SuccessStories from "@/components/DynamicProps/SuccessStories.astro";
+import CoreAi from "../DynamicProps/CoreAi.astro";
+import DataPillCard from "../DynamicProps/DataPillCard.astro";
+
+const { heroSection, sections } = Astro.props;
+---
+
+<main>
+  <!-- Hero Section -->
+  <div class="mt-40">
+    <div
+      class="flex flex-col justify-center items-center text-center h-auto px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background container"
+    >
+      <GradientHeading text={heroSection.heading} />
+      <p
+        class="font-normal mt-4 text-title-body text-gradientbody max-w-[1000px]"
+      >
+        {heroSection.description}
+      </p>
+      <BtnBig
+        text={heroSection.buttonText}
+        icon={heroSection.buttonIcon}
+        class="px-16"
+      />
+
+      {
+        heroSection.subHeading && (
+          <h1 class="text-heading text-primary font-dmSans font-semibold mt-20">
+            {heroSection.subHeading}
+          </h1>
+        )
+      }
+      {
+        heroSection.subDescription && (
+          <p class="text-secondary mt-0 text-subbody font-normal text-center max-w-[1558px]">
+            {heroSection.subDescription}
+          </p>
+        )
+      }
+    </div>
+  </div>
+
+  <!-- Dynamic Sections -->
+  {
+    sections.map((section) => {
+      switch (section.type) {
+        case "value-proposition":
+          return (
+            <div class="my-10 md:my-20 container">
+              <div class="text-heading text-primary md:mb-12 mb-2 font-bold">
+                {section.title}
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-6">
+                {section.cards.map((card) => (
+                  <UniqueValueCard {...card} />
+                ))}
+              </div>
+            </div>
+          );
+
+        case "Core-Ai":
+          return (
+            <div class="my-10 md:my-20 container">
+              <div class="text-heading text-primary md:mb-12 mb-2 font-bold">
+                {section.title}
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-6">
+                {section.cards.map((card) => (
+                  <CoreAi {...card} />
+                ))}
+              </div>
+            </div>
+          );
+
+        case "data-pill-cards":
+          return (
+            <div class="my-10 md:my-20 container">
+              <div class="text-heading text-primary md:mb-12 mb-2 font-semibold">
+                {section.title}
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+                {section.cards.map((card) => (
+                  <DataPillCard {...card} />
+                ))}
+              </div>
+            </div>
+          );
+
+        case "use-cases":
+          return (
+            <div class="space-y-1 lg:space-y-6 md:space-y-3 my-10 md:my-20 container">
+              <div class="text-primary font-bold text-heading">
+                {section.title}
+                {section.description && (
+                  <p class="text-secondary mt-4 md:mt-10 text-subheading max-w-[1205px] font-medium">
+                    {section.description}
+                  </p>
+                )}
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-14">
+                {section.cases.map((caseItem, index) => (
+                  <AiCard key={index} {...caseItem} />
+                ))}
+              </div>
+            </div>
+          );
+
+        case "industry-use-cases":
+          return (
+            <div class="my-10 md:my-20 container">
+              <div class="text-heading text-primary md:mb-12 mb-2 font-bold">
+                {section.title}
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-12">
+                {section.stories.map((story, index) => (
+                  <SuccessStories key={index} {...story} />
+                ))}
+              </div>
+            </div>
+          );
+
+        case "benefits":
+          return (
+            <div class="my-10 md:my-20 container">
+              <div class="flex justify-center items-center flex-col">
+                <h2 class="text-centerheading font-medium md:mb-10 mb-4 md:text-4xl text-primary">
+                  {section.title}
+                </h2>
+                <Star items={section.items} maxWidth="1305px" />
+              </div>
+            </div>
+          );
+
+        case "success-stories":
+          return (
+            <div class="my-10 md:my-20 container">
+              <h1 class="text-centerheading text-primary font-dmSans font-semibold text-center">
+                {section.title}
+              </h1>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 md:mt-16 mt-5">
+                {section.stories.map((story, index) => (
+                  <SuccessStories key={index} {...story} />
+                ))}
+              </div>
+            </div>
+          );
+
+        case "intermediate-cta":
+          return (
+            <div class="my-10 md:my-20 flex flex-col justify-center items-center container">
+              <h1 class="text-centerheading text-primary font-dmSans font-semibold">
+                {section.heading}
+              </h1>
+              <p class="text-secondary py-5 lg:py-10 text-subbody font-normal text-center">
+                {section.description}
+              </p>
+            </div>
+          );
+
+        case "final-cta":
+          return (
+            <div class="flex flex-col justify-center items-center text-center h-screen md:max-h-[666px] max-h-[400px] px-4 space-y-5 bg-[#313131] mt-5 lg:mt-20">
+              <GradientHeading text={section.heading} maxWidth="1200px" />
+              <p class="font-normal mt-4 text-subbody text-primary max-w-[1000px]">
+                {section.description}
+              </p>
+              <button class="mt-6 btnprimary text-subheading px-9 py-2 gap-2">
+                {section.buttonText}
+              </button>
+            </div>
+          );
+      }
+    })
+  }
+</main>
+

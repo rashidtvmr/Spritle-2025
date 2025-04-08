@@ -1,16 +1,125 @@
 ---
-import QualityFour from "@/components/Quality/QualityFour.astro";
-import QualityHero from "@/components/Quality/QualityHero.astro";
-import QualitySecond from "@/components/Quality/QualitySecond.astro";
-import QualityThird from "@/components/Quality/QualityThird.astro";
-import QualityLast from "@/components/Quality/QualityLast.astro";
-import Layout from "@/layouts/Layout.astro";
+// src/pages/qa-testing-services.astro
+import ServicePageContent from "@/components/services/ServicePageContent.astro";
+import Layout from "../layouts/Layout.astro";
+import u1 from "../../assets/icons/casestudy/u1.svg";
+
+import ecommerce from "../../../../assets/images/service/testing/ecommerce.png";
+import healthcare from "../../../../assets/images/service/testing/healthcare.png";
+import regression from "../../../../assets/images/service/testing/regression.png";
+import media from "../../../../assets/images/service/devscope/media.png";
+
+const pageData = {
+  heroSection: {
+    heading: "Quality Assurance & Testing Services for Next-Gen Applications",
+    description:
+      "Ensuring flawless user experiences with comprehensive, AI-driven QA and testing solutions",
+    buttonText: "Deliver Quality with Confidence",
+    buttonIcon: "/assets/rightarrow.svg",
+    subHeading: "Innovative Testing Solutions for Flawless Digital Experiences",
+    subDescription:
+      "Spritle integrates AI, automation, and agile testing methodologies to ensure top-tier software quality, reducing release time and improving application stability",
+  },
+  sections: [
+    {
+      type: "value-proposition",
+      title: "Key QA & Testing Services We Offer",
+      cards: [
+        {
+          logo: { u1 },
+          title: "Automated Testing & CI/CD Integration",
+          description:
+            "Leverage AI-driven automated testing frameworks integrated with CI/CD pipelines for faster, reliable, and continuous testing processes",
+        },
+        {
+          logo: { u1 },
+          title: "Performance Testing & Load Simulation",
+          description:
+            "Simulate real-world conditions to evaluate system performance, scalability, and reliability under load, ensuring seamless user experience even during peak usage",
+        },
+        {
+          logo: { u1 },
+          title: "Security Testing & Vulnerability Assessment",
+          description:
+            "Identify and eliminate potential security vulnerabilities with in-depth penetration testing and security assessments to safeguard applications",
+        },
+        {
+          logo: { u1 },
+          title: "AI-Powered Regression Testing",
+          description:
+            "Utilize machine learning algorithms to predict and identify high-impact test cases for efficient regression testing, ensuring stability after code changes",
+        },
+        {
+          logo: { u1 },
+          title: "User Experience (UX) Testing",
+          description:
+            "Ensure intuitive, user-friendly interfaces through comprehensive usability testing that assesses the functionality and accessibility of applications",
+        },
+      ],
+    },
+    {
+      type: "success-stories",
+      title: "Industry Use Cases",
+      stories: [
+        {
+          image: regression,
+          heading: "Retail – Cloud Migration for E-commerce Scalability",
+          description:
+            "Developed a big data solution for precision agriculture, analyzing soil health and weather patterns to optimize crop yield, increasing productivity by 25%",
+        },
+        {
+          image: ecommerce,
+          heading:
+            "Healthcare – CI/CD Implementation for Telemedicine Platform",
+          description:
+            "Implemented CI/CD pipelines for a telemedicine provider, accelerating software releases by 50%, ensuring regulatory compliance, and improving system stability.",
+        },
+        {
+          image: healthcare,
+          heading: "Banking – DevSecOps for Cloud Security",
+          description:
+            "Developed a DevSecOps approach for a financial institution, ensuring compliance with industry standards and reducing cloud security incidents by 25%",
+        },
+        {
+          image: media,
+          heading: "Media – Containerization for Streaming Services",
+          description:
+            "Enabled containerized microservices for a media streaming company, increasing resource efficiency and ensuring smooth service during traffic spikes",
+        },
+      ],
+    },
+    {
+      type: "benefits",
+      title: "Why Choose Spritle for QA & Testing?",
+      items: [
+        {
+          title: "AI-Enhanced Testing",
+          description:
+            "Utilizing AI and automation to make testing smarter, faster, and more reliable.",
+        },
+        {
+          title: "Comprehensive Coverage",
+          description:
+            "End-to-end testing solutions from functionality to performance and security",
+        },
+        {
+          title: "Agile & Scalable",
+          description:
+            "Adaptive testing processes that scale to match evolving project requirements and timelines",
+        },
+      ],
+    },
+    {
+      type: "final-cta",
+      heading: "Partner with Spritle for World-Class QA & Testing",
+      description:
+        "Leverage innovative testing technologies to ensure the highest level of quality for your software applications",
+      buttonText: "Talk to Our QA Experts",
+    },
+  ],
+};
 ---
 
-<Layout title="Quality Assurance Testing">
-  <QualityHero />
-  <QualitySecond />
-  <QualityThird />
-  <QualityFour />
-  <QualityLast />
+<Layout>
+  <ServicePageContent {...pageData} />
 </Layout>

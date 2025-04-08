@@ -9,10 +9,6 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
       rel="icon"
       href="/assets/favicon.png"
       type="image/png"
@@ -78,9 +74,6 @@ const { title } = Astro.props;
     <title>{title || "Spritle Software"}</title>
   </head>
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-    ></script>
-
     <NavBar />
     <slot />
     <Footer />

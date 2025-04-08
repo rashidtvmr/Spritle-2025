@@ -1,18 +1,177 @@
 ---
-import DsHero from "@/components/DataScience&BigData/DsHero.astro";
-import DsSecond from "@/components/DataScience&BigData/DsSecond.astro";
-import DsThird from "@/components/DataScience&BigData/DsThird.astro";
-import DsFourth from "@/components/DataScience&BigData/DsFourth.astro";
-import DsFive from "@/components/DataScience&BigData/DsFive.astro";
-import DsLast from "@/components/DataScience&BigData/DsLast.astro";
+// src/pages/data-science-services.astro
+import ServicePageContent from "@/components/services/ServicePageContent.astro";
 import Layout from "@/layouts/Layout.astro";
+import u1 from "../../assets/icons/casestudy/u1.svg";
+import agriculture from "../../assets/images/service/datascience/agriculture.png";
+import logistics from "../../assets/images/service/datascience/logistics.png";
+import team from "../../assets/images/service/datascience/team.png";
+import telecommunication from "../../assets/images/service/datascience/telecommunication.png";
+const heroSection = {
+  heading: "Data Science & Big Data Solutions for Smarter Decisions",
+  description:
+    "Unlock the value of data with advanced analytics and scalable big data platforms",
+  buttonText: "Explore Our Data Solutions",
+  buttonIcon: "/assets/rightarrow.svg",
+  subHeading: "Empowering Businesses with Data-Driven Insights",
+  subDescription:
+    "Our data science and big data expertise help businesses make informed decisions, optimize operations, and predict trends. From advanced analytics to cloud-based data platforms, we tailor our solutions to fit your unique needs",
+};
+
+const sections = [
+  {
+    type: "data-pill-cards",
+    title: "Core Data Science & Big Data Services",
+    cards: [
+      {
+        logo: { u1 },
+        heading: "Advanced Analytics & Predictive Modeling",
+        content: [
+          "Customer segmentation",
+          "Sales forecasting",
+          "Risk analysis",
+        ],
+        description:
+          "We create predictive models using machine learning and statistical techniques to forecast trends and behaviors",
+      },
+      {
+        logo: { u1 },
+        heading: "Big Data Platform Development",
+        content: ["Hadoop", "Spark", "kafka", "cassandra"],
+        description:
+          "Designing scalable, distributed systems to process massive datasets with low latency. Expertise in handling structured and unstructured data.",
+      },
+      {
+        logo: { u1 },
+        heading: "Data Engineering & Pipelines",
+        content: ["Apache NiFi", "AWS Data Pipeline", "Airflow"],
+        description:
+          "Building efficient data pipelines for real-time processing and analysis. We ensure seamless data flow across your organization",
+      },
+      {
+        logo: { u1 },
+        heading: "Data Visualization & BI Tools",
+        content: ["Power BI", "Tableau", "looker"],
+        description:
+          "Transform complex data into intuitive dashboards and visual reports, driving data-driven decisions at every level",
+      },
+      {
+        logo: { u1 },
+        heading: "Cloud Data Solutions",
+        content: [
+          "Customer segmentation",
+          "Sales forecasting",
+          "Risk analysis",
+        ],
+        description:
+          "We deploy scalable data solutions in cloud environments, ensuring high availability and security while handling vast data volumes.",
+      },
+      {
+        logo: { u1 },
+        heading: "AI-Powered Data Insights",
+        content: [
+          "Real-time monitoring",
+          "Anomaly detection",
+          "Customer behavior",
+        ],
+        description:
+          "Our AI models process big data to extract actionable insights, enabling real-time decision-making and trend detection",
+      },
+    ],
+  },
+  {
+    type: "value-proposition",
+    title: "Core AI & ML Services",
+    cards: [
+      {
+        logo: "{u1}",
+        title: "Big Data Technologies",
+        description:
+          "Expertise in Hadoop, Apache Spark, NoSQL databases like MongoDB, and distributed processing.",
+      },
+      {
+        logo: "{u1}",
+        title: "Machine Learning & AI Integration",
+        description:
+          "From generaProficiency in applying AI models for predictive analytics and automating data processes",
+      },
+      {
+        logo: "{u1}",
+        title: "Cloud Data Engineering",
+        description:
+          "Expertise in deploying, managing, and scaling data platforms on AWS, Azure, and GCP",
+      },
+      {
+        logo: "{u1}",
+        title: "Data Security & Compliance",
+        description:
+          "Deep knowledge of GDPR, HIPAA, and industry-specific regulations to ensure data integrity and security",
+      },
+      {
+        logo: "{u1}",
+        title: "Data Integration & ETL",
+        description:
+          "Mastery in integrating data from multiple sources and designing ETL workflows for seamless operations",
+      },
+    ],
+  },
+  {
+    type: "success-stories",
+    title: "Success Stories",
+    stories: [
+      {
+        image: agriculture,
+        heading: "Agriculture – AI-Powered Crop Monitoring",
+        description:
+          "Developed a big data solution for precision agriculture, analyzing soil health and weather patterns to optimize crop yield, increasing productivity by 25%",
+      },
+      {
+        image: team,
+        heading: "Energy – Predictive Analytics for Power Grid Efficiency",
+        description:
+          "Implemented machine learning models to predict energy demand and prevent outages for a utility company, reducing downtime by 20%",
+      },
+      {
+        image: logistics,
+        heading: "Logistics – Route Optimization for Fleet Management",
+        description:
+          "Built a real-time route optimization system using data analytics for a logistics firm, reducing fuel costs by 15% and improving delivery efficiency",
+      },
+      {
+        image: telecommunication,
+        heading: "Telecommunications – Churn Prediction",
+        description:
+          "Created a customer churn prediction model for a telecom provider, identifying at-risk customers and improving retention by 18%.",
+      },
+    ],
+  },
+  {
+    type: "benefits",
+    title: "Why Choose Spritle for Data Science & Big Data",
+    items: [
+      {
+        title:
+          "Expertise in handling complex datasets and building scalable systems",
+      },
+      { title: "AI-powered insights integrated into data workflows" },
+      {
+        title:
+          "Proven experience across cloud, big data, and advanced analytics",
+      },
+      { title: "End-to-end data solutions, from engineering to visualization" },
+    ],
+  },
+  {
+    type: "final-cta",
+    heading: "Leverage Data for Competitive Advantage",
+    description:
+      "Partner with Spritle for powerful data solutions tailored to your business",
+    buttonText: "Start Your Data Transformation",
+    buttonIcon: "/assets/staricon.png",
+  },
+];
 ---
 
-<Layout title="Data Science">
-  <DsHero />
-  <DsSecond/>
-  <DsThird />
-  <DsFourth/>
-  <DsFive/>
-  <DsLast/>
+<Layout>
+  <ServicePageContent heroSection={heroSection} sections={sections} />
 </Layout>

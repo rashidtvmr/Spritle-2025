@@ -1,20 +1,166 @@
 ---
-import VisionHero from "@/components/ServiceDropdown/GenAiSolution/Vision/VisionHero.astro";
-import VisionSecond from "@/components/ServiceDropdown/GenAiSolution/Vision/VisionSecond.astro";
-import VisionThird from "@/components/ServiceDropdown/GenAiSolution/Vision/VisionThird.astro";
-import VisionFour from "@/components/ServiceDropdown/GenAiSolution/Vision/VisionFour.astro";
-import VisionFifth from "@/components/ServiceDropdown/GenAiSolution/Vision/VisionFifth.astro";
-import VisionSixth from "@/components/ServiceDropdown/GenAiSolution/Vision/VisionSixth.astro";
-import VisionLast from "@/components/ServiceDropdown/GenAiSolution/Vision/VisionLast.astro";
-import Layout from "@/layouts/Layout.astro";
+import Layout from "../layouts/Layout.astro";
+import ServicePageContent from "@/components/services/ServicePageContent.astro";
+import u1 from "../../../../assets/icons/casestudy/u1.svg";
+import u2 from "../../../../assets/icons/casestudy/u2.svg";
+import u3 from "../../../../assets/icons/casestudy/u3.svg";
+import healthcare from "../../../../assets/images/service/visionAI/healthcare.png";
+import quality from "../../../../assets/images/service/visionAI/quality.png";
+import retail from "../../../../assets/images/service/visionAI/retail.png";
+import electronics from "../../../../assets/images/service/visionAI/electronics.png";
+import analytics from "../../../../assets/images/service/visionAI/analytics.png";
+
+const visionAIPageData = {
+  heroSection: {
+    heading: "Unlock the Power of Vision AI for Your Business",
+    description:
+      "AI-Powered Image and Video Analysis for Unparalleled Insights",
+    buttonText: "Discover Our AI Solutions",
+    buttonIcon: "/assets/rightarrow.svg",
+    subHeading: "What is Vision AI?",
+    subDescription:
+      "Vision AI is a cutting-edge technology that allows machines to understand and interpret visual data—images, videos, and real-world objects—at a level previously achievable only by humans. By automating tasks such as image recognition, object detection, and visual inspection, Vision AI can transform industries like manufacturing, healthcare, retail, and more.",
+  },
+  sections: [
+    {
+      type: "value-proposition",
+      title: "Our Unique Value Proposition",
+      cards: [
+        {
+          logo: { u1 },
+          title: "Tailored Vision AI Solutions",
+          description:
+            "Every industry and business has unique needs. We develop AI models specifically tailored to your industry, whether it's retail, healthcare, entertainment, or manufacturing.",
+        },
+        {
+          logo: { u2 },
+          title: "AI-Powered Creativity & Efficiency",
+          description:
+            "From generating compelling marketing content to automating complex design tasks, our solutions help you reduce costs, save time, and stay ahead of the competition by leveraging cutting-edge AI.",
+        },
+        {
+          logo: { u3 },
+          title: "Deep Industry Expertise",
+          description:
+            "With years of experience deploying AI solutions across various sectors, we understand how to drive meaningful impact using Generative AI",
+        },
+      ],
+    },
+    {
+      type: "use-cases",
+      title: "AI Solutions Across Industries",
+      description:
+        "Innovate faster with new capabilities, a choice of industry-leading FMs, and infrastructure that delivers high performance while lowering costs.",
+      cases: [
+        {
+          image: quality,
+          title: "AI-Powered Quality Control in Manufacturing",
+          description:
+            "We developed an AI vision system for a leading electronics manufacturer to detect defects on the assembly line. The system improved inspection accuracy by 98% and reduced production errors, saving time and costs.",
+        },
+        {
+          image: healthcare,
+          title: "Healthcare: Automated Medical Image Analysis",
+          description:
+            "Our Vision AI solution helps radiologists analyze medical scans for early detection of anomalies. It reduced manual workload by 40%, while increasing diagnostic precision and ensuring better patient outcomes.",
+        },
+        {
+          image: retail,
+          title: "AI-Driven Retail Analytics",
+          description:
+            "For a major retail chain, we implemented a Vision AI system to analyze in-store customer behavior. This provided insights into foot traffic, product placement effectiveness, and inventory levels, leading to a 20% increase in sales",
+        },
+      ],
+    },
+    {
+      type: "value-proposition",
+      title: "Solutions We Offer",
+      cards: [
+        {
+          logo: { u1 },
+          title: "AI-Driven Object Detection & Tracking",
+          description:
+            "Automatically detect and track objects in images or videos, ideal for applications in retail, surveillance, autonomous vehicles, and more.",
+        },
+        {
+          logo: { u2 },
+          title: "Visual Quality Control & Defect Detection",
+          description:
+            "Our AI models identify defects and irregularities in manufacturing processes, ensuring high-quality standards with reduced reliance on manual inspection.",
+        },
+        {
+          logo: { u3 },
+          title: "AI-Powered Healthcare Imaging Solutions",
+          description:
+            "Enhance diagnostic accuracy by using Vision AI to analyze X-rays, MRIs, and other medical images, supporting faster and more accurate diagnoses",
+        },
+        {
+          logo: { u3 },
+          title: "Video Analytics for Surveillance & Security",
+          description:
+            "Automate the analysis of live or recorded video footage for applications like security monitoring, anomaly detection, and traffic analysis",
+        },
+      ],
+    },
+    {
+      type: "benefits",
+      title: "Why Vision AI is a Game Changer",
+      items: [
+        {
+          title: "Accuracy Beyond Human Capabilities",
+          description:
+            "Vision AI models can process visual data at speeds and scales impossible for humans, delivering faster, more accurate insights in real-time",
+        },
+        {
+          title: "Automation & Efficiency",
+          description:
+            "Automate complex tasks such as defect detection, facial recognition, and visual inspection, reducing manual intervention and costs.",
+        },
+        {
+          title: "Real-Time Decision-Making",
+          description:
+            "With real-time video and image analysis, businesses can respond instantly to critical events, enhancing safety, security, and operational efficiency",
+        },
+      ],
+    },
+    {
+      type: "success-stories",
+      title: "Success Stories",
+      stories: [
+        {
+          image: electronics,
+          heading:
+            "98% Accuracy in Defect Detection for Electronics Manufacturer",
+          description:
+            "A leading electronics company implemented our Vision AI-based defect detection system, increasing inspection accuracy by 98% and reducing product recall rates by 15%.",
+        },
+        {
+          image: analytics,
+          heading: "20% Sales Increase through In-Store Behavior Analytics",
+          description:
+            "Our Vision AI system helped a major retail chain track customer behavior and optimize product placements. This resulted in a 20% increase in sales and improved inventory management",
+        },
+      ],
+    },
+    {
+      type: "intermediate-cta",
+      heading: "Start Your Vision AI Journey",
+      description:
+        "Harness the power of Vision AI to improve operational efficiency, enhance security, and unlock deeper insights from your visual data. We tailor our Vision AI solutions to fit your business needs and deliver measurable results.",
+    },
+    {
+      type: "final-cta",
+      heading:
+        "Explore Vision AI Solutions for Your Business. Contact Us for a Free Consultation",
+      description:
+        "Let's discuss how we can help your organization thrive in the age of artificial intelligence",
+
+      buttonText: "Get a Free Consultation Today",
+    },
+  ],
+};
 ---
 
-<Layout title="Vision AI">
-  <VisionHero />
-  <VisionSecond />
-  <VisionThird />
-  <VisionFour />
-  <VisionFifth />
-  <VisionSixth />
-  <VisionLast />
+<Layout>
+  <ServicePageContent {...visionAIPageData} />
 </Layout>

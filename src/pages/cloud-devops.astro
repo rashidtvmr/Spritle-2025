@@ -1,16 +1,140 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import CloudHero from "../components/ServiceDropdown/GenAiSolution/Cloud-Devops/CloudHero.astro";
-import CloudSecond from "@/components/ServiceDropdown/GenAiSolution/Cloud-Devops/CloudSecond.astro";
-import CloudThird from "@/components/ServiceDropdown/GenAiSolution/Cloud-Devops/CloudThird.astro";
-import CloudFour from "@/components/ServiceDropdown/GenAiSolution/Cloud-Devops/CloudFour.astro";
-import CloudLast from "@/components/ServiceDropdown/GenAiSolution/Cloud-Devops/CloudLast.astro";
+// Example usage in a page
+import ServicePageContent from "@/components/services/ServicePageContent.astro";
+import Layout from "@/layouts/Layout.astro";
+import u1 from "../../../../assets/icons/casestudy/u1.svg";
+import u2 from "../../../../assets/icons/casestudy/u1.svg";
+import u3 from "../../../../assets/icons/casestudy/u1.svg";
+import ecommerce from "../../../../assets/images/service/testing/ecommerce.png";
+import healthcare from "../../../../assets/images/service/testing/healthcare.png";
+import regression from "../../../../assets/images/service/testing/regression.png";
+import media from "../../../../assets/images/service/devscope/media.png";
+
+const heroSection = {
+  heading: "Cloud & DevOps Solutions for Scalable, Secure Operations",
+  description:
+    "Accelerate innovation with seamless cloud infrastructure and automated DevOps practices",
+  buttonText: "Explore Cloud & DevOps Services",
+  buttonIcon: "/assets/rightarrow.svg",
+  subHeading: "Transform Your Infrastructure with Cloud & DevOps Expertise",
+  subDescription:
+    "Spritle offers comprehensive cloud and DevOps solutions, ensuring your business can scale efficiently, deploy faster, and stay secure in a fast-changing digital landscape",
+};
+
+const sections = [
+  {
+    type: "data-pill-cards",
+    title: "Core Cloud & DevOps Services",
+    cards: [
+      {
+        logo: { u1 },
+        heading: "Cloud Infrastructure Design & Migration",
+        content: ["AWS", "Azure", "Google Cloud"],
+        description:
+          "Seamlessly migrate your legacy systems to the cloud, or design robust cloud architectures from scratch",
+      },
+      {
+        logo: { u2 },
+        heading: "CI/CD Pipeline Automation",
+        content: ["Jenkins", "GitLab CI", "CircleCI", "cassandra"],
+        description:
+          "Streamline your development lifecycle with automated Continuous Integration and Continuous Delivery pipelines, ensuring rapid and error-free deployments",
+      },
+      {
+        logo: { u3 },
+        heading: "Infrastructure as Code (IaC)",
+        content: ["Terraform", "AWS CloudFormation", "Ansible"],
+        description:
+          "Automate and standardize infrastructure management using IaC tools, improving consistency and reducing deployment time",
+      },
+      {
+        logo: { u3 },
+        heading: "Containerization & Orchestration",
+        content: ["Docker", "Kubernetes", "OpenShift"],
+        description:
+          "Optimize your microservices with containerized environments and orchestration tools for enhanced scalability and fault tolerance",
+      },
+      {
+        logo: { u3 },
+        heading: "Cloud Security & Monitoring",
+        content: ["Prometheus", "Grafana", "AWS CloudWatch"],
+        description:
+          "Implement robust cloud security protocols and real-time monitoring to ensure your systems are protected and performant",
+      },
+      {
+        logo: { u3 },
+        heading: "DevOps Consultation & Implementation",
+        content: [
+          "DevOps culture",
+          "Process automation",
+          "Toolchain optimization",
+        ],
+        description:
+          "Adopt DevOps best practices to foster a culture of collaboration, speed up development cycles, and reduce operational overhead",
+      },
+    ],
+  },
+  {
+    type: "industry-use-cases",
+    title: "Industry Use Cases",
+    stories: [
+      {
+        image: regression,
+        heading: "Retail – Cloud Migration for E-commerce Scalability",
+        description:
+          "Developed a big data solution for precision agriculture, analyzing soil health and weather patterns to optimize crop yield, increasing productivity by 25%",
+      },
+      {
+        image: ecommerce,
+        heading: "Healthcare – CI/CD Implementation for Telemedicine Platform",
+        description:
+          "Implemented CI/CD pipelines for a telemedicine provider, accelerating software releases by 50%, ensuring regulatory compliance, and improving system stability.",
+      },
+      {
+        image: healthcare,
+        heading: "Banking – DevSecOps for Cloud Security",
+        description:
+          "Developed a DevSecOps approach for a financial institution, ensuring compliance with industry standards and reducing cloud security incidents by 25%",
+      },
+      {
+        image: media,
+        heading: "Media – Containerization for Streaming Services",
+        description:
+          "Enabled containerized microservices for a media streaming company, increasing resource efficiency and ensuring smooth service during traffic spikes",
+      },
+    ],
+  },
+  {
+    type: "benefits",
+    title: "Why Spritle for Cloud & DevOps Solutions",
+    items: [
+      {
+        title: "Expertise in multi-cloud environments and hybrid cloud setups.",
+      },
+      {
+        title:
+          "Automated, efficient workflows using CI/CD, IaC, and containerization.",
+      },
+      {
+        title:
+          "Proven track record in enhancing scalability, reducing downtime, and improving deployment speed",
+      },
+      {
+        title:
+          "End-to-end cloud and DevOps services, from consulting to implementation and monitoring",
+      },
+    ],
+  },
+  {
+    type: "final-cta",
+    heading: "Scale and Secure Your Cloud Operations with DevOps",
+    description:
+      "Let Spritle's cloud and DevOps solutions streamline your infrastructure and accelerate your growth",
+    buttonText: "Start Your Cloud Journey",
+  },
+];
 ---
 
-<Layout title = "Cloud DevOps Services for Innovation">
-  <CloudHero />
-  <CloudSecond />
-  <CloudThird />
-  <CloudFour />
-  <CloudLast />
+<Layout>
+  <ServicePageContent heroSection={heroSection} sections={sections} />
 </Layout>

@@ -1,6 +1,7 @@
 ---
 import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
 import Layout from "@/layouts/Layout.astro";
+<<<<<<< HEAD
 import  callicon from "../../src/assets/images/contactme/callicon.png"
 import contactarrow from "../../src/assets/images/contactme/contactarrow.png"
 import msgicon from "../../src/assets/images/contactme/contacticon.png"
@@ -488,6 +489,209 @@ import {Image} from "astro:assets";
 
     {/* Join Us on Social Media */}
     <div class="mt-12 text-center">
+=======
+import LinkInput from "@/components/contact/LinkInput.astro";
+import TextInput from "@/components/contact/TextInput.astro";
+import Button from "@/components/common/button.astro";
+import TwitterIcon from "@/assets/icons/twitter.svg";
+import LinkedInIcon from "@/assets/icons/linkedin.svg";
+import IgIcon from "@/assets/icons/ig.svg";
+import XIcon from "@/assets/icons/x.svg";
+---
+
+<Layout title="Contact us">
+  <main class="container">
+    <div class="mt-20 lg:mt-52">
+      <div
+        class="flex flex-col justify-center items-center text-center container space-y-5 mt-10 md:mt-30"
+      >
+        <GradientHeading
+          text=" High-performing remote teams. The future of work."
+        />
+
+        <p
+          class="font-normal md:mt-4 text-title-body text-gradientbody max-w-[1021px]"
+        >
+          Powerful, self-serve team engagement tools and analytics. Supercharge
+          your managers & keep employees engaged from anywhere.
+        </p>
+      </div>
+    </div>
+
+    <section class="my-20">
+      <h2 class="text-4xl text-primary font-bold my-10">
+        Contact Us Via Email
+      </h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 card_outlined"
+      >
+        <div class="">
+          <h3 class="font-semibold text-primary text-subheading mb-4">
+            For General Inquiries
+          </h3>
+          <LinkInput email="info@spritle.com" type="message" />
+        </div>
+        <div class="">
+          <h3 class="font-semibold text-primary text-subheading mb-4">
+            For Business Collaborations
+          </h3>
+          <LinkInput email="partnerships@digitx.com" type="message" />
+        </div>
+        <div class="">
+          <h3 class="font-semibold text-primary text-subheading mb-4">
+            For Job Opportunities
+          </h3>
+          <LinkInput email="jobs@spritle.com" />
+        </div>
+      </div>
+    </section>
+
+    <section class="my-20">
+      <h2 class="text-4xl text-primary font-semibold my-10">
+        Contact Us By Phone
+      </h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 card_outlined gap-10"
+      >
+        <div class="">
+          <h3 class="font-semibold text-primary text-subheading mb-4">
+            Ohio, USA
+          </h3>
+          <LinkInput email="+1 614 664 7677" type="phone" />
+        </div>
+
+        <div class="">
+          <h3 class="font-semibold text-primary text-subheading mb-4">
+            Singapore
+          </h3>
+          <LinkInput email="+65 6652 5475" type="phone" />
+        </div>
+
+        <div class="">
+          <h3 class="font-semibold text-primary text-subheading mb-4">
+            Chennai, India
+          </h3>
+          <LinkInput email="+91 44 4784 3003" type="phone" />
+        </div>
+      </div>
+    </section>
+
+    <!-- form -->
+    <section>
+      <div class="my-10">
+        <h2 class="text-subbody text-primary font-semibold my-3">
+          Online Inquiry Form
+        </h2>
+        <p class="text-lg text-secondary">
+          Please fill in the following details, and we'll get back to you within
+          24 hours.
+        </p>
+      </div>
+
+      <form
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 card_outlined gap-10"
+        id="contactForm"
+      >
+        <TextInput
+          type="text"
+          id="firstName"
+          placeholder="Enter your First Name"
+          label="First Name"
+          required
+        />
+        <TextInput
+          type="text"
+          id="lastName"
+          placeholder="Enter your Last Name"
+          label="Last Name"
+          required
+        />
+
+        <TextInput
+          type="email"
+          id="email"
+          placeholder="Enter your Email"
+          label="Email"
+          required
+        />
+
+        <div>
+          <label
+            for="service"
+            class="block text-card-text text-lg font-medium mb-2"
+          >
+            Select Service
+          </label>
+          <select
+            id="service"
+            class="form-select w-full text-sm border border-secondary rounded-full text-primary p-4 bg-background"
+            required
+          >
+            <option value="">Select your Service</option>
+            <option value="service1">Service 1</option>
+            <option value="service2">Service 2</option>
+            <option value="service3">Service 3</option>
+          </select>
+          <span id="serviceError" class="text-red-500 text-sm hidden mt-1"
+          ></span>
+        </div>
+
+        <TextInput
+          type="tel"
+          id="phone"
+          placeholder="Enter your Phone Number"
+          label="Phone Number"
+          required
+        />
+
+        <TextInput
+          type="text"
+          id="company"
+          placeholder="Enter Company/Organization Name"
+          label="  Company / Organization Name"
+          required
+        />
+
+        <!-- Message row -->
+        <div class="col-span-1 md:col-span-2 lg:col-span-3">
+          <label
+            for="message"
+            class="block text-[#EAEAEA] text-subheading font-medium mb-2 lg:mb-[14px]"
+          >
+            Message
+          </label>
+          <textarea
+            id="message"
+            rows="4"
+            class="form-input w-full text-sm border border-secondary rounded-secondary text-[#888888] p-4 bg-background"
+            placeholder="Enter your Message"
+            required></textarea>
+          <span id="messageError" class="text-red-500 text-sm hidden mt-1"
+          ></span>
+        </div>
+
+        <div
+          class="col-span-1 md:col-span-2 lg:col-span-3 flex justify-center items-center mt-2 lg:mt-4"
+        >
+          <Button arrow={true} type="submit" href="" text="Send your inquiry" />
+        </div>
+      </form>
+    </section>
+
+    <div
+      id="formMessage"
+      class="col-span-1 md:col-span-2 lg:col-span-3 text-center hidden"
+    >
+      <p id="successMessage" class="text-green-500 font-medium text-lg hidden">
+        Your message has been sent successfully!
+      </p>
+      <p id="errorMessage" class="text-red-500 font-medium text-lg hidden">
+        There was an error submitting the form. Please try again.
+      </p>
+    </div>
+
+    <section class="my-20 text-center">
+>>>>>>> 142f24f7b6b8f965dce16e5ca3cfda12bf3f768a
       <h2 class="text-subbody text-white font-semibold mb-4">
         Join Us on Social Media
       </h2>
@@ -495,6 +699,7 @@ import {Image} from "astro:assets";
         Stay updated with our latest projects, industry insights, and company
         news by following us on social media
       </p>
+<<<<<<< HEAD
     </div>
   </div>
   <div class="flex flex-col items-center justify-center py-10 md:py-16 lg:py-19 px-4 text-center">
@@ -530,3 +735,36 @@ import {Image} from "astro:assets";
   </p>
 </div>
 </Layout>
+=======
+    </section>
+
+    <div
+      class="border-card border-2 flex items-center justify-center rounded-primary flex-col my-10 p-2 lg:p-10"
+    >
+      <div class="flex space-x-4 md:space-x-6 my-5 lg:my-10">
+        <a
+          href="https://www.linkedin.com/company/spritle-software"
+          target="_blank"
+        >
+          <LinkedInIcon class="size-20" />
+        </a>
+        <a href="https://www.instagram.com/spritlesoftware/" target="_blank">
+          <IgIcon class="size-20" />
+        </a>
+        <a href="https://x.com/spritlesoftware" target="_blank">
+          <XIcon class="size-20" />
+        </a>
+      </div>
+      <h1 class="font-dm-sans font-semibold md:text-6xl text-4xl my-5">
+        Thank You !
+      </h1>
+      <p
+        class="font-dm-sans font-medium text-subheading max-w-[1058px] text-secondary text-center"
+      >
+        For considering DigitX for your digital needs. We look forward to
+        connecting with you and being part of your digital success!
+      </p>
+    </div>
+  </main>
+</Layout>
+>>>>>>> 142f24f7b6b8f965dce16e5ca3cfda12bf3f768a
