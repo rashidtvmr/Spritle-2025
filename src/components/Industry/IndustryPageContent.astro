@@ -6,7 +6,6 @@ import UniqueValueCard from "@/components/DynamicProps/UniqueValueCard.astro";
 import SuccessStories from "@/components/DynamicProps/SuccessStories.astro";
 import Star from "@/components/DynamicProps/Star.astro";
 
-
 interface HeroSection {
   heading: string;
   description: string;
@@ -89,7 +88,7 @@ const {
 
         {
           heroSection.subHeading && (
-            <h1 class="text-heading text-primary font-dmSans font-semibold mt-20">
+            <h1 class="text-heading text-primary  font-semibold mt-20">
               {heroSection.subHeading}
             </h1>
           )
@@ -147,7 +146,7 @@ const {
         <div>
           <Star items={whyChooseSection.items} maxWidth={1000} />
         </div>
-      </div>     
+      </div>
     </div>
   </div>
   <!-- CTA Section -->

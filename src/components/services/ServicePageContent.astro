@@ -32,7 +32,7 @@ const { heroSection, sections } = Astro.props;
 
       {
         heroSection.subHeading && (
-          <h1 class="text-heading text-primary font-dmSans font-semibold mt-20">
+          <h1 class="text-heading text-primary  font-semibold mt-20">
             {heroSection.subHeading}
           </h1>
         )
@@ -141,7 +141,7 @@ const { heroSection, sections } = Astro.props;
         case "success-stories":
           return (
             <div class="my-10 md:my-20 container">
-              <h1 class="text-centerheading text-primary font-dmSans font-semibold text-center">
+              <h1 class="text-centerheading text-primary  font-semibold text-center">
                 {section.title}
               </h1>
               <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 md:mt-16 mt-5">
@@ -155,7 +155,7 @@ const { heroSection, sections } = Astro.props;
         case "intermediate-cta":
           return (
             <div class="my-10 md:my-20 flex flex-col justify-center items-center container">
-              <h1 class="text-centerheading text-primary font-dmSans font-semibold">
+              <h1 class="text-centerheading text-primary  font-semibold">
                 {section.heading}
               </h1>
               <p class="text-secondary py-5 lg:py-10 text-subbody font-normal text-center">
@@ -180,4 +180,3 @@ const { heroSection, sections } = Astro.props;
     })
   }
 </main>
-

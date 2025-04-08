@@ -5,20 +5,20 @@ import FeaturedBlog1 from "@/assets/images/home/blog1.png";
 import FeaturedBlog2 from "@/assets/images/home/blog1.png";
 import FeaturedBlog3 from "@/assets/images/home/blog1.png";
 import { Image } from "astro:assets";
+import Button from "@/components/common/button.astro";
 ---
 
 <div class="space-y-1 lg:space-y-6 md:space-y-3 my-10 md:my-20">
-  <div class="flex flex-wrap justify-between items-center mb-8">
-    <div class="py-3">
+  <div class="">
+    <div class="flex justify-between">
       <h2 class="text-heading text-primary md:mb-4 mb-2 font-medium">Blogs</h2>
-      <p
-        class="text-subheading md:space-y-4 md:mb-10 md:mt-10 space-y-1 text-secondary font-medium"
-      >
-        Don't take our word for it. Trust our customers
-      </p>
+      <Button href="/blogs" text="Browse all" className="!p-0" />
     </div>
+    <p class="text-subheading text-secondary font-medium">
+      Don't take our word for it. Trust our customers
+    </p>
 
-    <BtnSmall text="Browse all" />
+    <!-- <BtnSmall text="Browse all" /> -->
   </div>
 
   <div class="grid md:grid-cols-3 gap-6">
