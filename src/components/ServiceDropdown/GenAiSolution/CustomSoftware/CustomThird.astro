@@ -1,16 +1,18 @@
 ---
 // index.astro or your desired page
 import SuccessStories from "@/components/DynamicProps/SuccessStories.astro";
+import analytics from "../../../../assets/images/service/visionAI/analytics.png";
+import electronics from "../../../../assets/images/service/visionAI/electronics.png";
 
 const cardData = [
   {
-    image: "/assets/succ1.svg",
+    image: electronics,
     heading: "98% Accuracy in Defect Detection for Electronics Manufacturer",
     description:
       "A leading electronics company implemented our Vision AI-based defect detection system, increasing inspection accuracy by 98% and reducing product recall rates by 15%.",
   },
   {
-    image: "/assets/succ2.svg",
+    image: analytics,
     heading: "20% Sales Increase through In-Store Behavior Analytics",
     description:
       "Our Vision AI system helped a major retail chain track customer behavior and optimize product placements. This resulted in a 20% increase in sales and improved inventory management",
@@ -30,9 +32,7 @@ const technologies = [
   Success Stories
 </h1>
 <div>
-  <div
-    class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-12 container "
-  >
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-12 container">
     {cardData.map((card, index) => <SuccessStories key={index} {...card} />)}
   </div>
 </div>

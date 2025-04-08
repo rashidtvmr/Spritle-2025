@@ -1,5 +1,13 @@
 ---
 import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
+import rails from "../../../../assets/icons/Services/cutomsoftdev/rails.svg";
+import nodejs from "../../../../assets/icons/Services/cutomsoftdev/nodejs.svg";
+import js from "../../../../assets/icons/Services/cutomsoftdev/js.svg";
+import net from "../../../../assets/icons/Services/cutomsoftdev/net.svg";
+import react from "../../../../assets/icons/Services/cutomsoftdev/react.svg";
+import angular from "../../../../assets/icons/Services/cutomsoftdev/angular.svg";
+import python from "../../../../assets/icons/Services/cutomsoftdev/python.svg";
+import { Image } from "astro:assets";
 
 const technologies = [
   "Artificial Intelligence",
@@ -42,37 +50,37 @@ const technologies = [
   {
     [
       {
-        img: "/assets/rails.svg",
+        img: rails,
         title: "Ruby on Rails",
         description:
           "Rapid development with high scalability for robust, dynamic web applications.",
       },
       {
-        img: "/assets/js.svg",
+        img: nodejs,
         title: "Node.js",
         description:
           "Event-driven, non-blocking architecture for building scalable, high-performance applications.",
       },
       {
-        img: "/assets/net.svg",
+        img: net,
         title: ".NET",
         description:
           "Enterprise-level solutions with cross-platform capabilities using Microsoft’s secure and versatile framework.",
       },
       {
-        img: "/assets/python.svg",
+        img: python,
         title: "Python",
         description:
           "Versatile programming language, ideal for AI, data science, and machine learning applications.",
       },
       {
-        img: "/assets/jss.svg",
+        img: js,
         title: "JavaScript",
         description:
           "Rich, interactive user interfaces and real-time web applications.",
       },
       {
-        img: ["/assets/react.svg", "/assets/angular.svg"],
+        img: [react, angular],
         title: "React & Angular",
         description:
           "Dynamic, responsive front-end frameworks for modern web applications.",
@@ -85,18 +93,20 @@ const technologies = [
         <div class="flex  items-center w-full">
           {Array.isArray(item.img) ? (
             item.img.map((img, i) => (
-              <img key={i} src={img} alt="" class="mr-4 xl:pt-[60px]" />
+              <Image key={i} src={img} alt="" class="mr-4 xl:pt-[60px]" />
             ))
           ) : (
-            <img src={item.img} alt="" class="mr-4 xl:pt-[60px] " />
+            <Image src={item.img} alt="" class="mr-4 xl:pt-[60px] " />
           )}
-          <h2 class="text-primary lg:text-[32px] text-xl font-medium flex-grow text-center xl:pt-[61px] xl:pr-[52px]
-         h-30 ">
+          <h2
+            class="text-primary lg:text-[32px] text-xl font-medium flex-grow text-center xl:pt-[61px] xl:pr-[52px]
+         h-30 "
+          >
             {item.title}
           </h2>
         </div>
         <p class="mt-2 text-[#B0B0B0] font-normal text-subheading xl:pt-[54px] mb-3">
-          {item.description} 
+          {item.description}
         </p>
       </div>
     ))

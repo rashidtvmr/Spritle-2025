@@ -1,28 +1,32 @@
 ---
 // index.astro or your desired page
 import SuccessStories from "@/components/DynamicProps/SuccessStories.astro";
+import ecommerce from "../../../../assets/images/service/testing/ecommerce.png";
+import healthcare from "../../../../assets/images/service/testing/healthcare.png";
+import regression from "../../../../assets/images/service/testing/regression.png";
+import media from "../../../../assets/images/service/devscope/media.png";
 
 const cardData = [
   {
-    image: "/assets/dev1.svg",
+    image: regression,
     heading: "Retail – Cloud Migration for E-commerce Scalability",
     description:
       "Developed a big data solution for precision agriculture, analyzing soil health and weather patterns to optimize crop yield, increasing productivity by 25%",
   },
   {
-    image: "/assets/dev2.svg",
+    image: ecommerce,
     heading: "Healthcare – CI/CD Implementation for Telemedicine Platform",
     description:
       "Implemented CI/CD pipelines for a telemedicine provider, accelerating software releases by 50%, ensuring regulatory compliance, and improving system stability.",
   },
   {
-    image: "/assets/dev3.svg",
+    image: healthcare,
     heading: "Banking – DevSecOps for Cloud Security",
     description:
       "Developed a DevSecOps approach for a financial institution, ensuring compliance with industry standards and reducing cloud security incidents by 25%",
   },
   {
-    image: "/assets/dev4.svg",
+    image: media,
     heading: "Media – Containerization for Streaming Services",
     description:
       "Enabled containerized microservices for a media streaming company, increasing resource efficiency and ensuring smooth service during traffic spikes",
@@ -31,14 +35,12 @@ const cardData = [
 ---
 
 <div class="my-10 md:my-20">
-  <div
-    class="text-heading text-primary md:mb-12 mb-2 font-bold container "
-  >
+  <div class="text-heading text-primary md:mb-12 mb-2 font-bold container">
     Industry Use Cases
   </div>
   <div>
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-12 container "
+      class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-12 container"
     >
       {cardData.map((card, index) => <SuccessStories key={index} {...card} />)}
     </div>

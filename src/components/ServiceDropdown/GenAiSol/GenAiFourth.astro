@@ -1,32 +1,35 @@
 ---
 import UniqueValueCard from "@/components/DynamicProps/UniqueValueCard.astro";
+import u1 from "../../../assets/icons/casestudy/u1.svg";
+import u2 from "../../../assets/icons/casestudy/u2.svg";
+import u3 from "../../../assets/icons/casestudy/u3.svg";
 ---
 
 <div
-  class="text-heading text-primary md:mb-12 mb-2 font-bold container  my-10 md:my-20"
+  class="text-heading text-primary md:mb-12 mb-2 font-bold container my-10 md:my-20"
 >
   Our Unique Value Proposition
 </div>
 <div
-  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-6 container "
+  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 gap-y-6 container"
 >
   <UniqueValueCard
-    logo="/assets/unique1.svg"
+    logo={u1}
     title="Virtual Assistant for Sales"
     description="Empower your sales team with AI-driven virtual assistants that engage with leads, answer inquiries, and schedule follow-ups. By automating repetitive tasks, these assistants help boost sales productivity and en hance customer interactions."
   />
   <UniqueValueCard
-    logo="/assets/unique2.svg"
+    logo={u2}
     title="AI-Powered Data Summarization"
     description="From legal documents to healthcare records, our AI solutions generate concise, accurate summaries, making decision-making faster and more efficient."
   />
   <UniqueValueCard
-    logo="/assets/unique3.svg"
+    logo={u3}
     title="AI-Driven Product Design & Prototyping"
     description="Generate multiple design iterations quickly, whether you’re in the automotive, manufacturing, or creative industries. Our AI helps you explore creative possibilities at scale"
   />
   <UniqueValueCard
-    logo="/assets/unique3.svg"
+    logo={u3}
     title="Customer Support Automation"
     description="Enhance your customer service with AI-generated responses that provide accurate, human-like interactions in real time"
   />

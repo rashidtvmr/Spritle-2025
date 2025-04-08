@@ -1,27 +1,28 @@
 ---
 import UniqueValueCard from "@/components/DynamicProps/UniqueValueCard.astro";
+import u1 from "../../../../assets/icons/casestudy/u1.svg";
+import u2 from "../../../../assets/icons/casestudy/u2.svg";
+import u3 from "../../../../assets/icons/casestudy/u3.svg";
 ---
 
 <div
-  class="text-heading text-primary md:mb-12 mb-2 font-bold container  my-10 md:my-20"
+  class="text-heading text-primary md:mb-12 mb-2 font-bold container my-10 md:my-20"
 >
   Our Unique Value Proposition
 </div>
-<div
-  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 container "
->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 container">
   <UniqueValueCard
-    logo="/assets/unique1.svg"
+    logo={u1}
     title="Tailored Vision AI Solutions"
     description="Every industry and business has unique needs. We develop AI models specifically tailored to your industry, whether it's retail, healthcare, entertainment, or manufacturing."
   />
   <UniqueValueCard
-    logo="/assets/unique2.svg"
+    logo={u2}
     title="AI-Powered Creativity & Efficiency"
     description="From generating compelling marketing content to automating complex design tasks, our solutions help you reduce costs, save time, and stay ahead of the competition by leveraging cutting-edge AI."
   />
   <UniqueValueCard
-    logo="/assets/unique3.svg"
+    logo={u3}
     title="Deep Industry Expertise"
     description="With years of experience deploying AI solutions across various sectors, we understand how to drive meaningful impact using Generative AI"
   />

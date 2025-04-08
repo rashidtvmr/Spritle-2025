@@ -1,22 +1,25 @@
 ---
 // index.astro or your desired page
 import SuccessStories from "@/components/DynamicProps/SuccessStories.astro";
+import finance from "../../assets/images/service/itConsulting/finance.png";
+import healthcare from "../../assets/images/service/itConsulting/healthcare.png";
+import manufacture from "../../assets/images/service/itConsulting/manufacture.png";
 
 const cardData = [
   {
-    image: "/assets/it1.svg",
+    image: manufacture,
     heading: "Manufacturing – IT Infrastructure Overhaul",
     description:
       "We guided a manufacturing company through an end-to-end IT infrastructure transformation, reducing operational costs by 30%",
   },
   {
-    image: "/assets/it2.svg",
+    image: healthcare,
     heading: "Healthcare – Cloud Strategy Consulting",
     description:
       "Advised a healthcare provider on cloud migration, ensuring HIPAA compliance and reducing data storage costs by 40%",
   },
   {
-    image: "/assets/it3.svg",
+    image: finance,
     heading: "Finance – Digital Modernization",
     description:
       "Helped a financial institution modernize their IT systems, enabling faster, more secure transactions and improved customer experience",
@@ -24,14 +27,11 @@ const cardData = [
 ];
 ---
 
-<div class="my-10 md:my-20 container ">
-  <div class="text-heading text-primary  font-bold">
-    Industry Use Cases
-  </div>
+<div class="my-10 md:my-20 container">
+  <div class="text-heading text-primary font-bold">Industry Use Cases</div>
   <div>
     <div class="grid grid-cols-1 md:grid-cols-2 mx-auto lg:gap-12 gap-5 mt-12">
       {cardData.map((card, index) => <SuccessStories key={index} {...card} />)}
     </div>
   </div>
 </div>
-
