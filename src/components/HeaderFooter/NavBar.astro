@@ -1,314 +1,358 @@
 ---
 import MobileNav from "./MobileNav.astro";
+import SpritleLogo from "@/assets/icons/spritle.svg";
+import ArrowDown from "@/assets/icons/chevron-down.svg";
 ---
 
-<nav
-  class="backdrop-blur-md bg-[#171717]/80 shadow-md fixed top-0 left-0 w-full z-50 border-b border-[#ffffff]/10"
+<header
+  class="backdrop-blur-md bg-[#171717]/80 shadow-md fixed top-0 left-0 w-full z-50"
   role="navigation"
   aria-label="Main navigation"
 >
-  <div class="px-4 sm:px-6 lg:px-8">
+  <div class="container">
     <div class="flex justify-between items-center h-16">
       <!-- Mobile Menu Toggle Button -->
-      <div class="flex items-center bg-card rounded-lg md:hidden p-2">
-        <a href="/" aria-label="Home">
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
-            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
-            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
-          </svg>
+      <a href="/" aria-label="Home" class="lg:hidden p-2">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+          <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+          <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
+        </svg>
+      </a>
+
+      <!-- Logo -->
+      <div class="flex flex-1 justify-center lg:justify-start">
+        <a href="/">
+          <SpritleLogo mode="sprite" class="h-8 w-30" />
         </a>
       </div>
 
-      <!-- Logo -->
-      <a href="/">
-        <div class="flex-1 flex justify-center md:justify-start">
-          <img
-            src="/assets/spritle.svg"
-            alt="Spritle Logo"
-            class="lg:h-8 lg:w-24 h-8 w-30"
-          />
-        </div>
-      </a>
-
-      <!-- Desktop Menu -->
-      <div class="hidden md:flex space-x-6 items-center">
-        <!-- AI Solutions Link -->
-        <a
-          href="/aisolution"
-          class="text-primary text-sm hover:bg-card focus:bg-card px-3 py-2 rounded-lg transition duration-300 focus:outline-none"
-          >AI Solutions</a
-        >
-
-        <!-- Services Dropdown -->
-        <div class="relative group">
-          <button
-            id="servicesToggle"
-            class="text-primary text-sm px-3 py-2 rounded-t-xl transition duration-300 flex items-center hover:bg-card focus:bg-card focus:outline-none"
-            aria-haspopup="true"
-            aria-expanded="false"
-            aria-controls="servicesMenu"
-          >
-            Services
-            <svg
-              id="servicesArrow"
-              class="w-4 h-4 ml-1 transform transition-transform duration-300"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+      <nav>
+        <!-- Desktop Menu -->
+        <ul class="hidden lg:flex space-x-4 items-center">
+          <!-- AI Solutions Link -->
+          <li>
+            <a
+              href="/aisolution"
+              class="text-primary text-md hover:bg-card focus:bg-card px-3 py-2 rounded-primary transition duration-300 focus:outline-none"
+              >AI Solutions</a
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div
-            id="servicesMenu"
-            class="absolute hidden p-3 bg-card mt-[1px] rounded-lg rounded-tl-none shadow-lg w-64 z-50"
-            role="menu"
-            aria-label="Services"
-          >
-            <ul>
-              <li>
+          </li>
+
+          <!-- Services Dropdown -->
+          <li class="relative group">
+            <button
+              id="servicesToggle"
+              class="text-primary text-md px-2 py-2 aria-expanded:rounded-b-none rounded-primary transition-background duration-300 flex items-center hover:bg-card focus:bg-card focus:outline-none aria-expanded:bg-card"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="servicesMenu"
+            >
+              Services
+              <ArrowDown
+                id="servicesArrow"
+                class="w-4 h-4 ml-1 transition-transform duration-300"
+              />
+            </button>
+            <div
+              id="servicesMenu"
+              class="absolute hidden p-2 bg-card rounded-tl-none rounded-primary w-64 z-50 border-t-3 border-[#171717]/80"
+              role="menu"
+              aria-label="Services"
+            >
+              <ul>
+                <li>
+                  <a
+                    href="/genaisolution"
+                    role="menuitem"
+                    tabindex="0"
+                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                    >Gen AI Solution</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/visionai"
+                    role="menuitem"
+                    tabindex="0"
+                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                    >Vision AI</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/custom"
+                    role="menuitem"
+                    tabindex="0"
+                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                    >Custom Software Development</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/ai-ml-solutions"
+                    role="menuitem"
+                    tabindex="0"
+                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                    >AI & ML Solutions</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/datascience-bigdata"
+                    role="menuitem"
+                    tabindex="0"
+                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                    >DataScience & BigData</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/cloud-devops"
+                    role="menuitem"
+                    tabindex="0"
+                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                    >Cloud & Devops</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/it-consulting"
+                    role="menuitem"
+                    tabindex="0"
+                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                    >IT Consulting</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/quality-assurance-testing"
+                    role="menuitem"
+                    tabindex="0"
+                    class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                    >Quality Assurance & Testing</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Industries Dropdown for Laptop -->
+          <li class="relative group">
+            <button
+              id="industriesDropdownToggleDesktop"
+              class="text-primary text-md px-3 py-2 aria-expanded:rounded-b-none rounded-primary transition duration-300 flex items-center group-hover:bg-card focus:outline-none hover:bg-card focus:bg-card aria-expanded:bg-card"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="industriesDropdownDesktop"
+            >
+              Industries
+              <ArrowDown
+                id="industriesArrowDesktop"
+                class="w-4 h-4 ml-1 transition-transform duration-300"
+              />
+            </button>
+            <!-- Dropdown Menu Industries -->
+            <ul
+              id="industriesDropdownDesktop"
+              class="absolute hidden bg-card p-2 rounded-primary rounded-tl-none w-64 border-t-3 border-[#171717]/80"
+              role="menu"
+              aria-label="Industries Dropdown"
+            >
+              <li role="none">
                 <a
-                  href="/genaisolution"
+                  href="/healthcare-industry"
+                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
-                  tabindex="0"
-                  class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                  >Gen AI Solution</a
+                  tabindex="-1"
                 >
+                  Healthcare Industry
+                </a>
               </li>
-              <li>
+              <li role="none">
                 <a
-                  href="/visionai"
+                  href="/aviation-industry"
+                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
-                  tabindex="0"
-                  class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                  >Vision AI</a
+                  tabindex="-1"
                 >
+                  Aviation Industry
+                </a>
               </li>
-              <li>
+              <li role="none">
                 <a
-                  href="/custom"
+                  href="/education-industry"
+                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
-                  tabindex="0"
-                  class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                  >Custom Software Development</a
+                  tabindex="-1"
                 >
+                  Education Industry
+                </a>
               </li>
-              <li>
+              <li role="none">
                 <a
-                  href="/ai-ml-solutions"
+                  href="/manufacturing-industry"
+                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
-                  tabindex="0"
-                  class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                  >AI & ML Solutions</a
+                  tabindex="-1"
                 >
+                  Manufacturing Industry
+                </a>
               </li>
-              <li>
+              <li role="none">
                 <a
-                  href="/datascience-bigdata"
+                  href="/ecommerce-industry"
+                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
-                  tabindex="0"
-                  class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                  >DataScience & BigData</a
+                  tabindex="-1"
                 >
+                  Ecommerce Industry
+                </a>
               </li>
-              <li>
+              <li role="none">
                 <a
-                  href="/cloud-devops"
+                  href="/lifescience-industry"
+                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
-                  tabindex="0"
-                  class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                  >Cloud & Devops</a
+                  tabindex="-1"
                 >
+                  Life Science Industry
+                </a>
               </li>
-              <li>
+              <li role="none">
                 <a
-                  href="/it-consulting"
+                  href="/transportation-logistic-industry"
+                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
-                  tabindex="0"
-                  class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                  >IT Consulting</a
+                  tabindex="-1"
                 >
+                  Transportation & Logistics Industry
+                </a>
               </li>
-              <li>
+              <li role="none">
                 <a
-                  href="/quality-assurance-testing"
+                  href="/cpaas-industry"
+                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
                   role="menuitem"
-                  tabindex="0"
-                  class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                  >Quality Assurance & Testing</a
+                  tabindex="-1"
                 >
+                  CPaaS Industry
+                </a>
+              </li>
+              <li role="none">
+                <a
+                  href="/energy-utility-services"
+                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Energy & Utilities Industry
+                </a>
               </li>
             </ul>
-          </div>
-        </div>
+          </li>
 
-        <!-- Industries Dropdown for Laptop -->
-        <div class="relative group">
-          <button
-            id="industriesDropdownToggleDesktop"
-            class="text-primary text-sm px-3 py-2 rounded-t-xl transition duration-300 flex items-center group-hover:bg-card focus:outline-none hover:bg-card focus:bg-card"
-            aria-haspopup="true"
-            aria-expanded="false"
-            aria-controls="industriesDropdownDesktop"
-          >
-            Industries
-            <svg
-              id="industriesArrowDesktop"
-              class="w-4 h-4 ml-1 transform transition-transform duration-300"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <li>
+            <a
+              href="/works"
+              class="text-primary text-md hover:bg-card focus:bg-card px-3 py-2 rounded-primary transition duration-300 focus:outline-none"
+              >Works</a
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <!-- Dropdown Menu Industries -->
-          <ul
-            id="industriesDropdownDesktop"
-            class="absolute hidden bg-card p-3 mt-[1px] rounded-lg rounded-tl-none shadow-lg w-64"
-            role="menu"
-            aria-label="Industries Dropdown"
-          >
-            <li role="none">
-              <a
-                href="/healthcare-industry"
-                class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                role="menuitem"
-                tabindex="-1"
-              >
-                Healthcare Industry
-              </a>
-            </li>
-            <li role="none">
-              <a
-                href="/aviation-industry"
-                class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                role="menuitem"
-                tabindex="-1"
-              >
-                Aviation Industry
-              </a>
-            </li>
-            <li role="none">
-              <a
-                href="/education-industry"
-                class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                role="menuitem"
-                tabindex="-1"
-              >
-                Education Industry
-              </a>
-            </li>
-            <li role="none">
-              <a
-                href="/manufacturing-industry"
-                class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                role="menuitem"
-                tabindex="-1"
-              >
-                Manufacturing Industry
-              </a>
-            </li>
-            <li role="none">
-              <a
-                href="/ecommerce-industry"
-                class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                role="menuitem"
-                tabindex="-1"
-              >
-                Ecommerce Industry
-              </a>
-            </li>
-            <li role="none">
-              <a
-                href="/lifescience-industry"
-                class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                role="menuitem"
-                tabindex="-1"
-              >
-                Life Science Industry
-              </a>
-            </li>
-            <li role="none">
-              <a
-                href="/transportation-logistic-industry"
-                class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                role="menuitem"
-                tabindex="-1"
-              >
-                Transportation & Logistics Industry
-              </a>
-            </li>
-            <li role="none">
-              <a
-                href="/cpaas-industry"
-                class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                role="menuitem"
-                tabindex="-1"
-              >
-                CPaaS Industry
-              </a>
-            </li>
-            <li role="none">
-              <a
-                href="/energy-utility-services"
-                class="block text-primary text-sm px-4 py-2 hover:bg-card focus:bg-card hover:rounded-lg focus:rounded-lg focus:outline-none"
-                role="menuitem"
-                tabindex="-1"
-              >
-                Energy & Utilities Industry
-              </a>
-            </li>
-          </ul>
-        </div>
+          </li>
 
-        <!-- Other Menu Links -->
-        <a
-          href="/works"
-          class="text-primary text-sm hover:bg-card focus:bg-card px-3 py-2 rounded-lg transition duration-300 focus:outline-none"
-          >Works</a
-        >
+          <li>
+            <a
+              href="/about"
+              class="text-primary text-md hover:bg-card focus:bg-card px-3 py-2 rounded-primary transition duration-300 focus:outline-none"
+              >About</a
+            >
+          </li>
 
-        <a
-          href="/about"
-          class="text-primary text-sm hover:bg-card focus:bg-card px-3 py-2 rounded-lg transition duration-300 focus:outline-none"
-          >About</a
-        >
+          <!-- KNowledge Dropdown for Laptop -->
+          <li class="relative group">
+            <button
+              id="knowledgeDropdownToggleDesktop"
+              class="text-primary text-md px-3 py-2 aria-expanded:rounded-b-none rounded-primary transition duration-300 flex items-center group-hover:bg-card focus:outline-none hover:bg-card focus:bg-card aria-expanded:bg-card"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="knowledgeDropdownDesktop"
+            >
+              Knowledge
+              <ArrowDown
+                id="knowledgeArrowDesktop"
+                class="w-4 h-4 ml-1 transition-transform duration-300"
+              />
+            </button>
+            <!-- Dropdown Menu Industries -->
+            <ul
+              id="knowledgeDropdownDesktop"
+              class="absolute hidden bg-card p-2 rounded-primary rounded-tl-none w-64 border-t-3 border-[#171717]/80"
+              role="menu"
+              aria-label="Knowledge Dropdown"
+            >
+              <li role="none">
+                <a
+                  href="/blogs"
+                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Blogs
+                </a>
+              </li>
+              <li role="none">
+                <a
+                  href="/tips-of-the-week"
+                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Tips of the Week
+                </a>
+              </li>
+              <li role="none">
+                <a
+                  href="/q_and_a"
+                  class="block text-primary rounded-primary text-md px-3 py-2 hover:bg-background focus:bg-background focus:outline-none"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Q&A
+                </a>
+              </li>
+            </ul>
+          </li>
 
-        <a
-          href="/career"
-          class="text-primary text-sm hover:bg-card focus:bg-card px-3 py-2 rounded-lg transition duration-300 focus:outline-none"
-          >Career</a
-        >
+          <li>
+            <a
+              href="/career"
+              class="text-primary text-md hover:bg-card focus:bg-card px-3 py-2 rounded-primary transition duration-300 focus:outline-none"
+              >Career</a
+            >
+          </li>
 
-        <a
-          href="/contact"
-          class="bg-[#15AED5] text-primary px-4 py-2 rounded-full hover:bg-card focus:bg-card transition duration-300 text-sm focus:outline-none"
-          >Contact us</a
-        >
-      </div>
+          <li>
+            <a
+              href="/contact"
+              class="bg-button text-primary px-4 py-2 rounded-full hover:bg-card focus:bg-card transition-background duration-300 text-md focus:outline-none"
+              >Contact us</a
+            >
+          </li>
+        </ul>
+      </nav>
 
       <!-- Mobile Menu Toggle Button -->
       <button
         id="mobileMenuButton"
-        class="flex items-center cursor-pointer bg-background rounded-lg md:hidden p-2 focus:outline-none relative w-10 h-10 group"
+        class="flex items-center cursor-pointer bg-background rounded-primary lg:hidden p-2 focus:outline-none relative w-10 h-10 group"
         aria-label="Toggle menu"
         aria-expanded="false"
       >
@@ -321,7 +365,7 @@ import MobileNav from "./MobileNav.astro";
       </button>
     </div>
   </div>
-</nav>
+</header>
 
 <MobileNav />
 
@@ -389,5 +433,10 @@ import MobileNav from "./MobileNav.astro";
     "industriesDropdownToggleDesktop",
     "industriesDropdownDesktop",
     "industriesArrowDesktop"
+  );
+  setupDesktopDropdown(
+    "knowledgeDropdownToggleDesktop",
+    "knowledgeDropdownDesktop",
+    "knowledgeArrowDesktop"
   );
 </script>

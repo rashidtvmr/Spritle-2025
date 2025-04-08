@@ -1,24 +1,24 @@
----
-// MobileNav.astro
----
-
 <div
   id="mobileMenu"
-  class="md:hidden backdrop-blur-md bg-[#171717]/80 shadow-md hidden fixed top-0 left-0 mt-15 w-full h-full z-60 overflow-y-auto"
+  class="md:hidden bg-background shadow-md hidden fixed top-0 left-0 mt-15 w-full h-full z-60 overflow-y-auto"
 >
-  <div class="px-4 pt-2 pb-3 space-y-1">
-    <a
-      href="/aisolution"
-      class="block text-lg text-white hover:bg-background rounded-primary p-5"
-      >AI Solutions</a
-    >
+  <ul class="px-4 pt-2 pb-3 space-y-1">
+    <li role="none">
+      <a
+        href="/aisolution"
+        class="block text-lg text-white hover:bg-card rounded-primary p-5"
+        >AI Solutions</a
+      >
+    </li>
 
     <!-- Services Dropdown for Mobile -->
-    <div>
-      <a
-        href="#"
+    <li role="none">
+      <button
         id="servicesDropdownToggleMobile"
-        class="text-lg text-white hover:bg-[#262626] flex items-center p-5 rounded-primary"
+        class="text-lg text-white hover:bg-card aria-expanded:bg-card flex items-center p-5 rounded-primary w-full mb-0.5"
+        aria-expanded="false"
+        aria-controls="servicesDropdownMobile"
+        role="button"
       >
         Services
         <div class="flex justify-end w-full">
@@ -36,61 +36,81 @@
               d="M19 9l-7 7-7-7"></path>
           </svg>
         </div>
-      </a>
-      <div
+      </button>
+      <ul
         id="servicesDropdownMobile"
-        class="hidden bg-transparent p-2 rounded-primary border-card border"
+        class="hidden bg-card p-2 rounded-primary border-card border"
+        role="region"
+        aria-labelledby="servicesDropdownToggleMobile"
       >
-        <a
-          href="/genaisolution"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Gen AI Solution</a
-        >
-        <a
-          href="/visionai"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Vision Ai</a
-        >
-        <a
-          href="/custom"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Custom Software development-page</a
-        >
-        <a
-          href="/ai-ml-solutions"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >AI&ML solutions</a
-        >
-        <a
-          href="/datascience-bigdata"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >DataScience&BigData</a
-        >
-        <a
-          href="/cloud-devops"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Cloud&Devops</a
-        >
-        <a
-          href="/it-consulting"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >IT Consulting</a
-        >
-        <a
-          href="/quality-assurance-testing"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Quality Assurance&Testing</a
-        >
-      </div>
-    </div>
+        <li>
+          <a
+            href="/genaisolution"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Gen AI Solution</a
+          >
+        </li>
+        <li>
+          <a
+            href="/visionai"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Vision Ai</a
+          >
+        </li>
+        <li>
+          <a
+            href="/custom"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Custom Software development-page</a
+          >
+        </li>
+        <li>
+          <a
+            href="/ai-ml-solutions"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >AI&ML solutions</a
+          >
+        </li>
+        <li>
+          <a
+            href="/datascience-bigdata"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >DataScience&BigData</a
+          >
+        </li>
+        <li>
+          <a
+            href="/cloud-devops"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Cloud&Devops</a
+          >
+        </li>
+        <li>
+          <a
+            href="/it-consulting"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >IT Consulting</a
+          >
+        </li>
+        <li>
+          <a
+            href="/quality-assurance-testing"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Quality Assurance&Testing</a
+          >
+        </li>
+      </ul>
+    </li>
     <!-- Services End -->
 
     <!-- Industries Dropdown for Mobile -->
-    <div>
-      <a
-        href="#"
+    <li>
+      <button
         id="industriesDropdownToggleMobile"
-        class="text-lg text-white hover:bg-card flex items-center p-5 rounded-primary"
+        class="text-lg text-white hover:bg-card aria-expanded:bg-card flex items-center p-5 rounded-primary w-full mb-0.5"
+        aria-expanded="false"
+        aria-controls="industriesDropdownMobile"
+        role="button"
       >
         Industries
         <div class="flex justify-end w-full">
@@ -108,75 +128,104 @@
               d="M19 9l-7 7-7-7"></path>
           </svg>
         </div>
-      </a>
-      <div
+      </button>
+      <ul
         id="industriesDropdownMobile"
-        class="hidden bg-transparent p-2 rounded-primary border-card border"
+        class="hidden bg-card p-2 rounded-primary border-card border"
+        role="region"
+        aria-labelledby="industriesDropdownToggleMobile"
       >
-        <a
-          href="/healthcare-industry"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Healthcare Industry</a
-        >
-        <a
-          href="/aviation-industry"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Aviation Industry</a
-        >
-        <a
-          href="/education-industry"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Education Industry</a
-        >
-        <a
-          href="/manufacturing-industry"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Manufacturing Industry</a
-        >
-        <a
-          href="/ecommerce-industry"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Ecommerce Industry</a
-        >
-        <a
-          href="/lifescience-industry"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Life Science Industry</a
-        >
-        <a
-          href="/transportation-logistic-industry"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Transportation & Logistics Industry</a
-        >
-        <a
-          href="/cpaas-industry"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >CPaaS Industry</a
-        >
-        <a
-          href="/energy-utility-services"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Energy & Utilities Industry</a
-        >
-      </div>
-    </div>
+        <li>
+          <a
+            href="/healthcare-industry"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Healthcare Industry</a
+          >
+        </li>
+        <li>
+          <a
+            href="/aviation-industry"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Aviation Industry</a
+          >
+        </li>
+        <li>
+          <a
+            href="/education-industry"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Education Industry</a
+          >
+        </li>
+        <li>
+          <a
+            href="/manufacturing-industry"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Manufacturing Industry</a
+          >
+        </li>
+        <li>
+          <a
+            href="/ecommerce-industry"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Ecommerce Industry</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lifescience-industry"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Life Science Industry</a
+          >
+        </li>
+        <li>
+          <a
+            href="/transportation-logistic-industry"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Transportation & Logistics Industry</a
+          >
+        </li>
+        <li>
+          <a
+            href="/cpaas-industry"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >CPaaS Industry</a
+          >
+        </li>
+        <li>
+          <a
+            href="/energy-utility-services"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Energy & Utilities Industry</a
+          >
+        </li>
+      </ul>
+    </li>
     <!-- Industries End -->
 
-    <a
-      href="/works"
-      class="block text-lg text-white hover:bg-background rounded-primary p-5"
-      >Works</a
-    >
-    <a
-      href="/about"
-      class="block text-lg text-white hover:bg-background rounded-primary p-5"
-      >About</a
-    >
-    <div>
+    <li role="none">
       <a
-        href="#"
+        href="/works"
+        class="block text-lg text-white hover:bg-card rounded-primary p-5"
+        >Works</a
+      >
+    </li>
+
+    <li role="none">
+      <a
+        href="/about"
+        class="block text-lg text-white hover:bg-card rounded-primary p-5"
+        >About</a
+      >
+    </li>
+
+    <!-- Knowledge Dropdown for Mobile -->
+    <li>
+      <button
         id="knowledgeDropdownToggleMobile"
-        class="text-lg text-white hover:bg-card flex items-center p-5 rounded-primary"
+        class="text-lg text-white hover:bg-card aria-expanded:bg-card flex items-center p-5 rounded-primary w-full mb-0.5"
+        aria-expanded="false"
+        aria-controls="knowledgeDropdownMobile"
+        role="button"
       >
         Knowledge
         <div class="flex justify-end w-full">
@@ -194,39 +243,52 @@
               d="M19 9l-7 7-7-7"></path>
           </svg>
         </div>
-      </a>
-      <div
+      </button>
+      <ul
         id="knowledgeDropdownMobile"
-        class="hidden bg-transparent p-2 rounded-primary border-card border"
+        class="hidden bg-card p-2 rounded-primary border-card border"
+        role="region"
+        aria-labelledby="knowledgeDropdownToggleMobile"
       >
-        <a
-          href="/blogs"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Blogs</a
-        >
-        <a
-          href="/tips-of-the-week"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Tips of the Week</a
-        >
-        <a
-          href="/q&a"
-          class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
-          >Q&A</a
-        >
-      </div>
-    </div>
-    <a
-      href="/career"
-      class="block text-lg text-white hover:bg-background rounded-primary p-5"
-      >Career</a
-    >
-    <a
-      href="/contact"
-      class="block text-lg text-white hover:bg-background rounded-primary p-5"
-      >Contact us</a
-    >
-  </div>
+        <li>
+          <a
+            href="/blogs"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Blogs</a
+          >
+        </li>
+        <li>
+          <a
+            href="/tips-of-the-week"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Tips of the Week</a
+          >
+        </li>
+        <li>
+          <a
+            href="/q_and_a"
+            class="block text-primary text-lg hover:bg-background rounded-primary rounded-br-xl rounded-bl-xl p-5"
+            >Q&A</a
+          >
+        </li>
+      </ul>
+    </li>
+    <li role="none">
+      <a
+        href="/career"
+        class="block text-lg text-white hover:bg-card rounded-primary p-5"
+        >Career</a
+      >
+    </li>
+
+    <li role="none">
+      <a
+        href="/contact"
+        class="block text-lg text-white hover:bg-card rounded-primary p-5"
+        >Contact us</a
+      >
+    </li>
+  </ul>
 </div>
 
 <script lang="js">
@@ -255,8 +317,11 @@
 
     btn?.addEventListener("click", (e) => {
       e.preventDefault();
-      drop.classList.toggle("hidden");
+      const expanded = drop.classList.toggle("hidden");
       icon.classList.toggle("rotate-180");
+      btn.setAttribute("aria-expanded", expanded ? "false" : "true");
     });
   });
 </script>
+
+<style></style>
