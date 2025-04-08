@@ -1,28 +1,31 @@
 ---
-
 import AiCard from "../DynamicProps/AiCard.astro";
+import Healthcare from "@/assets/images/AIsolution/secthree1.png";
+import Retail from "@/assets/images/AIsolution/secthree2.png";
+import Manufacturing from "@/assets/images/AIsolution/secthree3.png";
+import Airports from "@/assets/images/AIsolution/secthree4.png";
 
 const AiSectionThreeMap = [
   {
-    image: "/assets/secthree1.svg",
+    image: Healthcare,
     title: "Healthcare",
     description:
       "Revolutionizing patient care with AI-driven diagnostics, personalized treatments, and operational automation",
   },
   {
-    image: "/assets/secthree2.svg",
+    image: Retail,
     title: "Retail",
     description:
       "Enhancing inventory management, customer personalization, and supply chain optimization using AI technologies",
   },
   {
-    image: "/assets/secthree3.svg",
+    image: Manufacturing,
     title: "Manufacturing",
     description:
       "Improving predictive maintenance, production optimization, and quality control with AI-driven analytics",
   },
   {
-    image: "/assets/secthree4.svg",
+    image: Airports,
     title: "Aviation/Airports",
     description:
       "Streamlining airport operations, enhancing safety, and optimizing passenger experiences through predictive analytics, computer vision, and AI-driven automation",
@@ -40,6 +43,6 @@ const AiSectionThreeMap = [
   </p>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 my-10 md:my-20 ">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 my-10 md:my-20">
   {AiSectionThreeMap.map((card, index) => <AiCard key={index} {...card} />)}
 </div>
