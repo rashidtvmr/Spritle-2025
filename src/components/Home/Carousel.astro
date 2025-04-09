@@ -78,16 +78,14 @@ const carouselContent = [
           const textId = `card-text-${index}`;
           return (
             <li
-              class={`
-              ${
-                (index === 0 ? " ms-4 md:ms-6 2xl:ms-0" : "") +
-                (index === carouselContent.length - 1
-                  ? " me-4 md:me-6 2xl:me-0"
-                  : "")
-              }
-                tb-carousel-card relative group h-[250px] w-[250px] md:h-[450px] lg:h-[600px] md:w-[600px]
-              flex-shrink-0 bg-gray-300 rounded-xl scroll-snap-start flex justify-center items-center text-xl overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500   
-              `}
+              data-href={content.href}
+              class:list={[
+                "tb-carousel-card relative group h-[250px] w-[250px] md:h-[450px] lg:h-[600px] md:w-[600px] flex-shrink-0 bg-gray-300 rounded-xl scroll-snap-start flex justify-center items-center text-xl overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",
+                { "ms-4 md:ms-6 2xl:ms-0": index === 0 },
+                {
+                  "me-4 md:me-6 2xl:me-0": index === carouselContent.length - 1,
+                },
+              ]}
               role="link"
               aria-labelledby={textId}
               tabindex="0"
@@ -113,7 +111,7 @@ const carouselContent = [
               [background:linear-gradient(to_bottom,rgba(0,0,0,0)_5%,rgba(0,0,0,.5)_100%)]
             "
               />
-              <a
+              {/* <a
                 href={content.href}
                 aria-labelledby={textId}
                 tabindex="-1"
@@ -123,7 +121,7 @@ const carouselContent = [
                 z-20
               
               "
-              />
+              /> */}
             </li>
           );
         })
@@ -150,42 +148,4 @@ const carouselContent = [
   </div>
 </section>
 
-<script lang="js">
-  const carousel = document.getElementById("tb-carousel");
-  const carouselStyles = window.getComputedStyle(carousel);
-  const carouselCard = document.querySelector(".tb-carousel-card");
-  const nextBtn = document.getElementById("nextBtn");
-  const prevBtn = document.getElementById("prevBtn");
-
-  function toggleArrowButtons() {
-    if (carousel.scrollLeft <= 0) {
-      prevBtn.classList.add("btn-disbaled");
-    } else {
-      prevBtn.classList.remove("btn-disbaled");
-    }
-    if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth) {
-      nextBtn.classList.add("btn-disbaled");
-    } else {
-      nextBtn.classList.remove("btn-disbaled");
-    }
-  }
-
-  function handleScroll(direction) {
-    if (!carouselCard) return;
-    const cardWidth = carouselCard.offsetWidth;
-    const gap = parseInt(carouselStyles.gap, 10) || 0;
-    const scrollAmount = (cardWidth + gap) * direction;
-    carousel.scrollBy({
-      left: scrollAmount,
-      behavior: "smooth",
-    });
-    setTimeout(toggleArrowButtons, 300);
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    toggleArrowButtons();
-    nextBtn.addEventListener("click", () => handleScroll(1));
-    prevBtn.addEventListener("click", () => handleScroll(-1));
-    carousel.addEventListener("scroll", toggleArrowButtons);
-  });
-</script>
+<script src="@/lib/index_carousel.js"></script>

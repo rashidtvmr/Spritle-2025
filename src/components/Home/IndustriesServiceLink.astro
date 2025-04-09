@@ -1,17 +1,13 @@
 ---
-interface Props {
-  link: string;
-  title: string;
-  description: string;
-}
-
 const { link, title, description } = Astro.props;
+import RightArrow from "@/assets/icons/rightarrow.svg";
 ---
 
 <a
   href={link}
-  class="flex justify-between border-2 border-[#D6D6D6] rounded-xl p-5 md:p-6 shadow-lg
-   w-full overflow-hidden group"
+  aria-label={title}
+  class="flex justify-between border-2 border-primary rounded-xl p-5 md:p-6 shadow-lg
+   w-full overflow-hidden group focus:outline-none focus:ring-1 focus:ring-button focus:border-button hover:border-button"
 >
   <div class="flex-1 h-auto">
     <h3 class="text-subtitle font-medium text-primary h-16">{title}</h3>
@@ -19,11 +15,9 @@ const { link, title, description } = Astro.props;
       {description}
     </p>
   </div>
-  <div class="flex justify-end">
-    <img
-      src="../assets/roundarrow.svg"
-      alt="Industry Button"
-      class="size-12 group-hover:bg-button rounded-full transition-colors duration-300"
-    />
+  <div
+    class="flex justify-end border rounded-full h-fit p-2 group-focus:border-button group-focus:bg-button group-hover:bg-button group-hover:border-button transition-[background]"
+  >
+    <RightArrow class="size-6" />
   </div>
 </a>

@@ -2,6 +2,7 @@
 dist/
 
 # generated types
+.unlighthouse
 .astro/
 
 # dependencies

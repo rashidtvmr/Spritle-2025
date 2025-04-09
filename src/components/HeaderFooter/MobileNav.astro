@@ -1,6 +1,6 @@
 <div
   id="mobileMenu"
-  class="md:hidden bg-background shadow-md hidden fixed top-0 left-0 mt-15 w-full h-full z-60 overflow-y-auto"
+  class="lg:hidden bg-background shadow-md hidden fixed top-0 left-0 mt-15 w-full h-full z-60 overflow-y-auto"
 >
   <ul class="px-4 pt-2 pb-3 space-y-1">
     <li role="none">
@@ -291,37 +291,6 @@
   </ul>
 </div>
 
-<script lang="js">
-  const dropdownToggles = [
-    {
-      button: "servicesDropdownToggleMobile",
-      dropdown: "servicesDropdownMobile",
-      arrow: "servicesArrowMobile",
-    },
-    {
-      button: "industriesDropdownToggleMobile",
-      dropdown: "industriesDropdownMobile",
-      arrow: "industriesArrowMobile",
-    },
-    {
-      button: "knowledgeDropdownToggleMobile",
-      dropdown: "knowledgeDropdownMobile",
-      arrow: "knowledgeArrowMobile",
-    },
-  ];
-
-  dropdownToggles.forEach(({ button, dropdown, arrow }) => {
-    const btn = document.getElementById(button);
-    const drop = document.getElementById(dropdown);
-    const icon = document.getElementById(arrow);
-
-    btn?.addEventListener("click", (e) => {
-      e.preventDefault();
-      const expanded = drop.classList.toggle("hidden");
-      icon.classList.toggle("rotate-180");
-      btn.setAttribute("aria-expanded", expanded ? "false" : "true");
-    });
-  });
-</script>
+<script src="@/lib/mobilenav.js"></script>
 
 <style></style>
