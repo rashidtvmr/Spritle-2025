@@ -1,5 +1,7 @@
 ---
 import RightArrow from "@/assets/icons/rightarrow.svg";
+import LogoStar from "@/assets/icons/staricon.svg";
+
 
 const {
   type = "button",
@@ -7,6 +9,7 @@ const {
   text,
   href,
   className,
+  logo = false,
   onClick = undefined,
 } = Astro.props;
 ---
@@ -20,6 +23,7 @@ const {
         ${className}`}
       onclick={onClick}
     >
+      {logo && <LogoStar class="w-4 h-4 mx-1" />}
       {text}
       {arrow && <RightArrow class="w-4 h-4 mx-1" />}
     </button>
@@ -30,7 +34,9 @@ const {
         ${className}`}
       href={href}
     >
-      {text} {arrow && <RightArrow class="w-4 h-4 mx-1" />}
+      {logo && <LogoStar class="w-6 h-6 mx-1" />}
+      {text}
+      {arrow && <RightArrow class="w-4 h-4 mx-1" />}
     </a>
   )
 }
