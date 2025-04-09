@@ -2,29 +2,26 @@
 // AiCard.astro
 const { image, title, description } = Astro.props;
 import { Image } from "astro:assets";
+import RightArrow from "@/assets/icons/rightarrow.svg";
 ---
 
 <div
-  class="relative border-2 border-[#D6D6D6] rounded-lg overflow-hidden p-3 lg:p-6 w-full h-full"
+  class="relative border-2 border-[#D6D6D6] rounded-lg overflow-hidden p-3 lg:p-6 w-full h-full group focus:outline-none focus:ring-1 focus:ring-button focus:border-button hover:border-button hover:duration-300"
 >
   <div class="absolute inset-0 rounded-lg m-1 min-h-[593px]"></div>
   <Image
     src={image}
     alt={title}
-    class="w-full min-h-[200px] max-h-[349px] object-cover rounded-lg"
+    class="w-full rounded-xl object-cover h-38 md:h-54 lg:h-80 xl:h-88"
   />
   <div class="mt-6">
     <div class="flex items-center justify-between">
       <h2 class="text-primary text-subtitle font-medium">{title}</h2>
-      <!-- <img
-        src="../assets/industrybutton.svg"
-        alt="Industry Button"
-        class="p-1 hover:bg-[#15AED5] transition duration-300 size-12"
-      /> -->
-      <aiArrow
-        alt="Industry Button"
-        class="p-1 hover:bg-[#15AED5] transition duration-300 size-12"
-      ></aiArrow>
+      <div
+        class="flex justify-end border rounded-full h-fit p-2 group-focus:border-button group-focus:bg-button group-hover:bg-button group-hover:border-button transition-[background] duration-300"
+      >
+        <RightArrow class="size-6" />
+      </div>
     </div>
     <p class="text-[#B0B0B0] font-medium text-subheading mt-4 mb-5">
       {description}
