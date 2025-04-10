@@ -1,39 +1,38 @@
 ---
-import BtnSmall from "../DynamicProps/BtnSmall.astro";
-import {Image} from "astro:assets";
+import { Image } from "astro:assets";
 import blog1 from "@/assets/images/home/saaslyblog1.png";
 import blog2 from "@/assets/images/home/saaslyblog2.png";
 import blog3 from "@/assets/images/home/saaslyblog3.png";
-
+import Button from "@/components/common/button.astro";
 ---
-<div
-  class="space-y-1 lg:space-y-6 md:space-y-3 my-10 md:my-20 "
->
-  <div class="flex flex-wrap justify-between items-center ">
+
+<div class="space-y-1 lg:space-y-6 md:space-y-3 my-10 md:my-20">
+  <div class="flex flex-wrap justify-between items-center">
     <div class="py-0">
-      <h2 class="text-heading text-primary  font-medium ">AI Blogs</h2>
+      <h2 class="text-heading text-primary font-medium">AI Blogs</h2>
       <p
-        class="text-subtitle  mt-2 md:mt-5 mt-3 md:mt-8 text-secondary font-medium"
+        class="text-subtitle mt-2 md:mt-5 mt-3 md:mt-8 text-secondary font-medium"
       >
         Don't take our word for it. Trust our customers
       </p>
     </div>
-    <BtnSmall text="Browse all" class="rounded-full " />
+    <Button
+      type="link"
+      href="/blogs"
+      text="Browse all"
+      className="!py-2 h-fit"
+    />
   </div>
 
   <div class="grid md:grid-cols-3 gap-6 mt-8 md:mt-25">
     <!-- Blog Card 1 -->
     <div class="text-white rounded-lg overflow-hidden">
-      <Image 
-        src={blog1}
-        alt="Blog Image"
-        class="w-full h-auto"
-      />
+      <Image src={blog1} alt="Blog Image" class="w-full h-auto" />
       <div class="p-2 mt-2">
-        <h3 class="text-subtitle  mt-2 md:mt-5 font-medium text-primary">
+        <h3 class="text-subtitle mt-2 md:mt-5 font-medium text-primary">
           Introducing the Webflow <br /> Boosters App
         </h3>
-        <p class="text-secondary font-medium text-body  mt-2 md:mt-4">
+        <p class="text-secondary font-medium text-body mt-2 md:mt-4">
           Advanced code solutions added directly inside of Webflow at the click
           of a button.
         </p>
@@ -42,16 +41,12 @@ import blog3 from "@/assets/images/home/saaslyblog3.png";
 
     <!-- Blog Card 2 -->
     <div class="text-white rounded-lg overflow-hidden">
-      <Image
-        src={blog2}
-        alt="Blog Image"
-        class="w-full h-auto"
-      />
+      <Image src={blog2} alt="Blog Image" class="w-full h-auto" />
       <div class="p-2 mt-2">
-        <h3 class="text-subtitle  mt-2 md:mt-5 font-medium text-primary">
+        <h3 class="text-subtitle mt-2 md:mt-5 font-medium text-primary">
           Top 20 UI Inspiration Sites <br />(2023)
         </h3>
-        <p class="text-secondary font-medium text-body  mt-2 md:mt-4">
+        <p class="text-secondary font-medium text-body mt-2 md:mt-4">
           We've collated the top 20 UI inspiration sites, all with links in one
           handy spot!
         </p>
@@ -60,16 +55,12 @@ import blog3 from "@/assets/images/home/saaslyblog3.png";
 
     <!-- Blog Card 3 -->
     <div class="text-white rounded-lg overflow-hidden">
-      <Image 
-      src={blog3}
-      alt="Blog Image"  
-      class="w-full" 
-      />
+      <Image src={blog3} alt="Blog Image" class="w-full" />
       <div class="p-2 mt-2">
-        <h3 class="text-subtitle  mt-2 md:mt-5 font-medium text-primary">
+        <h3 class="text-subtitle mt-2 md:mt-5 font-medium text-primary">
           How to add a countdown timer <br />to Framer
         </h3>
-        <p class="text-secondary font-medium text-body  mt-2 md:mt-4">
+        <p class="text-secondary font-medium text-body mt-2 md:mt-4">
           Learn how to add a beautiful countdown to your Framer project in
           seconds.
         </p>
