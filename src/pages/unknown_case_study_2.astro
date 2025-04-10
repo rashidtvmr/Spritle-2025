@@ -118,35 +118,37 @@ const tableData = {
 
 <Layout>
   <CaseStudyPageContent content={content} />
-  <div
-    class="max-w-[1307px] mt-7 md:mt-15 lg:mt-25 mx-auto rounded-lg border-4 border-white overflow-hidden"
-  >
-    <!-- Header -->
-    <div class="flex w-full border-b-4 border-white">
+  <section class="bg-background">
+    <div
+      class="max-w-[1307px] my-10 md:my-20 mx-auto rounded-lg border-4 border-white overflow-hidden"
+    >
+      <!-- Header -->
+      <div class="flex w-full border-b-4 border-white">
+        {
+          tableData.headers.map((header, index) => (
+            <div
+              class={`w-1/2 text-center p-4 font-medium text-xl lg:text-[44px] ${index === 1 ? "border-l-4 border-white border-solid" : ""}`}
+            >
+              {header}
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Rows -->
       {
-        tableData.headers.map((header, index) => (
-          <div
-            class={`w-1/2 text-center p-4 font-medium text-xl lg:text-[44px] ${index === 1 ? "border-l-4 border-white border-solid" : ""}`}
-          >
-            {header}
+        tableData.rows.map((row, rowIndex) => (
+          <div class="flex w-full    border-white last:border-none">
+            {row.map((cell, cellIndex) => (
+              <div
+                class={`w-1/2 flex justify-center items-center text-subbody font-medium p-3 md:p-6 ${cellIndex === 1 ? "border-l-4 border-white border-solid" : ""}`}
+              >
+                {cell}
+              </div>
+            ))}
           </div>
         ))
       }
     </div>
-
-    <!-- Rows -->
-    {
-      tableData.rows.map((row, rowIndex) => (
-        <div class="flex w-full    border-white last:border-none">
-          {row.map((cell, cellIndex) => (
-            <div
-              class={`w-1/2 flex justify-center items-center text-subbody font-medium p-3 md:p-6 ${cellIndex === 1 ? "border-l-4 border-white border-solid" : ""}`}
-            >
-              {cell}
-            </div>
-          ))}
-        </div>
-      ))
-    }
-  </div>
+  </section>
 </Layout>

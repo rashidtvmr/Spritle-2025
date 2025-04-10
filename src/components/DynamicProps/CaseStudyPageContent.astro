@@ -20,7 +20,7 @@ const {
   <!-- Hero Section -->
   <section class="relative w-full h-screen overflow-hidden">
     <!-- Image Container -->
-    <div class="fixed inset-0 -z-1">
+    <div class="absolute inset-0 w-full h-full">
       <!-- h-100 sm:h-180 md:h-300 lg:h-auto -->
       <Image
         src={hero_image.url}
@@ -41,14 +41,14 @@ const {
       </h1>
     </div>
   </section>
-  <div class="px-5 md:px-20 lg:px-30 py-2 md:py-5 bg-background">
+  <div class="container my-10 md:my-20 bg-background">
     <!-- Overview -->
     <section class="my-10 md:my-20">
       <h2 class="text-centerheading text-primary font-semibold">
         {overview.title}
       </h2>
       <p
-        class="font-normal text-subbody my-3 md:my-10 text-csgradient px-5 md:px-20 lg:px-33"
+        class="font-normal text-subbody my-3 md:my-10 text-csgradient px-5 md:px-20 leading-normal"
       >
         {overview.description}
       </p>
@@ -58,7 +58,9 @@ const {
     <section class="my-10 lg:my-20">
       <div class="md:flex gap-5 items-center justify-between">
         <div>
-          <h2 class="lg:text-7xl text-3xl font-semibold mb-6 text-primary">
+          <h2
+            class="lg:text-7xl text-3xl font-semibold mb-6 text-primary max-w-sm"
+          >
             {problem_statement.title}
           </h2>
           <p
@@ -83,7 +85,7 @@ const {
         Our Solution
       </h2>
       <p
-        class="font-normal text-subbody my-3 md:my-10 text-csgradient px-5 md:px-20 lg:px-33"
+        class="font-normal text-subbody my-3 md:my-10 text-csgradient px-5 md:px-20 leading-normal"
       >
         {our_solution.description}
       </p>
@@ -126,7 +128,7 @@ const {
         {conclusion.title}
       </h2>
       <p
-        class="font-normal text-subbody text-csgradient px-5 md:px-20 lg:px-33"
+        class="font-normal text-subbody my-3 md:my-10 text-csgradient px-5 md:px-20 leading-normal"
       >
         {conclusion.description}
       </p>
