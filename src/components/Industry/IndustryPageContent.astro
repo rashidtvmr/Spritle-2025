@@ -64,11 +64,7 @@ const {
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {
           solutionsSection.solutions.map((solution) => (
-            <UniqueValueCard
-              logo={solution.logo}
-              title={solution.title}
-              description={solution.description}
-            />
+            <UniqueValueCard {...solution} />
           ))
         }
       </div>
@@ -117,6 +113,5 @@ const {
       type="link"
       href="#"
     />
-    
   </div>
 </main>
