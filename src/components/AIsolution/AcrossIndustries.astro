@@ -36,13 +36,12 @@ const AiSectionThreeMap = [
 <div class="text-primary font-bold text-heading my-10 md:my-20">
   AI Solutions Across Industries
   <p
-    class="text-secondary mt-4 md:mt-10 text-subheading max-w-[1205px] font-medium"
+    class="text-secondary mt-5 md:mt-10 text-subheading max-w-[1205px] font-medium my-5 md:my-10"
   >
     Innovate faster with new capabilities, a choice of industry-leading FMs, and
     infrastructure that delivers high performance while lowering costs.
   </p>
-</div>
-
-<div class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 my-10 md:my-20">
-  {AiSectionThreeMap.map((card, index) => <AiCard key={index} {...card} />)}
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5">
+    {AiSectionThreeMap.map((card, index) => <AiCard key={index} {...card} />)}
+  </div>
 </div>

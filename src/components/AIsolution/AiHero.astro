@@ -1,11 +1,11 @@
 ---
 import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
-import BtnBig from "../DynamicProps/BtnBig.astro";
+import Button from "@/components/common/button.astro";
 ---
 
-<div class="lg:my-30 my-25">
+<div class="my-5 md:my-19">
   <div
-    class="flex flex-col justify-center items-center text-center lg:h-screen px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background"
+    class="flex flex-col  items-center text-center px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background"
   >
     <GradientHeading
       text="  AI-Powered Solutions for Transforming Your Business"
@@ -21,10 +21,12 @@ import BtnBig from "../DynamicProps/BtnBig.astro";
       Unlock the potential of artificial intelligence to drive innovation,
       optimize operations, and enhance customer experiences
     </p>
-    <BtnBig
+    <Button
       text="Discover Our AI Solutions"
-      icon="/assets/rightarrow.svg"
-      class="px-11"
+      arrow={true}
+      className="!py-2 !px-5 sm:!px-10 text-subheading h-fit tracking-wider"
+      type="link"
+      href="#"
     />
 
     <h1
@@ -34,7 +36,7 @@ import BtnBig from "../DynamicProps/BtnBig.astro";
       Empowering Enterprises with AI
     </h1>
     <p
-      class="text-secondary mt-4 text-subbody font-normal max-w-[1698px] pb-10"
+      class="text-secondary  text-subbody font-normal max-w-[1698px] "
     >
       At Spritle, we specialize in providing AI-driven solutions that deliver
       measurable results for enterprises across industries. Our team of experts
