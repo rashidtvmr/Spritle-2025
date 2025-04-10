@@ -81,29 +81,30 @@ const technologies = [
           "Dynamic, responsive front-end frameworks for modern web applications.",
       },
     ].map((item, index) => (
-      <div
-        key={index}
-        class="border-2 border-white p-6 flex flex-col  items-center text-center bg-[#313131] max-w-[560px] "
-      >
-        <div class="flex  items-center w-full">
-          {Array.isArray(item.img) ? (
-            item.img.map((img, i) => (
-              <Image key={i} src={img} alt="" class="mr-4 xl:pt-[60px]" />
-            ))
-          ) : (
-            <Image src={item.img} alt="" class="mr-4 xl:pt-[60px] " />
-          )}
-          <h2
-            class="text-primary lg:text-[32px] text-xl font-medium flex-grow text-center xl:pt-[61px] xl:pr-[52px]
-         h-30 "
-          >
-            {item.title}
-          </h2>
-        </div>
-        <p class="mt-2 text-[#B0B0B0] font-normal text-subheading xl:pt-[54px] mb-3">
-          {item.description}
-        </p>
-      </div>
+    <div
+  key={index}
+  class="border-2 border-white p-6 flex flex-col  md:gap-8 items-center text-center bg-[#313131] max-w-[560px] w-full"
+>
+  <!-- Row for Icon + Title -->
+  <div class="flex items-center gap-10  w-full justify-center md:my-2 xl:my-5 flex-wrap sm:flex-nowrap">
+    {Array.isArray(item.img) ? (
+      item.img.map((img, i) => (
+        <Image key={i} src={img} alt="" class="w-10 h-10" />
+      ))
+    ) : (
+      <Image src={item.img} alt="" class="w-10 h-10" />
+    )}
+    <h2 class="text-primary lg:text-[32px] text-xl font-medium text-center sm:text-left">
+      {item.title}
+    </h2>
+  </div>
+
+  <!-- Description -->
+  <p class="mt-4 text-[#B0B0B0] font-normal text-subheading mb-3 ">
+    {item.description}
+  </p>
+</div>
+
     ))
   }
 </div>

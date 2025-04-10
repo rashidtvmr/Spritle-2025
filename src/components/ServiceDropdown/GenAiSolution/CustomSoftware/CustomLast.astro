@@ -1,5 +1,6 @@
 ---
 import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
+import Button from "@/components/common/button.astro";
 ---
 
 <div
@@ -10,14 +11,11 @@ import GradientHeading from "@/components/DynamicProps/GradientHeading.astro";
     Contact us today to learn more about our industry-specific solutions and how
     they can transform your operations.
   </p>
-  <button
-    class="mt-6 btnprimary text-white text-base md:text-lg lg:text-xl font-medium px-4 py-2 md:px-6 md:py-3 lg:px-14 lg:py-2 rounded-full flex items-center gap-2"
-  >
-    <img
-      src="/assets/btnstar.svg"
-      alt="Right Arrow"
-      class="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6"
-    />
-    Request a Consultation
-  </button>
+  <Button
+    text="Request a Consultation"
+    logo={true}
+    className="!py-2 !px-5 sm:!px-10 text-subheading h-fit tracking-wider mt-2 md:mt-5"
+    type="link"
+    href="#"
+  />
 </div>
