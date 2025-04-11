@@ -6,55 +6,7 @@ import UniqueValueCard from "@/components/DynamicProps/UniqueValueCard.astro";
 import SuccessStories from "@/components/DynamicProps/SuccessStories.astro";
 import Star from "@/components/DynamicProps/Star.astro";
 
-interface HeroSection {
-  heading: string;
-  description: string;
-  buttonText: string;
-  buttonIcon: string;
-  subHeading?: string;
-  subDescription?: string;
-}
 
-interface SolutionsSection {
-  title: string;
-  solutions: {
-    logo: string;
-    title: string;
-    description: string;
-  }[];
-}
-
-interface UseCasesSection {
-  title: string;
-  cases: {
-    image: string;
-    heading: string;
-    description: string;
-  }[];
-}
-
-interface WhyChooseSection {
-  title: string;
-  items: {
-    title: string;
-    description: string;
-  }[];
-}
-
-interface CtaSection {
-  heading: string;
-  description: string;
-  buttonText: string;
-  buttonIcon: string;
-}
-
-interface Props {
-  heroSection: HeroSection;
-  solutionsSection: SolutionsSection;
-  useCasesSection: UseCasesSection;
-  whyChooseSection: WhyChooseSection;
-  ctaSection: CtaSection;
-}
 
 const {
   heroSection,
@@ -68,7 +20,7 @@ const {
 <main class="">
   <div class="container">
     <!-- Hero Section -->
-    <div class="mt-40">
+    <div class="my-20">
       <div
         class="flex flex-col justify-center items-center text-center h-auto px-4 space-y-2 lg:space-y-5 xl:space-y-10 bg-background"
       >
