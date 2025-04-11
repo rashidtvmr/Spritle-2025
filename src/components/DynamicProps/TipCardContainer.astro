@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface BlogItem {
   image: string;
   title: string;
@@ -19,7 +21,7 @@ const { items } = Astro.props;
 duration-300 ease-in-out cursor-pointer	">
       <!-- Image section -->
       <div class="border rounded-xl  w-full  h-full object-cover rounded-lg">
-        <img 
+        <Image 
           src={item.image} 
           alt={item.title} 
           class=""
