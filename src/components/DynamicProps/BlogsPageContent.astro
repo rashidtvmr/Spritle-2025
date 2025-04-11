@@ -58,7 +58,7 @@ const cards = cardType === "blog" ? blogs_card : tip_card;
   <!-- Blog or Tip Cards Section -->
   <section class="my-10 md:my-20">
     <div
-      class={`grid gap-4 md:gap-7 ${cardType === "blog" ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 " : "grid-cols-1 md:grid-cols-2"}`}
+      class={`grid gap-5  lg:gap-7 ${cardType === "blog" ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 " : "grid-cols-1 md:grid-cols-2"}`}
     >
       {
         cards.map((card) =>
