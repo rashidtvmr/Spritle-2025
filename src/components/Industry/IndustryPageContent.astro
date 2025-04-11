@@ -15,7 +15,7 @@ const {
 } = Astro.props;
 ---
 
-<main class="my-5 md:my-19">
+<main class="my-20">
   <div class="container">
     <!-- Hero Section -->
     <div>
@@ -30,10 +30,11 @@ const {
         >
           {heroSection.description}
         </p>
+
         <Button
           text={heroSection.buttonText}
           arrow={true}
-          className="!py-2 !px-2 sm:!px-10 text-subheading h-fit tracking-wider"
+          className="!py-2 !px-2 sm:!px-10 text-subheading h-fit tracking-wider !my-4 !md:my-0 !mb-10 md:mb-20"
           type="link"
           href="#"
         />
