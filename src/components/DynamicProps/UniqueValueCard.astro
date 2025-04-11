@@ -7,9 +7,13 @@ const { logo: Logo } = Astro.props;
   class="flex flex-col justify-between items-center text-center border-2 border-primary p-3 md:p-6 rounded-lg shadow-lg bg-[#313131] h-full w-full"
 >
   <!-- Logo Title Wrapper with fixed height -->
-  <div class="flex flex-col items-center gap-3 md:min-h-[100px] lg:min-h-[120px]">
+  <div
+    class="flex flex-col items-center gap-3 md:min-h-[100px] lg:min-h-[120px]"
+  >
     <Logo class="w-[54px] h-[52px]" />
-    <h2 class="text-primary text-subtitle font-medium text-center lg:h-25 xl:h-fit">
+    <h2
+      class="text-primary text-subtitle font-medium text-center lg:h-25 xl:h-fit"
+    >
       {title}
     </h2>
   </div>
