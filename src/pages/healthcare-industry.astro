@@ -2,14 +2,12 @@
 // src/pages/industries/healthcare.astro
 import IndustryPageContent from "@/components/Industry/IndustryPageContent.astro";
 import patient from "../assets/images/industry/healthcare/patient.png";
-import radiology from "../assets/images/industry/healthcare/radiology.png"
-import telemedicine from "../assets/images/industry/healthcare/telemedicine.png"
-import u1 from "../../src/assets/icons/casestudy/u1.svg"
+import radiology from "../assets/images/industry/healthcare/radiology.png";
+import telemedicine from "../assets/images/industry/healthcare/telemedicine.png";
+import u1 from "../../src/assets/icons/casestudy/u1.svg";
 import u2 from "../../src/assets/icons/casestudy/u2.svg";
 import u3 from "../../src/assets/icons/casestudy/u3.svg";
-
-
-
+import arrow from "../../src/assets/icons/arrow.svg";
 
 const healthcareContent = {
   heroSection: {
@@ -26,28 +24,32 @@ const healthcareContent = {
     title: "Healthcare Solutions We Offer",
     solutions: [
       {
-        logo:u1,
+        logo: u1,
         title: "AI-Powered Diagnostics",
         description:
           "Leverage AI to enhance diagnostic accuracy and accelerate medical decision-making with intelligent data-driven insights",
+        titleStyle: "pb-1 lg:pb-11",
       },
       {
-        logo:u2,
-        title: "Telemedicine Platforms",
+        logo: u2,
+        title: "Smart Telehealth Scheduling",
         description:
-          "Move to the cloud with confidence. We design cloud architectures that are secure, scalable, and cost-efficient",
+          "Enable automated appointment scheduling and resource optimization using intelligent algorithms.",
+        titleStyle: "pb-1  xl:pb-10",
       },
       {
         logo: u3,
-        title: "Electronic Health Records (EHR) Systems",
+        title: "Predictive Analytics for Patient Outcomes",
         description:
-          "Implement robust EHR systems that ensure efficient patient data management, HIPAA compliance, and seamless care coordination",
+          "Utilize data modeling to predict patient risks and improve care outcomes across treatment cycles.",
+        titleStyle: "pb-1 lg:pb-4",
       },
       {
-        logo:u3,
+        logo: u3,
         title: "IoT for Healthcare",
         description:
           "Enhance patient care with IoT-enabled devices, enabling real-time monitoring and proactive health interventions",
+        titleStyle: "pb-1 md:pb-7",
       },
     ],
   },
