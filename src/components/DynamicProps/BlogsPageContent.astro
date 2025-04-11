@@ -2,6 +2,7 @@
 import BlogsCardContainer from "./BlogsCardContainer.astro";
 import GradientHeading from "./GradientHeading.astro";
 import TipCardContainer from "@/components/DynamicProps/TipCardContainer.astro";
+import Button from "@/components/common/button.astro";
 
 // Define TypeScript interfaces
 interface BlogItem {
@@ -34,31 +35,30 @@ const cards = cardType === "blog" ? blogs_card : tip_card;
 
 <main class="container">
   <!-- Hero Section -->
-  <section class="mt-20 md:mt-45 flex flex-col items-center text-center">
+  <section
+    class="flex flex-col items-center text-center space-y-5 md:space-y-10 my-10"
+  >
     <h2>
-      <GradientHeading text={hero_text} maxWidth="1300px" />
+      <GradientHeading text={hero_text} />
     </h2>
     <p class="text-csgradient text-title-body mt-4 lg:px-20">
       {hero_description.description}
     </p>
-    <div class="mt-5 md:mt-12">
-      <button
-        class="btnprimary lg:w-screen lg:max-w-[194px] max-h-[46px] text-base font-normal px-8 py-4 flex items-center justify-center"
-      >
-        {hero_description.buttons}
-        <img
-          src="/assets/rightarrow.svg"
-          alt="Right Arrow"
-          class="w-4 h-4 ml-2"
-        />
-      </button>
+    <div class="">
+      <Button
+        arrow={true}
+        text="Get Started"
+        className="my-10 px-20 hover:bg-card"
+        type="link"
+        href="#"
+      />
     </div>
   </section>
 
   <!-- Blog or Tip Cards Section -->
-  <section class="my-10 md:my-30">
+  <section class="my-10 md:my-20">
     <div
-      class={`grid gap-3 md:gap-5 ${cardType === "blog" ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 " : "grid-cols-1 md:grid-cols-2"}`}
+      class={`grid gap-5  lg:gap-7 ${cardType === "blog" ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 " : "grid-cols-1 md:grid-cols-2"}`}
     >
       {
         cards.map((card) =>
