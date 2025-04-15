@@ -3,12 +3,11 @@
 import ServicePageContent from "@/components/services/ServicePageContent.astro";
 import Layout from "@/layouts/Layout.astro";
 import u1 from "@/assets/icons/casestudy/u1.svg";
-import ecommerce from "@/assets/images/service/testing/ecommerce.png";
 import healthcare from "@/assets/images/service/testing/healthcare.png";
-import regression from "@/assets/images/service/testing/regression.png";
-import media from "@/assets/images/service/devscope/media.png";
 import electronics from "@/assets/images/service/visionAI/electronics.png";
 import analytics from "@/assets/images/service/visionAI/analytics.png";
+import quality from "@/assets/images/service/visionAI/quality.png";
+import retail from "@/assets/images/service/visionAI/retail.png";
 const heroSection = {
   heading: "Cloud & DevOps Solutions for Scalable, Secure Operations",
   description:
@@ -64,32 +63,27 @@ const sections = [
     ],
   },
   {
-    type: "industry-use-cases",
+    type: "use-cases",
     title: "Industry Use Cases",
-    stories: [
+
+    cases: [
       {
-        image: regression,
-        heading: "Retail – Cloud Migration for E-commerce Scalability",
+        image: quality,
+        title: "Automated Regression Testing for Fintech App",
         description:
           "Developed a big data solution for precision agriculture, analyzing soil health and weather patterns to optimize crop yield, increasing productivity by 25%",
       },
       {
-        image: ecommerce,
-        heading: "Healthcare – CI/CD Implementation for Telemedicine Platform",
+        image: healthcare,
+        title: "Performance Testing for E-Commerce Platform",
         description:
           "Implemented CI/CD pipelines for a telemedicine provider, accelerating software releases by 50%, ensuring regulatory compliance, and improving system stability.",
       },
       {
-        image: healthcare,
-        heading: "Banking – DevSecOps for Cloud Security",
+        image: retail,
+        title: "Security Testing for Healthcare Application",
         description:
           "Developed a DevSecOps approach for a financial institution, ensuring compliance with industry standards and reducing cloud security incidents by 25%",
-      },
-      {
-        image: media,
-        heading: "Media – Containerization for Streaming Services",
-        description:
-          "Enabled containerized microservices for a media streaming company, increasing resource efficiency and ensuring smooth service during traffic spikes",
       },
     ],
   },
