@@ -3,13 +3,12 @@
 import ServicePageContent from "@/components/services/ServicePageContent.astro";
 import Layout from "@/layouts/Layout.astro";
 import u1 from "@/assets/icons/casestudy/u1.svg";
-import u2 from "@/assets/icons/casestudy/u1.svg";
-import u3 from "@/assets/icons/casestudy/u1.svg";
 import ecommerce from "@/assets/images/service/testing/ecommerce.png";
 import healthcare from "@/assets/images/service/testing/healthcare.png";
 import regression from "@/assets/images/service/testing/regression.png";
 import media from "@/assets/images/service/devscope/media.png";
-
+import electronics from "@/assets/images/service/visionAI/electronics.png";
+import analytics from "@/assets/images/service/visionAI/analytics.png";
 const heroSection = {
   heading: "Cloud & DevOps Solutions for Scalable, Secure Operations",
   description:
@@ -23,52 +22,42 @@ const heroSection = {
 
 const sections = [
   {
-    type: "data-pill-cards",
-    title: "Core Cloud & DevOps Services",
+    type: "value-proposition",
+    title: "Our Unique Value Proposition",
     cards: [
       {
         logo: u1,
-        heading: "Cloud Infrastructure Design & Migration",
-        content: ["AWS", "Azure", "Google Cloud"],
+        title: "Cloud Infrastructure Design & Migration",
         description:
           "Seamlessly migrate your legacy systems to the cloud, or design robust cloud architectures from scratch",
       },
       {
-        logo: u2,
-        heading: "CI/CD Pipeline Automation",
-        content: ["Jenkins", "GitLab CI", "CircleCI", "cassandra"],
+        logo: u1,
+        title: "CI/CD Pipeline Automation",
         description:
           "Streamline your development lifecycle with automated Continuous Integration and Continuous Delivery pipelines, ensuring rapid and error-free deployments",
       },
       {
-        logo: u3,
-        heading: "Infrastructure as Code (IaC)",
-        content: ["Terraform", "AWS CloudFormation", "Ansible"],
+        logo: u1,
+        title: "Infrastructure as Code (IaC)",
         description:
           "Automate and standardize infrastructure management using IaC tools, improving consistency and reducing deployment time",
       },
       {
-        logo: u3,
-        heading: "Containerization & Orchestration",
-        content: ["Docker", "Kubernetes", "OpenShift"],
+        logo: u1,
+        title: "Cloud Infrastructure Design & Migration",
         description:
           "Optimize your microservices with containerized environments and orchestration tools for enhanced scalability and fault tolerance",
       },
       {
-        logo: u3,
-        heading: "Cloud Security & Monitoring",
-        content: ["Prometheus", "Grafana", "AWS CloudWatch"],
+        logo: u1,
+        title: "Cloud Security & Monitoring",
         description:
           "Implement robust cloud security protocols and real-time monitoring to ensure your systems are protected and performant",
       },
       {
-        logo: u3,
-        heading: "DevOps Consultation & Implementation",
-        content: [
-          "DevOps culture",
-          "Process automation",
-          "Toolchain optimization",
-        ],
+        logo: u1,
+        title: "DevOps Consultation & Implementation",
         description:
           "Adopt DevOps best practices to foster a culture of collaboration, speed up development cycles, and reduce operational overhead",
       },
@@ -105,6 +94,48 @@ const sections = [
     ],
   },
   {
+    type: "value-proposition",
+    title: "Solutions We Offer",
+    cards: [
+      {
+        logo: u1,
+        title: "Mobile App Development",
+        description:
+          "Seamlessly migrate your legacy systems to the cloud, or design robust cloud architectures from scratch",
+      },
+      {
+        logo: u1,
+        title: "CI/CD Pipeline Automation",
+        description:
+          "Streamline your development lifecycle with automated Continuous Integration and Continuous Delivery pipelines, ensuring rapid and error-free deployments",
+      },
+      {
+        logo: u1,
+        title: "Infrastructure as Code (IaC)",
+        description:
+          "Automate and standardize infrastructure management using IaC tools, improving consistency and reducing deployment time",
+      },
+      {
+        logo: u1,
+        title: "Cloud Infrastructure Design & Migration",
+        description:
+          "Optimize your microservices with containerized environments and orchestration tools for enhanced scalability and fault tolerance",
+      },
+      {
+        logo: u1,
+        title: "Cloud Security & Monitoring",
+        description:
+          "Implement robust cloud security protocols and real-time monitoring to ensure your systems are protected and performant",
+      },
+      {
+        logo: u1,
+        title: "DevOps Consultation & Implementation",
+        description:
+          "Adopt DevOps best practices to foster a culture of collaboration, speed up development cycles, and reduce operational overhead",
+      },
+    ],
+  },
+  {
     type: "benefits",
     title: "Why Spritle for Cloud & DevOps Solutions",
     items: [
@@ -124,6 +155,30 @@ const sections = [
           "End-to-end cloud and DevOps services, from consulting to implementation and monitoring",
       },
     ],
+  },
+  {
+    type: "success-stories",
+    title: "Success Stories",
+    stories: [
+      {
+        image: electronics,
+        heading: "Custom AI-driven CRM",
+        description:
+          "We developed a tailored AI-powered CRM for a retail client, automating customer segmentation, personalized outreach, and sales predictions. The system processed large volumes of customer data in real-time, increasing customer retention by 25% and improving sales efficiency by 40%.",
+      },
+      {
+        image: analytics,
+        heading: "Blockchain-enabled supply chain transparency",
+        description:
+          "Implemented a blockchain solution for a logistics company to ensure end-to-end transparency. By recording immutable transaction data across the supply chain, we reduced errors by 30%, enhanced traceability, and improved trust between stakeholders, optimizing the entire process",
+      },
+    ],
+  },
+  {
+    type: "intermediate-cta",
+    heading: "Start Your Vision AI Journey",
+    description:
+      "Harness the power of Vision AI to improve operational efficiency, enhance security, and unlock deeper insights from your visual data. We tailor our Vision AI solutions to fit your business needs and deliver measurable results.",
   },
   {
     type: "final-cta",

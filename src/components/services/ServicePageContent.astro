@@ -7,7 +7,6 @@ import AiCard from "@/components/DynamicProps/AiCard.astro";
 import Star from "@/components/DynamicProps/Star.astro";
 import SuccessStories from "@/components/DynamicProps/SuccessStories.astro";
 import CoreAi from "../DynamicProps/CoreAi.astro";
-import DataPillCard from "../DynamicProps/DataPillCard.astro";
 
 const { heroSection, sections } = Astro.props;
 ---
@@ -56,7 +55,7 @@ const { heroSection, sections } = Astro.props;
               <div class="text-heading text-primary md:mb-10 mb-5 font-bold">
                 {section.title}
               </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-5   ">
                 {section.cards.map((card) => (
                   <UniqueValueCard {...card} />
                 ))}
@@ -78,19 +77,7 @@ const { heroSection, sections } = Astro.props;
             </div>
           );
 
-        case "data-pill-cards":
-          return (
-            <div class="my-10 md:my-20 container">
-              <div class="text-heading text-primary md:mb-10 mb-5 font-semibold">
-                {section.title}
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
-                {section.cards.map((card) => (
-                  <DataPillCard {...card} />
-                ))}
-              </div>
-            </div>
-          );
+    
 
         case "use-cases":
           return (
