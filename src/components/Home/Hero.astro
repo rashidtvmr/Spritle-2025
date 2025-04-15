@@ -12,27 +12,27 @@ import { Image } from "astro:assets";
 
 const slides = [
   {
-    text: "Spritle's Gen AI solutions drive operational cost savings for our clients",
+    text: "Spritle's Gen AI solutions drive <br class='hidden lg:block'/> operational cost savings for our clients",
     img: nurse,
     alt: "Gen AI",
   },
   {
-    text: "We help businesses improve efficiency using Vision AI",
+    text: "We help businesses improve efficiency <br class='hidden lg:block'/> using Vision AI",
     img: manworking,
     alt: "Vision AI",
   },
   {
-    text: "Spritle simplifies & accelerates digital transformation for your business",
+    text: "Spritle simplifies & accelerates digital <br class='hidden lg:block'/> transformation for your business",
     img: laptopstats,
     alt: "Digital Transformation",
   },
   {
-    text: "Spritle simplifies & accelerates digital transformation for your business",
+    text: "Empowering innovation, collaboration, <br class='hidden lg:block'/> and growth every day",
     img: team,
     alt: "Transformation",
   },
   {
-    text: "We are the official partners of Nvidia & Google",
+    text: "We are the official partners of <br class='hidden lg:block'/> Nvidia & Google",
     img: nvidiagoogle,
     alt: "Official Partners",
   },
@@ -45,11 +45,11 @@ const slides = [
 ---
 
 <section
-  class="heroswiper swiper my-10 lg:my-20"
+  class="heroswiper swiper h-[80vh] lg:h-screen"
   role="region"
   aria-label="Hero Slides"
 >
-  <ul class="hero-swiper swiper-wrapper" role="list">
+  <ul class="hero-swiper swiper-wrapper h-full" role="list">
     {
       slides.map((slide, index) => (
         <li
@@ -58,12 +58,20 @@ const slides = [
           role="listitem"
           tabindex="0"
         >
-          <div class="flex flex-col items-center justify-between text-center my-10 lg:my-0">
-            <h1 class="opacity-0 slide-text text-xl md:text-3xl lg:text-5xl h-30 lg:h-50 2xl:h-60 flex items-center text-center justify-center w-[95%] will-change-[opacity]">
-              {slide.text}
-            </h1>
-            <div class="h-[200px] lg:h-[calc(90vh-250px)] w-full will-change-auto">
+          <div class="flex flex-col h-full items-center justify-around text-center">
+            <h1
+              class="
+              flex items-center text-center justify-center will-change-[opacity]
+              h-[200px] lg:h-auto md:w-[95%]
+              text-xl md:text-2xl lg:text-3xl xl:text-4xl 
+              opacity-0 slide-text my-5 lg:mb-5
+              "
+              set:html={slide.text}
+            />
+
+            <div class=" mb-10 lg:mb-17 2xl:mb-20 h-full w-full will-change-auto">
               <Image
+                decoding={"sync"}
                 loading="eager"
                 class="slide-image w-full h-full"
                 src={slide.img}

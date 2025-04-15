@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         allowTouchMove: false,
         loop: true,
         breakpoints: {
-            320: { slidesPerView: 1.2, spaceBetween: 20 },
+            320: { slidesPerView: 1.1, spaceBetween: 10 },
             640: { slidesPerView: 1.3, spaceBetween: 10 },
             768: { slidesPerView: 1.3, spaceBetween: 30 },
             1024: { slidesPerView: 1.3, spaceBetween: 50 },

@@ -59,9 +59,9 @@ const carouselContent = [
   }
 </style>
 
-<section>
-  <div class="container my-10">
-    <h1 class="font-dm-sans text-heading text-primary text-medium my-10">
+<section class="my-5 lg:my-10">
+  <div class="container my-5 lg:my-10">
+    <h1 class="font-dm-sans text-heading text-primary text-medium my-5">
       Transforming business
     </h1>
     <p class="text-subbody text-secondary w-full text-normal">
@@ -80,7 +80,9 @@ const carouselContent = [
             <li
               data-href={content.href}
               class:list={[
-                "tb-carousel-card relative group h-[250px] w-[250px] md:h-[450px] lg:h-[600px] md:w-[600px] flex-shrink-0 bg-gray-300 rounded-xl scroll-snap-start flex justify-center items-center text-xl overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",
+                `tb-carousel-card relative group flex-shrink-0 rounded-xl scroll-snap-start flex justify-center items-center text-xl overflow-hidden  
+                h-[250px]  md:h-[400px] lg:h-[500px] w-[calc(100vw-35px)] md:w-[600px] 
+                focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`,
                 { "ms-4 md:ms-6 2xl:ms-0": index === 0 },
                 {
                   "me-4 md:me-6 2xl:me-0": index === carouselContent.length - 1,
@@ -93,11 +95,11 @@ const carouselContent = [
               <Image
                 src={content.src}
                 alt={content.alt}
-                class="w-full h-full object-cover rounded-xl scale-[1.1] group-hover:scale-[1.2] transition-transform duration-300"
+                class="w-full h-full object-cover rounded-xl md:group-hover:scale-[1.1] transition-transform duration-300"
               />
               <div
                 id={textId}
-                class="absolute z-10 w-full text-left bottom-3 md:bottom-10 font-poppins text-white  px-2 md:px-12 text-xl md:text-4xl group-hover:scale-[1.1] transition-transform duration-300"
+                class="absolute z-10 w-full text-left bottom-3 md:bottom-10 font-poppins text-white  px-2 md:px-12 text-xl md:text-4xl md:group-hover:scale-[1.05] transition-transform duration-300"
               >
                 <p class="break-words">{content.text}</p>
               </div>
@@ -106,22 +108,11 @@ const carouselContent = [
               absolute inset-0 z-0
               pointer-events-none
               opacity-0
-              group-hover:opacity-100
+              md:group-hover:opacity-100
               transition-opacity duration-300
               [background:linear-gradient(to_bottom,rgba(0,0,0,0)_5%,rgba(0,0,0,.5)_100%)]
             "
               />
-              {/* <a
-                href={content.href}
-                aria-labelledby={textId}
-                tabindex="-1"
-                class="
-                absolute
-                inset-0
-                z-20
-              
-              "
-              /> */}
             </li>
           );
         })
