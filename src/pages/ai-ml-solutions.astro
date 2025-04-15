@@ -7,6 +7,11 @@ import u2 from "@/assets/icons/casestudy/u2.svg";
 import u3 from "@/assets/icons/casestudy/u3.svg";
 import sentiment from "@/assets/images/service/visionAI/sentiment.png";
 import prediction from "@/assets/images/service/visionAI/prediction.png";
+import quality from "@/assets/images/service/visionAI/quality.png";
+import retail from "@/assets/images/service/visionAI/retail.png";
+import electronics from "@/assets/images/service/visionAI/electronics.png";
+import analytics from "@/assets/images/service/visionAI/analytics.png";
+import healthcare from "@/assets/images/service/visionAI/healthcare.png";
 
 const heroSection = {
   heading: "AI & ML Solutions that Drive Innovation",
@@ -20,98 +25,103 @@ const heroSection = {
 
 const sections = [
   {
-    type: "Core-Ai",
-    title: "Core AI & ML Services",
+    type: "value-proposition",
+    title: "Our Unique Value Proposition",
     cards: [
       {
         logo: u1,
-        heading: "Predictive Analytics",
-        content: [
-          "Customer churn prediction",
-          "Sales forecasting",
-          "Demand forecasting",
-        ],
+        title: "Tailored Vision AI Solutions",
+        description:
+          "Every industry and business has unique needs. We develop AI models specifically tailored to your industry, whether it's retail, healthcare, entertainment, or manufacturing.",
       },
       {
         logo: u2,
-        heading: "Natural Language Processing (NLP)",
-        content: ["Virtual assistants", "AI chatbots", "Sentiment analysis"],
+        title: "AI-Powered Creativity & Efficiency",
+        description:
+          "From generating compelling marketing content to automating complex design tasks, our solutions help you reduce costs, save time, and stay ahead of the competition by leveraging cutting-edge AI.",
       },
       {
         logo: u3,
-        heading: "Computer Vision",
-        content: [
-          "Facial recognition",
-          "Medical imaging analysis",
-          "Automated quality control",
-        ],
-      },
-      {
-        logo: u3,
-        heading: "Reinforcement Learning",
-        content: ["Autonomous systems", "Robotics", "Gaming strategies"],
-      },
-      {
-        logo: u3,
-        heading: "AI-Powered Automation",
-        content: ["Robotic process automation (RPA)", "Intelligent workflows"],
-      },
-      {
-        logo: u3,
-        heading: "Deep Learning Models",
-        content: [
-          "Personalized recommendations",
-          "Fraud detection",
-          "Fraud detection",
-        ],
+        title: "Deep Industry Expertise",
+        description:
+          "With years of experience deploying AI solutions across various sectors, we understand how to drive meaningful impact using Generative AI",
       },
     ],
   },
   {
-    type: "intermediate-cta",
-    heading: "Tailored AI Solutions for Your Business",
+    type: "use-cases",
+    title: "AI Solutions Across Industries",
     description:
-      "Whether you need AI models for specific applications or fully integrated AI systems, our custom development services ensure AI fits seamlessly into your business workflow",
+      "Innovate faster with new capabilities, a choice of industry-leading FMs, and infrastructure that delivers high performance while lowering costs.",
+    cases: [
+      {
+        image: quality,
+        title: "AI-Powered Quality Control in Manufacturing",
+        description:
+          "We developed an AI vision system for a leading electronics manufacturer to detect defects on the assembly line. The system improved inspection accuracy by 98% and reduced production errors, saving time and costs.",
+      },
+      {
+        image: healthcare,
+        title: "Healthcare: Automated Medical Image Analysis",
+        description:
+          "Our Vision AI solution helps radiologists analyze medical scans for early detection of anomalies. It reduced manual workload by 40%, while increasing diagnostic precision and ensuring better patient outcomes.",
+      },
+      {
+        image: retail,
+        title: "AI-Driven Retail Analytics",
+        description:
+          "For a major retail chain, we implemented a Vision AI system to analyze in-store customer behavior. This provided insights into foot traffic, product placement effectiveness, and inventory levels, leading to a 20% increase in sales",
+      },
+    ],
   },
   {
-    type: "Core-Ai",
-    title: "Industry-Specific AI Solutions",
+    type: "value-proposition",
+    title: "Solutions We Offer",
     cards: [
       {
         logo: u1,
-        heading: "Healthcare",
-        content: [
-          "AI-powered diagnostic tools",
-          "Virtual healthcare assistants",
-          "Predictive patient analytics",
-        ],
+        title: "AI-Driven Object Detection & Tracking",
+        description:
+          "Automatically detect and track objects in images or videos, ideal for applications in retail, surveillance, autonomous vehicles, and more.",
       },
       {
         logo: u2,
-        heading: "Manufacturing",
-        content: [
-          "Predictive maintenance",
-          "Automated quality control",
-          "Smart factory operations",
-        ],
+        title: "Visual Quality Control & Defect Detection",
+        description:
+          "Our AI models identify defects and irregularities in manufacturing processes, ensuring high-quality standards with reduced reliance on manual inspection.",
       },
       {
         logo: u3,
-        heading: "Retail & E-commerce",
-        content: [
-          "Personalized recommendations",
-          "Inventory forecasting",
-          "Dynamic pricing models",
-        ],
+        title: "AI-Powered Healthcare Imaging Solutions",
+        description:
+          "Enhance diagnostic accuracy by using Vision AI to analyze X-rays, MRIs, and other medical images, supporting faster and more accurate diagnoses",
       },
       {
         logo: u3,
-        heading: "Finance",
-        content: [
-          "Fraud detection",
-          "Credit risk assessment",
-          "Algorithmic trading",
-        ],
+        title: "Video Analytics for Surveillance & Security",
+        description:
+          "Automate the analysis of live or recorded video footage for applications like security monitoring, anomaly detection, and traffic analysis",
+      },
+    ],
+  },
+  {
+    type: "benefits",
+    title: "Why Vision AI is a Game Changer",
+    items: [
+      {
+        title: "Accuracy Beyond Human Capabilities",
+        description:
+          "Vision AI models can process visual data at speeds and scales impossible for humans, delivering faster, more accurate insights in real-time",
+      },
+      {
+        title: "Automation & Efficiency",
+        description:
+          "Automate complex tasks such as defect detection, facial recognition, and visual inspection, reducing manual intervention and costs.",
+      },
+      {
+        title: "Real-Time Decision-Making",
+        description:
+          "With real-time video and image analysis, businesses can respond instantly to critical events, enhancing safety, security, and operational efficiency",
       },
     ],
   },
@@ -120,35 +130,34 @@ const sections = [
     title: "Success Stories",
     stories: [
       {
-        image: prediction,
-        heading: "AI-Based Predictive Maintenance for Manufacturing",
+        image: electronics,
+        heading:
+          "98% Accuracy in Defect Detection for Electronics Manufacturer",
         description:
-          "Reduced machine downtime by 30% using predictive maintenance algorithms, leading to a 20% increase in operational efficiency",
+          "A leading electronics company implemented our Vision AI-based defect detection system, increasing inspection accuracy by 98% and reducing product recall rates by 15%.",
       },
       {
-        image: sentiment,
-        heading: "NLP-Powered Sentiment Analysis for Retail",
+        image: analytics,
+        heading: "20% Sales Increase through In-Store Behavior Analytics",
         description:
-          "Developed a sentiment analysis tool for a retail giant, enabling them to gauge customer satisfaction in real-time, increasing customer retention by 15%.",
+          "Our Vision AI system helped a major retail chain track customer behavior and optimize product placements. This resulted in a 20% increase in sales and improved inventory management",
       },
     ],
   },
   {
-    type: "benefits",
-    title: "Why Spritle for AI & ML Solutions",
-    items: [
-      { title: "Proven expertise in AI model development." },
-      { title: "Agile and scalable deployment of AI systems" },
-      { title: "End-to-end support from development to integration" },
-      { title: "Focus on security, compliance, and data privacy." },
-    ],
+    type: "intermediate-cta",
+    heading: "Start Your Vision AI Journey",
+    description:
+      "Harness the power of Vision AI to improve operational efficiency, enhance security, and unlock deeper insights from your visual data. We tailor our Vision AI solutions to fit your business needs and deliver measurable results.",
   },
   {
     type: "final-cta",
-    heading: "Unlock the Power of AI & ML for Your Business",
+    heading:
+      "Explore Vision AI Solutions for Your Business. Contact Us for a Free Consultation",
     description:
-      "Get in touch to discover how Spritle's AI and machine learning expertise can transform your business",
-    buttonText: "Start Your AI Transformation",
+      "Let's discuss how we can help your organization thrive in the age of artificial intelligence",
+
+    buttonText: "Get a Free Consultation Today",
   },
 ];
 ---

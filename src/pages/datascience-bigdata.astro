@@ -7,6 +7,14 @@ import agriculture from "@/assets/images/service/datascience/agriculture.png";
 import logistics from "@/assets/images/service/datascience/logistics.png";
 import team from "@/assets/images/service/datascience/team.png";
 import telecommunication from "@/assets/images/service/datascience/telecommunication.png";
+import ecommerce from "@/assets/images/service/testing/ecommerce.png";
+import healthcare from "@/assets/images/service/testing/healthcare.png";
+import regression from "@/assets/images/service/testing/regression.png";
+import media from "@/assets/images/service/devscope/media.png";
+import quality from "@/assets/images/service/visionAI/quality.png";
+import retail from "@/assets/images/service/visionAI/retail.png";
+import electronics from "@/assets/images/service/visionAI/electronics.png";
+import analytics from "@/assets/images/service/visionAI/analytics.png";
 const heroSection = {
   heading: "Data Science & Big Data Solutions for Smarter Decisions",
   description:
@@ -20,99 +28,123 @@ const heroSection = {
 
 const sections = [
   {
-    type: "data-pill-cards",
-    title: "Core Data Science & Big Data Services",
+    type: "value-proposition",
+    title: "Key QA & Testing Services We Offer",
     cards: [
       {
         logo: u1,
-        heading: "Advanced Analytics & Predictive Modeling",
-        content: [
-          "Customer segmentation",
-          "Sales forecasting",
-          "Risk analysis",
-        ],
+        title: "Automated Testing & CI/CD Integration",
         description:
-          "We create predictive models using machine learning and statistical techniques to forecast trends and behaviors",
+          "Leverage AI-driven automated testing frameworks integrated with CI/CD pipelines for faster, reliable, and continuous testing processes",
       },
       {
         logo: u1,
-        heading: "Big Data Platform Development",
-        content: ["Hadoop", "Spark", "kafka", "cassandra"],
+        title: "Performance Testing & Load Simulation",
         description:
-          "Designing scalable, distributed systems to process massive datasets with low latency. Expertise in handling structured and unstructured data.",
+          "Simulate real-world conditions to evaluate system performance, scalability, and reliability under load, ensuring seamless user experience even during peak usage",
       },
       {
         logo: u1,
-        heading: "Data Engineering & Pipelines",
-        content: ["Apache NiFi", "AWS Data Pipeline", "Airflow"],
+        title: "Security Testing & Vulnerability Assessment",
         description:
-          "Building efficient data pipelines for real-time processing and analysis. We ensure seamless data flow across your organization",
+          "Identify and eliminate potential security vulnerabilities with in-depth penetration testing and security assessments to safeguard applications",
       },
       {
         logo: u1,
-        heading: "Data Visualization & BI Tools",
-        content: ["Power BI", "Tableau", "looker"],
+        title: "AI-Powered Regression Testing",
         description:
-          "Transform complex data into intuitive dashboards and visual reports, driving data-driven decisions at every level",
+          "Utilize machine learning algorithms to predict and identify high-impact test cases for efficient regression testing, ensuring stability after code changes",
       },
       {
         logo: u1,
-        heading: "Cloud Data Solutions",
-        content: [
-          "Customer segmentation",
-          "Sales forecasting",
-          "Risk analysis",
-        ],
+        title: "User Experience (UX) Testing",
         description:
-          "We deploy scalable data solutions in cloud environments, ensuring high availability and security while handling vast data volumes.",
+          "Ensure intuitive, user-friendly interfaces through comprehensive usability testing that assesses the functionality and accessibility of applications",
+      },
+    ],
+  },
+  {
+    type: "use-cases",
+    title: "Industry Use Cases",
+
+    cases: [
+      {
+        image: quality,
+        title: "Automated Regression Testing for Fintech App",
+        description:
+          "Developed a big data solution for precision agriculture, analyzing soil health and weather patterns to optimize crop yield, increasing productivity by 25%",
       },
       {
-        logo: u1,
-        heading: "AI-Powered Data Insights",
-        content: [
-          "Real-time monitoring",
-          "Anomaly detection",
-          "Customer behavior",
-        ],
+        image: healthcare,
+        title: "Performance Testing for E-Commerce Platform",
         description:
-          "Our AI models process big data to extract actionable insights, enabling real-time decision-making and trend detection",
+          "Implemented CI/CD pipelines for a telemedicine provider, accelerating software releases by 50%, ensuring regulatory compliance, and improving system stability.",
+      },
+      {
+        image: retail,
+        title: "Security Testing for Healthcare Application",
+        description:
+          "Developed a DevSecOps approach for a financial institution, ensuring compliance with industry standards and reducing cloud security incidents by 25%",
       },
     ],
   },
   {
     type: "value-proposition",
-    title: "Core AI & ML Services",
+    title: "Solutions We Offer",
     cards: [
       {
         logo: u1,
-        title: "Big Data Technologies",
+        title: "Mobile App Development",
         description:
-          "Expertise in Hadoop, Apache Spark, NoSQL databases like MongoDB, and distributed processing.",
+          "Seamlessly migrate your legacy systems to the cloud, or design robust cloud architectures from scratch",
       },
       {
         logo: u1,
-        title: "Machine Learning & AI Integration",
+        title: "CI/CD Pipeline Automation",
         description:
-          "From generaProficiency in applying AI models for predictive analytics and automating data processes",
+          "Streamline your development lifecycle with automated Continuous Integration and Continuous Delivery pipelines, ensuring rapid and error-free deployments",
       },
       {
         logo: u1,
-        title: "Cloud Data Engineering",
+        title: "Infrastructure as Code (IaC)",
         description:
-          "Expertise in deploying, managing, and scaling data platforms on AWS, Azure, and GCP",
+          "Automate and standardize infrastructure management using IaC tools, improving consistency and reducing deployment time",
       },
       {
         logo: u1,
-        title: "Data Security & Compliance",
+        title: "Cloud Infrastructure Design & Migration",
         description:
-          "Deep knowledge of GDPR, HIPAA, and industry-specific regulations to ensure data integrity and security",
+          "Optimize your microservices with containerized environments and orchestration tools for enhanced scalability and fault tolerance",
       },
       {
         logo: u1,
-        title: "Data Integration & ETL",
+        title: "Cloud Security & Monitoring",
         description:
-          "Mastery in integrating data from multiple sources and designing ETL workflows for seamless operations",
+          "Implement robust cloud security protocols and real-time monitoring to ensure your systems are protected and performant",
       },
+      {
+        logo: u1,
+        title: "DevOps Consultation & Implementation",
+        description:
+          "Adopt DevOps best practices to foster a culture of collaboration, speed up development cycles, and reduce operational overhead",
+      },
+    ],
+  },
+
+  {
+    type: "benefits",
+    title: "Why Choose Spritle for Data Science & Big Data",
+    items: [
+      {
+        title:
+          "Expertise in handling complex datasets and building scalable systems",
+      },
+      { title: "AI-powered insights integrated into data workflows" },
+      {
+        title:
+          "Proven experience across cloud, big data, and advanced analytics",
+      },
+      { title: "End-to-end data solutions, from engineering to visualization" },
     ],
   },
   {
@@ -146,21 +178,11 @@ const sections = [
     ],
   },
   {
-    type: "benefits",
-    title: "Why Choose Spritle for Data Science & Big Data",
-    items: [
-      {
-        title:
-          "Expertise in handling complex datasets and building scalable systems",
-      },
-      { title: "AI-powered insights integrated into data workflows" },
-      {
-        title:
-          "Proven experience across cloud, big data, and advanced analytics",
-      },
-      { title: "End-to-end data solutions, from engineering to visualization" },
-    ],
-  },
+    type: "intermediate-cta",
+    heading: "Start Your Vision AI Journey",
+    description:
+      "Harness the power of Vision AI to improve operational efficiency, enhance security, and unlock deeper insights from your visual data. We tailor our Vision AI solutions to fit your business needs and deliver measurable results.",
+  }, 
   {
     type: "final-cta",
     heading: "Leverage Data for Competitive Advantage",
