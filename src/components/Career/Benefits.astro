@@ -1,18 +1,17 @@
 ---
-import {Image} from "astro:assets";
-import career1 from "../../assets/images/careers/career1icon.png";
-import career2 from "../../assets/images/careers/career2icon.png";
-import career3 from "../../assets/images/careers/career3icon.png";
-import career4 from "../../assets/images/careers/career4icon.png";
-import career5 from "../../assets/images/careers/career5icon.png";
-import career6 from "../../assets/images/careers/career6icon.png";
-import career7 from "../../assets/images/careers/career7icon.png";
-import career8 from "../../assets/images/careers/career8icon.png";
-import career9 from "../../assets/images/careers/career9icon.png";
-import career10 from "../../assets/images/careers/career10icon.png";
-import career11 from "../../assets/images/careers/career11icon.png";
-import career12 from "../../assets/images/careers/career12icon.png";
-
+import { Image } from "astro:assets";
+import career1 from "@/assets/icons/Careers/career1icon.svg";
+import career2 from "@/assets/icons/Careers/career2icon.svg";
+import career3 from "@/assets/icons/Careers/career3icon.svg";
+import career4 from "@/assets/icons/Careers/career4icon.svg";
+import career5 from "@/assets/icons/Careers/career5icon.svg";
+import career6 from "@/assets/icons/Careers/career6icon.svg";
+import career7 from "@/assets/icons/Careers/career7icon.svg";
+import career8 from "@/assets/icons/Careers/career8icon.svg";
+import career9 from "@/assets/icons/Careers/career9icon.svg";
+import career10 from "@/assets/icons/Careers/career10icon.svg";
+import career11 from "@/assets/icons/Careers/career11icon.svg";
+import career12 from "@/assets/icons/Careers/career12icon.svg";
 
 const logos = [
   career1,
@@ -44,44 +43,46 @@ const cardTitles = [
   "Work-Life Balance Support",
 ];
 
-const cards = cardTitles.map((title,i) => ({
-  logo:logos[i],
+const cards = cardTitles.map((title, i) => ({
+  logo: logos[i],
   title,
 }));
 ---
 
-<div
-  class="space-y-1 lg:space-y-6 md:space-y-3 my-10 md:my-20  container "
->
-  <h2 class="text-heading text-primary md:mb-4 mb-2 font-bold">
-    Benefits & Perks
-  </h2>
-  <p
-    class="text-subheading mt-3 md:mt-8 text-secondary font-medium max-w-[1095px]"
-  >
-    At DigitX, we believe in prioritizing the well-being and growth of our team
-    members. We offer a comprehensive range of benefits and perks to ensure our
-    employees feel valued, motivated, and supported in both their personal and
-    professional lives. As a member of the DigitX family,
-  </p>
-</div>
+<main class="my-10 md:my-20 container">
+  <div class="space-y-1 lg:space-y-6 md:space-y-3">
+    <h2 class="text-heading text-primary md:mb-10 mb-5 font-bold">
+      Benefits & Perks
+    </h2>
+    <p
+      class="text-subheading md:mb-10 mb-5 text-secondary font-medium max-w-[1095px]"
+    >
+      At DigitX, we believe in prioritizing the well-being and growth of our
+      team members. We offer a comprehensive range of benefits and perks to
+      ensure our employees feel valued, motivated, and supported in both their
+      personal and professional lives. As a member of the DigitX family,
+    </p>
+  </div>
 
-<div
-  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:mt-15 mt-5 container  xl:gap-10 lg:gap-8 gap-3"
->
-  {
-    cards.map((card, index) => (
-      <div
-        key={index}
-        class="flex items-center bg-[#333333] rounded-[10px] p-[10px]   h-[94px]  "
-      >
-        <Image
-          src={card.logo}
-          alt="Career Icon"
-          class="max-size-18 object-contain"
-        />
-        <p class="text-primary font-dm-sans text-subheading p-5 pl-5">{card.title}</p>
-      </div>
-    ))
-  }
-</div>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:gap-10 lg:gap-8 gap-3"
+  >
+    {
+      cards.map((card, index) => (
+        <div
+          key={index}
+          class="flex items-center bg-[#333333] rounded-[10px] p-[10px]   h-[94px]  "
+        >
+          <Image
+            src={card.logo}
+            alt="Career Icon"
+            class="max-size-18 object-contain"
+          />
+          <p class="text-primary font-dm-sans text-subheading p-5 pl-5">
+            {card.title}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</main>
