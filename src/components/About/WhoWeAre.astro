@@ -81,9 +81,9 @@ const MegaMinds = [
     </p>
   </div>
   <!-- Counter Section -->
-  <div class="py-18 xl:mt-10 mt-5" id="counterSection">
+  <div class="py-5 md:py-18 xl:mt-10 mt-5 w-full sm:w-auto" id="counterSection">
     <div
-      class="mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 lg:gap-20 text-center xl:px-30 px-5"
+      class="mx-auto px-4  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 lg:gap-20 text-center xl:px-30 px-5"
     >
       <!-- Box 1 -->
       <div
@@ -146,18 +146,32 @@ const MegaMinds = [
   </div>
 
   <!-- Child Companies Section -->
-  <section class="my-20 w-full">
-    <h1 class="font-medium text-3xl lg:text-4xl my-15">Our Subsidiaries</h1>
-    <div class="w-full flex flex-wrap justify-around gap-8 gap-y-10">
-      <Image src={Seewise} alt="Seewise Brand Logo" />
-      <Image src={Saasly} alt="Saasly Brand Logo" />
-      <Image src={Smartle} alt="Smartle Brand Logo" />
+  <section class="my-5 md:my-20 w-full">
+    <h1 class="font-medium text-centerheading my-5 md:my-15">
+      Our Subsidiaries
+    </h1>
+    <div class="flex flex-wrap justify-around gap-8 mt-10 sm:mt-0">
+      <Image
+        src={Seewise}
+        alt="Seewise Brand Logo"
+        class="h-16 w-72 md:h-auto md:w-auto"
+      />
+      <Image
+        src={Saasly}
+        alt="Saasly Brand Logo"
+        class="h-16 w-72 md:h-auto md:w-auto"
+      />
+      <Image
+        src={Smartle}
+        alt="Smartle Brand Logo"
+        class="h-16 w-72 md:h-auto md:w-auto"
+      />
     </div>
   </section>
 
   <!-- Megaminds Behind Spritle Section -->
-  <section class="my-20">
-    <h1 class="font-medium text-3xl lg:text-4xl my-15">
+  <section class="my-5 md:my-20">
+    <h1 class="font-medium text-centerheading my-5 md:my-15">
       Megaminds Behind Spritle
     </h1>
     <ul
@@ -180,4 +194,4 @@ const MegaMinds = [
   </section>
 </div>
 
-<script src="@/lib/counter.js" ></script>
+<script src="@/lib/counter.js"></script>
