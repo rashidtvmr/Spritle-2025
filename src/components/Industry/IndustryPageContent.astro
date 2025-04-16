@@ -15,17 +15,17 @@ const {
 } = Astro.props;
 ---
 
-<main>
+<main class="my-5 md:my-19">
   <div class="container">
     <!-- Hero Section -->
-    <div class="my-5 md:my-19">
+    <div class=>
       <div
         class="flex flex-col justify-center items-center text-center h-auto space-y-2 lg:space-y-5 xl:space-y-10 bg-background"
       >
         <div class="">
           <GradientHeading text={heroSection.heading} />
         </div>
-        <p
+        <p  
           class="font-normal mt-4 text-title-body text-gradientbody max-w-[600px]"
         >
           {heroSection.description}
@@ -34,7 +34,7 @@ const {
         <Button
           text={heroSection.buttonText}
           arrow={true}
-          className="!py-2 !px-2 sm:!px-10 text-subheading h-fit tracking-wider !my-8 md:!my-10"
+          className="!py-2 !px-4 sm:!px-10 text-subheading h-fit tracking-wider !mb-8 md:!mb-10 mt-4"
           type="link"
           href="#"
         />
