@@ -200,7 +200,7 @@
             ? ` 
                 <div class="w-full col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto">
                   <!-- Card -->
-                  <div class="w-full xl:w-[650px] h-auto xl:h-[960.495px] rounded-[20px] border border-gray-300 p-[20px] md:p-[40px_20px] flex flex-col gap-4 bg-[#313131]">
+                  <div class="w-full 2xl:w-[650px] lg:w-fit h-auto xl:h-[960.495px] rounded-[20px] border border-gray-300 p-[20px] md:p-[40px_20px] flex flex-col gap-4 bg-[#313131]">
                     <!-- Image -->
                     <div class="flex justify-center">
                       <img src="${item.image}" alt="Image" class="w-[200px] h-[225px] md:w-[329.438px] md:h-[370.628px]" />
