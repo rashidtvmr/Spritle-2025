@@ -1,9 +1,16 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
+  experimental: {
+    fonts: [{
+      provider: fontProviders.google(),
+      name: "DM Sans",
+      cssVariable: "--font-dm-sans"
+    }]
+  },
   base: '/',
   site: 'https://spritle-new.vercel.app/',
   output: 'static',
@@ -11,7 +18,4 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  experimental: {
-    svg: true
-  }
 });

@@ -1,0 +1,34 @@
+---
+// File: components/TextReveal.astro
+const {
+  height = "200vh", // Adjust height as necessary
+  text = "At Spritle, we are not just Engineers; we are visionaries harnessing the transformative power of artificial intelligence to propel industries into the future for the past 16 years.",
+} = Astro.props;
+---
+
+<section
+  class="scroll-reveal h-[30vh] md:h-[40vh] lg:h-[50vh] xl:h-[80vh] flex justify-center items-center md:pl-0 md:mb-10"
+>
+  <p
+    class="font-dm-sans leading-[1.5] font-light text-xl md:text-2xl lg:text-[36px] text-start max-h-[332px] px-8 md:px-16 lg:px-24"
+    id="text-wrapper" 
+  >
+    <span class="text-wrapper" >
+      <!-- Static text is split into words and inserted into the HTML -->
+      {
+        text.split(" ").map((word, index) => (
+          <span class="relative mx-2">
+            <span id={"tr_aword-" + index} class="absolute opacity-20 ">
+              {word}
+            </span>
+            <span id={"tr_word-" + index} class="text-white opacity-0">
+              {word}
+            </span>
+          </span>
+        ))
+      }
+    </span>
+  </p>
+</section>
+
+<script src="@/lib/text_reveal.js"></script>
