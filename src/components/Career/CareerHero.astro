@@ -49,13 +49,13 @@ const cards = [
   </div>
 </div>
 <div
-  class="grid grid-cols-1 md:grid-cols-2 container my-10 md:my-20 gap-3 md:gap-7 lg:gap-10"
+  class="grid grid-cols-1 md:grid-cols-2 container my-10 md:my-20 gap-3 md:gap-7 2xl:gap-10"
 >
   {
     cards.map((card, index) => (
       <div
         key={index}
-        class="bg-[#2E2E2E] border border-[#1F1F1F] rounded-[20px]  w-full max-w-[850px] lg:max-h-[264px] lg:h-screen flex flex-col justify-center space-y-3   md:space-y-6 p-3  md:p-10 "
+        class="bg-[#2E2E2E] border border-[#1F1F1F] rounded-[20px]  w-full max-w-[850px] lg:max-h-[264px] lg:h-screen flex flex-col justify-center space-y-3   md:space-y-6 p-3 md:p-5  2xl:p-10 "
       >
         <h3 class="text-primary text-title-body  font-dm-sans font-semibold  ">
           {card.title}

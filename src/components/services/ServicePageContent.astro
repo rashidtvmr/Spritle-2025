@@ -88,7 +88,7 @@ const { heroSection, sections } = Astro.props;
                   </p>
                 )}
               </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-5 md:mt-10">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 2xl:gap-12   mt-5 md:mt-10">
                 {section.cases.map((caseItem, index) => (
                   <AiCard key={index} {...caseItem} />
                 ))}
@@ -96,19 +96,7 @@ const { heroSection, sections } = Astro.props;
             </div>
           );
 
-        case "industry-use-cases":
-          return (
-            <div class="my-10 md:my-20 container">
-              <div class="text-heading text-primary md:mb-10 mb-5 font-bold">
-                {section.title}
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:gap-12 gap-5 mt-12">
-                {section.stories.map((story, index) => (
-                  <SuccessStories key={index} {...story} />
-                ))}
-              </div>
-            </div>
-          );
+       
 
         case "benefits":
           return (
@@ -128,7 +116,7 @@ const { heroSection, sections } = Astro.props;
               <h1 class="text-centerheading text-primary  font-semibold text-center">
                 {section.title}
               </h1>
-              <div class="grid grid-cols-1 md:grid-cols-2 xl:gap-12 lg:gap-9 md:gap-3 gap-2 md:mt-16 mt-5">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 2xl:gap-12   mt-5 md:mt-10">
                 {section.stories.map((story, index) => (
                   <SuccessStories key={index} {...story} />
                 ))}
