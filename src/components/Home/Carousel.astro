@@ -68,7 +68,7 @@ const carouselContent = [
       Transform your business with generative AI
     </p>
   </div>
-  <div class="relative 2xl:container">
+  <div class="relative  2xl:container">
     <ul
       id="tb-carousel"
       class="flex gap-10 overflow-x-auto scroll-smooth pb-3 scroll-snap-x snap-mandatory"
@@ -81,7 +81,7 @@ const carouselContent = [
               data-href={content.href}
               class:list={[
                 `tb-carousel-card relative group flex-shrink-0 rounded-xl scroll-snap-start flex justify-center items-center text-xl overflow-hidden  
-                h-[250px]  md:h-[400px] lg:h-[500px] w-[calc(100vw-35px)] md:w-[600px] 
+                h-[250px]  md:h-[400px] lg:h-[800px] w-[calc(100vw-35px)] md:w-[800px] 
                 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`,
                 { "ms-4 md:ms-6 2xl:ms-0": index === 0 },
                 {
@@ -99,7 +99,7 @@ const carouselContent = [
               />
               <div
                 id={textId}
-                class="absolute z-10 w-full text-left bottom-3 md:bottom-10 font-poppins text-white  px-2 md:px-12 text-xl md:text-4xl md:group-hover:scale-[1.05] transition-transform duration-300"
+                class="absolute z-10 w-full text-left bottom-3 md:bottom-10 font-poppins text-white  px-2 md:px-12 text-xl md:text-4xl 2xl:text-5xl md:group-hover:scale-[1.05] transition-transform duration-300"
               >
                 <p class="break-words">{content.text}</p>
               </div>
