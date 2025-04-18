@@ -46,7 +46,7 @@ body {
 }
 
 .text-centerheading {
-  @apply text-2xl lg:text-4xl 2xl:text-[55px] font-dm-sans;
+  @apply text-2xl lg:text-4xl xl:text-[55px] font-dm-sans;
 }
 
 .text-subheading {
@@ -70,7 +70,7 @@ body {
 }
 
 .boxShadow_works {
-  @apply rounded-lg p-3 sm:p-5  lg:p-10  space-y-3 bg-[#313131] flex flex-col md:items-start items-center text-center md:text-left;
+  @apply rounded-lg p-3  lg:p-6   2xl:p-10  space-y-3 bg-[#313131] flex flex-col md:items-start items-center text-center md:text-left;
 
   box-shadow:
     4px 6px 16px 0px #0000001a,
