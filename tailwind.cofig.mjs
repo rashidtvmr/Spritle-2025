@@ -20,10 +20,20 @@ export default {
 		},
 		container: {
 			center: true,
-			padding: '1rem',
-			screens: {
-				'2xl': '1736px',
+			padding: {
+				DEFAULT: '1rem',
+				sm: '1rem',
+				md: '1rem',
+				lg: '3.5rem',
+				xl: '4rem',
 			},
+			screens: {
+				sm: '640px',
+				md: '768px',
+				lg: '1024px',
+				xl: '1280px',
+				'2xl': '1736px',
+			}
 		},
 	},
 	plugins: [require('@tailwindcss/forms'),],

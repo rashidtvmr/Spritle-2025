@@ -13,9 +13,9 @@ const { heroSection, sections } = Astro.props;
 
 <main>
   <!-- Hero Section -->
-  <div class="my-20">
+  <div class="my-20 container">
     <div
-      class="flex flex-col justify-center items-center text-center h-auto px-4 space-y-5 xl:space-y-10 bg-background container"
+      class="flex flex-col justify-center items-center text-center h-auto px-4 space-y-5 xl:space-y-10 bg-background"
     >
       <GradientHeading text={heroSection.heading} />
       <p class="font-normal text-title-body text-gradientbody max-w-[1000px]">
@@ -30,14 +30,14 @@ const { heroSection, sections } = Astro.props;
       />
       {
         heroSection.subHeading && (
-          <h1 class="text-heading text-primary  font-semibold  mt-5 md:mt-15 lg:mt-25">
+          <h1 class="text-heading text-primary  font-semibold  mt-5 md:mt-15 lg:mt-24">
             {heroSection.subHeading}
           </h1>
         )
       }
       {
         heroSection.subDescription && (
-          <p class="text-secondary mt-0 text-subbody font-normal text-center max-w-[1558px]">
+          <p class="text-secondary  text-subbody font-normal text-center ">
             {heroSection.subDescription}
           </p>
         )
@@ -76,8 +76,6 @@ const { heroSection, sections } = Astro.props;
               </div>
             </div>
           );
-
-    
 
         case "use-cases":
           return (
@@ -153,7 +151,7 @@ const { heroSection, sections } = Astro.props;
         case "final-cta":
           return (
             <div class="bg-[#313131]">
-              <div class="flex flex-col justify-center items-center text-center h-screen md:max-h-[666px] max-h-[400px] px-4 space-y-5 md:space-y-10  mt-5 lg:mt-20 container" >
+              <div class="flex flex-col justify-center items-center text-center h-screen md:max-h-[666px] max-h-[400px] px-4 space-y-5 md:space-y-10  mt-5 lg:mt-20 container">
                 {" "}
                 <GradientHeading text={section.heading} />
                 <p class="font-normal  text-subbody text-primary max-w-[1000px]">
